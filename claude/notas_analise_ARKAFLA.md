@@ -49,3 +49,18 @@
 - CCS real do tanque (laticínio).
 - Registro de mastite original, com a coluna RETORNO.
 - Confirmação da APCBRH sobre REB 47238 → 70105.
+
+## Painel – novo visual do "Painel do mês" (30/09/2026, versão 6)
+- Os 4 indicadores principais ganharam cartões com tendência em todos os controles:
+  - CCS estimada do tanque sem o lote 10;
+  - % de vacas com CCS ≥ 200;
+  - % de novas infecções;
+  - % de crônicas.
+- Os outros 8 indicadores ficaram em cartões compactos, com a variação indicada por seta e sinal, não só pela cor.
+- Faixas de CCS e classificação sanitária: faixa de composição de 100% mais barras com marcador do controle anterior e variação.
+- Blocos novos:
+  - "Lotes: vacas com CCS ≥ 200", com linha da média do rebanho e o lote 10 hachurado;
+  - "10 maiores contribuições para a CCS do tanque (sem o lote 10)", com simulação (estimativa). Clicar na vaca abre o histórico dela.
+- Dica flutuante (tooltip) em todas as barras.
+- Corrigido o "−0,0 p.p." que aparecia quando não havia variação.
+- Cópia local do painel em `painel/painel_qualidade_ARKAFLA.html`. O script de alteração é `scripts/patch_painel_mes.py`.

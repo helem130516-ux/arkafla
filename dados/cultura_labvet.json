@@ -1,0 +1,1790 @@
+[
+ {
+  "arquivo": "LabVet_2026-07-24.xlsx",
+  "controle_lab": "3296/26",
+  "entrada": "2026-07-24",
+  "liberado": "2026-07-27",
+  "obs": [],
+  "amostras": [
+   {
+    "amostra": 15961,
+    "data": "2026-07-24",
+    "vaca": 1160,
+    "ident": "PD G1 L5",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15962,
+    "data": "2026-07-24",
+    "vaca": 2935,
+    "ident": "AE G1 L3",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [
+     "Corynebacterium sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15963,
+    "data": "2026-07-24",
+    "vaca": 2963,
+    "ident": "AE G2 L6",
+    "quartos": "AE",
+    "grau": 2,
+    "lote": 6,
+    "agentes": [
+     "Streptococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15964,
+    "data": "2026-07-24",
+    "vaca": 3064,
+    "ident": "PE G1 L5",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15965,
+    "data": "2026-07-24",
+    "vaca": 3074,
+    "ident": "AE G1 L5",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Corynebacterium sp.",
+     "Leveduras sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15966,
+    "data": "2026-07-24",
+    "vaca": 3472,
+    "ident": "AD G1 L5",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15967,
+    "data": "2026-07-24",
+    "vaca": 3480,
+    "ident": "AE G1 L6",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 6,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 15968,
+    "data": "2026-07-24",
+    "vaca": 3544,
+    "ident": "AD G1 L3",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 15969,
+    "data": "2026-07-24",
+    "vaca": 3743,
+    "ident": "AD G1 L5",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 15970,
+    "data": "2026-07-24",
+    "vaca": 4059,
+    "ident": "PE L5",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 5,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 15971,
+    "data": "2026-07-24",
+    "vaca": 4067,
+    "ident": "AE G1 L5",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15972,
+    "data": "2026-07-24",
+    "vaca": 4140,
+    "ident": "PE G1 L5",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Streptococcus uberis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15973,
+    "data": "2026-07-24",
+    "vaca": 4458,
+    "ident": "PD G1 L5",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15974,
+    "data": "2026-07-24",
+    "vaca": 4474,
+    "ident": "AE G1 L5",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15975,
+    "data": "2026-07-24",
+    "vaca": 4508,
+    "ident": "PE G3 L6",
+    "quartos": "PE",
+    "grau": 3,
+    "lote": 6,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15976,
+    "data": "2026-07-24",
+    "vaca": 4542,
+    "ident": "AE G1 L5",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15977,
+    "data": "2026-07-24",
+    "vaca": 4631,
+    "ident": "AD G1 L5",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15978,
+    "data": "2026-07-24",
+    "vaca": 4672,
+    "ident": "AE G1 L5",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15979,
+    "data": "2026-07-24",
+    "vaca": 4924,
+    "ident": "AD G1 L3",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [
+     "Staphylococcus aureus"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15980,
+    "data": "2026-07-24",
+    "vaca": 4985,
+    "ident": "PE G1 L3",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15981,
+    "data": "2026-07-24",
+    "vaca": 5410,
+    "ident": "AD G1 L4",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 4,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 15982,
+    "data": "2026-07-24",
+    "vaca": 5835,
+    "ident": "PD G1 L1",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 1,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   }
+  ]
+ },
+ {
+  "arquivo": "LabVet_2026-07-29.xlsx",
+  "controle_lab": "3372/26",
+  "entrada": "2026-07-29",
+  "liberado": "2026-07-31",
+  "obs": [],
+  "amostras": [
+   {
+    "amostra": 16318,
+    "data": "2026-07-29",
+    "vaca": 2540,
+    "ident": "AE G1 L6",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 6,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16319,
+    "data": "2026-07-29",
+    "vaca": 2570,
+    "ident": "PE G1 L6",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 6,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16320,
+    "data": "2026-07-29",
+    "vaca": 2643,
+    "ident": "PE G1 L6",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 6,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16321,
+    "data": "2026-07-29",
+    "vaca": 2791,
+    "ident": "AE G1 L2",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [
+     "Streptococcus dysgalactiae",
+     "Corynebacterium sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16322,
+    "data": "2026-07-29",
+    "vaca": 2825,
+    "ident": "PD G1 L3",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16323,
+    "data": "2026-07-29",
+    "vaca": 2892,
+    "ident": "AE G1 L5",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16324,
+    "data": "2026-07-29",
+    "vaca": 2981,
+    "ident": "PE G1 L8",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 8,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16325,
+    "data": "2026-07-29",
+    "vaca": 3064,
+    "ident": "PD G1 L5",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Corynebacterium sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16326,
+    "data": "2026-07-29",
+    "vaca": 3192,
+    "ident": "PE L5",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16327,
+    "data": "2026-07-29",
+    "vaca": 3177,
+    "ident": "PE L6",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 6,
+    "agentes": [
+     "Streptococcus dysgalactiae",
+     "Corynebacterium sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16328,
+    "data": "2026-07-29",
+    "vaca": 3208,
+    "ident": "AE G1 L5",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16329,
+    "data": "2026-07-29",
+    "vaca": 3251,
+    "ident": "AD G1 L6",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 6,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16330,
+    "data": "2026-07-29",
+    "vaca": 3370,
+    "ident": "AD G1 L3",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16331,
+    "data": "2026-07-29",
+    "vaca": 3421,
+    "ident": "AD G1 L3",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16332,
+    "data": "2026-07-29",
+    "vaca": 3472,
+    "ident": "AD G1 L5",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16333,
+    "data": "2026-07-29",
+    "vaca": 3479,
+    "ident": "AD G1 L2",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16334,
+    "data": "2026-07-29",
+    "vaca": 3671,
+    "ident": "PD G1 L5",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16335,
+    "data": "2026-07-29",
+    "vaca": 3672,
+    "ident": "AE G1 L2",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16336,
+    "data": "2026-07-29",
+    "vaca": 3845,
+    "ident": "AE G1 L2",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16337,
+    "data": "2026-07-29",
+    "vaca": 3906,
+    "ident": "PE G1 L2",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16338,
+    "data": "2026-07-29",
+    "vaca": 4019,
+    "ident": "PD G1 L5",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16339,
+    "data": "2026-07-29",
+    "vaca": 4041,
+    "ident": "AE G1 L5",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Corynebacterium sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16340,
+    "data": "2026-07-29",
+    "vaca": 4044,
+    "ident": "AE G1 L2",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16341,
+    "data": "2026-07-29",
+    "vaca": 4059,
+    "ident": "AD G1 L4",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 4,
+    "agentes": [
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16342,
+    "data": "2026-07-29",
+    "vaca": 4154,
+    "ident": "PE G1 L3",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16343,
+    "data": "2026-07-29",
+    "vaca": 4267,
+    "ident": "AD G1 L3",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16344,
+    "data": "2026-07-29",
+    "vaca": 4394,
+    "ident": "PD G1 L6",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 6,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16345,
+    "data": "2026-07-29",
+    "vaca": 4444,
+    "ident": "PD G1 L5",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16346,
+    "data": "2026-07-29",
+    "vaca": 4474,
+    "ident": "AE G1 L3",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16347,
+    "data": "2026-07-29",
+    "vaca": 4488,
+    "ident": "PE G1 L5",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus aureus"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16348,
+    "data": "2026-07-29",
+    "vaca": 4492,
+    "ident": "AD G1 L5",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16349,
+    "data": "2026-07-29",
+    "vaca": 4515,
+    "ident": "PE G1 L5",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16350,
+    "data": "2026-07-29",
+    "vaca": 4523,
+    "ident": "PD G1 L2",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16351,
+    "data": "2026-07-29",
+    "vaca": 4605,
+    "ident": "PD G1 L3",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16352,
+    "data": "2026-07-29",
+    "vaca": 4659,
+    "ident": "AD G1 L2",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16353,
+    "data": "2026-07-29",
+    "vaca": 4757,
+    "ident": "AE G1 L2",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [
+     "Streptococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16354,
+    "data": "2026-07-29",
+    "vaca": 4759,
+    "ident": "PD L6",
+    "quartos": "PD",
+    "grau": null,
+    "lote": 6,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16355,
+    "data": "2026-07-29",
+    "vaca": 4776,
+    "ident": "PD G1 L2",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16356,
+    "data": "2026-07-29",
+    "vaca": 4871,
+    "ident": "PE",
+    "quartos": "PE",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16357,
+    "data": "2026-07-29",
+    "vaca": 4865,
+    "ident": "AD G1 L3",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16358,
+    "data": "2026-07-29",
+    "vaca": 4985,
+    "ident": "PE G1 L3",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 3,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16359,
+    "data": "2026-07-29",
+    "vaca": 5141,
+    "ident": "AE G1 L4",
+    "quartos": "AE",
+    "grau": 1,
+    "lote": 4,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 16360,
+    "data": "2026-07-29",
+    "vaca": 5656,
+    "ident": "AD G2 L1",
+    "quartos": "AD",
+    "grau": 2,
+    "lote": 1,
+    "agentes": [
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   }
+  ]
+ },
+ {
+  "arquivo": "LabVet_2026-08-03.xlsx",
+  "controle_lab": "3466/26",
+  "entrada": "2026-08-03",
+  "liberado": "2026-08-05",
+  "obs": [],
+  "amostras": [
+   {
+    "amostra": 16947,
+    "data": "2026-08-03",
+    "vaca": 3905,
+    "ident": "AD G1 L2",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 2,
+    "agentes": [
+     "Streptococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16948,
+    "data": "2026-08-03",
+    "vaca": 4126,
+    "ident": "PD G1 L6",
+    "quartos": "PD",
+    "grau": 1,
+    "lote": 6,
+    "agentes": [
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16949,
+    "data": "2026-08-03",
+    "vaca": 4234,
+    "ident": "AD G1 L8",
+    "quartos": "AD",
+    "grau": 1,
+    "lote": 8,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16950,
+    "data": "2026-08-03",
+    "vaca": 4670,
+    "ident": "PE G1 L5",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 16951,
+    "data": "2026-08-03",
+    "vaca": 5126,
+    "ident": "PE G1 L1",
+    "quartos": "PE",
+    "grau": 1,
+    "lote": 1,
+    "agentes": [
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   }
+  ]
+ },
+ {
+  "arquivo": "LabVet_2026-09-15.xlsx",
+  "controle_lab": "4264/26",
+  "entrada": "2026-09-15",
+  "liberado": "2026-09-18",
+  "obs": [],
+  "amostras": [
+   {
+    "amostra": 21006,
+    "data": "2026-09-15",
+    "vaca": 1160,
+    "ident": "PD L5",
+    "quartos": "PD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21007,
+    "data": "2026-09-15",
+    "vaca": 2904,
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 21008,
+    "data": "2026-09-15",
+    "vaca": 3025,
+    "ident": "AD L5",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21009,
+    "data": "2026-09-15",
+    "vaca": 3112,
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21010,
+    "data": "2026-09-15",
+    "vaca": 3122,
+    "ident": "AE L5",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21011,
+    "data": "2026-09-15",
+    "vaca": 3246,
+    "ident": "AE L2",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21012,
+    "data": "2026-09-15",
+    "vaca": 3317,
+    "ident": "AD L3",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 3,
+    "agentes": [
+     "Streptococcus bovis",
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21013,
+    "data": "2026-09-15",
+    "vaca": 3424,
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21014,
+    "data": "2026-09-15",
+    "vaca": 3459,
+    "ident": "AE L2",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21015,
+    "data": "2026-09-15",
+    "vaca": 3493,
+    "ident": "AE L2",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21016,
+    "data": "2026-09-15",
+    "vaca": 3547,
+    "ident": "AD L5",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21017,
+    "data": "2026-09-15",
+    "vaca": 3579,
+    "ident": "AD L3",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 3,
+    "agentes": [
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21018,
+    "data": "2026-09-15",
+    "vaca": 3711,
+    "ident": "AE L5",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21019,
+    "data": "2026-09-15",
+    "vaca": 3853,
+    "ident": "AD L3",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 3,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21020,
+    "data": "2026-09-15",
+    "vaca": 3905,
+    "ident": "AD L2",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Streptococcus dysgalactiae",
+     "Corynebacterium sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21021,
+    "data": "2026-09-15",
+    "vaca": 3906,
+    "ident": "PE L3",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 3,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21022,
+    "data": "2026-09-15",
+    "vaca": 3951,
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Streptococcus uberis",
+     "Serratia sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21023,
+    "data": "2026-09-15",
+    "vaca": 4049,
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21024,
+    "data": "2026-09-15",
+    "vaca": 4158,
+    "ident": "AD L3",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 3,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21025,
+    "data": "2026-09-15",
+    "vaca": 4184,
+    "ident": "AE L2",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Streptococcus dysgalactiae",
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21026,
+    "data": "2026-09-15",
+    "vaca": 4188,
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Streptococcus uberis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21027,
+    "data": "2026-09-15",
+    "vaca": 4216,
+    "ident": "AD L3",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 3,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 21028,
+    "data": "2026-09-15",
+    "vaca": 4428,
+    "ident": "PE L5",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Corynebacterium sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21029,
+    "data": "2026-09-15",
+    "vaca": 4444,
+    "ident": "PD L5",
+    "quartos": "PD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21030,
+    "data": "2026-09-15",
+    "vaca": 4455,
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Streptococcus uberis",
+     "Klebsiella sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21031,
+    "data": "2026-09-15",
+    "vaca": 4478,
+    "ident": "AE L5",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 5,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 21032,
+    "data": "2026-09-15",
+    "vaca": 4631,
+    "ident": "AD L5",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21033,
+    "data": "2026-09-15",
+    "vaca": 4690,
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Trueperella sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21034,
+    "data": "2026-09-15",
+    "vaca": 4691,
+    "ident": "AE L5",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21035,
+    "data": "2026-09-15",
+    "vaca": 4845,
+    "ident": "AD L3",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 3,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 21036,
+    "data": "2026-09-15",
+    "vaca": 4985,
+    "ident": "PE L4",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 4,
+    "agentes": [
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21037,
+    "data": "2026-09-15",
+    "vaca": 5166,
+    "ident": "AE L5",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21038,
+    "data": "2026-09-15",
+    "vaca": 5210,
+    "ident": "AE L4",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 4,
+    "agentes": [
+     "Streptococcus bovis",
+     "Serratia sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21039,
+    "data": "2026-09-15",
+    "vaca": 5361,
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 21040,
+    "data": "2026-09-15",
+    "vaca": 5462,
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 21041,
+    "data": "2026-09-15",
+    "vaca": 5469,
+    "ident": "PD L4",
+    "quartos": "PD",
+    "grau": null,
+    "lote": 4,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 21042,
+    "data": "2026-09-15",
+    "vaca": 5535,
+    "ident": "AE L4",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 4,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21043,
+    "data": "2026-09-15",
+    "vaca": 5759,
+    "ident": "POOL",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21044,
+    "data": "2026-09-15",
+    "vaca": "Emilia",
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21045,
+    "data": "2026-09-15",
+    "vaca": "Nivea",
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 21046,
+    "data": "2026-09-15",
+    "vaca": "Original",
+    "ident": "-",
+    "quartos": "",
+    "grau": null,
+    "lote": null,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   }
+  ]
+ },
+ {
+  "arquivo": "LabVet_2026-09-22.xlsx",
+  "controle_lab": "4433/26",
+  "entrada": "2026-09-22",
+  "liberado": "2026-09-24",
+  "obs": [],
+  "amostras": [
+   {
+    "amostra": 22000,
+    "data": "2026-09-22",
+    "vaca": 1203,
+    "ident": "PE L5",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22001,
+    "data": "2026-09-22",
+    "vaca": 2887,
+    "ident": "AD L5",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus sp.",
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22002,
+    "data": "2026-09-22",
+    "vaca": 2938,
+    "ident": "AE L2",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Streptococcus sp.",
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22003,
+    "data": "2026-09-22",
+    "vaca": 2935,
+    "ident": "AE L2",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22004,
+    "data": "2026-09-22",
+    "vaca": 3721,
+    "ident": "AD L2",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Corynebacterium sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22005,
+    "data": "2026-09-22",
+    "vaca": 3885,
+    "ident": "AE L2",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Serratia sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22006,
+    "data": "2026-09-22",
+    "vaca": 4046,
+    "ident": "PE L4",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 4,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22007,
+    "data": "2026-09-22",
+    "vaca": 4267,
+    "ident": "AD L6",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 6,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 22008,
+    "data": "2026-09-22",
+    "vaca": 4353,
+    "ident": "AD L5",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Corynebacterium sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22009,
+    "data": "2026-09-22",
+    "vaca": 4372,
+    "ident": "AD L5",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22010,
+    "data": "2026-09-22",
+    "vaca": 4396,
+    "ident": "AE L2",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22011,
+    "data": "2026-09-22",
+    "vaca": 4431,
+    "ident": "PE L3",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 3,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22012,
+    "data": "2026-09-22",
+    "vaca": 4550,
+    "ident": "AD L3",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 3,
+    "agentes": [
+     "Streptococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22013,
+    "data": "2026-09-22",
+    "vaca": 4605,
+    "ident": "PD L5",
+    "quartos": "PD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 22014,
+    "data": "2026-09-22",
+    "vaca": 4759,
+    "ident": "PE L3",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 3,
+    "agentes": [
+     "Streptococcus bovis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22015,
+    "data": "2026-09-22",
+    "vaca": 4802,
+    "ident": "AE L3",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 3,
+    "agentes": [
+     "Bacillus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22016,
+    "data": "2026-09-22",
+    "vaca": 5032,
+    "ident": "AE L6",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 6,
+    "agentes": [
+     "Escherichia coli"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22017,
+    "data": "2026-09-22",
+    "vaca": 5036,
+    "ident": "AE L5",
+    "quartos": "AE",
+    "grau": null,
+    "lote": 5,
+    "agentes": [],
+    "sem_crescimento": true
+   },
+   {
+    "amostra": 22018,
+    "data": "2026-09-22",
+    "vaca": 5044,
+    "ident": "PE L3",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 3,
+    "agentes": [
+     "Staphylococcus sp.",
+     "Streptococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22019,
+    "data": "2026-09-22",
+    "vaca": 5160,
+    "ident": "PD L5",
+    "quartos": "PD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22020,
+    "data": "2026-09-22",
+    "vaca": 5211,
+    "ident": "PE L2",
+    "quartos": "PE",
+    "grau": null,
+    "lote": 2,
+    "agentes": [
+     "Prototheca sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22021,
+    "data": "2026-09-22",
+    "vaca": 5219,
+    "ident": "PD L4",
+    "quartos": "PD",
+    "grau": null,
+    "lote": 4,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22022,
+    "data": "2026-09-22",
+    "vaca": 5301,
+    "ident": "AD L5",
+    "quartos": "AD",
+    "grau": null,
+    "lote": 5,
+    "agentes": [
+     "Staphylococcus sp."
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22023,
+    "data": "2026-09-22",
+    "vaca": 5554,
+    "ident": "PD L4",
+    "quartos": "PD",
+    "grau": null,
+    "lote": 4,
+    "agentes": [
+     "Streptococcus uberis"
+    ],
+    "sem_crescimento": false
+   },
+   {
+    "amostra": 22024,
+    "data": "2026-09-22",
+    "vaca": 5979,
+    "ident": "AD G2 L1",
+    "quartos": "AD",
+    "grau": 2,
+    "lote": 1,
+    "agentes": [
+     "Streptococcus dysgalactiae"
+    ],
+    "sem_crescimento": false
+   }
+  ]
+ }
+]

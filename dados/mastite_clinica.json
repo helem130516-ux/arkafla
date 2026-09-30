@@ -1,7 +1,7 @@
 {
-"fonte": "Extraído do painel publicado (constante DATA.m), gerado de registro de mastite clínica da fazenda (jan–set/2026). O arquivo original não foi anexado nesta sessão.",
+"fonte": "Registro de mastite clínica da fazenda (dados/MASTITE_2026.xlsx, aba 2026), conferido com o painel publicado: 773 tratamentos idênticos.",
 "notas": [
-"Retorno do leite nesta planilha = data final + carência. O registro original tem coluna RETORNO própria; em 30 dos 773 tratamentos o painel (feito com o RETORNO original) mostra outra 'CCS depois'. Reanexar o registro para corrigir."
+"Retorno do leite = coluna RETORNO do registro ('297/26' lido como 29/07/2026). Com ela, a CCS depois bate 100% com o painel."
 ],
 "tratamentos": [
 {
@@ -14,7 +14,8 @@
 "ccs_antes_painel": 141,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-12"
 },
 {
 "vaca": 1075,
@@ -26,7 +27,8 @@
 "ccs_antes_painel": 44,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-03-16"
 },
 {
 "vaca": 1075,
@@ -38,7 +40,8 @@
 "ccs_antes_painel": 1877,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-03-26"
 },
 {
 "vaca": 1160,
@@ -50,7 +53,8 @@
 "ccs_antes_painel": 3438,
 "ccs_depois_painel": 4093,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-08"
 },
 {
 "vaca": 1160,
@@ -62,7 +66,8 @@
 "ccs_antes_painel": 3438,
 "ccs_depois_painel": 4905,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-20"
 },
 {
 "vaca": 1160,
@@ -74,7 +79,8 @@
 "ccs_antes_painel": 4093,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-26"
 },
 {
 "vaca": 1187,
@@ -86,7 +92,8 @@
 "ccs_antes_painel": 2064,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-27"
 },
 {
 "vaca": 1187,
@@ -98,7 +105,8 @@
 "ccs_antes_painel": 2064,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-12"
 },
 {
 "vaca": 1203,
@@ -110,7 +118,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 632,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-12"
 },
 {
 "vaca": 1203,
@@ -122,7 +131,8 @@
 "ccs_antes_painel": 2736,
 "ccs_depois_painel": 105,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-03"
 },
 {
 "vaca": 1216,
@@ -134,7 +144,8 @@
 "ccs_antes_painel": 243,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-26"
 },
 {
 "vaca": 1216,
@@ -146,7 +157,8 @@
 "ccs_antes_painel": 4033,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-10-05"
 },
 {
 "vaca": 1571,
@@ -158,7 +170,8 @@
 "ccs_antes_painel": 40,
 "ccs_depois_painel": 110,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-09-01"
 },
 {
 "vaca": 1746,
@@ -170,7 +183,8 @@
 "ccs_antes_painel": 8126,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-05"
 },
 {
 "vaca": 1749,
@@ -182,7 +196,8 @@
 "ccs_antes_painel": 39,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-05"
 },
 {
 "vaca": 1945,
@@ -194,7 +209,8 @@
 "ccs_antes_painel": 2347,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-29"
 },
 {
 "vaca": 2108,
@@ -206,7 +222,8 @@
 "ccs_antes_painel": 1330,
 "ccs_depois_painel": 438,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-03-25"
 },
 {
 "vaca": 218,
@@ -218,7 +235,8 @@
 "ccs_antes_painel": 1855,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-04"
 },
 {
 "vaca": 2225,
@@ -230,7 +248,8 @@
 "ccs_antes_painel": 2259,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-10-11"
 },
 {
 "vaca": 2279,
@@ -242,7 +261,8 @@
 "ccs_antes_painel": 3300,
 "ccs_depois_painel": 61,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-02"
 },
 {
 "vaca": 2279,
@@ -254,7 +274,8 @@
 "ccs_antes_painel": 1669,
 "ccs_depois_painel": 1095,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-24"
 },
 {
 "vaca": 2385,
@@ -266,7 +287,8 @@
 "ccs_antes_painel": 80,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-10"
 },
 {
 "vaca": 2545,
@@ -278,7 +300,8 @@
 "ccs_antes_painel": 2123,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-04-07"
 },
 {
 "vaca": 2570,
@@ -290,7 +313,8 @@
 "ccs_antes_painel": 7058,
 "ccs_depois_painel": 4951,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-02"
 },
 {
 "vaca": 2570,
@@ -302,7 +326,8 @@
 "ccs_antes_painel": 7058,
 "ccs_depois_painel": 4951,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-06"
 },
 {
 "vaca": 2570,
@@ -314,7 +339,8 @@
 "ccs_antes_painel": 7058,
 "ccs_depois_painel": 4951,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-16"
 },
 {
 "vaca": 2643,
@@ -326,7 +352,8 @@
 "ccs_antes_painel": 911,
 "ccs_depois_painel": 9690,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-12"
 },
 {
 "vaca": 2643,
@@ -338,7 +365,8 @@
 "ccs_antes_painel": 9690,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-21"
 },
 {
 "vaca": 2730,
@@ -350,7 +378,8 @@
 "ccs_antes_painel": 21,
 "ccs_depois_painel": 18,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-02-23"
 },
 {
 "vaca": 2760,
@@ -362,7 +391,8 @@
 "ccs_antes_painel": 54,
 "ccs_depois_painel": 106,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-04"
 },
 {
 "vaca": 2760,
@@ -374,7 +404,8 @@
 "ccs_antes_painel": 106,
 "ccs_depois_painel": 1761,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-05-28"
 },
 {
 "vaca": 2760,
@@ -386,7 +417,8 @@
 "ccs_antes_painel": 106,
 "ccs_depois_painel": 1761,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-08"
 },
 {
 "vaca": 2761,
@@ -398,7 +430,8 @@
 "ccs_antes_painel": 3871,
 "ccs_depois_painel": 2880,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-28"
 },
 {
 "vaca": 2761,
@@ -410,7 +443,8 @@
 "ccs_antes_painel": 3871,
 "ccs_depois_painel": 2880,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-05"
 },
 {
 "vaca": 2761,
@@ -422,7 +456,8 @@
 "ccs_antes_painel": 3871,
 "ccs_depois_painel": 2880,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-13"
 },
 {
 "vaca": 2763,
@@ -434,7 +469,8 @@
 "ccs_antes_painel": 6,
 "ccs_depois_painel": 345,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-28"
 },
 {
 "vaca": 2800,
@@ -446,7 +482,8 @@
 "ccs_antes_painel": 168,
 "ccs_depois_painel": 484,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-24"
 },
 {
 "vaca": 2800,
@@ -458,7 +495,8 @@
 "ccs_antes_painel": 573,
 "ccs_depois_painel": 484,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-15"
 },
 {
 "vaca": 2822,
@@ -470,7 +508,8 @@
 "ccs_antes_painel": 163,
 "ccs_depois_painel": 146,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-20"
 },
 {
 "vaca": 2863,
@@ -482,7 +521,8 @@
 "ccs_antes_painel": 5789,
 "ccs_depois_painel": 42,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-30"
 },
 {
 "vaca": 2872,
@@ -494,7 +534,8 @@
 "ccs_antes_painel": 613,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-02-20"
 },
 {
 "vaca": 2885,
@@ -506,7 +547,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 404,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-24"
 },
 {
 "vaca": 2885,
@@ -518,7 +560,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 301,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-03"
 },
 {
 "vaca": 2885,
@@ -530,7 +573,8 @@
 "ccs_antes_painel": 214,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-10"
 },
 {
 "vaca": 2886,
@@ -542,7 +586,8 @@
 "ccs_antes_painel": 305,
 "ccs_depois_painel": 806,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-03-20"
 },
 {
 "vaca": 2887,
@@ -554,7 +599,8 @@
 "ccs_antes_painel": 4065,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-10-05"
 },
 {
 "vaca": 2889,
@@ -566,7 +612,8 @@
 "ccs_antes_painel": 5918,
 "ccs_depois_painel": 2944,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-05-27"
 },
 {
 "vaca": 2892,
@@ -578,7 +625,8 @@
 "ccs_antes_painel": 1066,
 "ccs_depois_painel": 1502,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-12"
 },
 {
 "vaca": 2892,
@@ -590,7 +638,8 @@
 "ccs_antes_painel": 1066,
 "ccs_depois_painel": 1543,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-25"
 },
 {
 "vaca": 2892,
@@ -602,7 +651,8 @@
 "ccs_antes_painel": 1502,
 "ccs_depois_painel": 1543,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-16"
 },
 {
 "vaca": 2892,
@@ -614,7 +664,8 @@
 "ccs_antes_painel": 1543,
 "ccs_depois_painel": 9998,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-06"
 },
 {
 "vaca": 2892,
@@ -626,7 +677,8 @@
 "ccs_antes_painel": 1543,
 "ccs_depois_painel": 3788,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-19"
 },
 {
 "vaca": 2894,
@@ -638,7 +690,8 @@
 "ccs_antes_painel": 801,
 "ccs_depois_painel": 673,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 2894,
@@ -650,7 +703,8 @@
 "ccs_antes_painel": 801,
 "ccs_depois_painel": 673,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-13"
 },
 {
 "vaca": 2904,
@@ -662,7 +716,8 @@
 "ccs_antes_painel": 596,
 "ccs_depois_painel": 1256,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-15"
 },
 {
 "vaca": 2904,
@@ -674,7 +729,8 @@
 "ccs_antes_painel": 596,
 "ccs_depois_painel": 776,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-20"
 },
 {
 "vaca": 2904,
@@ -686,7 +742,8 @@
 "ccs_antes_painel": 273,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-20"
 },
 {
 "vaca": 2924,
@@ -698,7 +755,8 @@
 "ccs_antes_painel": 1543,
 "ccs_depois_painel": 1563,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-02-15"
 },
 {
 "vaca": 2927,
@@ -710,7 +768,8 @@
 "ccs_antes_painel": 423,
 "ccs_depois_painel": 44,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-09"
 },
 {
 "vaca": 2927,
@@ -722,7 +781,8 @@
 "ccs_antes_painel": 423,
 "ccs_depois_painel": 44,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 2927,
@@ -734,7 +794,8 @@
 "ccs_antes_painel": 48,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-10-05"
 },
 {
 "vaca": 2931,
@@ -746,7 +807,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 4298,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-05"
 },
 {
 "vaca": 2931,
@@ -758,7 +820,8 @@
 "ccs_antes_painel": 4678,
 "ccs_depois_painel": 3188,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-11"
 },
 {
 "vaca": 2931,
@@ -770,7 +833,8 @@
 "ccs_antes_painel": 4079,
 "ccs_depois_painel": 1143,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-25"
 },
 {
 "vaca": 2931,
@@ -782,7 +846,8 @@
 "ccs_antes_painel": 2890,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-09-22"
 },
 {
 "vaca": 2935,
@@ -794,7 +859,8 @@
 "ccs_antes_painel": 1091,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-10-01"
 },
 {
 "vaca": 2936,
@@ -806,7 +872,8 @@
 "ccs_antes_painel": 323,
 "ccs_depois_painel": 766,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-09"
 },
 {
 "vaca": 2944,
@@ -818,7 +885,8 @@
 "ccs_antes_painel": 1081,
 "ccs_depois_painel": 451,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-03-02"
 },
 {
 "vaca": 2954,
@@ -830,7 +898,8 @@
 "ccs_antes_painel": 456,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-09"
 },
 {
 "vaca": 2971,
@@ -842,7 +911,8 @@
 "ccs_antes_painel": 2484,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-24"
 },
 {
 "vaca": 2981,
@@ -854,7 +924,8 @@
 "ccs_antes_painel": 2807,
 "ccs_depois_painel": 4991,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-13"
 },
 {
 "vaca": 2981,
@@ -866,7 +937,8 @@
 "ccs_antes_painel": 9315,
 "ccs_depois_painel": 1000,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-12"
 },
 {
 "vaca": 2981,
@@ -878,7 +950,8 @@
 "ccs_antes_painel": 9315,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-28"
 },
 {
 "vaca": 2988,
@@ -890,7 +963,8 @@
 "ccs_antes_painel": 199,
 "ccs_depois_painel": 1221,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-09"
 },
 {
 "vaca": 2988,
@@ -902,7 +976,8 @@
 "ccs_antes_painel": 397,
 "ccs_depois_painel": 133,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-02"
 },
 {
 "vaca": 2996,
@@ -914,7 +989,8 @@
 "ccs_antes_painel": 823,
 "ccs_depois_painel": 1340,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-03-11"
 },
 {
 "vaca": 2997,
@@ -926,7 +1002,8 @@
 "ccs_antes_painel": 2283,
 "ccs_depois_painel": 486,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-12"
 },
 {
 "vaca": 3004,
@@ -938,7 +1015,8 @@
 "ccs_antes_painel": 200,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-06"
 },
 {
 "vaca": 3007,
@@ -950,7 +1028,8 @@
 "ccs_antes_painel": 2456,
 "ccs_depois_painel": 1328,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-03-31"
 },
 {
 "vaca": 3007,
@@ -962,7 +1041,8 @@
 "ccs_antes_painel": 2456,
 "ccs_depois_painel": 1328,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-04-12"
 },
 {
 "vaca": 3008,
@@ -974,7 +1054,8 @@
 "ccs_antes_painel": 2008,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-04"
 },
 {
 "vaca": 3008,
@@ -986,7 +1067,8 @@
 "ccs_antes_painel": 2008,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-12"
 },
 {
 "vaca": 3008,
@@ -998,7 +1080,8 @@
 "ccs_antes_painel": 2008,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-13"
 },
 {
 "vaca": 3020,
@@ -1010,7 +1093,8 @@
 "ccs_antes_painel": 219,
 "ccs_depois_painel": 190,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-04"
 },
 {
 "vaca": 3020,
@@ -1022,7 +1106,8 @@
 "ccs_antes_painel": 219,
 "ccs_depois_painel": 190,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-09"
 },
 {
 "vaca": 3025,
@@ -1034,7 +1119,8 @@
 "ccs_antes_painel": 138,
 "ccs_depois_painel": 5422,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-17"
 },
 {
 "vaca": 3034,
@@ -1046,7 +1132,8 @@
 "ccs_antes_painel": 115,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-06"
 },
 {
 "vaca": 3050,
@@ -1058,7 +1145,8 @@
 "ccs_antes_painel": 1254,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-10-05"
 },
 {
 "vaca": 3064,
@@ -1070,7 +1158,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 2610,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-05-24"
 },
 {
 "vaca": 3064,
@@ -1082,7 +1171,8 @@
 "ccs_antes_painel": 5550,
 "ccs_depois_painel": 5142,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-30"
 },
 {
 "vaca": 3072,
@@ -1094,7 +1184,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 115,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-24"
 },
 {
 "vaca": 3110,
@@ -1106,7 +1197,8 @@
 "ccs_antes_painel": 5266,
 "ccs_depois_painel": 1037,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-02"
 },
 {
 "vaca": 3110,
@@ -1118,7 +1210,8 @@
 "ccs_antes_painel": 5266,
 "ccs_depois_painel": 1037,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-14"
 },
 {
 "vaca": 3112,
@@ -1130,7 +1223,8 @@
 "ccs_antes_painel": 267,
 "ccs_depois_painel": 916,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-09"
 },
 {
 "vaca": 3112,
@@ -1142,7 +1236,8 @@
 "ccs_antes_painel": 3101,
 "ccs_depois_painel": 4346,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-02"
 },
 {
 "vaca": 3112,
@@ -1154,7 +1249,8 @@
 "ccs_antes_painel": 3101,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-21"
 },
 {
 "vaca": 3122,
@@ -1166,7 +1262,8 @@
 "ccs_antes_painel": 167,
 "ccs_depois_painel": 27,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-22"
 },
 {
 "vaca": 3122,
@@ -1178,7 +1275,8 @@
 "ccs_antes_painel": 3764,
 "ccs_depois_painel": 27,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-30"
 },
 {
 "vaca": 3122,
@@ -1190,7 +1288,8 @@
 "ccs_antes_painel": 27,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-28"
 },
 {
 "vaca": 3146,
@@ -1202,7 +1301,8 @@
 "ccs_antes_painel": 248,
 "ccs_depois_painel": 9998,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-10"
 },
 {
 "vaca": 3146,
@@ -1214,7 +1314,8 @@
 "ccs_antes_painel": 9998,
 "ccs_depois_painel": 2980,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-06-17"
 },
 {
 "vaca": 3146,
@@ -1226,7 +1327,8 @@
 "ccs_antes_painel": 9998,
 "ccs_depois_painel": 8638,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-20"
 },
 {
 "vaca": 3146,
@@ -1238,7 +1340,8 @@
 "ccs_antes_painel": 2980,
 "ccs_depois_painel": 8638,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-27"
 },
 {
 "vaca": 3149,
@@ -1250,7 +1353,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 6139,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-05-28"
 },
 {
 "vaca": 3158,
@@ -1262,7 +1366,8 @@
 "ccs_antes_painel": 1671,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-19"
 },
 {
 "vaca": 3159,
@@ -1274,7 +1379,8 @@
 "ccs_antes_painel": 192,
 "ccs_depois_painel": 1011,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-16"
 },
 {
 "vaca": 3160,
@@ -1286,7 +1392,8 @@
 "ccs_antes_painel": 73,
 "ccs_depois_painel": 11,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-26"
 },
 {
 "vaca": 3169,
@@ -1298,7 +1405,8 @@
 "ccs_antes_painel": 173,
 "ccs_depois_painel": 67,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-06-08"
 },
 {
 "vaca": 3174,
@@ -1310,7 +1418,8 @@
 "ccs_antes_painel": 97,
 "ccs_depois_painel": 1780,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-08"
 },
 {
 "vaca": 3177,
@@ -1322,7 +1431,8 @@
 "ccs_antes_painel": 1108,
 "ccs_depois_painel": 262,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-04-27"
 },
 {
 "vaca": 3177,
@@ -1334,7 +1444,8 @@
 "ccs_antes_painel": 262,
 "ccs_depois_painel": 321,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-15"
 },
 {
 "vaca": 3190,
@@ -1346,7 +1457,8 @@
 "ccs_antes_painel": 32,
 "ccs_depois_painel": 16,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-03-21"
 },
 {
 "vaca": 3193,
@@ -1358,7 +1470,8 @@
 "ccs_antes_painel": 2548,
 "ccs_depois_painel": 1073,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-23"
 },
 {
 "vaca": 3193,
@@ -1370,7 +1483,8 @@
 "ccs_antes_painel": 545,
 "ccs_depois_painel": 526,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-21"
 },
 {
 "vaca": 3194,
@@ -1382,7 +1496,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-07-13"
 },
 {
 "vaca": 3210,
@@ -1394,7 +1509,8 @@
 "ccs_antes_painel": 1370,
 "ccs_depois_painel": 987,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-16"
 },
 {
 "vaca": 3223,
@@ -1406,7 +1522,8 @@
 "ccs_antes_painel": 471,
 "ccs_depois_painel": 2026,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-13"
 },
 {
 "vaca": 3223,
@@ -1418,7 +1535,8 @@
 "ccs_antes_painel": 471,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-18"
 },
 {
 "vaca": 3223,
@@ -1430,7 +1548,8 @@
 "ccs_antes_painel": 471,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-26"
 },
 {
 "vaca": 3232,
@@ -1442,7 +1561,8 @@
 "ccs_antes_painel": 114,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-03-24"
 },
 {
 "vaca": 3232,
@@ -1454,7 +1574,8 @@
 "ccs_antes_painel": 114,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-05"
 },
 {
 "vaca": 3246,
@@ -1466,7 +1587,8 @@
 "ccs_antes_painel": 1905,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-24"
 },
 {
 "vaca": 3246,
@@ -1478,7 +1600,8 @@
 "ccs_antes_painel": 1905,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-30"
 },
 {
 "vaca": 3251,
@@ -1490,7 +1613,8 @@
 "ccs_antes_painel": 103,
 "ccs_depois_painel": 1723,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-23"
 },
 {
 "vaca": 3252,
@@ -1502,7 +1626,8 @@
 "ccs_antes_painel": 302,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-02-27"
 },
 {
 "vaca": 3254,
@@ -1514,7 +1639,8 @@
 "ccs_antes_painel": 1956,
 "ccs_depois_painel": 333,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-27"
 },
 {
 "vaca": 3261,
@@ -1526,7 +1652,8 @@
 "ccs_antes_painel": 21,
 "ccs_depois_painel": 673,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-03-09"
 },
 {
 "vaca": 3262,
@@ -1538,7 +1665,8 @@
 "ccs_antes_painel": 1308,
 "ccs_depois_painel": 269,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-04"
 },
 {
 "vaca": 3288,
@@ -1550,7 +1678,8 @@
 "ccs_antes_painel": 27,
 "ccs_depois_painel": 680,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-04-23"
 },
 {
 "vaca": 3295,
@@ -1562,7 +1691,8 @@
 "ccs_antes_painel": 297,
 "ccs_depois_painel": 137,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-12"
 },
 {
 "vaca": 3295,
@@ -1574,7 +1704,8 @@
 "ccs_antes_painel": 137,
 "ccs_depois_painel": 57,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-13"
 },
 {
 "vaca": 3305,
@@ -1586,7 +1717,8 @@
 "ccs_antes_painel": 4605,
 "ccs_depois_painel": 6790,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-04-07"
 },
 {
 "vaca": 3306,
@@ -1598,7 +1730,8 @@
 "ccs_antes_painel": 463,
 "ccs_depois_painel": 312,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-04"
 },
 {
 "vaca": 3317,
@@ -1610,7 +1743,8 @@
 "ccs_antes_painel": 456,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-24"
 },
 {
 "vaca": 3330,
@@ -1622,7 +1756,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 917,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-31"
 },
 {
 "vaca": 3334,
@@ -1634,7 +1769,8 @@
 "ccs_antes_painel": 197,
 "ccs_depois_painel": 273,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 3334,
@@ -1646,7 +1782,8 @@
 "ccs_antes_painel": 197,
 "ccs_depois_painel": 273,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-17"
 },
 {
 "vaca": 3341,
@@ -1658,7 +1795,8 @@
 "ccs_antes_painel": 7,
 "ccs_depois_painel": 1221,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-19"
 },
 {
 "vaca": 3341,
@@ -1670,7 +1808,8 @@
 "ccs_antes_painel": 1554,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-22"
 },
 {
 "vaca": 3363,
@@ -1682,7 +1821,8 @@
 "ccs_antes_painel": 3269,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-02"
 },
 {
 "vaca": 3370,
@@ -1694,7 +1834,8 @@
 "ccs_antes_painel": 4519,
 "ccs_depois_painel": 2700,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-31"
 },
 {
 "vaca": 3372,
@@ -1706,7 +1847,8 @@
 "ccs_antes_painel": 155,
 "ccs_depois_painel": 245,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-04"
 },
 {
 "vaca": 3372,
@@ -1718,7 +1860,8 @@
 "ccs_antes_painel": 245,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-25"
 },
 {
 "vaca": 3383,
@@ -1730,7 +1873,8 @@
 "ccs_antes_painel": 843,
 "ccs_depois_painel": 1246,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-27"
 },
 {
 "vaca": 3383,
@@ -1742,7 +1886,8 @@
 "ccs_antes_painel": 843,
 "ccs_depois_painel": 1246,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 3385,
@@ -1754,7 +1899,8 @@
 "ccs_antes_painel": 375,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-02"
 },
 {
 "vaca": 3385,
@@ -1766,7 +1912,8 @@
 "ccs_antes_painel": 375,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-05"
 },
 {
 "vaca": 3397,
@@ -1778,7 +1925,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 132,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-15"
 },
 {
 "vaca": 3400,
@@ -1790,7 +1938,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-03-14"
 },
 {
 "vaca": 3402,
@@ -1802,7 +1951,8 @@
 "ccs_antes_painel": 22,
 "ccs_depois_painel": 3093,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-22"
 },
 {
 "vaca": 3402,
@@ -1814,7 +1964,8 @@
 "ccs_antes_painel": 1396,
 "ccs_depois_painel": 3093,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-08"
 },
 {
 "vaca": 3417,
@@ -1826,7 +1977,8 @@
 "ccs_antes_painel": 64,
 "ccs_depois_painel": 71,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-25"
 },
 {
 "vaca": 3421,
@@ -1838,7 +1990,8 @@
 "ccs_antes_painel": 137,
 "ccs_depois_painel": 827,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-24"
 },
 {
 "vaca": 3422,
@@ -1850,7 +2003,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 286,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-29"
 },
 {
 "vaca": 3423,
@@ -1862,7 +2016,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 2004,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-10"
 },
 {
 "vaca": 3423,
@@ -1874,7 +2029,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 2004,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-20"
 },
 {
 "vaca": 3428,
@@ -1886,7 +2042,8 @@
 "ccs_antes_painel": 1172,
 "ccs_depois_painel": 7343,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-02-16"
 },
 {
 "vaca": 3428,
@@ -1898,7 +2055,8 @@
 "ccs_antes_painel": 1172,
 "ccs_depois_painel": 2951,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-02-23"
 },
 {
 "vaca": 3433,
@@ -1910,7 +2068,8 @@
 "ccs_antes_painel": 80,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-05-06"
 },
 {
 "vaca": 3437,
@@ -1922,7 +2081,8 @@
 "ccs_antes_painel": 85,
 "ccs_depois_painel": 295,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-04-05"
 },
 {
 "vaca": 3439,
@@ -1934,7 +2094,8 @@
 "ccs_antes_painel": 1718,
 "ccs_depois_painel": 1057,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-15"
 },
 {
 "vaca": 3449,
@@ -1946,7 +2107,8 @@
 "ccs_antes_painel": 821,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-15"
 },
 {
 "vaca": 3450,
@@ -1958,7 +2120,8 @@
 "ccs_antes_painel": 120,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-24"
 },
 {
 "vaca": 3456,
@@ -1970,7 +2133,8 @@
 "ccs_antes_painel": 242,
 "ccs_depois_painel": 352,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-05"
 },
 {
 "vaca": 3459,
@@ -1982,7 +2146,8 @@
 "ccs_antes_painel": 4049,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-24"
 },
 {
 "vaca": 3459,
@@ -1994,7 +2159,8 @@
 "ccs_antes_painel": 6951,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-09-30"
 },
 {
 "vaca": 3471,
@@ -2006,7 +2172,8 @@
 "ccs_antes_painel": 5618,
 "ccs_depois_painel": 96,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-30"
 },
 {
 "vaca": 3472,
@@ -2018,7 +2185,8 @@
 "ccs_antes_painel": 7212,
 "ccs_depois_painel": 8714,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-06"
 },
 {
 "vaca": 3472,
@@ -2030,7 +2198,8 @@
 "ccs_antes_painel": 7212,
 "ccs_depois_painel": 8714,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-06"
 },
 {
 "vaca": 3478,
@@ -2042,7 +2211,8 @@
 "ccs_antes_painel": 5304,
 "ccs_depois_painel": 382,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-17"
 },
 {
 "vaca": 3480,
@@ -2054,7 +2224,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 944,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-10"
 },
 {
 "vaca": 3480,
@@ -2066,7 +2237,8 @@
 "ccs_antes_painel": 942,
 "ccs_depois_painel": 605,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-01"
 },
 {
 "vaca": 3480,
@@ -2078,7 +2250,8 @@
 "ccs_antes_painel": 942,
 "ccs_depois_painel": 605,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-24"
 },
 {
 "vaca": 3480,
@@ -2090,7 +2263,8 @@
 "ccs_antes_painel": 942,
 "ccs_depois_painel": 605,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-27"
 },
 {
 "vaca": 3480,
@@ -2102,7 +2276,8 @@
 "ccs_antes_painel": 942,
 "ccs_depois_painel": 605,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-08"
 },
 {
 "vaca": 3483,
@@ -2114,7 +2289,8 @@
 "ccs_antes_painel": 789,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-03-16"
 },
 {
 "vaca": 3483,
@@ -2126,7 +2302,8 @@
 "ccs_antes_painel": 4148,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-23"
 },
 {
 "vaca": 3483,
@@ -2138,7 +2315,8 @@
 "ccs_antes_painel": 4148,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-04-05"
 },
 {
 "vaca": 3493,
@@ -2150,7 +2328,8 @@
 "ccs_antes_painel": 729,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-24"
 },
 {
 "vaca": 3494,
@@ -2162,7 +2341,8 @@
 "ccs_antes_painel": 306,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-20"
 },
 {
 "vaca": 3500,
@@ -2174,7 +2354,8 @@
 "ccs_antes_painel": 12,
 "ccs_depois_painel": 225,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-03"
 },
 {
 "vaca": 3501,
@@ -2186,7 +2367,8 @@
 "ccs_antes_painel": 157,
 "ccs_depois_painel": 33,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-06-09"
 },
 {
 "vaca": 3507,
@@ -2198,7 +2380,8 @@
 "ccs_antes_painel": 69,
 "ccs_depois_painel": 271,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-07"
 },
 {
 "vaca": 3507,
@@ -2210,7 +2393,8 @@
 "ccs_antes_painel": 69,
 "ccs_depois_painel": 271,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-16"
 },
 {
 "vaca": 3511,
@@ -2222,7 +2406,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 80,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-05"
 },
 {
 "vaca": 3515,
@@ -2234,7 +2419,8 @@
 "ccs_antes_painel": 46,
 "ccs_depois_painel": 220,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 3520,
@@ -2246,7 +2432,8 @@
 "ccs_antes_painel": 8,
 "ccs_depois_painel": 63,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-12"
 },
 {
 "vaca": 3520,
@@ -2258,7 +2445,8 @@
 "ccs_antes_painel": 1209,
 "ccs_depois_painel": 80,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-02"
 },
 {
 "vaca": 3526,
@@ -2270,7 +2458,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 164,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-19"
 },
 {
 "vaca": 3528,
@@ -2282,7 +2471,8 @@
 "ccs_antes_painel": 1569,
 "ccs_depois_painel": 4999,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-25"
 },
 {
 "vaca": 3551,
@@ -2294,7 +2484,8 @@
 "ccs_antes_painel": 79,
 "ccs_depois_painel": 89,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-13"
 },
 {
 "vaca": 3554,
@@ -2306,7 +2497,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 1034,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-21"
 },
 {
 "vaca": 3554,
@@ -2318,7 +2510,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 1034,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-29"
 },
 {
 "vaca": 3554,
@@ -2330,7 +2523,8 @@
 "ccs_antes_painel": 49,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-21"
 },
 {
 "vaca": 3558,
@@ -2342,7 +2536,8 @@
 "ccs_antes_painel": 108,
 "ccs_depois_painel": 115,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-11"
 },
 {
 "vaca": 3560,
@@ -2354,7 +2549,8 @@
 "ccs_antes_painel": 229,
 "ccs_depois_painel": 279,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 3573,
@@ -2366,7 +2562,8 @@
 "ccs_antes_painel": 66,
 "ccs_depois_painel": 349,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 3575,
@@ -2378,7 +2575,8 @@
 "ccs_antes_painel": 1830,
 "ccs_depois_painel": 220,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-30"
 },
 {
 "vaca": 3576,
@@ -2390,7 +2588,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 3138,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-03"
 },
 {
 "vaca": 3576,
@@ -2402,7 +2601,8 @@
 "ccs_antes_painel": 2505,
 "ccs_depois_painel": 3138,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-10"
 },
 {
 "vaca": 3579,
@@ -2414,7 +2614,8 @@
 "ccs_antes_painel": 1862,
 "ccs_depois_painel": 3094,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-12"
 },
 {
 "vaca": 3579,
@@ -2426,7 +2627,8 @@
 "ccs_antes_painel": 1862,
 "ccs_depois_painel": 3094,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-16"
 },
 {
 "vaca": 3579,
@@ -2438,7 +2640,8 @@
 "ccs_antes_painel": 1862,
 "ccs_depois_painel": 2189,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-25"
 },
 {
 "vaca": 3591,
@@ -2450,7 +2653,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 233,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-16"
 },
 {
 "vaca": 3592,
@@ -2462,7 +2666,8 @@
 "ccs_antes_painel": 201,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-05"
 },
 {
 "vaca": 3594,
@@ -2474,7 +2679,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 2971,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-20"
 },
 {
 "vaca": 3596,
@@ -2486,7 +2692,8 @@
 "ccs_antes_painel": 2952,
 "ccs_depois_painel": 146,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-14"
 },
 {
 "vaca": 3597,
@@ -2498,7 +2705,8 @@
 "ccs_antes_painel": 16,
 "ccs_depois_painel": 101,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-17"
 },
 {
 "vaca": 3613,
@@ -2510,7 +2718,8 @@
 "ccs_antes_painel": 73,
 "ccs_depois_painel": 1442,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-13"
 },
 {
 "vaca": 3613,
@@ -2522,7 +2731,8 @@
 "ccs_antes_painel": 73,
 "ccs_depois_painel": 21,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-25"
 },
 {
 "vaca": 3615,
@@ -2534,7 +2744,8 @@
 "ccs_antes_painel": 4797,
 "ccs_depois_painel": 4888,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-28"
 },
 {
 "vaca": 3615,
@@ -2546,7 +2757,8 @@
 "ccs_antes_painel": 4797,
 "ccs_depois_painel": 4888,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-06"
 },
 {
 "vaca": 3615,
@@ -2558,7 +2770,8 @@
 "ccs_antes_painel": 4888,
 "ccs_depois_painel": 318,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-03-19"
 },
 {
 "vaca": 3617,
@@ -2570,7 +2783,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-04-22"
 },
 {
 "vaca": 3617,
@@ -2582,7 +2796,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-05-26"
 },
 {
 "vaca": 3624,
@@ -2594,7 +2809,8 @@
 "ccs_antes_painel": 291,
 "ccs_depois_painel": 814,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-15"
 },
 {
 "vaca": 3627,
@@ -2606,7 +2822,8 @@
 "ccs_antes_painel": 150,
 "ccs_depois_painel": 125,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-11"
 },
 {
 "vaca": 3627,
@@ -2618,7 +2835,8 @@
 "ccs_antes_painel": 125,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-18"
 },
 {
 "vaca": 3637,
@@ -2630,7 +2848,8 @@
 "ccs_antes_painel": 194,
 "ccs_depois_painel": 285,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-24"
 },
 {
 "vaca": 3637,
@@ -2642,7 +2861,8 @@
 "ccs_antes_painel": 4267,
 "ccs_depois_painel": 285,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-01"
 },
 {
 "vaca": 3666,
@@ -2654,7 +2874,8 @@
 "ccs_antes_painel": 10,
 "ccs_depois_painel": 66,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-22"
 },
 {
 "vaca": 3680,
@@ -2666,7 +2887,8 @@
 "ccs_antes_painel": 83,
 "ccs_depois_painel": 155,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-03-20"
 },
 {
 "vaca": 3680,
@@ -2678,7 +2900,8 @@
 "ccs_antes_painel": 4329,
 "ccs_depois_painel": 155,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-04-05"
 },
 {
 "vaca": 3688,
@@ -2690,7 +2913,8 @@
 "ccs_antes_painel": 1253,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-09-30"
 },
 {
 "vaca": 3688,
@@ -2702,7 +2926,8 @@
 "ccs_antes_painel": 1253,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-10-04"
 },
 {
 "vaca": 3688,
@@ -2714,7 +2939,8 @@
 "ccs_antes_painel": 1253,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-10-11"
 },
 {
 "vaca": 3691,
@@ -2726,7 +2952,8 @@
 "ccs_antes_painel": 39,
 "ccs_depois_painel": 421,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-22"
 },
 {
 "vaca": 3691,
@@ -2738,7 +2965,8 @@
 "ccs_antes_painel": 39,
 "ccs_depois_painel": 421,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-05"
 },
 {
 "vaca": 3691,
@@ -2750,7 +2978,8 @@
 "ccs_antes_painel": 39,
 "ccs_depois_painel": 49,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-20"
 },
 {
 "vaca": 3718,
@@ -2762,7 +2991,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 410,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-11"
 },
 {
 "vaca": 3723,
@@ -2774,7 +3004,8 @@
 "ccs_antes_painel": 268,
 "ccs_depois_painel": 42,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-13"
 },
 {
 "vaca": 3728,
@@ -2786,7 +3017,8 @@
 "ccs_antes_painel": 453,
 "ccs_depois_painel": 2640,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 3734,
@@ -2798,7 +3030,8 @@
 "ccs_antes_painel": 3119,
 "ccs_depois_painel": 343,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-14"
 },
 {
 "vaca": 3736,
@@ -2810,7 +3043,8 @@
 "ccs_antes_painel": 702,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-10-03"
 },
 {
 "vaca": 3739,
@@ -2822,7 +3056,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 944,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-30"
 },
 {
 "vaca": 3740,
@@ -2834,7 +3069,8 @@
 "ccs_antes_painel": 31,
 "ccs_depois_painel": 162,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-17"
 },
 {
 "vaca": 3743,
@@ -2846,7 +3082,8 @@
 "ccs_antes_painel": 8,
 "ccs_depois_painel": 32,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 3743,
@@ -2858,7 +3095,8 @@
 "ccs_antes_painel": 244,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-28"
 },
 {
 "vaca": 3746,
@@ -2870,7 +3108,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 3112,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-28"
 },
 {
 "vaca": 3746,
@@ -2882,7 +3121,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 2067,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-08"
 },
 {
 "vaca": 3753,
@@ -2894,7 +3134,8 @@
 "ccs_antes_painel": 1770,
 "ccs_depois_painel": 3461,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-29"
 },
 {
 "vaca": 3754,
@@ -2906,7 +3147,8 @@
 "ccs_antes_painel": 5453,
 "ccs_depois_painel": 46,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-28"
 },
 {
 "vaca": 3754,
@@ -2918,7 +3160,8 @@
 "ccs_antes_painel": 46,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-25"
 },
 {
 "vaca": 3759,
@@ -2930,7 +3173,8 @@
 "ccs_antes_painel": 19,
 "ccs_depois_painel": 70,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 3761,
@@ -2942,7 +3186,8 @@
 "ccs_antes_painel": 10,
 "ccs_depois_painel": 4698,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-02-24"
 },
 {
 "vaca": 3761,
@@ -2954,7 +3199,8 @@
 "ccs_antes_painel": 10,
 "ccs_depois_painel": 4698,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-03-04"
 },
 {
 "vaca": 3767,
@@ -2966,7 +3212,8 @@
 "ccs_antes_painel": 27,
 "ccs_depois_painel": 46,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-19"
 },
 {
 "vaca": 3767,
@@ -2978,7 +3225,8 @@
 "ccs_antes_painel": 27,
 "ccs_depois_painel": 46,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-28"
 },
 {
 "vaca": 3767,
@@ -2990,7 +3238,8 @@
 "ccs_antes_painel": 503,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-21"
 },
 {
 "vaca": 3786,
@@ -3002,7 +3251,8 @@
 "ccs_antes_painel": 187,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-18"
 },
 {
 "vaca": 3803,
@@ -3014,7 +3264,8 @@
 "ccs_antes_painel": 11,
 "ccs_depois_painel": 1879,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-08"
 },
 {
 "vaca": 3804,
@@ -3026,7 +3277,8 @@
 "ccs_antes_painel": 21,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-09"
 },
 {
 "vaca": 3805,
@@ -3038,7 +3290,8 @@
 "ccs_antes_painel": 281,
 "ccs_depois_painel": 66,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-04-20"
 },
 {
 "vaca": 3805,
@@ -3050,7 +3303,8 @@
 "ccs_antes_painel": 4199,
 "ccs_depois_painel": 210,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-14"
 },
 {
 "vaca": 3805,
@@ -3062,7 +3316,8 @@
 "ccs_antes_painel": 4199,
 "ccs_depois_painel": 210,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-06"
 },
 {
 "vaca": 3825,
@@ -3074,7 +3329,8 @@
 "ccs_antes_painel": 78,
 "ccs_depois_painel": 401,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-17"
 },
 {
 "vaca": 3826,
@@ -3086,7 +3342,8 @@
 "ccs_antes_painel": 13,
 "ccs_depois_painel": 61,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-24"
 },
 {
 "vaca": 3833,
@@ -3098,7 +3355,8 @@
 "ccs_antes_painel": 63,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-29"
 },
 {
 "vaca": 3834,
@@ -3110,7 +3368,8 @@
 "ccs_antes_painel": 466,
 "ccs_depois_painel": 311,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-15"
 },
 {
 "vaca": 3841,
@@ -3122,7 +3381,8 @@
 "ccs_antes_painel": 437,
 "ccs_depois_painel": 3866,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-12"
 },
 {
 "vaca": 3846,
@@ -3134,7 +3394,8 @@
 "ccs_antes_painel": 614,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-04-23"
 },
 {
 "vaca": 3846,
@@ -3146,7 +3407,8 @@
 "ccs_antes_painel": 1666,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-04-30"
 },
 {
 "vaca": 3852,
@@ -3158,7 +3420,8 @@
 "ccs_antes_painel": 6,
 "ccs_depois_painel": 9998,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-17"
 },
 {
 "vaca": 3852,
@@ -3170,7 +3433,8 @@
 "ccs_antes_painel": 6,
 "ccs_depois_painel": 270,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-01"
 },
 {
 "vaca": 3852,
@@ -3182,7 +3446,8 @@
 "ccs_antes_painel": 9998,
 "ccs_depois_painel": 190,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-30"
 },
 {
 "vaca": 3852,
@@ -3194,7 +3459,8 @@
 "ccs_antes_painel": 9998,
 "ccs_depois_painel": 270,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-09"
 },
 {
 "vaca": 3854,
@@ -3206,7 +3472,8 @@
 "ccs_antes_painel": 2474,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-05"
 },
 {
 "vaca": 3858,
@@ -3218,7 +3485,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 63,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-28"
 },
 {
 "vaca": 3858,
@@ -3230,7 +3498,8 @@
 "ccs_antes_painel": 246,
 "ccs_depois_painel": 48,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-05"
 },
 {
 "vaca": 3858,
@@ -3242,7 +3511,8 @@
 "ccs_antes_painel": 8516,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-09-30"
 },
 {
 "vaca": 3862,
@@ -3254,7 +3524,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-11"
 },
 {
 "vaca": 3870,
@@ -3266,7 +3537,8 @@
 "ccs_antes_painel": 566,
 "ccs_depois_painel": 1251,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-04-08"
 },
 {
 "vaca": 3870,
@@ -3278,7 +3550,8 @@
 "ccs_antes_painel": 5627,
 "ccs_depois_painel": 1677,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-26"
 },
 {
 "vaca": 3881,
@@ -3290,7 +3563,8 @@
 "ccs_antes_painel": 1159,
 "ccs_depois_painel": 2112,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-05-12"
 },
 {
 "vaca": 3881,
@@ -3302,7 +3576,8 @@
 "ccs_antes_painel": 1159,
 "ccs_depois_painel": 905,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-05-26"
 },
 {
 "vaca": 3882,
@@ -3314,7 +3589,8 @@
 "ccs_antes_painel": 1008,
 "ccs_depois_painel": 2134,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-24"
 },
 {
 "vaca": 3885,
@@ -3326,7 +3602,8 @@
 "ccs_antes_painel": 994,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-10-01"
 },
 {
 "vaca": 3896,
@@ -3338,7 +3615,8 @@
 "ccs_antes_painel": 666,
 "ccs_depois_painel": 130,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-06-26"
 },
 {
 "vaca": 3902,
@@ -3350,7 +3628,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-20"
 },
 {
 "vaca": 3905,
@@ -3362,7 +3641,8 @@
 "ccs_antes_painel": 924,
 "ccs_depois_painel": 1305,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-12"
 },
 {
 "vaca": 3906,
@@ -3374,7 +3654,8 @@
 "ccs_antes_painel": 4397,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-28"
 },
 {
 "vaca": 3908,
@@ -3386,7 +3667,8 @@
 "ccs_antes_painel": 123,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-22"
 },
 {
 "vaca": 3923,
@@ -3398,7 +3680,8 @@
 "ccs_antes_painel": 223,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-24"
 },
 {
 "vaca": 3923,
@@ -3410,7 +3693,8 @@
 "ccs_antes_painel": 223,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-01"
 },
 {
 "vaca": 3927,
@@ -3422,7 +3706,8 @@
 "ccs_antes_painel": 187,
 "ccs_depois_painel": 1965,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-10"
 },
 {
 "vaca": 3930,
@@ -3434,7 +3719,8 @@
 "ccs_antes_painel": 22,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-06-27"
 },
 {
 "vaca": 3933,
@@ -3446,7 +3732,8 @@
 "ccs_antes_painel": 4227,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-10-02"
 },
 {
 "vaca": 3935,
@@ -3458,7 +3745,8 @@
 "ccs_antes_painel": 72,
 "ccs_depois_painel": 289,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-02-14"
 },
 {
 "vaca": 3935,
@@ -3470,7 +3758,8 @@
 "ccs_antes_painel": 72,
 "ccs_depois_painel": 289,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-02-23"
 },
 {
 "vaca": 3935,
@@ -3482,7 +3771,8 @@
 "ccs_antes_painel": 51,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-10-02"
 },
 {
 "vaca": 3938,
@@ -3494,7 +3784,8 @@
 "ccs_antes_painel": 13,
 "ccs_depois_painel": 254,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-27"
 },
 {
 "vaca": 3940,
@@ -3506,7 +3797,8 @@
 "ccs_antes_painel": 86,
 "ccs_depois_painel": 3111,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-04-19"
 },
 {
 "vaca": 3940,
@@ -3518,7 +3810,8 @@
 "ccs_antes_painel": 1892,
 "ccs_depois_painel": 3111,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 3950,
@@ -3530,7 +3823,8 @@
 "ccs_antes_painel": 1690,
 "ccs_depois_painel": 2454,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-30"
 },
 {
 "vaca": 3950,
@@ -3542,7 +3836,8 @@
 "ccs_antes_painel": 1690,
 "ccs_depois_painel": 2454,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-04"
 },
 {
 "vaca": 3950,
@@ -3554,7 +3849,8 @@
 "ccs_antes_painel": 2454,
 "ccs_depois_painel": 1538,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-01"
 },
 {
 "vaca": 3976,
@@ -3566,7 +3862,8 @@
 "ccs_antes_painel": 8,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-02-22"
 },
 {
 "vaca": 3989,
@@ -3578,7 +3875,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 3912,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-04-10"
 },
 {
 "vaca": 3989,
@@ -3590,7 +3888,8 @@
 "ccs_antes_painel": 3912,
 "ccs_depois_painel": 3874,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-02"
 },
 {
 "vaca": 3989,
@@ -3602,7 +3901,8 @@
 "ccs_antes_painel": 3874,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-29"
 },
 {
 "vaca": 3990,
@@ -3614,7 +3914,8 @@
 "ccs_antes_painel": 64,
 "ccs_depois_painel": 186,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-03-10"
 },
 {
 "vaca": 4002,
@@ -3626,7 +3927,8 @@
 "ccs_antes_painel": 12,
 "ccs_depois_painel": 361,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-25"
 },
 {
 "vaca": 4002,
@@ -3638,7 +3940,8 @@
 "ccs_antes_painel": 2152,
 "ccs_depois_painel": 37,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-14"
 },
 {
 "vaca": 4002,
@@ -3650,7 +3953,8 @@
 "ccs_antes_painel": 2152,
 "ccs_depois_painel": 37,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-21"
 },
 {
 "vaca": 4006,
@@ -3662,7 +3966,8 @@
 "ccs_antes_painel": 1064,
 "ccs_depois_painel": 263,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-22"
 },
 {
 "vaca": 4006,
@@ -3674,7 +3979,8 @@
 "ccs_antes_painel": 1886,
 "ccs_depois_painel": 263,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-05-15"
 },
 {
 "vaca": 4014,
@@ -3686,7 +3992,8 @@
 "ccs_antes_painel": 213,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-20"
 },
 {
 "vaca": 4017,
@@ -3698,7 +4005,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 235,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-31"
 },
 {
 "vaca": 4018,
@@ -3710,7 +4018,8 @@
 "ccs_antes_painel": 8194,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-30"
 },
 {
 "vaca": 4026,
@@ -3722,7 +4031,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 416,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-24"
 },
 {
 "vaca": 4026,
@@ -3734,7 +4044,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 416,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-30"
 },
 {
 "vaca": 4026,
@@ -3746,7 +4057,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 151,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-08"
 },
 {
 "vaca": 4028,
@@ -3758,7 +4070,8 @@
 "ccs_antes_painel": 3423,
 "ccs_depois_painel": 617,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-26"
 },
 {
 "vaca": 4028,
@@ -3770,7 +4083,8 @@
 "ccs_antes_painel": 3423,
 "ccs_depois_painel": 617,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-01"
 },
 {
 "vaca": 4028,
@@ -3782,7 +4096,8 @@
 "ccs_antes_painel": 3423,
 "ccs_depois_painel": 1935,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-14"
 },
 {
 "vaca": 4028,
@@ -3794,7 +4109,8 @@
 "ccs_antes_painel": 1935,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-10-05"
 },
 {
 "vaca": 4032,
@@ -3806,7 +4122,8 @@
 "ccs_antes_painel": 941,
 "ccs_depois_painel": 766,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-26"
 },
 {
 "vaca": 4032,
@@ -3818,7 +4135,8 @@
 "ccs_antes_painel": 941,
 "ccs_depois_painel": 82,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-13"
 },
 {
 "vaca": 4033,
@@ -3830,7 +4148,8 @@
 "ccs_antes_painel": 49,
 "ccs_depois_painel": 97,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-22"
 },
 {
 "vaca": 4038,
@@ -3842,7 +4161,8 @@
 "ccs_antes_painel": 1895,
 "ccs_depois_painel": 1888,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-09"
 },
 {
 "vaca": 4040,
@@ -3854,7 +4174,8 @@
 "ccs_antes_painel": 190,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-21"
 },
 {
 "vaca": 4041,
@@ -3866,7 +4187,8 @@
 "ccs_antes_painel": 3628,
 "ccs_depois_painel": 1742,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-02"
 },
 {
 "vaca": 4044,
@@ -3878,7 +4200,8 @@
 "ccs_antes_painel": 507,
 "ccs_depois_painel": 83,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-12"
 },
 {
 "vaca": 4044,
@@ -3890,7 +4213,8 @@
 "ccs_antes_painel": 83,
 "ccs_depois_painel": 758,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-15"
 },
 {
 "vaca": 4044,
@@ -3902,7 +4226,8 @@
 "ccs_antes_painel": 83,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-20"
 },
 {
 "vaca": 4054,
@@ -3914,7 +4239,8 @@
 "ccs_antes_painel": 2953,
 "ccs_depois_painel": 92,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-20"
 },
 {
 "vaca": 4055,
@@ -3926,7 +4252,8 @@
 "ccs_antes_painel": 1111,
 "ccs_depois_painel": 731,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-20"
 },
 {
 "vaca": 4058,
@@ -3938,7 +4265,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-25"
 },
 {
 "vaca": 4058,
@@ -3950,7 +4278,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-23"
 },
 {
 "vaca": 4059,
@@ -3962,7 +4291,8 @@
 "ccs_antes_painel": 492,
 "ccs_depois_painel": 420,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-07"
 },
 {
 "vaca": 4059,
@@ -3974,7 +4304,8 @@
 "ccs_antes_painel": 492,
 "ccs_depois_painel": 420,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 4064,
@@ -3986,7 +4317,8 @@
 "ccs_antes_painel": 23,
 "ccs_depois_painel": 1356,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-03-20"
 },
 {
 "vaca": 4067,
@@ -3998,7 +4330,8 @@
 "ccs_antes_painel": 207,
 "ccs_depois_painel": 235,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-19"
 },
 {
 "vaca": 4072,
@@ -4010,7 +4343,8 @@
 "ccs_antes_painel": 83,
 "ccs_depois_painel": 109,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-05"
 },
 {
 "vaca": 4074,
@@ -4022,7 +4356,8 @@
 "ccs_antes_painel": 5,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-26"
 },
 {
 "vaca": 4083,
@@ -4034,7 +4369,8 @@
 "ccs_antes_painel": 2203,
 "ccs_depois_painel": 59,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-03-11"
 },
 {
 "vaca": 4101,
@@ -4046,7 +4382,8 @@
 "ccs_antes_painel": 128,
 "ccs_depois_painel": 179,
 "retrat_painel": 0,
-"lote_painel": "14"
+"lote_painel": "14",
+"retorno": "2026-07-03"
 },
 {
 "vaca": 4101,
@@ -4058,7 +4395,8 @@
 "ccs_antes_painel": 128,
 "ccs_depois_painel": 179,
 "retrat_painel": 1,
-"lote_painel": "14"
+"lote_painel": "14",
+"retorno": "2026-07-12"
 },
 {
 "vaca": 4108,
@@ -4070,7 +4408,8 @@
 "ccs_antes_painel": 81,
 "ccs_depois_painel": 161,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-21"
 },
 {
 "vaca": 4111,
@@ -4082,7 +4421,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 443,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-23"
 },
 {
 "vaca": 4117,
@@ -4094,7 +4434,8 @@
 "ccs_antes_painel": 48,
 "ccs_depois_painel": 3759,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-26"
 },
 {
 "vaca": 4124,
@@ -4106,7 +4447,8 @@
 "ccs_antes_painel": 43,
 "ccs_depois_painel": 280,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-07"
 },
 {
 "vaca": 4125,
@@ -4118,7 +4460,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 21,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-06"
 },
 {
 "vaca": 4126,
@@ -4130,7 +4473,8 @@
 "ccs_antes_painel": 143,
 "ccs_depois_painel": 143,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-14"
 },
 {
 "vaca": 4129,
@@ -4142,7 +4486,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 3519,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-21"
 },
 {
 "vaca": 4129,
@@ -4154,7 +4499,8 @@
 "ccs_antes_painel": 3519,
 "ccs_depois_painel": 3888,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-02-11"
 },
 {
 "vaca": 4129,
@@ -4166,7 +4512,8 @@
 "ccs_antes_painel": 3888,
 "ccs_depois_painel": 3888,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-02-12"
 },
 {
 "vaca": 4145,
@@ -4178,7 +4525,8 @@
 "ccs_antes_painel": 129,
 "ccs_depois_painel": 418,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-02-19"
 },
 {
 "vaca": 4157,
@@ -4190,7 +4538,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 129,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-28"
 },
 {
 "vaca": 4157,
@@ -4202,7 +4551,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-03"
 },
 {
 "vaca": 4160,
@@ -4214,7 +4564,8 @@
 "ccs_antes_painel": 1767,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-18"
 },
 {
 "vaca": 4163,
@@ -4226,7 +4577,8 @@
 "ccs_antes_painel": 159,
 "ccs_depois_painel": 322,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-02"
 },
 {
 "vaca": 4166,
@@ -4238,7 +4590,8 @@
 "ccs_antes_painel": 108,
 "ccs_depois_painel": 995,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-24"
 },
 {
 "vaca": 4171,
@@ -4250,7 +4603,8 @@
 "ccs_antes_painel": 32,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-02-20"
 },
 {
 "vaca": 4173,
@@ -4262,7 +4616,8 @@
 "ccs_antes_painel": 23,
 "ccs_depois_painel": 204,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-17"
 },
 {
 "vaca": 4182,
@@ -4274,7 +4629,8 @@
 "ccs_antes_painel": 2917,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-08"
 },
 {
 "vaca": 4184,
@@ -4286,7 +4642,8 @@
 "ccs_antes_painel": 276,
 "ccs_depois_painel": 549,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-09"
 },
 {
 "vaca": 4184,
@@ -4298,7 +4655,8 @@
 "ccs_antes_painel": 636,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-10-02"
 },
 {
 "vaca": 4189,
@@ -4310,7 +4668,8 @@
 "ccs_antes_painel": 915,
 "ccs_depois_painel": 1196,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-12"
 },
 {
 "vaca": 4194,
@@ -4322,7 +4681,8 @@
 "ccs_antes_painel": 61,
 "ccs_depois_painel": 54,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-23"
 },
 {
 "vaca": 4194,
@@ -4334,7 +4694,8 @@
 "ccs_antes_painel": 54,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-26"
 },
 {
 "vaca": 4196,
@@ -4346,7 +4707,8 @@
 "ccs_antes_painel": 2691,
 "ccs_depois_painel": 6161,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-20"
 },
 {
 "vaca": 4196,
@@ -4358,7 +4720,8 @@
 "ccs_antes_painel": 6161,
 "ccs_depois_painel": 63,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-02"
 },
 {
 "vaca": 4200,
@@ -4370,7 +4733,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 980,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-31"
 },
 {
 "vaca": 4204,
@@ -4382,7 +4746,8 @@
 "ccs_antes_painel": 3105,
 "ccs_depois_painel": 257,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-03-25"
 },
 {
 "vaca": 4204,
@@ -4394,7 +4759,8 @@
 "ccs_antes_painel": 3105,
 "ccs_depois_painel": 72,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-04-20"
 },
 {
 "vaca": 4205,
@@ -4406,7 +4772,8 @@
 "ccs_antes_painel": 15,
 "ccs_depois_painel": 3402,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-15"
 },
 {
 "vaca": 4205,
@@ -4418,7 +4785,8 @@
 "ccs_antes_painel": 3402,
 "ccs_depois_painel": 470,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-07"
 },
 {
 "vaca": 4212,
@@ -4430,7 +4798,8 @@
 "ccs_antes_painel": 3179,
 "ccs_depois_painel": 3099,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-17"
 },
 {
 "vaca": 4216,
@@ -4442,7 +4811,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 1544,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-10"
 },
 {
 "vaca": 4216,
@@ -4454,7 +4824,8 @@
 "ccs_antes_painel": 1544,
 "ccs_depois_painel": 597,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-02-19"
 },
 {
 "vaca": 4216,
@@ -4466,7 +4837,8 @@
 "ccs_antes_painel": 597,
 "ccs_depois_painel": 179,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-04-09"
 },
 {
 "vaca": 4216,
@@ -4478,7 +4850,8 @@
 "ccs_antes_painel": 179,
 "ccs_depois_painel": 458,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-17"
 },
 {
 "vaca": 4216,
@@ -4490,7 +4863,8 @@
 "ccs_antes_painel": 179,
 "ccs_depois_painel": 2632,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-24"
 },
 {
 "vaca": 4219,
@@ -4502,7 +4876,8 @@
 "ccs_antes_painel": 61,
 "ccs_depois_painel": 118,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-28"
 },
 {
 "vaca": 4219,
@@ -4514,7 +4889,8 @@
 "ccs_antes_painel": 92,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-18"
 },
 {
 "vaca": 4222,
@@ -4526,7 +4902,8 @@
 "ccs_antes_painel": 19,
 "ccs_depois_painel": 24,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-03"
 },
 {
 "vaca": 4229,
@@ -4538,7 +4915,8 @@
 "ccs_antes_painel": 4619,
 "ccs_depois_painel": 44,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-20"
 },
 {
 "vaca": 4229,
@@ -4550,7 +4928,8 @@
 "ccs_antes_painel": 4619,
 "ccs_depois_painel": 44,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-31"
 },
 {
 "vaca": 4229,
@@ -4562,7 +4941,8 @@
 "ccs_antes_painel": 96,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-01"
 },
 {
 "vaca": 4230,
@@ -4574,7 +4954,8 @@
 "ccs_antes_painel": 1110,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-10-05"
 },
 {
 "vaca": 4232,
@@ -4586,7 +4967,8 @@
 "ccs_antes_painel": 2883,
 "ccs_depois_painel": 191,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-22"
 },
 {
 "vaca": 4240,
@@ -4598,7 +4980,8 @@
 "ccs_antes_painel": 31,
 "ccs_depois_painel": 36,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-03"
 },
 {
 "vaca": 4244,
@@ -4610,7 +4993,8 @@
 "ccs_antes_painel": 230,
 "ccs_depois_painel": 16,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-16"
 },
 {
 "vaca": 4254,
@@ -4622,7 +5006,8 @@
 "ccs_antes_painel": 14,
 "ccs_depois_painel": 39,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-04-05"
 },
 {
 "vaca": 4260,
@@ -4634,7 +5019,8 @@
 "ccs_antes_painel": 42,
 "ccs_depois_painel": 1335,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-02-10"
 },
 {
 "vaca": 4260,
@@ -4646,7 +5032,8 @@
 "ccs_antes_painel": 1335,
 "ccs_depois_painel": 23,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-03-17"
 },
 {
 "vaca": 4260,
@@ -4658,7 +5045,8 @@
 "ccs_antes_painel": 1335,
 "ccs_depois_painel": 23,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-03-27"
 },
 {
 "vaca": 4260,
@@ -4670,7 +5058,8 @@
 "ccs_antes_painel": 1335,
 "ccs_depois_painel": 23,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-04-06"
 },
 {
 "vaca": 4263,
@@ -4682,7 +5071,8 @@
 "ccs_antes_painel": 70,
 "ccs_depois_painel": 133,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-30"
 },
 {
 "vaca": 4263,
@@ -4694,7 +5084,8 @@
 "ccs_antes_painel": 70,
 "ccs_depois_painel": 133,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-08"
 },
 {
 "vaca": 4269,
@@ -4706,7 +5097,8 @@
 "ccs_antes_painel": 33,
 "ccs_depois_painel": 68,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-13"
 },
 {
 "vaca": 4271,
@@ -4718,7 +5110,8 @@
 "ccs_antes_painel": 30,
 "ccs_depois_painel": 174,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-05"
 },
 {
 "vaca": 4271,
@@ -4730,7 +5123,8 @@
 "ccs_antes_painel": 174,
 "ccs_depois_painel": 108,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-19"
 },
 {
 "vaca": 4277,
@@ -4742,7 +5136,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-28"
 },
 {
 "vaca": 4277,
@@ -4754,7 +5149,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-03"
 },
 {
 "vaca": 4278,
@@ -4766,7 +5162,8 @@
 "ccs_antes_painel": 221,
 "ccs_depois_painel": 458,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-10"
 },
 {
 "vaca": 4278,
@@ -4778,7 +5175,8 @@
 "ccs_antes_painel": 221,
 "ccs_depois_painel": 458,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-10"
 },
 {
 "vaca": 4285,
@@ -4790,7 +5188,8 @@
 "ccs_antes_painel": 80,
 "ccs_depois_painel": 2475,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-10"
 },
 {
 "vaca": 4285,
@@ -4802,7 +5201,8 @@
 "ccs_antes_painel": 2475,
 "ccs_depois_painel": 744,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-21"
 },
 {
 "vaca": 4289,
@@ -4814,7 +5214,8 @@
 "ccs_antes_painel": 28,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-22"
 },
 {
 "vaca": 4298,
@@ -4826,7 +5227,8 @@
 "ccs_antes_painel": 64,
 "ccs_depois_painel": 29,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-17"
 },
 {
 "vaca": 4303,
@@ -4838,7 +5240,8 @@
 "ccs_antes_painel": 227,
 "ccs_depois_painel": 135,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-10"
 },
 {
 "vaca": 4303,
@@ -4850,7 +5253,8 @@
 "ccs_antes_painel": 227,
 "ccs_depois_painel": 135,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-23"
 },
 {
 "vaca": 4303,
@@ -4862,7 +5266,8 @@
 "ccs_antes_painel": 209,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-10-10"
 },
 {
 "vaca": 4304,
@@ -4874,7 +5279,8 @@
 "ccs_antes_painel": 1670,
 "ccs_depois_painel": 51,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-18"
 },
 {
 "vaca": 4319,
@@ -4886,7 +5292,8 @@
 "ccs_antes_painel": 37,
 "ccs_depois_painel": 162,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-21"
 },
 {
 "vaca": 4319,
@@ -4898,7 +5305,8 @@
 "ccs_antes_painel": 162,
 "ccs_depois_painel": 482,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-09"
 },
 {
 "vaca": 4324,
@@ -4910,7 +5318,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 6,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-15"
 },
 {
 "vaca": 4325,
@@ -4922,7 +5331,8 @@
 "ccs_antes_painel": 123,
 "ccs_depois_painel": 620,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-17"
 },
 {
 "vaca": 4326,
@@ -4934,7 +5344,8 @@
 "ccs_antes_painel": 294,
 "ccs_depois_painel": 207,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-13"
 },
 {
 "vaca": 4330,
@@ -4946,7 +5357,8 @@
 "ccs_antes_painel": 20,
 "ccs_depois_painel": 69,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 4336,
@@ -4958,7 +5370,8 @@
 "ccs_antes_painel": 5980,
 "ccs_depois_painel": 4685,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-09"
 },
 {
 "vaca": 4336,
@@ -4970,7 +5383,8 @@
 "ccs_antes_painel": 5980,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-18"
 },
 {
 "vaca": 4340,
@@ -4982,7 +5396,8 @@
 "ccs_antes_painel": 3,
 "ccs_depois_painel": 117,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-01"
 },
 {
 "vaca": 4340,
@@ -4994,7 +5409,8 @@
 "ccs_antes_painel": 3,
 "ccs_depois_painel": 117,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-05"
 },
 {
 "vaca": 4346,
@@ -5006,7 +5422,8 @@
 "ccs_antes_painel": 755,
 "ccs_depois_painel": 2977,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-29"
 },
 {
 "vaca": 4346,
@@ -5018,7 +5435,8 @@
 "ccs_antes_painel": 5521,
 "ccs_depois_painel": 2977,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-09"
 },
 {
 "vaca": 4347,
@@ -5030,7 +5448,8 @@
 "ccs_antes_painel": 139,
 "ccs_depois_painel": 126,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-14"
 },
 {
 "vaca": 4349,
@@ -5042,7 +5461,8 @@
 "ccs_antes_painel": 74,
 "ccs_depois_painel": 48,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-21"
 },
 {
 "vaca": 4353,
@@ -5054,7 +5474,8 @@
 "ccs_antes_painel": 1328,
 "ccs_depois_painel": 891,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-03"
 },
 {
 "vaca": 4357,
@@ -5066,7 +5487,8 @@
 "ccs_antes_painel": 98,
 "ccs_depois_painel": 221,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-22"
 },
 {
 "vaca": 4362,
@@ -5078,7 +5500,8 @@
 "ccs_antes_painel": 29,
 "ccs_depois_painel": 66,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-25"
 },
 {
 "vaca": 4370,
@@ -5090,7 +5513,8 @@
 "ccs_antes_painel": 436,
 "ccs_depois_painel": 51,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-12"
 },
 {
 "vaca": 4370,
@@ -5102,7 +5526,8 @@
 "ccs_antes_painel": 51,
 "ccs_depois_painel": 1148,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-05-03"
 },
 {
 "vaca": 4372,
@@ -5114,7 +5539,8 @@
 "ccs_antes_painel": 159,
 "ccs_depois_painel": 161,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-17"
 },
 {
 "vaca": 4373,
@@ -5126,7 +5552,8 @@
 "ccs_antes_painel": 594,
 "ccs_depois_painel": 663,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-14"
 },
 {
 "vaca": 4375,
@@ -5138,7 +5565,8 @@
 "ccs_antes_painel": 34,
 "ccs_depois_painel": 36,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-03-17"
 },
 {
 "vaca": 4376,
@@ -5150,7 +5578,8 @@
 "ccs_antes_painel": 61,
 "ccs_depois_painel": 73,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-03-14"
 },
 {
 "vaca": 4383,
@@ -5162,7 +5591,8 @@
 "ccs_antes_painel": 1339,
 "ccs_depois_painel": 9808,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-14"
 },
 {
 "vaca": 4385,
@@ -5174,7 +5604,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 50,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-23"
 },
 {
 "vaca": 4385,
@@ -5186,7 +5617,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 50,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-03"
 },
 {
 "vaca": 4385,
@@ -5198,7 +5630,8 @@
 "ccs_antes_painel": 18,
 "ccs_depois_painel": 1683,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-04-03"
 },
 {
 "vaca": 4385,
@@ -5210,7 +5643,8 @@
 "ccs_antes_painel": 1683,
 "ccs_depois_painel": 39,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-19"
 },
 {
 "vaca": 4386,
@@ -5222,7 +5656,8 @@
 "ccs_antes_painel": 10,
 "ccs_depois_painel": 283,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-07"
 },
 {
 "vaca": 4394,
@@ -5234,7 +5669,8 @@
 "ccs_antes_painel": 7,
 "ccs_depois_painel": 174,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-11"
 },
 {
 "vaca": 4394,
@@ -5246,7 +5682,8 @@
 "ccs_antes_painel": 7,
 "ccs_depois_painel": 154,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-22"
 },
 {
 "vaca": 4395,
@@ -5258,7 +5695,8 @@
 "ccs_antes_painel": 26,
 "ccs_depois_painel": 104,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-15"
 },
 {
 "vaca": 4398,
@@ -5270,7 +5708,8 @@
 "ccs_antes_painel": 272,
 "ccs_depois_painel": 151,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-03"
 },
 {
 "vaca": 4400,
@@ -5282,7 +5721,8 @@
 "ccs_antes_painel": 30,
 "ccs_depois_painel": 468,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-06"
 },
 {
 "vaca": 4417,
@@ -5294,7 +5734,8 @@
 "ccs_antes_painel": 3440,
 "ccs_depois_painel": 667,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-11"
 },
 {
 "vaca": 4418,
@@ -5306,7 +5747,8 @@
 "ccs_antes_painel": 664,
 "ccs_depois_painel": 259,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-27"
 },
 {
 "vaca": 4418,
@@ -5318,7 +5760,8 @@
 "ccs_antes_painel": 1843,
 "ccs_depois_painel": 259,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-01"
 },
 {
 "vaca": 4418,
@@ -5330,7 +5773,8 @@
 "ccs_antes_painel": 1843,
 "ccs_depois_painel": 259,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-16"
 },
 {
 "vaca": 4419,
@@ -5342,7 +5786,8 @@
 "ccs_antes_painel": 4,
 "ccs_depois_painel": 197,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-10"
 },
 {
 "vaca": 4425,
@@ -5354,7 +5799,8 @@
 "ccs_antes_painel": 108,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-28"
 },
 {
 "vaca": 4428,
@@ -5366,7 +5812,8 @@
 "ccs_antes_painel": 304,
 "ccs_depois_painel": 456,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-03-29"
 },
 {
 "vaca": 4428,
@@ -5378,7 +5825,8 @@
 "ccs_antes_painel": 456,
 "ccs_depois_painel": 587,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-22"
 },
 {
 "vaca": 4428,
@@ -5390,7 +5838,8 @@
 "ccs_antes_painel": 798,
 "ccs_depois_painel": 524,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-30"
 },
 {
 "vaca": 4428,
@@ -5402,7 +5851,8 @@
 "ccs_antes_painel": 798,
 "ccs_depois_painel": 524,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-05"
 },
 {
 "vaca": 4431,
@@ -5414,7 +5864,8 @@
 "ccs_antes_painel": 102,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-10-01"
 },
 {
 "vaca": 4435,
@@ -5426,7 +5877,8 @@
 "ccs_antes_painel": 2305,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-16"
 },
 {
 "vaca": 4435,
@@ -5438,7 +5890,8 @@
 "ccs_antes_painel": 2305,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-22"
 },
 {
 "vaca": 4438,
@@ -5450,7 +5903,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 106,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-05"
 },
 {
 "vaca": 4439,
@@ -5462,7 +5916,8 @@
 "ccs_antes_painel": 387,
 "ccs_depois_painel": 628,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-24"
 },
 {
 "vaca": 4439,
@@ -5474,7 +5929,8 @@
 "ccs_antes_painel": 472,
 "ccs_depois_painel": 628,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-24"
 },
 {
 "vaca": 4442,
@@ -5486,7 +5942,8 @@
 "ccs_antes_painel": 3248,
 "ccs_depois_painel": 3248,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-02-13"
 },
 {
 "vaca": 4444,
@@ -5498,7 +5955,8 @@
 "ccs_antes_painel": 4022,
 "ccs_depois_painel": 3295,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-02"
 },
 {
 "vaca": 4444,
@@ -5510,7 +5968,8 @@
 "ccs_antes_painel": 3237,
 "ccs_depois_painel": 3445,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-07"
 },
 {
 "vaca": 4444,
@@ -5522,7 +5981,8 @@
 "ccs_antes_painel": 3248,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-26"
 },
 {
 "vaca": 4446,
@@ -5534,7 +5994,8 @@
 "ccs_antes_painel": 1390,
 "ccs_depois_painel": 1147,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-17"
 },
 {
 "vaca": 4452,
@@ -5546,7 +6007,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 29,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-21"
 },
 {
 "vaca": 4452,
@@ -5558,7 +6020,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 29,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-23"
 },
 {
 "vaca": 4452,
@@ -5570,7 +6033,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 29,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-27"
 },
 {
 "vaca": 4452,
@@ -5582,7 +6046,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 681,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-08"
 },
 {
 "vaca": 4456,
@@ -5594,7 +6059,8 @@
 "ccs_antes_painel": 874,
 "ccs_depois_painel": 10,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-20"
 },
 {
 "vaca": 4456,
@@ -5606,7 +6072,8 @@
 "ccs_antes_painel": 775,
 "ccs_depois_painel": 1855,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-04"
 },
 {
 "vaca": 4456,
@@ -5618,7 +6085,8 @@
 "ccs_antes_painel": 775,
 "ccs_depois_painel": 1855,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-31"
 },
 {
 "vaca": 4457,
@@ -5630,7 +6098,8 @@
 "ccs_antes_painel": 5277,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-03-22"
 },
 {
 "vaca": 4459,
@@ -5642,7 +6111,8 @@
 "ccs_antes_painel": 146,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-22"
 },
 {
 "vaca": 4459,
@@ -5654,7 +6124,8 @@
 "ccs_antes_painel": 1892,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-09-28"
 },
 {
 "vaca": 4464,
@@ -5666,7 +6137,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 462,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-07"
 },
 {
 "vaca": 4469,
@@ -5678,7 +6150,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 784,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-12"
 },
 {
 "vaca": 4469,
@@ -5690,7 +6163,8 @@
 "ccs_antes_painel": 163,
 "ccs_depois_painel": 77,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-29"
 },
 {
 "vaca": 4469,
@@ -5702,7 +6176,8 @@
 "ccs_antes_painel": 77,
 "ccs_depois_painel": 272,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-21"
 },
 {
 "vaca": 4474,
@@ -5714,7 +6189,8 @@
 "ccs_antes_painel": 299,
 "ccs_depois_painel": 231,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-03-14"
 },
 {
 "vaca": 4476,
@@ -5726,7 +6202,8 @@
 "ccs_antes_painel": 36,
 "ccs_depois_painel": 328,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 4476,
@@ -5738,7 +6215,8 @@
 "ccs_antes_painel": 36,
 "ccs_depois_painel": 328,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-18"
 },
 {
 "vaca": 4476,
@@ -5750,7 +6228,8 @@
 "ccs_antes_painel": 36,
 "ccs_depois_painel": 310,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-05-29"
 },
 {
 "vaca": 4478,
@@ -5762,7 +6241,8 @@
 "ccs_antes_painel": 384,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-10-01"
 },
 {
 "vaca": 4478,
@@ -5774,7 +6254,8 @@
 "ccs_antes_painel": 384,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-10-07"
 },
 {
 "vaca": 4483,
@@ -5786,7 +6267,8 @@
 "ccs_antes_painel": 18,
 "ccs_depois_painel": 12,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-21"
 },
 {
 "vaca": 4488,
@@ -5798,7 +6280,8 @@
 "ccs_antes_painel": 50,
 "ccs_depois_painel": 1482,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-18"
 },
 {
 "vaca": 4488,
@@ -5810,7 +6293,8 @@
 "ccs_antes_painel": 50,
 "ccs_depois_painel": 1482,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-27"
 },
 {
 "vaca": 4488,
@@ -5822,7 +6306,8 @@
 "ccs_antes_painel": 1482,
 "ccs_depois_painel": 746,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-15"
 },
 {
 "vaca": 4488,
@@ -5834,7 +6319,8 @@
 "ccs_antes_painel": 436,
 "ccs_depois_painel": 197,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-07"
 },
 {
 "vaca": 4488,
@@ -5846,7 +6332,8 @@
 "ccs_antes_painel": 197,
 "ccs_depois_painel": 1272,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-30"
 },
 {
 "vaca": 4488,
@@ -5858,7 +6345,8 @@
 "ccs_antes_painel": 197,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-26"
 },
 {
 "vaca": 4492,
@@ -5870,7 +6358,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 7,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-03"
 },
 {
 "vaca": 4499,
@@ -5882,7 +6371,8 @@
 "ccs_antes_painel": 1137,
 "ccs_depois_painel": 27,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-01"
 },
 {
 "vaca": 4501,
@@ -5894,7 +6384,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 2799,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-23"
 },
 {
 "vaca": 4501,
@@ -5906,7 +6397,8 @@
 "ccs_antes_painel": 2799,
 "ccs_depois_painel": 1794,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-02-13"
 },
 {
 "vaca": 4501,
@@ -5918,7 +6410,8 @@
 "ccs_antes_painel": 1794,
 "ccs_depois_painel": 1682,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-04"
 },
 {
 "vaca": 4501,
@@ -5930,7 +6423,8 @@
 "ccs_antes_painel": 1429,
 "ccs_depois_painel": 90,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 4502,
@@ -5942,7 +6436,8 @@
 "ccs_antes_painel": 257,
 "ccs_depois_painel": 60,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-02"
 },
 {
 "vaca": 4506,
@@ -5954,7 +6449,8 @@
 "ccs_antes_painel": 20,
 "ccs_depois_painel": 82,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-24"
 },
 {
 "vaca": 4506,
@@ -5966,7 +6462,8 @@
 "ccs_antes_painel": 4228,
 "ccs_depois_painel": 4228,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-05"
 },
 {
 "vaca": 4508,
@@ -5978,7 +6475,8 @@
 "ccs_antes_painel": 645,
 "ccs_depois_painel": 18,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-18"
 },
 {
 "vaca": 4509,
@@ -5990,7 +6488,8 @@
 "ccs_antes_painel": 21,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-20"
 },
 {
 "vaca": 4509,
@@ -6002,7 +6501,8 @@
 "ccs_antes_painel": 2712,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-09-01"
 },
 {
 "vaca": 4514,
@@ -6014,7 +6514,8 @@
 "ccs_antes_painel": 14,
 "ccs_depois_painel": 72,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-23"
 },
 {
 "vaca": 4515,
@@ -6026,7 +6527,8 @@
 "ccs_antes_painel": 1182,
 "ccs_depois_painel": 1188,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-22"
 },
 {
 "vaca": 4515,
@@ -6038,7 +6540,8 @@
 "ccs_antes_painel": 2530,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-24"
 },
 {
 "vaca": 4518,
@@ -6050,7 +6553,8 @@
 "ccs_antes_painel": 6,
 "ccs_depois_painel": 24,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-25"
 },
 {
 "vaca": 4520,
@@ -6062,7 +6566,8 @@
 "ccs_antes_painel": 24,
 "ccs_depois_painel": 23,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-23"
 },
 {
 "vaca": 4520,
@@ -6074,7 +6579,8 @@
 "ccs_antes_painel": 1572,
 "ccs_depois_painel": 23,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-28"
 },
 {
 "vaca": 4538,
@@ -6086,7 +6592,8 @@
 "ccs_antes_painel": 13,
 "ccs_depois_painel": 639,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-12"
 },
 {
 "vaca": 4538,
@@ -6098,7 +6605,8 @@
 "ccs_antes_painel": 13,
 "ccs_depois_painel": 639,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 4560,
@@ -6110,7 +6618,8 @@
 "ccs_antes_painel": 988,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-21"
 },
 {
 "vaca": 4573,
@@ -6122,7 +6631,8 @@
 "ccs_antes_painel": 21,
 "ccs_depois_painel": 30,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-02-28"
 },
 {
 "vaca": 4576,
@@ -6134,7 +6644,8 @@
 "ccs_antes_painel": 90,
 "ccs_depois_painel": 234,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-13"
 },
 {
 "vaca": 4578,
@@ -6146,7 +6657,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 393,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-24"
 },
 {
 "vaca": 4578,
@@ -6158,7 +6670,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 387,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-09"
 },
 {
 "vaca": 4578,
@@ -6170,7 +6683,8 @@
 "ccs_antes_painel": 362,
 "ccs_depois_painel": 1331,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-16"
 },
 {
 "vaca": 4596,
@@ -6182,7 +6696,8 @@
 "ccs_antes_painel": 39,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-13"
 },
 {
 "vaca": 4596,
@@ -6194,7 +6709,8 @@
 "ccs_antes_painel": 39,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-17"
 },
 {
 "vaca": 4601,
@@ -6206,7 +6722,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 273,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-09"
 },
 {
 "vaca": 4601,
@@ -6218,7 +6735,8 @@
 "ccs_antes_painel": 6955,
 "ccs_depois_painel": 66,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-23"
 },
 {
 "vaca": 4601,
@@ -6230,7 +6748,8 @@
 "ccs_antes_painel": 117,
 "ccs_depois_painel": 1154,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-09"
 },
 {
 "vaca": 4616,
@@ -6242,7 +6761,8 @@
 "ccs_antes_painel": 52,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-09-30"
 },
 {
 "vaca": 4617,
@@ -6254,7 +6774,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 1369,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-06"
 },
 {
 "vaca": 4617,
@@ -6266,7 +6787,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 1369,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-13"
 },
 {
 "vaca": 4617,
@@ -6278,7 +6800,8 @@
 "ccs_antes_painel": 9998,
 "ccs_depois_painel": 909,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-27"
 },
 {
 "vaca": 4642,
@@ -6290,7 +6813,8 @@
 "ccs_antes_painel": 90,
 "ccs_depois_painel": 1746,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 4644,
@@ -6302,7 +6826,8 @@
 "ccs_antes_painel": 75,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-10-07"
 },
 {
 "vaca": 4646,
@@ -6314,7 +6839,8 @@
 "ccs_antes_painel": 33,
 "ccs_depois_painel": 1071,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-06"
 },
 {
 "vaca": 4646,
@@ -6326,7 +6852,8 @@
 "ccs_antes_painel": 33,
 "ccs_depois_painel": 49,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-15"
 },
 {
 "vaca": 4648,
@@ -6338,7 +6865,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 41,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-11"
 },
 {
 "vaca": 4648,
@@ -6350,7 +6878,8 @@
 "ccs_antes_painel": 829,
 "ccs_depois_painel": 174,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-28"
 },
 {
 "vaca": 4649,
@@ -6362,7 +6891,8 @@
 "ccs_antes_painel": 646,
 "ccs_depois_painel": 3180,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-28"
 },
 {
 "vaca": 4649,
@@ -6374,7 +6904,8 @@
 "ccs_antes_painel": 646,
 "ccs_depois_painel": 3180,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-02"
 },
 {
 "vaca": 4649,
@@ -6386,7 +6917,8 @@
 "ccs_antes_painel": 646,
 "ccs_depois_painel": 3180,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-13"
 },
 {
 "vaca": 4653,
@@ -6398,7 +6930,8 @@
 "ccs_antes_painel": 93,
 "ccs_depois_painel": 75,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-23"
 },
 {
 "vaca": 4653,
@@ -6410,7 +6943,8 @@
 "ccs_antes_painel": 93,
 "ccs_depois_painel": 75,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-23"
 },
 {
 "vaca": 4653,
@@ -6422,7 +6956,8 @@
 "ccs_antes_painel": 93,
 "ccs_depois_painel": 75,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-28"
 },
 {
 "vaca": 4655,
@@ -6434,7 +6969,8 @@
 "ccs_antes_painel": 2444,
 "ccs_depois_painel": 309,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-14"
 },
 {
 "vaca": 4657,
@@ -6446,7 +6982,8 @@
 "ccs_antes_painel": 357,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-10-08"
 },
 {
 "vaca": 4659,
@@ -6458,7 +6995,8 @@
 "ccs_antes_painel": 10,
 "ccs_depois_painel": 142,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-28"
 },
 {
 "vaca": 4664,
@@ -6470,7 +7008,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 636,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-31"
 },
 {
 "vaca": 4667,
@@ -6482,7 +7021,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 3562,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-21"
 },
 {
 "vaca": 4670,
@@ -6494,7 +7034,8 @@
 "ccs_antes_painel": 992,
 "ccs_depois_painel": 5127,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-08"
 },
 {
 "vaca": 4677,
@@ -6506,7 +7047,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 114,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-28"
 },
 {
 "vaca": 4677,
@@ -6518,7 +7060,8 @@
 "ccs_antes_painel": 109,
 "ccs_depois_painel": 41,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-20"
 },
 {
 "vaca": 4680,
@@ -6530,7 +7073,8 @@
 "ccs_antes_painel": 482,
 "ccs_depois_painel": 569,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-28"
 },
 {
 "vaca": 4687,
@@ -6542,7 +7086,8 @@
 "ccs_antes_painel": 1187,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-27"
 },
 {
 "vaca": 4687,
@@ -6554,7 +7099,8 @@
 "ccs_antes_painel": 1187,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-27"
 },
 {
 "vaca": 4687,
@@ -6566,7 +7112,8 @@
 "ccs_antes_painel": 1187,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 4690,
@@ -6578,7 +7125,8 @@
 "ccs_antes_painel": 3,
 "ccs_depois_painel": 132,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-03-28"
 },
 {
 "vaca": 4690,
@@ -6590,7 +7138,8 @@
 "ccs_antes_painel": 3,
 "ccs_depois_painel": 132,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-04-06"
 },
 {
 "vaca": 4690,
@@ -6602,7 +7151,8 @@
 "ccs_antes_painel": 11,
 "ccs_depois_painel": 1610,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-01"
 },
 {
 "vaca": 4690,
@@ -6614,7 +7164,8 @@
 "ccs_antes_painel": 11,
 "ccs_depois_painel": 1610,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-09"
 },
 {
 "vaca": 4690,
@@ -6626,7 +7177,8 @@
 "ccs_antes_painel": 2248,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-31"
 },
 {
 "vaca": 4690,
@@ -6638,7 +7190,8 @@
 "ccs_antes_painel": 2248,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-06"
 },
 {
 "vaca": 4690,
@@ -6650,7 +7203,8 @@
 "ccs_antes_painel": 2248,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-20"
 },
 {
 "vaca": 4692,
@@ -6662,7 +7216,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 2170,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-05"
 },
 {
 "vaca": 4692,
@@ -6674,7 +7229,8 @@
 "ccs_antes_painel": 1770,
 "ccs_depois_painel": 2170,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-10"
 },
 {
 "vaca": 4695,
@@ -6686,7 +7242,8 @@
 "ccs_antes_painel": 122,
 "ccs_depois_painel": 177,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-04-06"
 },
 {
 "vaca": 4699,
@@ -6698,7 +7255,8 @@
 "ccs_antes_painel": 621,
 "ccs_depois_painel": 1054,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-05-08"
 },
 {
 "vaca": 4699,
@@ -6710,7 +7268,8 @@
 "ccs_antes_painel": 621,
 "ccs_depois_painel": 1054,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-05-13"
 },
 {
 "vaca": 4699,
@@ -6722,7 +7281,8 @@
 "ccs_antes_painel": 621,
 "ccs_depois_painel": 184,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-05-24"
 },
 {
 "vaca": 4700,
@@ -6734,7 +7294,8 @@
 "ccs_antes_painel": 8574,
 "ccs_depois_painel": 7316,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-03"
 },
 {
 "vaca": 4700,
@@ -6746,7 +7307,8 @@
 "ccs_antes_painel": 8574,
 "ccs_depois_painel": 7316,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-01"
 },
 {
 "vaca": 4700,
@@ -6758,7 +7320,8 @@
 "ccs_antes_painel": 8574,
 "ccs_depois_painel": 599,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-21"
 },
 {
 "vaca": 4712,
@@ -6770,7 +7333,8 @@
 "ccs_antes_painel": 46,
 "ccs_depois_painel": 54,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-23"
 },
 {
 "vaca": 4716,
@@ -6782,7 +7346,8 @@
 "ccs_antes_painel": 1308,
 "ccs_depois_painel": 1560,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-03"
 },
 {
 "vaca": 4731,
@@ -6794,7 +7359,8 @@
 "ccs_antes_painel": 3126,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-02-21"
 },
 {
 "vaca": 4734,
@@ -6806,7 +7372,8 @@
 "ccs_antes_painel": 65,
 "ccs_depois_painel": 53,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-05"
 },
 {
 "vaca": 4740,
@@ -6818,7 +7385,8 @@
 "ccs_antes_painel": 132,
 "ccs_depois_painel": 191,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-12"
 },
 {
 "vaca": 4746,
@@ -6830,7 +7398,8 @@
 "ccs_antes_painel": 9435,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-05-28"
 },
 {
 "vaca": 4746,
@@ -6842,7 +7411,8 @@
 "ccs_antes_painel": 9435,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-01"
 },
 {
 "vaca": 4746,
@@ -6854,7 +7424,8 @@
 "ccs_antes_painel": 9435,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-16"
 },
 {
 "vaca": 4748,
@@ -6866,7 +7437,8 @@
 "ccs_antes_painel": 171,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-26"
 },
 {
 "vaca": 4758,
@@ -6878,7 +7450,8 @@
 "ccs_antes_painel": 524,
 "ccs_depois_painel": 141,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-16"
 },
 {
 "vaca": 4759,
@@ -6890,7 +7463,8 @@
 "ccs_antes_painel": 42,
 "ccs_depois_painel": 2165,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-06-08"
 },
 {
 "vaca": 4759,
@@ -6902,7 +7476,8 @@
 "ccs_antes_painel": 2165,
 "ccs_depois_painel": 2272,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 4759,
@@ -6914,7 +7489,8 @@
 "ccs_antes_painel": 2165,
 "ccs_depois_painel": 7,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-25"
 },
 {
 "vaca": 4760,
@@ -6926,7 +7502,8 @@
 "ccs_antes_painel": 437,
 "ccs_depois_painel": 20,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-08"
 },
 {
 "vaca": 4769,
@@ -6938,7 +7515,8 @@
 "ccs_antes_painel": 22,
 "ccs_depois_painel": 174,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-13"
 },
 {
 "vaca": 4771,
@@ -6950,7 +7528,8 @@
 "ccs_antes_painel": 30,
 "ccs_depois_painel": 37,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-14"
 },
 {
 "vaca": 4773,
@@ -6962,7 +7541,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 1036,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-23"
 },
 {
 "vaca": 4773,
@@ -6974,7 +7554,8 @@
 "ccs_antes_painel": 1036,
 "ccs_depois_painel": 26,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-02-25"
 },
 {
 "vaca": 4779,
@@ -6986,7 +7567,8 @@
 "ccs_antes_painel": 10,
 "ccs_depois_painel": 225,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-09"
 },
 {
 "vaca": 4790,
@@ -6998,7 +7580,8 @@
 "ccs_antes_painel": 14,
 "ccs_depois_painel": 28,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-08"
 },
 {
 "vaca": 4791,
@@ -7010,7 +7593,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 64,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-24"
 },
 {
 "vaca": 4794,
@@ -7022,7 +7606,8 @@
 "ccs_antes_painel": 35,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-10-04"
 },
 {
 "vaca": 4796,
@@ -7034,7 +7619,8 @@
 "ccs_antes_painel": 32,
 "ccs_depois_painel": 232,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-08"
 },
 {
 "vaca": 4817,
@@ -7046,7 +7632,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 32,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-18"
 },
 {
 "vaca": 4817,
@@ -7058,7 +7645,8 @@
 "ccs_antes_painel": 107,
 "ccs_depois_painel": 267,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-16"
 },
 {
 "vaca": 4819,
@@ -7070,7 +7658,8 @@
 "ccs_antes_painel": 488,
 "ccs_depois_painel": 8,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-03-14"
 },
 {
 "vaca": 4821,
@@ -7082,7 +7671,8 @@
 "ccs_antes_painel": 70,
 "ccs_depois_painel": 275,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-17"
 },
 {
 "vaca": 4825,
@@ -7094,7 +7684,8 @@
 "ccs_antes_painel": 6751,
 "ccs_depois_painel": 581,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-03"
 },
 {
 "vaca": 4825,
@@ -7106,7 +7697,8 @@
 "ccs_antes_painel": 460,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-03"
 },
 {
 "vaca": 4829,
@@ -7118,7 +7710,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 33,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-24"
 },
 {
 "vaca": 4832,
@@ -7130,7 +7723,8 @@
 "ccs_antes_painel": 307,
 "ccs_depois_painel": 163,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-21"
 },
 {
 "vaca": 4832,
@@ -7142,7 +7736,8 @@
 "ccs_antes_painel": 4132,
 "ccs_depois_painel": 163,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-27"
 },
 {
 "vaca": 4832,
@@ -7154,7 +7749,8 @@
 "ccs_antes_painel": 163,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-10-05"
 },
 {
 "vaca": 4836,
@@ -7166,7 +7762,8 @@
 "ccs_antes_painel": 1928,
 "ccs_depois_painel": 792,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-29"
 },
 {
 "vaca": 4836,
@@ -7178,7 +7775,8 @@
 "ccs_antes_painel": 1928,
 "ccs_depois_painel": 792,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-04"
 },
 {
 "vaca": 4853,
@@ -7190,7 +7788,8 @@
 "ccs_antes_painel": 554,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-09-18"
 },
 {
 "vaca": 4860,
@@ -7202,7 +7801,8 @@
 "ccs_antes_painel": 272,
 "ccs_depois_painel": 2082,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-15"
 },
 {
 "vaca": 4860,
@@ -7214,7 +7814,8 @@
 "ccs_antes_painel": 576,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-23"
 },
 {
 "vaca": 4868,
@@ -7226,7 +7827,8 @@
 "ccs_antes_painel": 3339,
 "ccs_depois_painel": 49,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-25"
 },
 {
 "vaca": 4871,
@@ -7238,7 +7840,8 @@
 "ccs_antes_painel": 2097,
 "ccs_depois_painel": 739,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-26"
 },
 {
 "vaca": 4871,
@@ -7250,7 +7853,8 @@
 "ccs_antes_painel": 2097,
 "ccs_depois_painel": 739,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-30"
 },
 {
 "vaca": 4871,
@@ -7262,7 +7866,8 @@
 "ccs_antes_painel": 2097,
 "ccs_depois_painel": 739,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-10"
 },
 {
 "vaca": 4877,
@@ -7274,7 +7879,8 @@
 "ccs_antes_painel": 1257,
 "ccs_depois_painel": 142,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-08"
 },
 {
 "vaca": 4879,
@@ -7286,7 +7892,8 @@
 "ccs_antes_painel": 85,
 "ccs_depois_painel": 9887,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-07-30"
 },
 {
 "vaca": 4879,
@@ -7298,7 +7905,8 @@
 "ccs_antes_painel": 9887,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-26"
 },
 {
 "vaca": 4879,
@@ -7310,7 +7918,8 @@
 "ccs_antes_painel": 9887,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-06"
 },
 {
 "vaca": 4880,
@@ -7322,7 +7931,8 @@
 "ccs_antes_painel": 6881,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-27"
 },
 {
 "vaca": 4880,
@@ -7334,7 +7944,8 @@
 "ccs_antes_painel": 6881,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-07"
 },
 {
 "vaca": 4895,
@@ -7346,7 +7957,8 @@
 "ccs_antes_painel": 18,
 "ccs_depois_painel": 34,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-10"
 },
 {
 "vaca": 4900,
@@ -7358,7 +7970,8 @@
 "ccs_antes_painel": 13,
 "ccs_depois_painel": 451,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-07-22"
 },
 {
 "vaca": 4900,
@@ -7370,7 +7983,8 @@
 "ccs_antes_painel": 13,
 "ccs_depois_painel": 451,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-08-01"
 },
 {
 "vaca": 4910,
@@ -7382,7 +7996,8 @@
 "ccs_antes_painel": 1720,
 "ccs_depois_painel": 1432,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-07-29"
 },
 {
 "vaca": 4910,
@@ -7394,7 +8009,8 @@
 "ccs_antes_painel": 1720,
 "ccs_depois_painel": 247,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-22"
 },
 {
 "vaca": 4917,
@@ -7406,7 +8022,8 @@
 "ccs_antes_painel": 255,
 "ccs_depois_painel": 20,
 "retrat_painel": 0,
-"lote_painel": "13"
+"lote_painel": "13",
+"retorno": "2026-03-24"
 },
 {
 "vaca": 4924,
@@ -7418,7 +8035,8 @@
 "ccs_antes_painel": 1148,
 "ccs_depois_painel": 173,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-02-15"
 },
 {
 "vaca": 4941,
@@ -7430,7 +8048,8 @@
 "ccs_antes_painel": 1617,
 "ccs_depois_painel": 1919,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-08"
 },
 {
 "vaca": 4941,
@@ -7442,7 +8061,8 @@
 "ccs_antes_painel": 1617,
 "ccs_depois_painel": 5446,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-21"
 },
 {
 "vaca": 4941,
@@ -7454,7 +8074,8 @@
 "ccs_antes_painel": 1919,
 "ccs_depois_painel": 805,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-28"
 },
 {
 "vaca": 4941,
@@ -7466,7 +8087,8 @@
 "ccs_antes_painel": 5446,
 "ccs_depois_painel": 91,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-20"
 },
 {
 "vaca": 4944,
@@ -7478,7 +8100,8 @@
 "ccs_antes_painel": 210,
 "ccs_depois_painel": 3056,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-06"
 },
 {
 "vaca": 4944,
@@ -7490,7 +8113,8 @@
 "ccs_antes_painel": 210,
 "ccs_depois_painel": 42,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-24"
 },
 {
 "vaca": 4951,
@@ -7502,7 +8126,8 @@
 "ccs_antes_painel": 38,
 "ccs_depois_painel": 103,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-22"
 },
 {
 "vaca": 4953,
@@ -7514,7 +8139,8 @@
 "ccs_antes_painel": 32,
 "ccs_depois_painel": 26,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-06-04"
 },
 {
 "vaca": 4953,
@@ -7526,7 +8152,8 @@
 "ccs_antes_painel": 32,
 "ccs_depois_painel": 26,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-06-09"
 },
 {
 "vaca": 4965,
@@ -7538,7 +8165,8 @@
 "ccs_antes_painel": 446,
 "ccs_depois_painel": 518,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-13"
 },
 {
 "vaca": 4970,
@@ -7550,7 +8178,8 @@
 "ccs_antes_painel": 570,
 "ccs_depois_painel": 58,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-04-03"
 },
 {
 "vaca": 4970,
@@ -7562,7 +8191,8 @@
 "ccs_antes_painel": 570,
 "ccs_depois_painel": 145,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-04-20"
 },
 {
 "vaca": 4971,
@@ -7574,7 +8204,8 @@
 "ccs_antes_painel": 66,
 "ccs_depois_painel": 249,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-08-08"
 },
 {
 "vaca": 4978,
@@ -7586,7 +8217,8 @@
 "ccs_antes_painel": 58,
 "ccs_depois_painel": 15,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-30"
 },
 {
 "vaca": 4983,
@@ -7598,7 +8230,8 @@
 "ccs_antes_painel": 79,
 "ccs_depois_painel": 47,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-20"
 },
 {
 "vaca": 4985,
@@ -7610,7 +8243,8 @@
 "ccs_antes_painel": 2947,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-10-02"
 },
 {
 "vaca": 4992,
@@ -7622,7 +8256,8 @@
 "ccs_antes_painel": 210,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-10-06"
 },
 {
 "vaca": 4993,
@@ -7634,7 +8269,8 @@
 "ccs_antes_painel": 228,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-19"
 },
 {
 "vaca": 4993,
@@ -7646,7 +8282,8 @@
 "ccs_antes_painel": 228,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-03"
 },
 {
 "vaca": 5005,
@@ -7658,7 +8295,8 @@
 "ccs_antes_painel": 1240,
 "ccs_depois_painel": 1071,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-01"
 },
 {
 "vaca": 5008,
@@ -7670,7 +8308,8 @@
 "ccs_antes_painel": 82,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-07-17"
 },
 {
 "vaca": 5016,
@@ -7682,7 +8321,8 @@
 "ccs_antes_painel": 125,
 "ccs_depois_painel": 355,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-03-10"
 },
 {
 "vaca": 5016,
@@ -7694,7 +8334,8 @@
 "ccs_antes_painel": 85,
 "ccs_depois_painel": 92,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-09-03"
 },
 {
 "vaca": 5018,
@@ -7706,7 +8347,8 @@
 "ccs_antes_painel": 1716,
 "ccs_depois_painel": 580,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-04-18"
 },
 {
 "vaca": 5037,
@@ -7718,7 +8360,8 @@
 "ccs_antes_painel": 351,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-05-22"
 },
 {
 "vaca": 5037,
@@ -7730,7 +8373,8 @@
 "ccs_antes_painel": 5109,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-08"
 },
 {
 "vaca": 5041,
@@ -7742,7 +8386,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 960,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 5041,
@@ -7754,7 +8399,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 21,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-05-22"
 },
 {
 "vaca": 5042,
@@ -7766,7 +8412,8 @@
 "ccs_antes_painel": 113,
 "ccs_depois_painel": 199,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-02-18"
 },
 {
 "vaca": 5042,
@@ -7778,7 +8425,8 @@
 "ccs_antes_painel": 113,
 "ccs_depois_painel": 199,
 "retrat_painel": 1,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-02-27"
 },
 {
 "vaca": 5050,
@@ -7790,7 +8438,8 @@
 "ccs_antes_painel": 58,
 "ccs_depois_painel": 181,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-12"
 },
 {
 "vaca": 5052,
@@ -7802,7 +8451,8 @@
 "ccs_antes_painel": 167,
 "ccs_depois_painel": 205,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-03-21"
 },
 {
 "vaca": 5052,
@@ -7814,7 +8464,8 @@
 "ccs_antes_painel": 167,
 "ccs_depois_painel": 205,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-03-24"
 },
 {
 "vaca": 5056,
@@ -7826,7 +8477,8 @@
 "ccs_antes_painel": 47,
 "ccs_depois_painel": 265,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-15"
 },
 {
 "vaca": 5056,
@@ -7838,7 +8490,8 @@
 "ccs_antes_painel": 265,
 "ccs_depois_painel": 262,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-17"
 },
 {
 "vaca": 5056,
@@ -7850,7 +8503,8 @@
 "ccs_antes_painel": 2248,
 "ccs_depois_painel": 262,
 "retrat_painel": 1,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-09"
 },
 {
 "vaca": 5063,
@@ -7862,7 +8516,8 @@
 "ccs_antes_painel": 12,
 "ccs_depois_painel": 27,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-04-04"
 },
 {
 "vaca": 5064,
@@ -7874,7 +8529,8 @@
 "ccs_antes_painel": 21,
 "ccs_depois_painel": 60,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-08-02"
 },
 {
 "vaca": 5081,
@@ -7886,7 +8542,8 @@
 "ccs_antes_painel": 140,
 "ccs_depois_painel": 189,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-12"
 },
 {
 "vaca": 5093,
@@ -7898,7 +8555,8 @@
 "ccs_antes_painel": 105,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-29"
 },
 {
 "vaca": 5108,
@@ -7910,7 +8568,8 @@
 "ccs_antes_painel": 1672,
 "ccs_depois_painel": 51,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-13"
 },
 {
 "vaca": 5108,
@@ -7922,7 +8581,8 @@
 "ccs_antes_painel": 1672,
 "ccs_depois_painel": 51,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-18"
 },
 {
 "vaca": 5108,
@@ -7934,7 +8594,8 @@
 "ccs_antes_painel": 199,
 "ccs_depois_painel": 494,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-09-07"
 },
 {
 "vaca": 5109,
@@ -7946,7 +8607,8 @@
 "ccs_antes_painel": 7,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-09-22"
 },
 {
 "vaca": 5115,
@@ -7958,7 +8620,8 @@
 "ccs_antes_painel": 232,
 "ccs_depois_painel": 151,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-01"
 },
 {
 "vaca": 5115,
@@ -7970,7 +8633,8 @@
 "ccs_antes_painel": 232,
 "ccs_depois_painel": 151,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-06-09"
 },
 {
 "vaca": 5126,
@@ -7982,7 +8646,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 3227,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-06-07"
 },
 {
 "vaca": 5129,
@@ -7994,7 +8659,8 @@
 "ccs_antes_painel": 3,
 "ccs_depois_painel": 22,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-05-13"
 },
 {
 "vaca": 5140,
@@ -8006,7 +8672,8 @@
 "ccs_antes_painel": 22,
 "ccs_depois_painel": 43,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-08-15"
 },
 {
 "vaca": 5140,
@@ -8018,7 +8685,8 @@
 "ccs_antes_painel": 224,
 "ccs_depois_painel": 43,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-29"
 },
 {
 "vaca": 5141,
@@ -8030,7 +8698,8 @@
 "ccs_antes_painel": 132,
 "ccs_depois_painel": 253,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-08-07"
 },
 {
 "vaca": 5141,
@@ -8042,7 +8711,8 @@
 "ccs_antes_painel": 132,
 "ccs_depois_painel": 253,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-08-10"
 },
 {
 "vaca": 5142,
@@ -8054,7 +8724,8 @@
 "ccs_antes_painel": 66,
 "ccs_depois_painel": 49,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-09-07"
 },
 {
 "vaca": 5147,
@@ -8066,7 +8737,8 @@
 "ccs_antes_painel": 64,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-12"
 },
 {
 "vaca": 5147,
@@ -8078,7 +8750,8 @@
 "ccs_antes_painel": 64,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-25"
 },
 {
 "vaca": 5155,
@@ -8090,7 +8763,8 @@
 "ccs_antes_painel": 4085,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-10-02"
 },
 {
 "vaca": 5175,
@@ -8102,7 +8776,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 27,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-07"
 },
 {
 "vaca": 5177,
@@ -8114,7 +8789,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 41,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-21"
 },
 {
 "vaca": 5191,
@@ -8126,7 +8802,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 16,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-31"
 },
 {
 "vaca": 5194,
@@ -8138,7 +8815,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 293,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-23"
 },
 {
 "vaca": 5194,
@@ -8150,7 +8828,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 64,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-05"
 },
 {
 "vaca": 5194,
@@ -8162,7 +8841,8 @@
 "ccs_antes_painel": 6942,
 "ccs_depois_painel": 78,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-04-14"
 },
 {
 "vaca": 5202,
@@ -8174,7 +8854,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 181,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-02"
 },
 {
 "vaca": 5209,
@@ -8186,7 +8867,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 115,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-23"
 },
 {
 "vaca": 5221,
@@ -8198,7 +8880,8 @@
 "ccs_antes_painel": 43,
 "ccs_depois_painel": 34,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-11"
 },
 {
 "vaca": 5221,
@@ -8210,7 +8893,8 @@
 "ccs_antes_painel": 43,
 "ccs_depois_painel": 34,
 "retrat_painel": 1,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-13"
 },
 {
 "vaca": 5230,
@@ -8222,7 +8906,8 @@
 "ccs_antes_painel": 146,
 "ccs_depois_painel": 9,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-02-23"
 },
 {
 "vaca": 5231,
@@ -8234,7 +8919,8 @@
 "ccs_antes_painel": 89,
 "ccs_depois_painel": 301,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-08-16"
 },
 {
 "vaca": 5232,
@@ -8246,7 +8932,8 @@
 "ccs_antes_painel": 22,
 "ccs_depois_painel": 45,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-17"
 },
 {
 "vaca": 5235,
@@ -8258,7 +8945,8 @@
 "ccs_antes_painel": 109,
 "ccs_depois_painel": 173,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-09-16"
 },
 {
 "vaca": 5246,
@@ -8270,7 +8958,8 @@
 "ccs_antes_painel": 45,
 "ccs_depois_painel": 206,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-01"
 },
 {
 "vaca": 5250,
@@ -8282,7 +8971,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 664,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-22"
 },
 {
 "vaca": 5260,
@@ -8294,7 +8984,8 @@
 "ccs_antes_painel": 78,
 "ccs_depois_painel": 4963,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-04"
 },
 {
 "vaca": 5260,
@@ -8306,7 +8997,8 @@
 "ccs_antes_painel": 4963,
 "ccs_depois_painel": 576,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-07-25"
 },
 {
 "vaca": 5260,
@@ -8318,7 +9010,8 @@
 "ccs_antes_painel": 4963,
 "ccs_depois_painel": 576,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-08"
 },
 {
 "vaca": 5285,
@@ -8330,7 +9023,8 @@
 "ccs_antes_painel": 1764,
 "ccs_depois_painel": 1197,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-14"
 },
 {
 "vaca": 5297,
@@ -8342,7 +9036,8 @@
 "ccs_antes_painel": 63,
 "ccs_depois_painel": 580,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-08-20"
 },
 {
 "vaca": 5302,
@@ -8354,7 +9049,8 @@
 "ccs_antes_painel": 19,
 "ccs_depois_painel": 3017,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-08"
 },
 {
 "vaca": 5302,
@@ -8366,7 +9062,8 @@
 "ccs_antes_painel": 3017,
 "ccs_depois_painel": 41,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-30"
 },
 {
 "vaca": 5302,
@@ -8378,7 +9075,8 @@
 "ccs_antes_painel": 3017,
 "ccs_depois_painel": 41,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-08"
 },
 {
 "vaca": 5307,
@@ -8390,7 +9088,8 @@
 "ccs_antes_painel": 73,
 "ccs_depois_painel": 256,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-27"
 },
 {
 "vaca": 5319,
@@ -8402,7 +9101,8 @@
 "ccs_antes_painel": 13,
 "ccs_depois_painel": 96,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-08-18"
 },
 {
 "vaca": 5333,
@@ -8414,7 +9114,8 @@
 "ccs_antes_painel": 4089,
 "ccs_depois_painel": 142,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-04-24"
 },
 {
 "vaca": 5338,
@@ -8426,7 +9127,8 @@
 "ccs_antes_painel": 1154,
 "ccs_depois_painel": 1673,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-27"
 },
 {
 "vaca": 5340,
@@ -8438,7 +9140,8 @@
 "ccs_antes_painel": 32,
 "ccs_depois_painel": 122,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-09"
 },
 {
 "vaca": 5346,
@@ -8450,7 +9153,8 @@
 "ccs_antes_painel": 39,
 "ccs_depois_painel": 2520,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-08"
 },
 {
 "vaca": 5347,
@@ -8462,7 +9166,8 @@
 "ccs_antes_painel": 882,
 "ccs_depois_painel": 9924,
 "retrat_painel": 0,
-"lote_painel": "5"
+"lote_painel": "5",
+"retorno": "2026-06-05"
 },
 {
 "vaca": 5347,
@@ -8474,7 +9179,8 @@
 "ccs_antes_painel": 9924,
 "ccs_depois_painel": 4533,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-25"
 },
 {
 "vaca": 5347,
@@ -8486,7 +9192,8 @@
 "ccs_antes_painel": 9924,
 "ccs_depois_painel": 4533,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-02"
 },
 {
 "vaca": 5347,
@@ -8498,7 +9205,8 @@
 "ccs_antes_painel": 9924,
 "ccs_depois_painel": 4533,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-14"
 },
 {
 "vaca": 5350,
@@ -8510,7 +9218,8 @@
 "ccs_antes_painel": 5,
 "ccs_depois_painel": 43,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-04-21"
 },
 {
 "vaca": 5350,
@@ -8522,7 +9231,8 @@
 "ccs_antes_painel": 1063,
 "ccs_depois_painel": 43,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-05-15"
 },
 {
 "vaca": 5351,
@@ -8534,7 +9244,8 @@
 "ccs_antes_painel": 35,
 "ccs_depois_painel": 1555,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-05-07"
 },
 {
 "vaca": 5351,
@@ -8546,7 +9257,8 @@
 "ccs_antes_painel": 35,
 "ccs_depois_painel": 26,
 "retrat_painel": 1,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-06-01"
 },
 {
 "vaca": 5356,
@@ -8558,7 +9270,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 38,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-01-13"
 },
 {
 "vaca": 5361,
@@ -8570,7 +9283,8 @@
 "ccs_antes_painel": 516,
 "ccs_depois_painel": 2045,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-08-10"
 },
 {
 "vaca": 5361,
@@ -8582,7 +9296,8 @@
 "ccs_antes_painel": 516,
 "ccs_depois_painel": 122,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-08-20"
 },
 {
 "vaca": 5361,
@@ -8594,7 +9309,8 @@
 "ccs_antes_painel": 2045,
 "ccs_depois_painel": 122,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-06"
 },
 {
 "vaca": 5361,
@@ -8606,7 +9322,8 @@
 "ccs_antes_painel": 2045,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-09-23"
 },
 {
 "vaca": 5369,
@@ -8618,7 +9335,8 @@
 "ccs_antes_painel": 221,
 "ccs_depois_painel": 221,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-06-03"
 },
 {
 "vaca": 5369,
@@ -8630,7 +9348,8 @@
 "ccs_antes_painel": 221,
 "ccs_depois_painel": 115,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-13"
 },
 {
 "vaca": 5370,
@@ -8642,7 +9361,8 @@
 "ccs_antes_painel": 14,
 "ccs_depois_painel": 88,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-17"
 },
 {
 "vaca": 5393,
@@ -8654,7 +9374,8 @@
 "ccs_antes_painel": 58,
 "ccs_depois_painel": 27,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-05-25"
 },
 {
 "vaca": 5399,
@@ -8666,7 +9387,8 @@
 "ccs_antes_painel": 11,
 "ccs_depois_painel": 41,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-07-12"
 },
 {
 "vaca": 5400,
@@ -8678,7 +9400,8 @@
 "ccs_antes_painel": 26,
 "ccs_depois_painel": 203,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-13"
 },
 {
 "vaca": 5401,
@@ -8690,7 +9413,8 @@
 "ccs_antes_painel": 113,
 "ccs_depois_painel": 273,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-29"
 },
 {
 "vaca": 5401,
@@ -8702,7 +9426,8 @@
 "ccs_antes_painel": 113,
 "ccs_depois_painel": 273,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-08-28"
 },
 {
 "vaca": 5410,
@@ -8714,7 +9439,8 @@
 "ccs_antes_painel": 80,
 "ccs_depois_painel": 167,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-16"
 },
 {
 "vaca": 5450,
@@ -8726,7 +9452,8 @@
 "ccs_antes_painel": 262,
 "ccs_depois_painel": 19,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-04-10"
 },
 {
 "vaca": 5450,
@@ -8738,7 +9465,8 @@
 "ccs_antes_painel": 83,
 "ccs_depois_painel": 167,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-09-10"
 },
 {
 "vaca": 5452,
@@ -8750,7 +9478,8 @@
 "ccs_antes_painel": 26,
 "ccs_depois_painel": 32,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-08-09"
 },
 {
 "vaca": 5465,
@@ -8762,7 +9491,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-05-24"
 },
 {
 "vaca": 5465,
@@ -8774,7 +9504,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-06-03"
 },
 {
 "vaca": 5472,
@@ -8786,7 +9517,8 @@
 "ccs_antes_painel": 2381,
 "ccs_depois_painel": 39,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-07"
 },
 {
 "vaca": 5483,
@@ -8798,7 +9530,8 @@
 "ccs_antes_painel": 384,
 "ccs_depois_painel": 113,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-04-05"
 },
 {
 "vaca": 5483,
@@ -8810,7 +9543,8 @@
 "ccs_antes_painel": 3657,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-09-18"
 },
 {
 "vaca": 5485,
@@ -8822,7 +9556,8 @@
 "ccs_antes_painel": 8163,
 "ccs_depois_painel": 204,
 "retrat_painel": 0,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-18"
 },
 {
 "vaca": 5485,
@@ -8834,7 +9569,8 @@
 "ccs_antes_painel": 3267,
 "ccs_depois_painel": 204,
 "retrat_painel": 0,
-"lote_painel": "2"
+"lote_painel": "2",
+"retorno": "2026-03-10"
 },
 {
 "vaca": 5487,
@@ -8846,7 +9582,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 110,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-06-13"
 },
 {
 "vaca": 5490,
@@ -8858,7 +9595,8 @@
 "ccs_antes_painel": 14,
 "ccs_depois_painel": 30,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-06-04"
 },
 {
 "vaca": 5492,
@@ -8870,7 +9608,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 3096,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-19"
 },
 {
 "vaca": 5492,
@@ -8882,7 +9621,8 @@
 "ccs_antes_painel": 532,
 "ccs_depois_painel": 3096,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-02-28"
 },
 {
 "vaca": 5492,
@@ -8894,7 +9634,8 @@
 "ccs_antes_painel": 532,
 "ccs_depois_painel": 179,
 "retrat_painel": 1,
-"lote_painel": "10"
+"lote_painel": "10",
+"retorno": "2026-03-13"
 },
 {
 "vaca": 5516,
@@ -8906,7 +9647,8 @@
 "ccs_antes_painel": 91,
 "ccs_depois_painel": 158,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-08-31"
 },
 {
 "vaca": 5516,
@@ -8918,7 +9660,8 @@
 "ccs_antes_painel": 91,
 "ccs_depois_painel": 158,
 "retrat_painel": 1,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-09-06"
 },
 {
 "vaca": 5542,
@@ -8930,7 +9673,8 @@
 "ccs_antes_painel": 23,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-09-24"
 },
 {
 "vaca": 5554,
@@ -8942,7 +9686,8 @@
 "ccs_antes_painel": 3079,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-10-04"
 },
 {
 "vaca": 5566,
@@ -8954,7 +9699,8 @@
 "ccs_antes_painel": 51,
 "ccs_depois_painel": 1343,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-07-14"
 },
 {
 "vaca": 5566,
@@ -8966,7 +9712,8 @@
 "ccs_antes_painel": 51,
 "ccs_depois_painel": 1087,
 "retrat_painel": 1,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-07-24"
 },
 {
 "vaca": 5566,
@@ -8978,7 +9725,8 @@
 "ccs_antes_painel": 1343,
 "ccs_depois_painel": 92,
 "retrat_painel": 0,
-"lote_painel": "4"
+"lote_painel": "4",
+"retorno": "2026-08-17"
 },
 {
 "vaca": 5569,
@@ -8990,7 +9738,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 333,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-05-12"
 },
 {
 "vaca": 5569,
@@ -9002,7 +9751,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 105,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-05-21"
 },
 {
 "vaca": 5569,
@@ -9014,7 +9764,8 @@
 "ccs_antes_painel": 333,
 "ccs_depois_painel": 105,
 "retrat_painel": 1,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-10"
 },
 {
 "vaca": 5582,
@@ -9026,7 +9777,8 @@
 "ccs_antes_painel": 5,
 "ccs_depois_painel": 105,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-09-11"
 },
 {
 "vaca": 5590,
@@ -9038,7 +9790,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 619,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-03-10"
 },
 {
 "vaca": 5590,
@@ -9050,7 +9803,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 619,
 "retrat_painel": 1,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-03-19"
 },
 {
 "vaca": 5596,
@@ -9062,7 +9816,8 @@
 "ccs_antes_painel": 546,
 "ccs_depois_painel": 9257,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-07-16"
 },
 {
 "vaca": 5656,
@@ -9074,7 +9829,8 @@
 "ccs_antes_painel": 16,
 "ccs_depois_painel": 267,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-08-05"
 },
 {
 "vaca": 5656,
@@ -9086,7 +9842,8 @@
 "ccs_antes_painel": 16,
 "ccs_depois_painel": 12,
 "retrat_painel": 1,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-08-14"
 },
 {
 "vaca": 5659,
@@ -9098,7 +9855,8 @@
 "ccs_antes_painel": 41,
 "ccs_depois_painel": 57,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-07-07"
 },
 {
 "vaca": 5700,
@@ -9110,7 +9868,8 @@
 "ccs_antes_painel": 62,
 "ccs_depois_painel": 111,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-06-21"
 },
 {
 "vaca": 5703,
@@ -9122,7 +9881,8 @@
 "ccs_antes_painel": 121,
 "ccs_depois_painel": 9998,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-09-16"
 },
 {
 "vaca": 5734,
@@ -9134,7 +9894,8 @@
 "ccs_antes_painel": 19,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-09-08"
 },
 {
 "vaca": 5740,
@@ -9146,7 +9907,8 @@
 "ccs_antes_painel": 71,
 "ccs_depois_painel": 59,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-08-26"
 },
 {
 "vaca": 5769,
@@ -9158,7 +9920,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 2010,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-05-14"
 },
 {
 "vaca": 5813,
@@ -9170,7 +9933,8 @@
 "ccs_antes_painel": 22,
 "ccs_depois_painel": 20,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-07-03"
 },
 {
 "vaca": 5829,
@@ -9182,7 +9946,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 85,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-06-07"
 },
 {
 "vaca": 5842,
@@ -9194,7 +9959,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 484,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-07-11"
 },
 {
 "vaca": 5879,
@@ -9206,7 +9972,8 @@
 "ccs_antes_painel": 695,
 "ccs_depois_painel": 283,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-08-23"
 },
 {
 "vaca": 6000,
@@ -9218,7 +9985,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-07-26"
 },
 {
 "vaca": 6062,
@@ -9230,7 +9998,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 663,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-08-23"
 },
 {
 "vaca": 6128,
@@ -9242,7 +10011,8 @@
 "ccs_antes_painel": 438,
 "ccs_depois_painel": -1,
 "retrat_painel": 0,
-"lote_painel": "1"
+"lote_painel": "1",
+"retorno": "2026-09-28"
 },
 {
 "vaca": 649,
@@ -9254,7 +10024,8 @@
 "ccs_antes_painel": 11,
 "ccs_depois_painel": 127,
 "retrat_painel": 0,
-"lote_painel": "3"
+"lote_painel": "3",
+"retorno": "2026-06-27"
 },
 {
 "vaca": 850,
@@ -9266,7 +10037,8 @@
 "ccs_antes_painel": 2881,
 "ccs_depois_painel": 369,
 "retrat_painel": 0,
-"lote_painel": "6"
+"lote_painel": "6",
+"retorno": "2026-06-23"
 },
 {
 "vaca": 892,
@@ -9278,7 +10050,8 @@
 "ccs_antes_painel": -1,
 "ccs_depois_painel": 1799,
 "retrat_painel": 0,
-"lote_painel": ""
+"lote_painel": "",
+"retorno": "2026-02-05"
 }
 ]
 }

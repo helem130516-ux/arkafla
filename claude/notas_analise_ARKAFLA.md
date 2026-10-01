@@ -139,3 +139,26 @@
 3. Publicar `painel/painel_qualidade_ARKAFLA.html` no mesmo link.
 - Conferido: o DATA gerado pelo script é idêntico ao publicado antes (9 controles, 13.798 registros, 773 tratamentos).
 - O OnFarm (PDF de gráfico) continua manual: transcrever para `dados/cultura_onfarm_2026.json`.
+
+## Mapa de pagamento do laticínio – CCS/CPP reais do tanque (01/10/2026, painel versão 10)
+- Arquivo: `dados/mapa_leite/mapa_2026-09.pdf` (Pool Leite, mês 09/2026, emitido em 01/10/2026). Script `scripts/le_mapa_leite.py` → `dados/mapa_leite.json`.
+  - Lê cada célula pela posição no PDF. Lê vários mapas; o mais recente substitui o mesmo tanque/mês/período.
+- Conteúdo: 4 tanques, até 4 períodos por mês, de jul/26 a set/26. São 42 análises de CCS, CPP, gordura, proteína, sólidos e ureia, com o volume de cada período.
+  - Faltam períodos: tanque 1 jul 1º; tanque 3 jul 1º; tanque 4 jul 4º, ago 1º e set 1º.
+  - CPP só vai até o 1º período de setembro.
+- CCS real (média ponderada pelo volume) × controle APCBRH do mês:
+
+| Mês | CCS real | Estimativa sem lote 10 | APCBRH com lote 10 |
+|---|---|---|---|
+| jul/26 | 250 | 290 (17/07) | 329 |
+| ago/26 | 260 | 341 (14/08) | 367 |
+| set/26 | 332 | 309 (18/09) | 325 |
+
+  - Em set/26, o real subiu acima da estimativa.
+  - Picos de setembro: tanque 4 com 512 (2º período) e tanque 1 com 410 (1º período).
+- Médias do mapa: "Média Pagto" CCS 276,21 (POOL 221,62); CPP 10,54 (POOL 9,1).
+  - A CCS de 276,21 fica perto da média geométrica dos 3 meses (276,6), mas o mapa não informa o critério.
+- Prêmio de CCS em 09/2026: 3,09% (R$ 0,0664/L, R$ 137.888,90). Prêmio de CPP: 5,96%. Preço final: R$ 3,0279/L.
+- CPP: tanque 2, jul 1º período = 338 (o único acima de 100); tanques 3 e 4 entre 30 e 36 em julho.
+- Painel: nova aba "Tanque (laticínio)". O "Painel do mês" mostra a CCS real do mês do controle ao lado da estimativa, sempre separadas.
+- Próximos meses: salvar o novo mapa em `dados/mapa_leite/mapa_AAAA-MM.pdf` e rodar `scripts/monta_painel.py`.

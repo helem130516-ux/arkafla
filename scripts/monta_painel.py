@@ -16,6 +16,7 @@ py = lambda *a: subprocess.run([sys.executable, *a], check=True)  # noqa: E731
 py(f"{S}/le_cultura_labvet.py")
 py(f"{S}/le_registro_mastite.py")
 py(f"{S}/le_antibiograma.py")
+py(f"{S}/le_mapa_leite.py")
 py(f"{S}/gera_data_painel.py")
 base = open("painel/base_original.html", encoding="utf-8").read()
 i = base.index("const DATA = ") + len("const DATA = ")
@@ -27,7 +28,8 @@ open(f0, "w", encoding="utf-8").write(base[:i] + data + base[i + end:])
 passos = [("patch_painel_mes.py", None), ("patch_painel_cultura_onfarm.py", "dados/cultura_onfarm_2026.json"),
           ("patch_painel_cultura_labvet.py", "dados/cultura_labvet.json"),
           ("patch_painel_registro_fazenda.py", "dados/registro_fazenda.json"),
-          ("patch_painel_antibiograma.py", "dados/antibiograma.json")]
+          ("patch_painel_antibiograma.py", "dados/antibiograma.json"),
+          ("patch_painel_tanque.py", "dados/mapa_leite.json")]
 cur = f0
 for k, (p, arg) in enumerate(passos, 1):
     nxt = os.path.join(tmp, f"p{k}.html")

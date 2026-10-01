@@ -13,8 +13,13 @@ warnings.filterwarnings("ignore")
 NEG = {"-", "", None}
 
 
+ALIAS = {k.lower(): v for k, v in json.load(open("dados/aliases_vacas.json")).items() if not k.startswith("_")}
+
+
 def _vaca(v):
     s = str(v).strip()
+    if s.lower() in ALIAS:
+        return ALIAS[s.lower()]
     return int(float(s)) if re.fullmatch(r"\d+(\.0)?", s) else s
 
 
@@ -37,7 +42,7 @@ def le(path):
         lt = re.search(r"\bL(\d+)\b", ident)
         ag = [str(ws.cell(r, c).value).strip() for c in (6, 7, 8) if str(ws.cell(r, c).value).strip() not in NEG]
         out.append(dict(amostra=ws.cell(r, 2).value, data=ws.cell(r, 3).value.date().isoformat(),
-                        vaca=_vaca(ws.cell(r, 4).value), ident=ident, quartos=" ".join(q),
+                        vaca=_vaca(ws.cell(r, 4).value), nome_boletim=str(ws.cell(r, 4).value).strip(), ident=ident, quartos=" ".join(q),
                         grau=int(g.group(1)) if g else None, lote=int(lt.group(1)) if lt else None,
                         agentes=[a for a in ag if a != "Não houve crescimento"],
                         sem_crescimento="Não houve crescimento" in ag))

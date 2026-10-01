@@ -100,3 +100,42 @@
 - Painel:
   - "Painel do mês" ganhou o bloco "Hiperqueratose × CCS" (% ≥ 200 e taxa de NI por escore, no controle selecionado).
   - O "Histórico da vaca" mostra o escore de hiperqueratose, as secagens e os tratamentos sistêmicos.
+
+## Antibiograma e painel automatizado (01/10/2026, painel versão 9)
+**Antibiograma LabVet** (`dados/antibiograma/LabVet_ATB_AAAA-MM-DD.xlsx` → `dados/antibiograma.json`, script `scripts/le_antibiograma.py`)
+- 2 boletins: coletas de 15/09 (12 isolados) e 22/09 (7 isolados). Cada isolado testado contra 16 antibióticos.
+- Os 19 isolados batem com a cultura do mesmo boletim (nº da amostra, vaca e agente).
+- % sensível em todos os isolados:
+
+| Antibiótico | % sensível |
+|---|---|
+| Amoxi + clavulânico | 95% |
+| Marbofloxacina | 79% |
+| Amoxicilina | 74% |
+| Gentamicina | 58% |
+| Cefalexina | 53% |
+| Ceftiofur | 32% |
+| Tetraciclina | 32% |
+| Penicilina | 26% |
+| Neomicina | 16% (13 resistentes) |
+| Estreptomicina | 0% (13 resistentes) |
+
+- Intramamários × antibiograma (princípio ativo a confirmar com o veterinário):
+  - Mastjet (tetraciclina + neomicina), 246 tratamentos em 2026: tetraciclina 32% e neomicina 16% sensíveis.
+  - Spectramast (ceftiofur): 32% sensível.
+- Resultado in vitro, com poucos isolados: só para orientar a conversa com o veterinário.
+
+**Aliases dos boletins** (`dados/aliases_vacas.json`, informado pela fazenda em 01/10): Emilia = 1571, Nivea = 100, Original = 101.
+- Ficam 5 amostras sem ligação com os controles: 3544, 2825, 3192, 3479 e 4046.
+
+**Como atualizar a cada novo envio** (o painel agora é montado por script):
+1. Salvar o arquivo na pasta certa:
+   - controle APCBRH: `dados/apcbrh/R22_AAAA-MM-DD.xlsx`;
+   - registro de mastite: `dados/MASTITE_2026.xlsx`;
+   - cultura LabVet: `dados/cultura_labvet/LabVet_AAAA-MM-DD.xlsx`;
+   - antibiograma: `dados/antibiograma/LabVet_ATB_AAAA-MM-DD.xlsx`;
+   - novo apelido de vaca: `dados/aliases_vacas.json`.
+2. Rodar `python3 scripts/monta_painel.py`. Ele lê tudo, gera o DATA (`scripts/gera_data_painel.py`) e aplica os patches sobre `painel/base_original.html`.
+3. Publicar `painel/painel_qualidade_ARKAFLA.html` no mesmo link.
+- Conferido: o DATA gerado pelo script é idêntico ao publicado antes (9 controles, 13.798 registros, 773 tratamentos).
+- O OnFarm (PDF de gráfico) continua manual: transcrever para `dados/cultura_onfarm_2026.json`.

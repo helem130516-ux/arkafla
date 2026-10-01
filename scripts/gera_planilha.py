@@ -1037,7 +1037,7 @@ notes = [
     f"Partos alterados entre controles (mesma lactação, data de parto diferente): vacas {', '.join(alt)}.",
     "CCS 9.998 é provavelmente o teto de leitura do equipamento; mantida como informada.",
     "Lotes reorganizados em junho. Lotes 7, 13, 14 e 20 com poucas vacas.",
-    "REB 47238 até 18/06/2026 e REB 70105 a partir de 17/07/2026: tratado como o mesmo rebanho (mesmas vacas e datas de parto). Confirmação com a APCBRH pendente.",
+    "REB 47238 até 18/06/2026 e REB 70105 a partir de 17/07/2026: mesmo rebanho: mudança no código do produtor confirmada pela APCBRH (informado em 01/10/2026).",
     "O arquivo 'r22_janeiro.xlsx' corresponde ao controle de 02/02/2026 (referente a janeiro). Não há controle com data em janeiro.",
     "Em todos os controles a média ponderada recalculada bate com a 'MÉDIA CCS TANQUE' da APCBRH (coluna 'Confere?').",
 ]
@@ -1082,7 +1082,7 @@ lm = [
     ("Controles carregados", "=TEXT(MIN(Controles!B2:B%d),\"DD/MM/YYYY\")&\" a \"&TEXT(MAX(Controles!B2:B%d),\"DD/MM/YYYY\")&\" (\"&COUNT(Controles!A2:A%d)&\" controles)\"" % (NC + 1, NC + 1, NC + 1)),
     ("Como atualizar", "Anexar o novo Relatório 2.2 e o registro de mastite; o script scripts/gera_planilha.py refaz esta planilha."),
     ("Estimativas", "A CCS do tanque aqui é sempre estimativa pelas vacas do controle. A CCS real do laticínio ainda não foi fornecida."),
-    ("Pendências", "Cultura microbiológica; CCS real do tanque; confirmação APCBRH REB 47238 → 70105; registro de mastite original (coluna RETORNO)."),
+    ("Pendências", "Tabela de faixas do prêmio de CCS do laticínio; tratamentos sistêmicos de mastite (aba DOENÇAS GERAL) ainda fora dos indicadores."),
     ("Decisões", "Tratamento, secagem ou descarte: sempre com o veterinário responsável."),
 ]
 for j, (a, b) in enumerate(lm):

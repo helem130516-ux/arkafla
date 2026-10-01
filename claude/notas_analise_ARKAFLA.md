@@ -48,7 +48,7 @@
 - Cultura microbiológica.
 - CCS real do tanque (laticínio).
 - Registro de mastite original, com a coluna RETORNO.
-- Confirmação da APCBRH sobre REB 47238 → 70105.
+- ~~Confirmação da APCBRH sobre REB 47238 → 70105~~ — confirmada em 01/10/2026 (ver abaixo).
 
 ## Painel – novo visual do "Painel do mês" (30/09/2026, versão 6)
 - Os 4 indicadores principais ganharam cartões com tendência em todos os controles:
@@ -162,3 +162,7 @@
 - CPP: tanque 2, jul 1º período = 338 (o único acima de 100); tanques 3 e 4 entre 30 e 36 em julho.
 - Painel: nova aba "Tanque (laticínio)". O "Painel do mês" mostra a CCS real do mês do controle ao lado da estimativa, sempre separadas.
 - Próximos meses: salvar o novo mapa em `dados/mapa_leite/mapa_AAAA-MM.pdf` e rodar `scripts/monta_painel.py`.
+
+## REB 47238 → 70105 confirmado (01/10/2026)
+- A fazenda informou que a APCBRH confirmou: houve mudança no código do produtor. É o mesmo rebanho.
+- A análise já tratava os controles de 02/02 a 18/06 (REB 47238) e de 17/07 em diante (REB 70105) como uma série única. Nada muda nos números.

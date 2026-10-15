@@ -172,8 +172,15 @@
 - Relatórios guardados em `dados/zootecnico/Zootecnico_AAAA-MM-DD.xlsx`; mesma data substitui.
 - `python3 scripts/monitor_diario.py <novo.xlsx>` guarda o relatório e refaz
   `monitoramento/Monitoramento_Diario_ARKAFLA.xlsx` (10 dias mais recentes em colunas, indicadores em linhas,
-  variação último − anterior). Depois rodar o recalc.py (10 dias ≈ 35 s, 80 mil fórmulas).
-- Regra do usuário: vacas em lactação = lotes 1 a 6 e 10. Lote 10 = tratamento, leite descartado
-  (fora do leite do tanque, mostrado à parte).
-- Primeiro dia carregado: 14/10/2026 — 1.653 vacas em lactação, 67.643 kg no tanque (1.547 vacas, 43,7 kg/vaca),
-  767,8 kg descartados no lote 10, 47,6% das vacas em lactação prenhas.
+  variação último − anterior). A aba Dados leva 11 dias (o 11º serve às comparações com o dia anterior).
+  Depois rodar o recalc.py (11 dias ≈ 1 min, ~390 mil fórmulas, ~7,7 MB).
+- Itens definidos pelo usuário (versão 2):
+  - Adultos (LACT > 0): vacas adultas; em lactação (lotes 1–6 e 10); DEL médio; produção média 24 h;
+    média dos lotes 1 a 6; lote 10 (tratamento); leite vendido (entrada, `dados/leite_vendido.json`,
+    virá de PDF); gestantes (DDP ≥ 1); DEL > 150 não gestantes; DNB (+ Dry DNB); DEL > 70 com NumIAs = 0;
+    começaram a lactação, saída de adultos e entradas/saídas/saldo do lote 10 (comparação por brinco com o
+    relatório anterior).
+  - Jovens (LACT = 0): totais; ≥ 3 meses (90 d); novilhas gestantes; > 15 meses (456 d) não gestantes, sem machos.
+- Comparações validadas com dias simulados (entradas/saídas conhecidas) e valores conferidos com pandas.
+- 14/10/2026: 1.856 adultas, 1.652 em lactação, DEL 188, 43,3 kg/vaca, 57 no lote 10, 988 gestantes,
+  274 com DEL > 150 vazias, 59 DNB, 16 com DEL > 70 sem IA; jovens 2.114, novilhas atrasadas 69.

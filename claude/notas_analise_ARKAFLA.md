@@ -230,3 +230,7 @@
     Gordura e proteína do tanque substituíram as médias do DairyPlan.
   - Leite ECM = produção média 24 h × (0,327 + 0,1295 × G% + 0,0765 × P%) (Sjaunja et al., 1990):
     44,1 kg em 14/10.
+- Versão 8 (15/10/2026), pedido do usuário: as análises de uma mesma mensagem (campo "grupo" em
+  analise_tanque.json) contam como uma só coleta. 04/10 e 05/10 viraram um grupo único: 4 tanques, 134.757 L,
+  gordura 3,44%, proteína 3,39%, ST 12,54%, CCS 261, CPP 11, ureia 13,4. Vale a partir de 04/10 (primeira coleta
+  do grupo) até chegar um grupo novo. ECM em 14/10: 44,7 kg.

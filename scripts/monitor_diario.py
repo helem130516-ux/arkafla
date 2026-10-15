@@ -162,22 +162,26 @@ wp.column_dimensions["C"].width = 30
 wt["A1"] = "Análises do leite do tanque (laticínio)"
 wt["A1"].font = font(bold=True, size=14, color=AZUL)
 wt["A2"] = ("Valores azuis transcritos das mensagens do laticínio (dados/analise_tanque.json). "
-            "Volume = coleta do mesmo dia e tanque no Demonstrativo das Coletas; 0 = não encontrado.")
+            "Volume = coleta do mesmo dia e tanque no Demonstrativo das Coletas; 0 = não encontrado. "
+            "Análises do mesmo grupo (mesma mensagem) contam como uma só coleta.")
 wt["A2"].font = font(italic=True, size=9, color="5E6B63")
 TQ = ["Data coleta", "Tanque", "Volume (L)", "Gordura %", "Proteína %", "Sólidos totais %",
-      "CCS (mil cél/mL)", "CPP (mil UFC/mL)", "Ureia (mg/dL)", "Fonte"]
+      "CCS (mil cél/mL)", "CPP (mil UFC/mL)", "Ureia (mg/dL)", "Grupo", "Fonte"]
 TQK = ["gordura", "proteina", "st", "ccs", "cpp", "ureia"]
+for a in analises:
+    a.setdefault("grupo", a.get("fonte", a["data"]))
 for j, t in enumerate(TQ, 1):
     c = wt.cell(4, j, t)
     c.font, c.fill, c.border = font(bold=True, size=9), HFILL, BOX
     c.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
 for i, a in enumerate(analises, 5):
     vol = sum(c["volume"] for c in coletas if c["data"] == a["data"] and c["tanque"] == a["tanque"])
-    vals = [date.fromisoformat(a["data"]), a["tanque"], vol] + [a[k] for k in TQK] + [a.get("fonte", "")]
+    vals = ([date.fromisoformat(a["data"]), a["tanque"], vol] + [a[k] for k in TQK]
+            + [a["grupo"], a.get("fonte", "")])
     for j, v in enumerate(vals, 1):
         c = wt.cell(i, j, v)
         c.border = BOX
-        c.font = font(color="0000FF") if j != 10 else font(size=8, color="5E6B63")
+        c.font = font(color="0000FF") if j < 11 else font(size=8, color="5E6B63")
     wt.cell(i, 1).number_format = "DD/MM/YYYY"
     wt.cell(i, 3).number_format = "#,##0"
 NA = max(len(analises), 1) + 4  # última linha das análises
@@ -187,33 +191,41 @@ def TR(col):
     return f"'Análises do tanque'!${col}$5:${col}${NA}"
 
 
-# média geral do tanque por data de coleta, ponderada pelo volume de cada tanque
-DT = sorted({a["data"] for a in analises})
-c0 = 12  # coluna L
-wt.cell(3, c0, "Média geral do tanque por data de coleta (ponderada pelo volume)").font = font(bold=True)
-for j, t in enumerate(["Data coleta", "Volume analisado (L)"] + TQ[3:9], c0):
+# média geral do tanque por grupo de análises (uma mensagem = uma coleta), ponderada pelo volume.
+# Vale a partir da primeira data de coleta do grupo.
+GR = {}
+for a in analises:
+    GR.setdefault(a["grupo"], []).append(a["data"])
+GR = sorted(GR.items(), key=lambda g: min(g[1]))
+c0 = 14  # coluna N
+wt.cell(3, c0, "Média geral do tanque por grupo de análises (ponderada pelo volume)").font = font(bold=True)
+for j, t in enumerate(["Vale a partir de", "Coletas até", "Grupo", "Volume analisado (L)"] + TQ[3:9], c0):
     c = wt.cell(4, j, t)
     c.font, c.fill, c.border = font(bold=True, size=9), HFILL, BOX
     c.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
-for i, d in enumerate(DT, 5):
-    dc = f"{L(c0)}{i}"
-    wt.cell(i, c0, date.fromisoformat(d)).number_format = "DD/MM/YYYY"
-    wt.cell(i, c0 + 1, f"=SUMIFS({TR('C')},{TR('A')},{dc})").number_format = "#,##0"
+for i, (g, datas) in enumerate(GR, 5):
+    gc = f"{L(c0 + 2)}{i}"
+    wt.cell(i, c0, date.fromisoformat(min(datas))).number_format = "DD/MM/YYYY"
+    wt.cell(i, c0 + 1, date.fromisoformat(max(datas))).number_format = "DD/MM/YYYY"
+    wt.cell(i, c0 + 2, g)
+    wt.cell(i, c0 + 3, f"=SUMIFS({TR('C')},{TR('J')},{gc})").number_format = "#,##0"
     for k, col in enumerate("DEFGHI"):
-        f = (f"=IF(COUNTIFS({TR('A')},{dc},{TR('C')},0)>0,AVERAGEIFS({TR(col)},{TR('A')},{dc}),"
-             f"SUMPRODUCT(({TR('A')}={dc})*{TR('C')}*{TR(col)})/{L(c0 + 1)}{i})")
-        wt.cell(i, c0 + 2 + k, f).number_format = "0.00" if k < 3 else "0"
-    for j in range(c0, c0 + 8):
+        f = (f"=IF(COUNTIFS({TR('J')},{gc},{TR('C')},0)>0,AVERAGEIFS({TR(col)},{TR('J')},{gc}),"
+             f"SUMPRODUCT(({TR('J')}={gc})*{TR('C')}*{TR(col)})/{L(c0 + 3)}{i})")
+        wt.cell(i, c0 + 4 + k, f).number_format = "0.00" if k < 3 else "0"
+    for j in range(c0, c0 + 10):
         wt.cell(i, j).border = BOX
         wt.cell(i, j).font = font()
-NT = max(len(DT), 1) + 4
+NT = max(len(GR), 1) + 4
 name("TQ_DATA", f"'Análises do tanque'!${L(c0)}$5:${L(c0)}${NT}")
 for k, n in enumerate(["TQ_GORD", "TQ_PROT", "TQ_ST", "TQ_CCS", "TQ_CPP", "TQ_UREIA"]):
-    col = L(c0 + 2 + k)
+    col = L(c0 + 4 + k)
     name(n, f"'Análises do tanque'!${col}$5:${col}${NT}")
-for j in range(1, c0 + 8):
+for j in range(1, c0 + 10):
     wt.column_dimensions[L(j)].width = 11
-wt.column_dimensions["J"].width = 34
+wt.column_dimensions["J"].width = 26
+wt.column_dimensions["K"].width = 34
+wt.column_dimensions[L(c0 + 2)].width = 26
 wt.row_dimensions[4].height = 30
 wt.freeze_panes = "A5"
 
@@ -388,7 +400,7 @@ GRUPOS = [
         ("% do leite produzido que foi descartado", "%",
          razao(soma("Leite", *DESCARTE),
                lambda d: f"({soma('Leite', *COM_LEITE)(d)}+{soma('Leite', *DESCARTE)(d)})"), P),
-        ("Data da coleta analisada (tanque)", "data", data_tanque, "DD/MM/YYYY"),
+        ("Análise do tanque vigente desde", "data", data_tanque, "DD/MM/YYYY"),
         ("Gordura – análise do tanque", "%", tanque("TQ_GORD"), N2),
         ("Proteína – análise do tanque", "%", tanque("TQ_PROT"), N2),
         ("Sólidos totais – análise do tanque", "%", tanque("TQ_ST"), N2),
@@ -527,10 +539,10 @@ notas = [
     ("Produção 24 h", "Média da coluna Leite das vacas em lactação com Leite > 0 (lotes 1 a 6 e 10). "
                       "Por lote: adultas do lote com Leite > 0."),
     ("Análises do tanque", "Aba própria. Valores transcritos das mensagens do laticínio (Ref. coleta = data "
-                           "da coleta e tanque). Média geral do dia ponderada pelo volume de cada tanque "
-                           "(Demonstrativo das Coletas); sem volume, média simples. Cada dia do monitoramento "
-                           "usa a última análise com data de coleta igual ou anterior ao dia e repete até "
-                           "chegar uma nova. Gordura e proteína do tanque substituem as médias do DairyPlan."),
+                           "da coleta e tanque). As análises de uma mesma mensagem formam um grupo, tratado "
+                           "como uma só coleta: média geral ponderada pelo volume de cada tanque "
+                           "(Demonstrativo das Coletas; sem volume, média simples), válida a partir da "
+                           "primeira data de coleta do grupo e repetida até chegar um grupo novo. Gordura e proteína do tanque substituem as médias do DairyPlan."),
     ("Leite ECM", "Produção média nas últimas 24 h × (0,327 + 0,1295 × gordura % + 0,0765 × proteína %), "
                   "com gordura e proteína da análise do tanque (Sjaunja et al., 1990; fatores na aba "
                   "Parâmetros)."),

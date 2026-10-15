@@ -1,6 +1,6 @@
 [
- {"data": "2026-10-04", "tanque": 2, "cpp": 14, "proteina": 3.39, "gordura": 3.56, "ccs": 266, "st": 12.66, "ureia": 12.4, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png"},
- {"data": "2026-10-04", "tanque": 3, "cpp": 13, "proteina": 3.38, "gordura": 3.54, "ccs": 224, "st": 12.63, "ureia": 14.4, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png"},
- {"data": "2026-10-05", "tanque": 1, "cpp": 7, "proteina": 3.39, "gordura": 3.18, "ccs": 253, "st": 12.26, "ureia": 12.4, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png"},
- {"data": "2026-10-05", "tanque": 4, "cpp": 9, "proteina": 3.42, "gordura": 3.53, "ccs": 309, "st": 12.64, "ureia": 14.7, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png"}
+ {"data": "2026-10-04", "tanque": 2, "cpp": 14, "proteina": 3.39, "gordura": 3.56, "ccs": 266, "st": 12.66, "ureia": 12.4, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png", "grupo": "Mensagem recebida 15/10/2026"},
+ {"data": "2026-10-04", "tanque": 3, "cpp": 13, "proteina": 3.38, "gordura": 3.54, "ccs": 224, "st": 12.63, "ureia": 14.4, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png", "grupo": "Mensagem recebida 15/10/2026"},
+ {"data": "2026-10-05", "tanque": 1, "cpp": 7, "proteina": 3.39, "gordura": 3.18, "ccs": 253, "st": 12.26, "ureia": 12.4, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png", "grupo": "Mensagem recebida 15/10/2026"},
+ {"data": "2026-10-05", "tanque": 4, "cpp": 9, "proteina": 3.42, "gordura": 3.53, "ccs": 309, "st": 12.64, "ureia": 14.7, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png", "grupo": "Mensagem recebida 15/10/2026"}
 ]

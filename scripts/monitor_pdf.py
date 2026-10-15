@@ -80,7 +80,7 @@ st_s = ParagraphStyle("s", fontName="LibI", fontSize=7, textColor=CINZA, leading
 st_l = ParagraphStyle("l", fontName="LibB", fontSize=8, textColor=AZUL, leading=10)
 
 # ---------------------------------------------------------------- tabela principal
-cab = (["Indicador", "Un."] + [d.strftime("%d/%m") for d in dias] + [f"Média {ND}d"]
+cab = (["Indicador", "Un."] + [d.strftime("%d/%m") for d in dias] + ["Média 10 dias"]
        + (["Var."] if tem_var else []))
 MI = 2 + ND  # coluna da média no PDF
 linhas = [cab]
@@ -139,7 +139,7 @@ for r in range(HR + 1, ws.max_row + 1):
 
 LARG = PAG[0] - 2 * 12 * 2.835  # margens de 12 mm
 w_un = 32
-w_med = 44
+w_med = 50
 w_var = 32 if tem_var else 0
 w_rot = 205
 w_dia = min((LARG - w_rot - w_un - w_med - w_var) / ND, 52)

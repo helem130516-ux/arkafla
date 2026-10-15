@@ -461,7 +461,7 @@ ws["A2"] = (f"Relatório zootécnico diário · {ND} dias mais recentes "
 ws["A2"].font = font(italic=True, size=9, color="5E6B63")
 
 HR = 4
-for j, t in enumerate(["Indicador", "Unidade"] + [None] * ND + [f"Média\n{ND} dia{'s' if ND > 1 else ''}", "Variação\n(último − anterior)"], 1):
+for j, t in enumerate(["Indicador", "Unidade"] + [None] * ND + ["Média\n10 dias", "Variação\n(último − anterior)"], 1):
     c = ws.cell(HR, j, t)
     c.font = font(bold=True, size=9)
     c.fill = HFILL

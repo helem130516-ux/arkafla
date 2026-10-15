@@ -127,10 +127,11 @@ LARG = A4[0] - 2 * 14 * 2.835  # margens de 14 mm
 w_dia = 32
 w_un = 30
 w_var = 30 if tem_var else 0
-w_rot = LARG - w_un - w_dia * ND - w_var
+w_rot = min(LARG - w_un - w_dia * ND - w_var, 200)
 tab = Table(linhas, colWidths=[w_rot, w_un] + [w_dia] * ND + ([w_var] if tem_var else []),
             rowHeights=7.7, repeatRows=0)
 tab.setStyle(TableStyle(estilo))
+tab.hAlign = "LEFT"
 
 # ---------------------------------------------------------------- produção por lote
 wl = wb["Produção por lote"]
@@ -168,9 +169,10 @@ while wl.cell(r, 1).value:
     r += 1
 est2.append(("FONT", (0, len(pl) - 1), (-1, len(pl) - 1), "LibB", FS))
 w_l = 98
-w_c = (LARG - w_l) / (2 * ND)
+w_c = min((LARG - w_l) / (2 * ND), 34)
 tab2 = Table(pl, colWidths=[w_l] + [w_c] * (2 * ND), rowHeights=7.7)
 tab2.setStyle(TableStyle(est2))
+tab2.hAlign = "LEFT"
 
 # ---------------------------------------------------------------- página
 OUT = os.path.join(os.path.dirname(XLSX), f"Monitoramento_Diario_ARKAFLA_{ultimo:%Y-%m-%d}.pdf")

@@ -166,3 +166,14 @@
 ## REB 47238 → 70105 confirmado (01/10/2026)
 - A fazenda informou que a APCBRH confirmou: houve mudança no código do produtor. É o mesmo rebanho.
 - A análise já tratava os controles de 02/02 a 18/06 (REB 47238) e de 17/07 em diante (REB 70105) como uma série única. Nada muda nos números.
+
+## Monitoramento diário do rebanho (15/10/2026)
+- Fonte: relatório zootécnico diário "Zootécnico Jorge atualizado DD-MM-AAAA.xlsx"; a data do arquivo é a do nome.
+- Relatórios guardados em `dados/zootecnico/Zootecnico_AAAA-MM-DD.xlsx`; mesma data substitui.
+- `python3 scripts/monitor_diario.py <novo.xlsx>` guarda o relatório e refaz
+  `monitoramento/Monitoramento_Diario_ARKAFLA.xlsx` (10 dias mais recentes em colunas, indicadores em linhas,
+  variação último − anterior). Depois rodar o recalc.py (10 dias ≈ 35 s, 80 mil fórmulas).
+- Regra do usuário: vacas em lactação = lotes 1 a 6 e 10. Lote 10 = tratamento, leite descartado
+  (fora do leite do tanque, mostrado à parte).
+- Primeiro dia carregado: 14/10/2026 — 1.653 vacas em lactação, 67.643 kg no tanque (1.547 vacas, 43,7 kg/vaca),
+  767,8 kg descartados no lote 10, 47,6% das vacas em lactação prenhas.

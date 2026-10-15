@@ -234,3 +234,13 @@
   analise_tanque.json) contam como uma só coleta. 04/10 e 05/10 viraram um grupo único: 4 tanques, 134.757 L,
   gordura 3,44%, proteína 3,39%, ST 12,54%, CCS 261, CPP 11, ureia 13,4. Vale a partir de 04/10 (primeira coleta
   do grupo) até chegar um grupo novo. ECM em 14/10: 44,7 kg.
+- Versão 9 (15/10/2026): o relatório ganhou a coluna "DATA da IA" (última inseminação).
+  - O arquivo veio sem data no nome ("Zoot_cnico_Jorge_atualizado_1.xlsx"), mas as outras 21 colunas são
+    idênticas às do relatório de 14/10. Por isso substituiu `Zootecnico_2026-10-14.xlsx`.
+  - Atenção: 41 vacas têm DATA da IA = 15/10/2026 num relatório de 14/10. Para elas, dias desde a IA = −1;
+    não afeta a regra de > 35 dias.
+  - Novos indicadores (dias desde IA = data do relatório − DATA da IA; parâmetro P_DIAS_IA = 35; sem DNB).
+    Em 14/10:
+    - Adultas: Bred ou Dry Bred com IA há > 35 dias = 20; Vazia com IA há > 35 dias = 81.
+    - Jovens: Bred com IA há > 35 dias = 3; Vazia com IA há > 35 dias = 2.
+  - Dias de relatórios sem a coluna ficam vazios nessas linhas.

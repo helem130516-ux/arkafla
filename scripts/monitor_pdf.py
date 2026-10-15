@@ -33,7 +33,7 @@ MFILL = colors.HexColor("#EEF3F7")
 LINHA = colors.HexColor("#C9D1CB")
 VERDE = colors.HexColor("#1E7B45")
 VERMELHO = colors.HexColor("#B03A2E")
-FS = 7.0  # corpo da tabela
+FS = 6.8  # corpo da tabela
 
 
 def br(v, casas, milhar=True):
@@ -133,7 +133,7 @@ for r in range(HR + 1, ws.max_row + 1):
     estilo.append(("BACKGROUND", (MI, i), (MI, i), MFILL))
     for k in range(ND):  # "média (DP)" em letra menor para caber na coluna
         if isinstance(ws.cell(r, 3 + k).value, str):
-            estilo.append(("FONTSIZE", (2 + k, i), (2 + k, i), 6.3))
+            estilo.append(("FONTSIZE", (2 + k, i), (2 + k, i), 6.1))
     linhas.append(linha)
     n_item += 1
 
@@ -144,7 +144,7 @@ w_var = 32 if tem_var else 0
 w_rot = 205
 w_dia = min((LARG - w_rot - w_un - w_med - w_var) / ND, 52)
 tab = Table(linhas, colWidths=[w_rot, w_un] + [w_dia] * ND + [w_med] + ([w_var] if tem_var else []),
-            rowHeights=9.55, repeatRows=0)
+            rowHeights=9.0, repeatRows=0)
 tab.setStyle(TableStyle(estilo))
 tab.hAlign = "LEFT"
 

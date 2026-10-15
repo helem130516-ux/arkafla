@@ -95,10 +95,14 @@ for d, p in zip(DATAS, arquivos):
     frames.append(df)
 # Ordenado por brinco e data: a linha de cima é o mesmo animal no relatório anterior.
 dados = pd.concat(frames, ignore_index=True).sort_values(["Brinco", "Data"], kind="stable")
+# Data da última inseminação: coluna nova no relatório (a partir de 14/10/2026); antes não existia.
+if "DATA da IA" not in dados.columns:
+    dados["DATA da IA"] = pd.NaT
+dados["DATA da IA"] = pd.to_datetime(dados["DATA da IA"], errors="coerce")
 COLS = list(dados.columns)
 NR = len(dados) + 1  # última linha da aba Dados
 
-AUX = ["Fêmea", "DNB", "DiaNº", "Lactação", "Lote10", "Lactação ant.", "Lote10 ant.",
+AUX = ["Fêmea", "DNB", "Dias desde IA", "DiaNº", "Lactação", "Lote10", "Lactação ant.", "Lote10 ant.",
        "Iniciou lactação", "Entrou lote 10", "Saída adulto em", "Saída lote 10 em"]
 C = {c: L(i + 1) for i, c in enumerate(COLS + AUX)}
 
@@ -131,6 +135,7 @@ params = [
     ("P_DEL_SEM_IA", "Vacas sem inseminação: DEL acima de (dias)", 70),
     ("P_IDADE_3M", "Animais jovens < 3 meses: idade abaixo de (dias)", 90),
     ("P_IDADE_15M", "Novilhas atrasadas: idade acima de (dias) – 15 meses", 456),
+    ("P_DIAS_IA", "Inseminadas / vazias: dias desde a última IA acima de", 35),
     # ECM (Sjaunja et al., 1990): 0,327 × leite + 12,95 × kg gordura + 7,65 × kg proteína
     ("P_ECM_BASE", "ECM: fator do leite (Sjaunja et al., 1990)", 0.327),
     ("P_ECM_GORD", "ECM: fator por ponto % de gordura (12,95 ÷ 100)", 0.1295),
@@ -241,9 +246,11 @@ for i, row in enumerate(dados.itertuples(index=False), 2):
     for j, v in enumerate(row, 1):
         if pd.isna(v):
             continue
-        if j == 1:
+        if isinstance(v, pd.Timestamp):
             v = v.date()
         wd.cell(i, j, v)
+        if j == 1 or COLS[j - 1] == "DATA da IA":
+            wd.cell(i, j).number_format = "DD/MM/YYYY"
     x = {k: f"{C[k]}{i}" for k in C}          # esta linha
     a = {k: f"{C[k]}{i - 1}" for k in C}      # linha de cima (mesmo animal, dia anterior?)
     b = {k: f"{C[k]}{i + 1}" for k in C}      # linha de baixo (mesmo animal, dia seguinte?)
@@ -254,6 +261,7 @@ for i, row in enumerate(dados.itertuples(index=False), 2):
     f = {
         "Fêmea": f'=IF({h}="Male",0,1)',
         "DNB": f'=IF(OR({h}="DNB",{h}="Dry DNB"),1,0)',
+        "Dias desde IA": f'=IF(ISNUMBER({x["DATA da IA"]}),{x["Data"]}-{x["DATA da IA"]},"")',
         "DiaNº": f"=MATCH({x['Data']},DATAS,0)",
         "Lactação": f"=IF(AND({lac}>0,OR(AND({lt}>=1,{lt}<=6),{lt}=10)),1,0)",
         "Lote10": f"=IF(AND({lac}>0,{lt}=10),1,0)",
@@ -301,6 +309,11 @@ def media(campo, *conds):
 
 def menos(f1, f2):
     return lambda d: f"({f1(d)}-{f2(d)})"
+
+
+def com_ia(f1):
+    """Só existe nos dias em que o relatório traz a coluna DATA da IA."""
+    return lambda d: f'IF(COUNTIFS({R("Data")},{d},{R("Dias desde IA")},">-100000")=0,"",{f1(d)})'
 
 
 def comparado(f1):
@@ -366,6 +379,10 @@ ng150 = menos(cont(LAC, REPRO, ("DEL", ">\"&P_DEL_NG&\"")),
 PROD24 = media_dp(("Lactação", 1), ("Leite", ">0"))
 ecm = lambda d: (f'IFERROR({PROD24.raw(d)}*(P_ECM_BASE+P_ECM_GORD*INDEX(TQ_GORD,MATCH({d},TQ_DATA,1))'
                  f'+P_ECM_PROT*INDEX(TQ_PROT,MATCH({d},TQ_DATA,1))),"")')
+def IA35(status, grupo):
+    return cont(grupo, REPRO, ("StatRepro", status), ("Dias desde IA", ">\"&P_DIAS_IA&\""))
+
+
 GRUPOS = [
     ("Animais adultos (fêmeas, LACT > 0)", [
         ("Vacas adultas", "cab", cont(ADULTO), N0),
@@ -415,6 +432,9 @@ GRUPOS = [
         ("Vacas a descartar (DNB)", "cab", cont(ADULTO, ("DNB", 1)), N0),
         ("DEL > 70 sem IA (NumIAs = 0, sem DNB)", "cab",
          cont(LAC, REPRO, ("DEL", ">\"&P_DEL_SEM_IA&\""), ("NumIAs", 0)), N0),
+        ("Inseminadas (Bred) com IA há > 35 dias", "cab",
+         com_ia(lambda d: f'({IA35("Bred", ADULTO)(d)}+{IA35("Dry Bred", ADULTO)(d)})'), N0),
+        ("Vazias com IA há > 35 dias", "cab", com_ia(IA35("Vazia", ADULTO)), N0),
     ]),
     ("Animais jovens (fêmeas, LACT = 0)", [
         ("Animais jovens totais", "cab", cont(JOVEM), N0),
@@ -424,6 +444,8 @@ GRUPOS = [
         ("Novilhas > 15 meses não gestantes", "cab",
          menos(cont(JOVEM, REPRO, ("IdadeDias", ">\"&P_IDADE_15M&\"")),
                cont(JOVEM, REPRO, ("IdadeDias", ">\"&P_IDADE_15M&\""), ("DDP", ">=1"))), N0),
+        ("Novilhas inseminadas (Bred) com IA há > 35 dias", "cab", com_ia(IA35("Bred", JOVEM)), N0),
+        ("Novilhas vazias com IA há > 35 dias", "cab", com_ia(IA35("Vazia", JOVEM)), N0),
     ]),
 ]
 
@@ -557,6 +579,9 @@ notas = [
     ("Gestantes", "DDP (dias de prenhez) ≥ 1, sem DNB; inclui secas. % = gestantes ÷ (adultas − DNB)."),
     ("DEL > 150 não gestantes", "Vacas em lactação, sem DNB, com DEL acima do parâmetro e DDP vazio. "
                                 "% = esse número ÷ todas as vacas em lactação."),
+    ("IA há > 35 dias", "Dias desde IA = data do relatório − DATA da IA (última inseminação, coluna "
+                        "do relatório desde 14/10/2026). Inseminadas: StatRepro Bred (adultas também Dry "
+                        "Bred); vazias: StatRepro Vazia; sem DNB. Dias sem a coluna ficam vazios."),
     ("DEL > 70 sem IA", "Vacas em lactação, sem DNB, com DEL acima do parâmetro e NumIAs = 0."),
     ("Começaram a lactação", "Vacas em lactação no dia que não estavam em lactação (ou não estavam "
                              "no relatório) no dia anterior. Comparação por brinco."),

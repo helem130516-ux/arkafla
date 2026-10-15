@@ -106,7 +106,6 @@ wb = Workbook()
 wb._named_styles["Normal"].font = Font(name=F, size=10)
 ws = wb.active
 ws.title = "Monitoramento"
-wl = wb.create_sheet("Produção por lote")
 wp = wb.create_sheet("Parâmetros")
 wd = wb.create_sheet("Dados")
 wn = wb.create_sheet("Notas")
@@ -237,6 +236,22 @@ def razao(num, den):
     return lambda d: f'IFERROR({num(d)}/{den(d)},"")'
 
 
+def media_dp(*conds):
+    """Média e desvio padrão amostral do Leite na mesma célula: "43,6 (10,1)".
+    DP sem fórmula matricial: √((Σx² − (Σx)²/n)/(n − 1)). FIXED usa o separador decimal do Excel."""
+    def f(d):
+        m = [f"({R('Data')}={d})"] + [f"({R(c)}{v if isinstance(v, str) else '=' + str(v)})"
+                                      for c, v in conds]
+        n = f"SUMPRODUCT({'*'.join(m)})"
+        s1 = f"SUMPRODUCT({'*'.join(m)},{R('Leite')})"
+        sq = f"SUMPRODUCT({'*'.join(m)},{R('Leite')},{R('Leite')})"
+        dp = f"SQRT(MAX(0,({sq}-{s1}^2/{n})/({n}-1)))"
+        return (f'IF({n}=0,"",IF({n}<2,FIXED({s1}/{n},1,TRUE),'
+                f'FIXED({s1}/{n},1,TRUE)&" ("&FIXED({dp},1,TRUE)&")"))')
+    f.media = media("Leite", *conds)  # para a coluna de variação
+    return f
+
+
 N0, N1, N2, P = "0", "0.0", "0.00", "0.0%"
 TANQUE = [LAC, ("Lote", "<=6")]
 COM_LEITE = [*TANQUE, ("Leite", ">0")]
@@ -250,9 +265,10 @@ GRUPOS = [
         ("Vacas adultas", "cab", cont(ADULTO), N0),
         ("Vacas em lactação (lotes 1 a 6 e 10)", "cab", cont(LAC), N0),
         ("DEL médio da lactação", "dias", media("DEL", LAC), N0),
-        ("Produção média nas últimas 24 h", "kg/vaca", media("Leite", LAC, ("Leite", ">0")), N1),
-        *[(f"   Produção média do lote {lt}", "kg/vaca",
-           media("Leite", ADULTO, ("Lote", lt), ("Leite", ">0")), N1) for lt in range(1, 7)],
+        ("Produção média nas últimas 24 h (DP)", "kg/vaca",
+         media_dp(("Lactação", 1), ("Leite", ">0")), N1),
+        *[(f"   Produção média do lote {lt} (DP)", "kg/vaca",
+           media_dp(("LACT", ">0"), ("Lote", lt), ("Leite", ">0")), N1) for lt in range(1, 7)],
         ("Animais em tratamento (lote 10)", "cab", cont(ADULTO, ("Lote", 10)), N0),
         ("Leite vendido", "kg", vendido_dia, "#,##0"),
         ("Vacas gestantes totais (DDP ≥ 1)", "cab", cont(ADULTO, ("DDP", ">=1")), N0),
@@ -260,7 +276,7 @@ GRUPOS = [
          menos(cont(LAC, ("DEL", ">\"&P_DEL_NG&\"")),
                cont(LAC, ("DEL", ">\"&P_DEL_NG&\""), ("DDP", ">=1"))), N0),
         ("Vacas a descartar (DNB)", "cab", dnb, N0),
-        ("Em lactação, DEL > 70 e sem IA (NumIAs = 0)", "cab",
+        ("Em lactação, DEL > 70 sem IA (NumIAs = 0)", "cab",
          cont(LAC, ("DEL", ">\"&P_DEL_SEM_IA&\""), ("NumIAs", 0)), N0),
         ("Vacas que começaram a lactação", "cab", comparado(cont(("Iniciou lactação", 1))), N0),
         ("Saída de animais adultos", "cab",
@@ -273,7 +289,7 @@ GRUPOS = [
         ("Animais jovens totais", "cab", cont(JOVEM), N0),
         ("Animais com ≥ 3 meses", "cab", cont(JOVEM, ("IdadeDias", ">=\"&P_IDADE_3M&\"")), N0),
         ("Novilhas gestantes (DDP ≥ 1)", "cab", cont(JOVEM, ("DDP", ">=1")), N0),
-        ("Novilhas > 15 meses não gestantes (atrasadas)", "cab",
+        ("Novilhas > 15 meses não gestantes", "cab",
          menos(cont(JOVEM, ("StatRepro", "<>Male"), ("IdadeDias", ">\"&P_IDADE_15M&\"")),
                cont(JOVEM, ("StatRepro", "<>Male"), ("IdadeDias", ">\"&P_IDADE_15M&\""),
                     ("DDP", ">=1"))), N0),
@@ -366,10 +382,16 @@ for grupo, itens in GRUPOS:
             else:
                 c = ws.cell(r, 3 + k, "=" + f(f"{col}${HR}"))
                 c.font = font()
+                if hasattr(f, "media"):
+                    c.alignment = Alignment(horizontal="right")
             c.number_format = fmt
         if ND >= 2:
-            a, b = f"{DC[-1]}{r}", f"{DC[-2]}{r}"
-            c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",{a}-{b})')
+            if hasattr(f, "media"):  # célula com texto "média (DP)": variação da média
+                a, b = f.media(f"{DC[-1]}${HR}"), f.media(f"{DC[-2]}${HR}")
+                c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",{a}-{b})')
+            else:
+                a, b = f"{DC[-1]}{r}", f"{DC[-2]}{r}"
+                c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",{a}-{b})')
             c.number_format = "+" + fmt + ";-" + fmt + ";0"
             c.font = font(bold=True)
         for j in range(1, LAST + 1):
@@ -395,72 +417,6 @@ ws.page_setup.fitToWidth = 1
 ws.page_setup.fitToHeight = 0
 ws.sheet_properties.pageSetUpPr.fitToPage = True
 ws.print_title_rows = f"{HR}:{HR}"
-
-# ---------------------------------------------------------------- Produção por lote
-wl["A1"] = "ARKAFLA – Produção por lote (vacas adultas com leite > 0)"
-wl["A1"].font = font(bold=True, size=14, color=AZUL)
-wl["A2"] = ("Média e desvio padrão (amostral) da coluna Leite em cada dia · "
-            "um lote por linha para acompanhar o histórico")
-wl["A2"].font = font(italic=True, size=9, color="5E6B63")
-LH = 4
-wl.cell(LH, 1, "Lote")
-wl.merge_cells(start_row=LH, start_column=1, end_row=LH + 1, end_column=1)
-for k, d in enumerate(DIAS):
-    c0 = 2 + 2 * k
-    wl.cell(LH, c0, d).number_format = "DD/MM/YYYY"
-    wl.merge_cells(start_row=LH, start_column=c0, end_row=LH, end_column=c0 + 1)
-    wl.cell(LH + 1, c0, "Média")
-    wl.cell(LH + 1, c0 + 1, "Desvio padrão")
-for rr in (LH, LH + 1):
-    for j in range(1, 2 + 2 * ND):
-        c = wl.cell(rr, j)
-        c.font = font(bold=True, size=9)
-        c.fill = HFILL
-        c.border = BOX
-        c.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
-LINHAS_LOTE = [(f"Lote {lt}", [("Lote", lt)]) for lt in range(1, 7)] + [
-    ("Lote 10 (tratamento – descarte)", [("Lote", 10)]),
-    ("Todas em lactação (1 a 6 e 10)", [LAC]),
-]
-
-
-def desvio(conds, d):
-    """Desvio padrão amostral sem fórmula matricial: √((Σx² − (Σx)²/n)/(n − 1))."""
-    m = [f"({R('Data')}={d})", f"({R('LACT')}>0)", f"({R('Leite')}>0)"]
-    for campo, v in conds:
-        m.append(f"({R(campo)}={v})")
-    sq = f"SUMPRODUCT({'*'.join(m)},{R('Leite')},{R('Leite')})"
-    s1 = f"SUMPRODUCT({'*'.join(m)},{R('Leite')})"
-    n = f"SUMPRODUCT({'*'.join(m)})"
-    return f'=IF({n}<2,"",SQRT(MAX(0,({sq}-{s1}^2/{n})/({n}-1))))'
-
-
-for i, (rot, conds) in enumerate(LINHAS_LOTE):
-    rr = LH + 2 + i
-    wl.cell(rr, 1, rot).font = font(bold=(i == len(LINHAS_LOTE) - 1))
-    for k in range(ND):
-        c0 = 2 + 2 * k
-        d = f"{L(c0)}${LH}"
-        c = wl.cell(rr, c0, "=" + media("Leite", ADULTO, ("Leite", ">0"), *conds)(d))
-        c.number_format = N1
-        c.font = font(bold=True)
-        c = wl.cell(rr, c0 + 1, desvio(conds, d))
-        c.number_format = N1
-        c.font = font(color="5E6B63")
-    for j in range(1, 2 + 2 * ND):
-        wl.cell(rr, j).border = BOX
-        if i % 2:
-            wl.cell(rr, j).fill = ZEBRA
-wl.column_dimensions["A"].width = 32
-for j in range(2, 2 + 2 * ND):
-    wl.column_dimensions[L(j)].width = 10
-wl.row_dimensions[LH + 1].height = 26
-wl.freeze_panes = f"B{LH + 2}"
-wl.sheet_view.showGridLines = False
-wl.page_setup.orientation = "landscape"
-wl.page_setup.fitToWidth = 1
-wl.page_setup.fitToHeight = 0
-wl.sheet_properties.pageSetUpPr.fitToPage = True
 
 # ---------------------------------------------------------------- Notas
 notas = [
@@ -492,8 +448,8 @@ notas = [
                 "do relatório. Saldo = entradas − saídas."),
     ("Comparações", "\"Dia anterior\" é o relatório anterior guardado. Sem ele, a célula fica vazia. "
                     "Se faltar um dia, a comparação é com o último relatório que existe."),
-    ("Produção por lote", "Aba própria: um lote por linha; em cada dia, média e desvio padrão "
-                          "amostral (n − 1) do Leite das adultas do lote com Leite > 0."),
+    ("Média (DP)", "Linhas de produção média: a célula traz a média e, entre parênteses, o desvio "
+                   "padrão amostral (n − 1) do Leite. A variação compara só as médias."),
     ("Blocos complementares", "Indicadores da primeira versão. Leite do tanque = lotes 1 a 6; o lote 10 "
                               "aparece como leite descartado. Secas = adultas fora dos lotes 1 a 6 e 10. "
                               "Novilhas = jovens sem machos e sem Youngstock."),

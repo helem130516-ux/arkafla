@@ -32,7 +32,7 @@ INFILL = colors.HexColor("#FFF6D6")
 LINHA = colors.HexColor("#C9D1CB")
 VERDE = colors.HexColor("#1E7B45")
 VERMELHO = colors.HexColor("#B03A2E")
-FS = 6.2  # corpo da tabela
+FS = 6.8  # corpo da tabela
 
 
 def br(v, casas, milhar=True):
@@ -44,8 +44,8 @@ def fmt(v, nf, sinal=False):
     """Formata como no Excel (formatos usados no script da planilha), em pt-BR."""
     if v is None or v == "":
         return ""
-    if isinstance(v, str):
-        return v
+    if isinstance(v, str):  # "média (DP)": decimal com vírgula
+        return v.replace(".", ",")
     base = nf.split(";")[0].lstrip("+")
     if base.endswith("%"):
         casas = len(base.split(".")[1]) - 1 if "." in base else 0
@@ -120,59 +120,21 @@ for r in range(HR + 1, ws.max_row + 1):
     elif n_item % 2:
         estilo.append(("BACKGROUND", (0, i), (-1, i), ZEBRA))
     estilo.append(("FONT", (2 + ND - 1, i), (2 + ND - 1, i), "LibB", FS))  # último dia em negrito
+    for k in range(ND):  # "média (DP)" em letra menor para caber na coluna
+        if isinstance(ws.cell(r, 3 + k).value, str):
+            estilo.append(("FONTSIZE", (2 + k, i), (2 + k, i), 5.6))
     linhas.append(linha)
     n_item += 1
 
 LARG = A4[0] - 2 * 14 * 2.835  # margens de 14 mm
 w_dia = 32
-w_un = 30
-w_var = 30 if tem_var else 0
+w_un = 28
+w_var = 25 if tem_var else 0
 w_rot = min(LARG - w_un - w_dia * ND - w_var, 200)
 tab = Table(linhas, colWidths=[w_rot, w_un] + [w_dia] * ND + ([w_var] if tem_var else []),
-            rowHeights=7.7, repeatRows=0)
+            rowHeights=9.2, repeatRows=0)
 tab.setStyle(TableStyle(estilo))
 tab.hAlign = "LEFT"
-
-# ---------------------------------------------------------------- produção por lote
-wl = wb["Produção por lote"]
-LH = 4
-cab1 = ["Lote"] + sum([[d.strftime("%d/%m"), ""] for d in dias], [])
-cab2 = [""] + ["Média", "DP"] * ND
-pl = [cab1, cab2]
-est2 = [
-    ("FONT", (0, 0), (-1, -1), "Lib", FS),
-    ("FONT", (0, 0), (-1, 1), "LibB", FS),
-    ("BACKGROUND", (0, 0), (-1, 1), HFILL),
-    ("ALIGN", (1, 0), (-1, -1), "CENTER"),
-    ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-    ("GRID", (0, 0), (-1, -1), 0.25, LINHA),
-    ("SPAN", (0, 0), (0, 1)),
-    ("TOPPADDING", (0, 0), (-1, -1), 0.6),
-    ("BOTTOMPADDING", (0, 0), (-1, -1), 0.9),
-    ("LEFTPADDING", (0, 0), (-1, -1), 1.5),
-    ("RIGHTPADDING", (0, 0), (-1, -1), 1.5),
-]
-for k in range(ND):
-    est2.append(("SPAN", (1 + 2 * k, 0), (2 + 2 * k, 0)))
-    est2.append(("TEXTCOLOR", (2 + 2 * k, 2), (2 + 2 * k, -1), CINZA))
-r = LH + 2
-while wl.cell(r, 1).value:
-    i = len(pl)
-    linha = [wl.cell(r, 1).value]
-    for k in range(ND):
-        for o in (0, 1):
-            c = wl.cell(r, 2 + 2 * k + o)
-            linha.append(fmt(c.value, c.number_format))
-    pl.append(linha)
-    if (i - 2) % 2:
-        est2.append(("BACKGROUND", (0, i), (-1, i), ZEBRA))
-    r += 1
-est2.append(("FONT", (0, len(pl) - 1), (-1, len(pl) - 1), "LibB", FS))
-w_l = 98
-w_c = min((LARG - w_l) / (2 * ND), 34)
-tab2 = Table(pl, colWidths=[w_l] + [w_c] * (2 * ND), rowHeights=7.7)
-tab2.setStyle(TableStyle(est2))
-tab2.hAlign = "LEFT"
 
 # ---------------------------------------------------------------- página
 OUT = os.path.join(os.path.dirname(XLSX), f"Monitoramento_Diario_ARKAFLA_{ultimo:%Y-%m-%d}.pdf")
@@ -181,10 +143,9 @@ doc = SimpleDocTemplate(OUT, pagesize=A4, leftMargin=14 * 2.835, rightMargin=14 
                         title=f"ARKAFLA – Monitoramento diário {ultimo:%d/%m/%Y}")
 sub = (f"Relatório zootécnico diário · {ND} dia(s): {dias[0]:%d/%m/%Y} a {ultimo:%d/%m/%Y} · "
        "Var. = último dia − dia anterior · Adultos: LACT &gt; 0 · Lactação: lotes 1 a 6 e 10 "
-       "(10 = tratamento, leite descartado) · DP = desvio padrão")
+       "(10 = tratamento, leite descartado) · Produção: média (desvio padrão)")
 partes = [Paragraph(f"ARKAFLA – Monitoramento diário do rebanho · {ultimo:%d/%m/%Y}", st_t),
-          Paragraph(sub, st_s), Spacer(1, 4), tab, Spacer(1, 5),
-          Paragraph("Produção por lote (kg/vaca, adultas com leite &gt; 0)", st_l), Spacer(1, 2), tab2]
+          Paragraph(sub, st_s), Spacer(1, 4), tab]
 
 
 def rodape(c, d):

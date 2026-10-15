@@ -192,3 +192,6 @@
   `monitoramento/Monitoramento_Diario_ARKAFLA_AAAA-MM-DD.pdf` (data do último dia). Testado com 10 dias: cabe em
   uma página; o script falha se passar de uma.
 - Fluxo diário: monitor_diario.py <novo.xlsx> → recalc.py → monitor_pdf.py → commit.
+- Versão 4 (15/10/2026): a aba/quadro "Produção por lote" saiu. O desvio padrão agora fica na mesma célula da
+  média, entre parênteses ("43,6 (10,1)"), nas linhas de produção média geral e dos lotes 1 a 6 (texto via
+  FIXED; a coluna Var. compara só as médias). PDF com letra 6,8 e "média (DP)" em 5,6.

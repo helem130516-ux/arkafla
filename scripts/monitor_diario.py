@@ -231,6 +231,10 @@ def vendido_dia(d):
     return None  # marcador: valor de entrada, vem de dados/leite_vendido.json
 
 
+def dif_vendido(d):
+    return None  # marcador: (DairyPlan − vendido) ÷ vendido, das duas linhas de cima
+
+
 def soma(campo, *conds):
     return lambda d: f"SUMIFS({R(campo)},{crit(conds, d)})"
 
@@ -252,6 +256,7 @@ def media_dp(*conds):
         return (f'IF({n}=0,"",IF({n}<2,FIXED({s1}/{n},1,TRUE),'
                 f'FIXED({s1}/{n},1,TRUE)&" ("&FIXED({dp},1,TRUE)&")"))')
     f.media = media("Leite", *conds)  # para a coluna de variação
+    f.raw = lambda d: f"AVERAGEIFS({R('Leite')},{crit(conds, d)})"  # para a média dos dias
     return f
 
 
@@ -286,18 +291,19 @@ GRUPOS = [
         *[(f"   Produção média do lote {lt} (DP)", "kg/vaca",
            media_dp(("LACT", ">0"), ("Lote", lt), ("Leite", ">0")), N1) for lt in range(1, 7)],
         ("Média de leite por vaca (tanque)", "kg/vaca", media("Leite", *COM_LEITE), N1),
-        ("Média de leite 7 dias (tanque)", "kg/vaca", media("Leite7", *TANQUE, ("Leite7", ">0")), N1),
         ("Média primíparas (LACT 1, tanque)", "kg/vaca", media("Leite", *COM_LEITE, ("LACT", 1)), N1),
         ("Média multíparas (LACT ≥ 2, tanque)", "kg/vaca",
          media("Leite", *COM_LEITE, ("LACT", ">=2")), N1),
         ("Vacas com leite < 20 kg (tanque)", "cab", cont(*COM_LEITE, ("Leite", "<20")), N0),
         ("Vacas com pesagem de leite (tanque)", "cab", cont(*COM_LEITE), N0),
-        ("Leite total do dia (tanque)", "kg", soma("Leite", *COM_LEITE), "#,##0"),
+        ("% vacas com leitura de leite (tanque)", "%", razao(cont(*COM_LEITE), cont(*TANQUE)), P),
+        ("Leite Total dia DairyPlan", "kg", soma("Leite", *COM_LEITE), "#,##0"),
+        ("Leite vendido no dia (coletas do laticínio)", "L", vendido_dia, "#,##0"),
+        ("Diferença DairyPlan × vendido", "%", dif_vendido, "+0.0%;-0.0%;0.0%"),
         ("Leite descartado – lote 10", "kg", soma("Leite", *DESCARTE), "#,##0"),
         ("% do leite produzido que foi descartado", "%",
          razao(soma("Leite", *DESCARTE),
                lambda d: f"({soma('Leite', *COM_LEITE)(d)}+{soma('Leite', *DESCARTE)(d)})"), P),
-        ("Leite vendido", "kg", vendido_dia, "#,##0"),
         ("Gordura média (tanque)", "%", media("%Gord", *TANQUE, ("%Gord", ">0")), N2),
         ("Proteína média (tanque)", "%", media("Prot%", *TANQUE, ("Prot%", ">0")), N2),
         ("Vacas gestantes (DDP ≥ 1, sem DNB)", "cab", cont(ADULTO, REPRO, ("DDP", ">=1")), N0),
@@ -313,8 +319,6 @@ GRUPOS = [
         ("Animais jovens totais", "cab", cont(JOVEM), N0),
         ("Animais com < 3 meses", "cab", cont(JOVEM, ("IdadeDias", "<\"&P_IDADE_3M&\"")), N0),
         ("Nascidas há até 7 dias", "cab", cont(JOVEM, ("IdadeDias", "<=7")), N0),
-        ("Bezerras / recria (Youngstock)", "cab", cont(JOVEM, ("StatRepro", "Youngstock")), N0),
-        ("Novilhas em reprodução", "cab", cont(JOVEM, ("StatRepro", "<>Youngstock")), N0),
         ("Novilhas gestantes (DDP ≥ 1, sem DNB)", "cab", cont(JOVEM, REPRO, ("DDP", ">=1")), N0),
         ("Novilhas > 15 meses não gestantes", "cab",
          menos(cont(JOVEM, REPRO, ("IdadeDias", ">\"&P_IDADE_15M&\"")),
@@ -323,8 +327,9 @@ GRUPOS = [
 ]
 
 DC = [L(3 + k) for k in range(ND)]   # colunas dos dias: C, D, ...
-VC = L(3 + ND)                        # variação último − anterior
-LAST = 3 + ND
+MC = L(3 + ND)                        # média dos dias exibidos
+VC = L(4 + ND)                        # variação último − anterior
+LAST = 4 + ND
 
 ws["A1"] = "ARKAFLA – Monitoramento diário do rebanho"
 ws["A1"].font = font(bold=True, size=14, color=AZUL)
@@ -333,7 +338,7 @@ ws["A2"] = (f"Relatório zootécnico diário · {ND} dias mais recentes "
 ws["A2"].font = font(italic=True, size=9, color="5E6B63")
 
 HR = 4
-for j, t in enumerate(["Indicador", "Unidade"] + [None] * ND + ["Variação\n(último − anterior)"], 1):
+for j, t in enumerate(["Indicador", "Unidade"] + [None] * ND + [f"Média\n{ND} dia{'s' if ND > 1 else ''}", "Variação\n(último − anterior)"], 1):
     c = ws.cell(HR, j, t)
     c.font = font(bold=True, size=9)
     c.fill = HFILL
@@ -358,12 +363,26 @@ for grupo, itens in GRUPOS:
                 c = ws.cell(r, 3 + k, vendido.get(DIAS[k].isoformat()))
                 c.fill = INFILL
                 c.font = font(color="0000FF")
+            elif f is dif_vendido:  # linhas de cima: DairyPlan (r − 2) e vendido (r − 1)
+                dp, vd = f"{col}{r - 2}", f"{col}{r - 1}"
+                c = ws.cell(r, 3 + k, f'=IF(OR({dp}="",{vd}="",{vd}=0),"",({dp}-{vd})/{vd})')
+                c.font = font()
             else:
                 c = ws.cell(r, 3 + k, "=" + f(f"{col}${HR}"))
                 c.font = font()
                 if hasattr(f, "media"):
                     c.alignment = Alignment(horizontal="right")
             c.number_format = fmt
+        if hasattr(f, "media"):  # média das médias diárias (sem o DP), só dias com valor
+            raw = [f.raw(f"{col}${HR}") for col in DC]
+            num = "+".join(f"IFERROR({x},0)" for x in raw)
+            den = "+".join(f"IF(ISERROR({x}),0,1)" for x in raw)
+            c = ws.cell(r, LAST - 1, f'=IF(({den})=0,"",({num})/({den}))')
+        else:
+            c = ws.cell(r, LAST - 1, f'=IFERROR(AVERAGE({DC[0]}{r}:{DC[-1]}{r}),"")')
+        c.number_format = fmt
+        c.font = font(bold=True)
+        c.fill = PatternFill("solid", fgColor="EEF3F7")
         if ND >= 2:
             if hasattr(f, "media"):  # célula com texto "média (DP)": variação da média
                 a, b = f.media(f"{DC[-1]}${HR}"), f.media(f"{DC[-2]}${HR}")
@@ -371,7 +390,7 @@ for grupo, itens in GRUPOS:
             else:
                 a, b = f"{DC[-1]}{r}", f"{DC[-2]}{r}"
                 c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",{a}-{b})')
-            c.number_format = "+" + fmt + ";-" + fmt + ";0"
+            c.number_format = fmt if fmt.startswith("+") else "+" + fmt + ";-" + fmt + ";0"
             c.font = font(bold=True)
         for j in range(1, LAST + 1):
             ws.cell(r, j).border = BOX
@@ -388,6 +407,7 @@ ws.column_dimensions["A"].width = 56
 ws.column_dimensions["B"].width = 9
 for col in DC:
     ws.column_dimensions[col].width = 11.5
+ws.column_dimensions[MC].width = 11
 ws.column_dimensions[VC].width = 14
 ws.freeze_panes = f"C{HR + 1}"
 ws.sheet_view.showGridLines = False
@@ -414,8 +434,12 @@ notas = [
     ("DEL médio", "Média de DEL das vacas em lactação."),
     ("Produção 24 h", "Média da coluna Leite das vacas em lactação com Leite > 0 (lotes 1 a 6 e 10). "
                       "Por lote: adultas do lote com Leite > 0."),
-    ("Leite vendido", "Valor de entrada (azul/amarelo), lido de dados/leite_vendido.json. Será "
-                      "preenchido a partir do PDF do laticínio."),
+    ("Leite vendido", "Valor de entrada (azul/amarelo), em litros, lido de dados/leite_vendido.json. "
+                      "Vem do \"Demonstrativo das Coletas de Leite\" (scripts/le_leite_vendido.py): soma "
+                      "do Volume de todas as coletas com a mesma Data Coleta."),
+    ("Diferença DairyPlan × vendido", "(Leite Total dia DairyPlan − leite vendido) ÷ leite vendido. "
+                                      "Negativo = DairyPlan abaixo do vendido. O DairyPlan está em kg e o "
+                                      "laticínio em litros; não há conversão."),
     ("DNB", "StatRepro = DNB ou Dry DNB. Ficam fora de todos os indicadores de reprodução "
             "(só aparecem na própria contagem de DNB)."),
     ("Gestantes", "DDP (dias de prenhez) ≥ 1, sem DNB; inclui secas. % = gestantes ÷ (adultas − DNB)."),
@@ -437,6 +461,10 @@ notas = [
     ("Jovens < 3 meses", "IdadeDias abaixo do parâmetro (90 dias)."),
     ("Novilhas", "Em reprodução = jovens que não são Youngstock. Atrasadas: sem DNB, IdadeDias acima "
                  "do parâmetro (456 dias ≈ 15 meses) e DDP vazio."),
+    ("Média 10 dias", "Média de cada indicador nos dias exibidos (até 10), ignorando dias sem valor. "
+                      "Nas linhas média (DP): média das médias diárias."),
+    ("% leitura de leite", "Vacas do tanque (lotes 1 a 6) com Leite > 0 ÷ vacas em lactação nos lotes 1 a 6."),
+    ("Leite Total dia DairyPlan", "Soma da coluna Leite das vacas dos lotes 1 a 6 no relatório do DairyPlan."),
     ("Variação", "Último dia menos o dia anterior exibido. Verde = subiu, vermelho = caiu "
                  "(a cor não indica se é bom ou ruim)."),
 ]

@@ -203,3 +203,19 @@
   - % DEL > 150 não gestantes = não gestantes sem DNB ÷ vacas em lactação: 224 ÷ 1.652 = 13,6%.
   - Jovens: "< 3 meses" (IdadeDias < 90) em vez de ≥ 3 meses: 245 em 14/10. Jovens fêmeas: 1.905.
   - Conferido com pandas; recálculo de 10 dias ficou mais lento (≈ 2–3 min).
+- Versão 6 (15/10/2026):
+  - Saíram a média de leite 7 dias, Youngstock e novilhas em reprodução.
+  - Entrou o % de vacas com leitura de leite: com Leite > 0 ÷ vacas dos lotes 1 a 6 (97,0% em 14/10).
+  - "Leite total do dia (tanque)" passou a se chamar "Leite Total dia DairyPlan". Logo abaixo vêm o leite
+    vendido e a diferença % = (DairyPlan − vendido) ÷ vendido.
+  - Nova coluna "Média N dias" com a média dos dias exibidos. Nas linhas média (DP), é a média das médias diárias.
+  - PDF em A4 paisagem, só com o título no cabeçalho.
+- Leite vendido: "Demonstrativo das Coletas de Leite" (Oracle Reports, LEI0275), lido por
+  `python3 scripts/le_leite_vendido.py <pdf>`.
+  - Soma o Volume (litros) por Data Coleta, não pela data de recepção.
+  - Confere a soma com o "Total Período" do PDF.
+  - Grava em `dados/leite_vendido.json` e guarda o PDF em `dados/leite_vendido/`; um PDF novo substitui as datas que traz.
+  - PDF de 15/10/2026 12:13: 32 coletas, de 30/09 a 14/10, total de 1.020.426 L.
+  - 14/10: 70.310 L vendidos contra 67.643 kg no DairyPlan, diferença de −3,8% (kg contra litros, sem conversão).
+  - A última data de coleta de cada PDF pode estar incompleta; o próximo PDF a corrige.
+- Fluxo diário: le_leite_vendido.py <pdf> → monitor_diario.py <xlsx> → recalc.py → monitor_pdf.py → commit.

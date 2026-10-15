@@ -219,3 +219,14 @@
   - 14/10: 70.310 L vendidos contra 67.643 kg no DairyPlan, diferença de −3,8% (kg contra litros, sem conversão).
   - A última data de coleta de cada PDF pode estar incompleta; o próximo PDF a corrige.
 - Fluxo diário: le_leite_vendido.py <pdf> → monitor_diario.py <xlsx> → recalc.py → monitor_pdf.py → commit.
+- Versão 7 (15/10/2026): análises do tanque do laticínio (mensagens de WhatsApp com Ref. coleta DD/MM T-n).
+  - Transcritas à mão para `dados/analise_tanque.json`; a imagem fica em `dados/analise_tanque/`.
+  - Primeira imagem: 04/10 T-2 e T-3, 05/10 T-1 e T-4. Cada uma casa com exatamente uma coleta (mesmo dia e
+    tanque) no Demonstrativo. `le_leite_vendido.py` passou a gravar o detalhe das coletas em
+    `dados/coletas_leite.json`.
+  - Nova aba "Análises do tanque": média geral por data de coleta, ponderada pelo volume do tanque (média
+    simples se faltar volume). 05/10: gordura 3,33%, proteína 3,40%, ST 12,43%, CCS 277, CPP 8, ureia 13,4.
+  - Cada dia do monitoramento usa a última análise com data de coleta ≤ dia e repete até chegar uma nova.
+    Gordura e proteína do tanque substituíram as médias do DairyPlan.
+  - Leite ECM = produção média 24 h × (0,327 + 0,1295 × G% + 0,0765 × P%) (Sjaunja et al., 1990):
+    44,1 kg em 14/10.

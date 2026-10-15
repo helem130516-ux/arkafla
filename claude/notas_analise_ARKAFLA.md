@@ -195,3 +195,11 @@
 - Versão 4 (15/10/2026): a aba/quadro "Produção por lote" saiu. O desvio padrão agora fica na mesma célula da
   média, entre parênteses ("43,6 (10,1)"), nas linhas de produção média geral e dos lotes 1 a 6 (texto via
   FIXED; a coluna Var. compara só as médias). PDF com letra 6,8 e "média (DP)" em 5,6.
+- Versão 5 (15/10/2026): saíram os blocos de reprodução complementar (vacas e novilhas) e "Animais por lote";
+  o restante dos complementares foi integrado em só duas seções, Adultas e Jovens.
+  - Machos (StatRepro = Male) fora de todos os números (coluna auxiliar Fêmea na aba Dados).
+  - DNB (DNB e Dry DNB) fora de todos os indicadores de reprodução; só a contagem de DNB os mostra.
+  - % gestantes = gestantes (DDP ≥ 1, sem DNB) ÷ (adultas − DNB): 988 ÷ 1.797 = 55,0% em 14/10.
+  - % DEL > 150 não gestantes = não gestantes sem DNB ÷ vacas em lactação: 224 ÷ 1.652 = 13,6%.
+  - Jovens: "< 3 meses" (IdadeDias < 90) em vez de ≥ 3 meses: 245 em 14/10. Jovens fêmeas: 1.905.
+  - Conferido com pandas; recálculo de 10 dias ficou mais lento (≈ 2–3 min).

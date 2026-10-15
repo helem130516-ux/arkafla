@@ -32,7 +32,7 @@ INFILL = colors.HexColor("#FFF6D6")
 LINHA = colors.HexColor("#C9D1CB")
 VERDE = colors.HexColor("#1E7B45")
 VERMELHO = colors.HexColor("#B03A2E")
-FS = 6.8  # corpo da tabela
+FS = 7.4  # corpo da tabela
 
 
 def br(v, casas, milhar=True):
@@ -90,6 +90,7 @@ estilo = [
     ("LEFTPADDING", (0, 0), (-1, -1), 2),
     ("RIGHTPADDING", (0, 0), (-1, -1), 2),
     ("TEXTCOLOR", (1, 1), (1, -1), CINZA),
+    ("FONTSIZE", (1, 1), (1, -1), 6.2),
 ]
 n_item = 0
 for r in range(HR + 1, ws.max_row + 1):
@@ -122,7 +123,7 @@ for r in range(HR + 1, ws.max_row + 1):
     estilo.append(("FONT", (2 + ND - 1, i), (2 + ND - 1, i), "LibB", FS))  # último dia em negrito
     for k in range(ND):  # "média (DP)" em letra menor para caber na coluna
         if isinstance(ws.cell(r, 3 + k).value, str):
-            estilo.append(("FONTSIZE", (2 + k, i), (2 + k, i), 5.6))
+            estilo.append(("FONTSIZE", (2 + k, i), (2 + k, i), 5.8))
     linhas.append(linha)
     n_item += 1
 
@@ -132,7 +133,7 @@ w_un = 28
 w_var = 25 if tem_var else 0
 w_rot = min(LARG - w_un - w_dia * ND - w_var, 200)
 tab = Table(linhas, colWidths=[w_rot, w_un] + [w_dia] * ND + ([w_var] if tem_var else []),
-            rowHeights=9.2, repeatRows=0)
+            rowHeights=11.6, repeatRows=0)
 tab.setStyle(TableStyle(estilo))
 tab.hAlign = "LEFT"
 
@@ -142,7 +143,7 @@ doc = SimpleDocTemplate(OUT, pagesize=A4, leftMargin=14 * 2.835, rightMargin=14 
                         topMargin=10 * 2.835, bottomMargin=8 * 2.835,
                         title=f"ARKAFLA – Monitoramento diário {ultimo:%d/%m/%Y}")
 sub = (f"Relatório zootécnico diário · {ND} dia(s): {dias[0]:%d/%m/%Y} a {ultimo:%d/%m/%Y} · "
-       "Var. = último dia − dia anterior · Adultos: LACT &gt; 0 · Lactação: lotes 1 a 6 e 10 "
+       "Var. = último dia − dia anterior · Só fêmeas (machos fora) · Adultas: LACT &gt; 0 · DNB fora da reprodução · Lactação: lotes 1 a 6 e 10 "
        "(10 = tratamento, leite descartado) · Produção: média (desvio padrão)")
 partes = [Paragraph(f"ARKAFLA – Monitoramento diário do rebanho · {ultimo:%d/%m/%Y}", st_t),
           Paragraph(sub, st_s), Spacer(1, 4), tab]

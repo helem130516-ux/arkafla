@@ -93,7 +93,7 @@ dados = pd.concat(frames, ignore_index=True).sort_values(["Brinco", "Data"], kin
 COLS = list(dados.columns)
 NR = len(dados) + 1  # última linha da aba Dados
 
-AUX = ["DiaNº", "Lactação", "Lote10", "Lactação ant.", "Lote10 ant.",
+AUX = ["Fêmea", "DNB", "DiaNº", "Lactação", "Lote10", "Lactação ant.", "Lote10 ant.",
        "Iniciou lactação", "Entrou lote 10", "Saída adulto em", "Saída lote 10 em"]
 C = {c: L(i + 1) for i, c in enumerate(COLS + AUX)}
 
@@ -123,7 +123,7 @@ wp["A2"].font = font(italic=True, size=9, color="5E6B63")
 params = [
     ("P_DEL_NG", "Vacas não gestantes: DEL acima de (dias)", 150),
     ("P_DEL_SEM_IA", "Vacas sem inseminação: DEL acima de (dias)", 70),
-    ("P_IDADE_3M", "Animais jovens ≥ 3 meses: idade mínima (dias)", 90),
+    ("P_IDADE_3M", "Animais jovens < 3 meses: idade abaixo de (dias)", 90),
     ("P_IDADE_15M", "Novilhas atrasadas: idade acima de (dias) – 15 meses", 456),
 ]
 for j, t in enumerate(["Parâmetro", "Valor", "Nome"], 1):
@@ -169,7 +169,10 @@ for i, row in enumerate(dados.itertuples(index=False), 2):
     ontem = f'AND({a["Brinco"]}={x["Brinco"]},{a["DiaNº"]}={x["DiaNº"]}-1)' if i > 2 else "FALSE"
     amanha = f'AND({b["Brinco"]}={x["Brinco"]},{b["DiaNº"]}={x["DiaNº"]}+1)'
     lt, lac = x["Lote"], x["LACT"]
+    h = x["StatRepro"]
     f = {
+        "Fêmea": f'=IF({h}="Male",0,1)',
+        "DNB": f'=IF(OR({h}="DNB",{h}="Dry DNB"),1,0)',
         "DiaNº": f"=MATCH({x['Data']},DATAS,0)",
         "Lactação": f"=IF(AND({lac}>0,OR(AND({lt}>=1,{lt}<=6),{lt}=10)),1,0)",
         "Lote10": f"=IF(AND({lac}>0,{lt}=10),1,0)",
@@ -201,7 +204,7 @@ LAC = ("Lactação", 1)
 
 
 def crit(conds, d):
-    parts = [f"{R('Data')},{d}"]
+    parts = [f"{R('Data')},{d}", f"{R('Fêmea')},1"]  # machos fora de todos os números
     for campo, v in conds:
         parts.append(f'{R(campo)},"{v}"' if isinstance(v, str) else f"{R(campo)},{v}")
     return ",".join(parts)
@@ -216,7 +219,7 @@ def media(campo, *conds):
 
 
 def menos(f1, f2):
-    return lambda d: f"{f1(d)}-{f2(d)}"
+    return lambda d: f"({f1(d)}-{f2(d)})"
 
 
 def comparado(f1):
@@ -240,7 +243,7 @@ def media_dp(*conds):
     """Média e desvio padrão amostral do Leite na mesma célula: "43,6 (10,1)".
     DP sem fórmula matricial: √((Σx² − (Σx)²/n)/(n − 1)). FIXED usa o separador decimal do Excel."""
     def f(d):
-        m = [f"({R('Data')}={d})"] + [f"({R(c)}{v if isinstance(v, str) else '=' + str(v)})"
+        m = [f"({R('Data')}={d})", f"({R('Fêmea')}=1)"] + [f"({R(c)}{v if isinstance(v, str) else '=' + str(v)})"
                                       for c, v in conds]
         n = f"SUMPRODUCT({'*'.join(m)})"
         s1 = f"SUMPRODUCT({'*'.join(m)},{R('Leite')})"
@@ -256,90 +259,66 @@ N0, N1, N2, P = "0", "0.0", "0.00", "0.0%"
 TANQUE = [LAC, ("Lote", "<=6")]
 COM_LEITE = [*TANQUE, ("Leite", ">0")]
 DESCARTE = [LAC, ("Lote", 10), ("Leite", ">0")]
-LOTES = sorted(int(x) for x in dados.loc[dados["Data"] >= pd.Timestamp(DIAS[0]), "Lote"].dropna().unique())
-dnb = lambda d: f'{cont(ADULTO, ("StatRepro", "DNB"))(d)}+{cont(ADULTO, ("StatRepro", "Dry DNB"))(d)}'
+# Reprodução: DNB fica fora de todos os indicadores (exceto a contagem de DNB).
+REPRO = ("DNB", 0)
 ent10 = cont(("Entrou lote 10", 1))
 sai10 = lambda d: f"COUNTIFS({R('Saída lote 10 em')},{d})"
+ng150 = menos(cont(LAC, REPRO, ("DEL", ">\"&P_DEL_NG&\"")),
+              cont(LAC, REPRO, ("DEL", ">\"&P_DEL_NG&\""), ("DDP", ">=1")))
 GRUPOS = [
-    ("Animais adultos (LACT > 0)", [
+    ("Animais adultos (fêmeas, LACT > 0)", [
         ("Vacas adultas", "cab", cont(ADULTO), N0),
         ("Vacas em lactação (lotes 1 a 6 e 10)", "cab", cont(LAC), N0),
-        ("DEL médio da lactação", "dias", media("DEL", LAC), N0),
-        ("Produção média nas últimas 24 h (DP)", "kg/vaca",
-         media_dp(("Lactação", 1), ("Leite", ">0")), N1),
-        *[(f"   Produção média do lote {lt} (DP)", "kg/vaca",
-           media_dp(("LACT", ">0"), ("Lote", lt), ("Leite", ">0")), N1) for lt in range(1, 7)],
-        ("Animais em tratamento (lote 10)", "cab", cont(ADULTO, ("Lote", 10)), N0),
-        ("Leite vendido", "kg", vendido_dia, "#,##0"),
-        ("Vacas gestantes totais (DDP ≥ 1)", "cab", cont(ADULTO, ("DDP", ">=1")), N0),
-        ("Em lactação com DEL > 150 não gestantes", "cab",
-         menos(cont(LAC, ("DEL", ">\"&P_DEL_NG&\"")),
-               cont(LAC, ("DEL", ">\"&P_DEL_NG&\""), ("DDP", ">=1"))), N0),
-        ("Vacas a descartar (DNB)", "cab", dnb, N0),
-        ("Em lactação, DEL > 70 sem IA (NumIAs = 0)", "cab",
-         cont(LAC, ("DEL", ">\"&P_DEL_SEM_IA&\""), ("NumIAs", 0)), N0),
+        ("   Em lactação no tanque (lotes 1 a 6)", "cab", cont(*TANQUE), N0),
+        ("   Animais em tratamento (lote 10)", "cab", cont(ADULTO, ("Lote", 10)), N0),
+        ("Vacas secas (adultas fora da lactação)", "cab", cont(ADULTO, ("Lactação", 0)), N0),
+        ("Vacas paridas há até 21 dias (DEL ≤ 21)", "cab", cont(LAC, ("DEL", "<=21")), N0),
         ("Vacas que começaram a lactação", "cab", comparado(cont(("Iniciou lactação", 1))), N0),
         ("Saída de animais adultos", "cab",
          comparado(lambda d: f"COUNTIFS({R('Saída adulto em')},{d})"), N0),
         ("   Lote 10 – entradas", "cab", comparado(ent10), N0),
         ("   Lote 10 – saídas", "cab", comparado(sai10), N0),
         ("   Lote 10 – saldo (entradas − saídas)", "cab", comparado(menos(ent10, sai10)), N0),
-    ]),
-    ("Animais jovens (LACT = 0)", [
-        ("Animais jovens totais", "cab", cont(JOVEM), N0),
-        ("Animais com ≥ 3 meses", "cab", cont(JOVEM, ("IdadeDias", ">=\"&P_IDADE_3M&\"")), N0),
-        ("Novilhas gestantes (DDP ≥ 1)", "cab", cont(JOVEM, ("DDP", ">=1")), N0),
-        ("Novilhas > 15 meses não gestantes", "cab",
-         menos(cont(JOVEM, ("StatRepro", "<>Male"), ("IdadeDias", ">\"&P_IDADE_15M&\"")),
-               cont(JOVEM, ("StatRepro", "<>Male"), ("IdadeDias", ">\"&P_IDADE_15M&\""),
-                    ("DDP", ">=1"))), N0),
-    ]),
-    ("Complementar – rebanho", [
-        ("Total de animais", "cab", cont(), N0),
-        ("   Em lactação no tanque (lotes 1 a 6)", "cab", cont(*TANQUE), N0),
-        ("Vacas secas (adultas fora da lactação)", "cab", cont(ADULTO, ("Lactação", 0)), N0),
-        ("Novilhas em reprodução (sem machos)", "cab",
-         cont(JOVEM, ("StatRepro", "<>Male"), ("StatRepro", "<>Youngstock")), N0),
-        ("Bezerras / recria (Youngstock)", "cab", cont(JOVEM, ("StatRepro", "Youngstock")), N0),
-        ("Machos", "cab", cont(("StatRepro", "Male")), N0),
-        ("Animais com até 7 dias de idade", "cab", cont(("IdadeDias", "<=7")), N0),
-        ("Vacas paridas há até 21 dias (DEL ≤ 21)", "cab", cont(LAC, ("DEL", "<=21")), N0),
-    ]),
-    ("Complementar – produção (leite do tanque: lotes 1 a 6, vacas com leite > 0)", [
-        ("Vacas com pesagem de leite", "cab", cont(*COM_LEITE), N0),
-        ("Leite total do dia", "kg", soma("Leite", *COM_LEITE), "#,##0"),
+        ("DEL médio da lactação", "dias", media("DEL", LAC), N0),
+        ("DEL médio (lotes 1 a 6)", "dias", media("DEL", *TANQUE), N0),
+        ("Produção média nas últimas 24 h (DP)", "kg/vaca",
+         media_dp(("Lactação", 1), ("Leite", ">0")), N1),
+        *[(f"   Produção média do lote {lt} (DP)", "kg/vaca",
+           media_dp(("LACT", ">0"), ("Lote", lt), ("Leite", ">0")), N1) for lt in range(1, 7)],
+        ("Média de leite por vaca (tanque)", "kg/vaca", media("Leite", *COM_LEITE), N1),
+        ("Média de leite 7 dias (tanque)", "kg/vaca", media("Leite7", *TANQUE, ("Leite7", ">0")), N1),
+        ("Média primíparas (LACT 1, tanque)", "kg/vaca", media("Leite", *COM_LEITE, ("LACT", 1)), N1),
+        ("Média multíparas (LACT ≥ 2, tanque)", "kg/vaca",
+         media("Leite", *COM_LEITE, ("LACT", ">=2")), N1),
+        ("Vacas com leite < 20 kg (tanque)", "cab", cont(*COM_LEITE, ("Leite", "<20")), N0),
+        ("Vacas com pesagem de leite (tanque)", "cab", cont(*COM_LEITE), N0),
+        ("Leite total do dia (tanque)", "kg", soma("Leite", *COM_LEITE), "#,##0"),
         ("Leite descartado – lote 10", "kg", soma("Leite", *DESCARTE), "#,##0"),
         ("% do leite produzido que foi descartado", "%",
          razao(soma("Leite", *DESCARTE),
                lambda d: f"({soma('Leite', *COM_LEITE)(d)}+{soma('Leite', *DESCARTE)(d)})"), P),
-        ("Média de leite por vaca (tanque)", "kg/vaca", media("Leite", *COM_LEITE), N1),
-        ("Média de leite 7 dias (tanque)", "kg/vaca", media("Leite7", *TANQUE, ("Leite7", ">0")), N1),
-        ("Média primíparas (LACT 1)", "kg/vaca", media("Leite", *COM_LEITE, ("LACT", 1)), N1),
-        ("Média multíparas (LACT ≥ 2)", "kg/vaca", media("Leite", *COM_LEITE, ("LACT", ">=2")), N1),
-        ("Vacas com leite < 20 kg", "cab", cont(*COM_LEITE, ("Leite", "<20")), N0),
-        ("DEL médio (lotes 1 a 6)", "dias", media("DEL", *TANQUE), N0),
-        ("Gordura média", "%", media("%Gord", *TANQUE, ("%Gord", ">0")), N2),
-        ("Proteína média", "%", media("Prot%", *TANQUE, ("Prot%", ">0")), N2),
+        ("Leite vendido", "kg", vendido_dia, "#,##0"),
+        ("Gordura média (tanque)", "%", media("%Gord", *TANQUE, ("%Gord", ">0")), N2),
+        ("Proteína média (tanque)", "%", media("Prot%", *TANQUE, ("Prot%", ">0")), N2),
+        ("Vacas gestantes (DDP ≥ 1, sem DNB)", "cab", cont(ADULTO, REPRO, ("DDP", ">=1")), N0),
+        ("% gestantes ÷ (adultas − DNB)", "%",
+         razao(cont(ADULTO, REPRO, ("DDP", ">=1")), cont(ADULTO, REPRO)), P),
+        ("DEL > 150 não gestantes (sem DNB)", "cab", ng150, N0),
+        ("% DEL > 150 não gestantes ÷ em lactação", "%", razao(ng150, cont(LAC)), P),
+        ("Vacas a descartar (DNB)", "cab", cont(ADULTO, ("DNB", 1)), N0),
+        ("DEL > 70 sem IA (NumIAs = 0, sem DNB)", "cab",
+         cont(LAC, REPRO, ("DEL", ">\"&P_DEL_SEM_IA&\""), ("NumIAs", 0)), N0),
     ]),
-    ("Complementar – reprodução das vacas em lactação (lotes 1 a 6 e 10)", [
-        ("Frescas (Fresca)", "cab", cont(LAC, ("StatRepro", "Fresca")), N0),
-        ("Inseminadas (Bred)", "cab", cont(LAC, ("StatRepro", "Bred")), N0),
-        ("Prenhas", "cab", cont(LAC, ("StatRepro", "Prenha")), N0),
-        ("Vazias", "cab", cont(LAC, ("StatRepro", "Vazia")), N0),
-        ("% prenhes das vacas em lactação", "%",
-         razao(cont(LAC, ("StatRepro", "Prenha")), cont(LAC)), P),
-        ("DEL médio ao 1º serviço (DEL1S)", "dias", media("DEL1S", LAC, ("DEL1S", ">0")), N0),
-        ("Dias em aberto médios das prenhas", "dias",
-         media("DiasVazia", LAC, ("StatRepro", "Prenha")), N0),
-        ("IAs por prenhez (prenhas)", "IAs", media("NumIAs", LAC, ("StatRepro", "Prenha")), N2),
-    ]),
-    ("Complementar – reprodução das novilhas", [
-        ("Novilhas inseminadas (Bred)", "cab", cont(JOVEM, ("StatRepro", "Bred")), N0),
-        ("Novilhas prenhas", "cab", cont(JOVEM, ("StatRepro", "Prenha")), N0),
-        ("Novilhas vazias", "cab", cont(JOVEM, ("StatRepro", "Vazia")), N0),
-    ]),
-    ("Animais por lote", [
-        (f"Lote {lt}", "cab", cont(("Lote", lt)), N0) for lt in LOTES
+    ("Animais jovens (fêmeas, LACT = 0)", [
+        ("Animais jovens totais", "cab", cont(JOVEM), N0),
+        ("Animais com < 3 meses", "cab", cont(JOVEM, ("IdadeDias", "<\"&P_IDADE_3M&\"")), N0),
+        ("Nascidas há até 7 dias", "cab", cont(JOVEM, ("IdadeDias", "<=7")), N0),
+        ("Bezerras / recria (Youngstock)", "cab", cont(JOVEM, ("StatRepro", "Youngstock")), N0),
+        ("Novilhas em reprodução", "cab", cont(JOVEM, ("StatRepro", "<>Youngstock")), N0),
+        ("Novilhas gestantes (DDP ≥ 1, sem DNB)", "cab", cont(JOVEM, REPRO, ("DDP", ">=1")), N0),
+        ("Novilhas > 15 meses não gestantes", "cab",
+         menos(cont(JOVEM, REPRO, ("IdadeDias", ">\"&P_IDADE_15M&\"")),
+               cont(JOVEM, REPRO, ("IdadeDias", ">\"&P_IDADE_15M&\""), ("DDP", ">=1"))), N0),
     ]),
 ]
 
@@ -428,7 +407,8 @@ notas = [
     ("Atualização", "python3 scripts/monitor_diario.py <novo_relatorio.xlsx> — guarda o relatório "
                     "como Zootecnico_AAAA-MM-DD.xlsx e refaz esta planilha. Um relatório novo da "
                     "mesma data substitui o anterior."),
-    ("Adultos / jovens", "Adultos: LACT > 0. Jovens: LACT = 0 (inclui machos)."),
+    ("Machos", "Fora de todos os números (StatRepro = Male). Tudo é calculado só sobre fêmeas."),
+    ("Adultos / jovens", "Adultas: LACT > 0. Jovens: LACT = 0."),
     ("Vacas em lactação", "Adultas (LACT > 0) nos lotes 1, 2, 3, 4, 5, 6 e 10. O lote 10 são vacas "
                           "em tratamento com leite descartado."),
     ("DEL médio", "Média de DEL das vacas em lactação."),
@@ -436,10 +416,12 @@ notas = [
                       "Por lote: adultas do lote com Leite > 0."),
     ("Leite vendido", "Valor de entrada (azul/amarelo), lido de dados/leite_vendido.json. Será "
                       "preenchido a partir do PDF do laticínio."),
-    ("Gestantes", "DDP (dias de prenhez) ≥ 1. Vacas gestantes inclui secas."),
-    ("DEL > 150 não gestantes", "Vacas em lactação com DEL acima do parâmetro e DDP vazio."),
-    ("DNB", "Adultas com StatRepro = DNB ou Dry DNB."),
-    ("DEL > 70 sem IA", "Vacas em lactação com DEL acima do parâmetro e NumIAs = 0."),
+    ("DNB", "StatRepro = DNB ou Dry DNB. Ficam fora de todos os indicadores de reprodução "
+            "(só aparecem na própria contagem de DNB)."),
+    ("Gestantes", "DDP (dias de prenhez) ≥ 1, sem DNB; inclui secas. % = gestantes ÷ (adultas − DNB)."),
+    ("DEL > 150 não gestantes", "Vacas em lactação, sem DNB, com DEL acima do parâmetro e DDP vazio. "
+                                "% = esse número ÷ todas as vacas em lactação."),
+    ("DEL > 70 sem IA", "Vacas em lactação, sem DNB, com DEL acima do parâmetro e NumIAs = 0."),
     ("Começaram a lactação", "Vacas em lactação no dia que não estavam em lactação (ou não estavam "
                              "no relatório) no dia anterior. Comparação por brinco."),
     ("Saída de adultos", "Adultos que estavam no relatório do dia anterior e não estão no do dia."),
@@ -450,12 +432,11 @@ notas = [
                     "Se faltar um dia, a comparação é com o último relatório que existe."),
     ("Média (DP)", "Linhas de produção média: a célula traz a média e, entre parênteses, o desvio "
                    "padrão amostral (n − 1) do Leite. A variação compara só as médias."),
-    ("Blocos complementares", "Indicadores da primeira versão. Leite do tanque = lotes 1 a 6; o lote 10 "
-                              "aparece como leite descartado. Secas = adultas fora dos lotes 1 a 6 e 10. "
-                              "Novilhas = jovens sem machos e sem Youngstock."),
-    ("Jovens ≥ 3 meses", "IdadeDias ≥ parâmetro (90 dias)."),
-    ("Novilhas atrasadas", "LACT = 0, exceto machos, com IdadeDias acima do parâmetro "
-                           "(456 dias ≈ 15 meses) e DDP vazio."),
+    ("Tanque", "Leite do tanque = lotes 1 a 6; o lote 10 aparece como leite descartado. "
+               "Secas = adultas fora dos lotes 1 a 6 e 10."),
+    ("Jovens < 3 meses", "IdadeDias abaixo do parâmetro (90 dias)."),
+    ("Novilhas", "Em reprodução = jovens que não são Youngstock. Atrasadas: sem DNB, IdadeDias acima "
+                 "do parâmetro (456 dias ≈ 15 meses) e DDP vazio."),
     ("Variação", "Último dia menos o dia anterior exibido. Verde = subiu, vermelho = caiu "
                  "(a cor não indica se é bom ou ruim)."),
 ]

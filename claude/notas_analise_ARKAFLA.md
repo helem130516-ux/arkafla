@@ -184,3 +184,11 @@
 - Comparações validadas com dias simulados (entradas/saídas conhecidas) e valores conferidos com pandas.
 - 14/10/2026: 1.856 adultas, 1.652 em lactação, DEL 188, 43,3 kg/vaca, 57 no lote 10, 988 gestantes,
   274 com DEL > 150 vazias, 59 DNB, 16 com DEL > 70 sem IA; jovens 2.114, novilhas atrasadas 69.
+- Versão 3 (15/10/2026): voltaram os indicadores da 1ª versão como blocos "Complementar" (rebanho, produção do
+  tanque, reprodução das vacas em lactação e das novilhas, animais por lote). Nova aba "Produção por lote":
+  um lote por linha (1 a 6, 10 e todas em lactação), média e desvio padrão amostral por dia (SUMPRODUCT, sem
+  fórmula matricial); conferidos com pandas (std, ddof = 1).
+- PDF de uma página (A4 retrato) a cada atualização: `python3 scripts/monitor_pdf.py` depois do recalc →
+  `monitoramento/Monitoramento_Diario_ARKAFLA_AAAA-MM-DD.pdf` (data do último dia). Testado com 10 dias: cabe em
+  uma página; o script falha se passar de uma.
+- Fluxo diário: monitor_diario.py <novo.xlsx> → recalc.py → monitor_pdf.py → commit.

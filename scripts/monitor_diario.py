@@ -12,7 +12,8 @@ preenchido a partir do PDF do laticínio.
 
 Uso:
     python3 scripts/monitor_diario.py [novo_relatorio.xlsx ...]
-Depois: recalcular com recalc.py (skill xlsx).
+Depois: recalcular com recalc.py (skill xlsx) e gerar o PDF de uma página com
+    python3 scripts/monitor_pdf.py
 """
 import glob
 import json
@@ -105,6 +106,7 @@ wb = Workbook()
 wb._named_styles["Normal"].font = Font(name=F, size=10)
 ws = wb.active
 ws.title = "Monitoramento"
+wl = wb.create_sheet("Produção por lote")
 wp = wb.create_sheet("Parâmetros")
 wd = wb.create_sheet("Dados")
 wn = wb.create_sheet("Notas")
@@ -227,7 +229,19 @@ def vendido_dia(d):
     return None  # marcador: valor de entrada, vem de dados/leite_vendido.json
 
 
-N0, N1 = "0", "0.0"
+def soma(campo, *conds):
+    return lambda d: f"SUMIFS({R(campo)},{crit(conds, d)})"
+
+
+def razao(num, den):
+    return lambda d: f'IFERROR({num(d)}/{den(d)},"")'
+
+
+N0, N1, N2, P = "0", "0.0", "0.00", "0.0%"
+TANQUE = [LAC, ("Lote", "<=6")]
+COM_LEITE = [*TANQUE, ("Leite", ">0")]
+DESCARTE = [LAC, ("Lote", 10), ("Leite", ">0")]
+LOTES = sorted(int(x) for x in dados.loc[dados["Data"] >= pd.Timestamp(DIAS[0]), "Lote"].dropna().unique())
 dnb = lambda d: f'{cont(ADULTO, ("StatRepro", "DNB"))(d)}+{cont(ADULTO, ("StatRepro", "Dry DNB"))(d)}'
 ent10 = cont(("Entrou lote 10", 1))
 sai10 = lambda d: f"COUNTIFS({R('Saída lote 10 em')},{d})"
@@ -242,11 +256,11 @@ GRUPOS = [
         ("Animais em tratamento (lote 10)", "cab", cont(ADULTO, ("Lote", 10)), N0),
         ("Leite vendido", "kg", vendido_dia, "#,##0"),
         ("Vacas gestantes totais (DDP ≥ 1)", "cab", cont(ADULTO, ("DDP", ">=1")), N0),
-        ("Vacas em lactação com DEL > 150 não gestantes", "cab",
+        ("Em lactação com DEL > 150 não gestantes", "cab",
          menos(cont(LAC, ("DEL", ">\"&P_DEL_NG&\"")),
                cont(LAC, ("DEL", ">\"&P_DEL_NG&\""), ("DDP", ">=1"))), N0),
         ("Vacas a descartar (DNB)", "cab", dnb, N0),
-        ("Vacas em lactação com DEL > 70 sem inseminação (NumIAs = 0)", "cab",
+        ("Em lactação, DEL > 70 e sem IA (NumIAs = 0)", "cab",
          cont(LAC, ("DEL", ">\"&P_DEL_SEM_IA&\""), ("NumIAs", 0)), N0),
         ("Vacas que começaram a lactação", "cab", comparado(cont(("Iniciou lactação", 1))), N0),
         ("Saída de animais adultos", "cab",
@@ -259,10 +273,57 @@ GRUPOS = [
         ("Animais jovens totais", "cab", cont(JOVEM), N0),
         ("Animais com ≥ 3 meses", "cab", cont(JOVEM, ("IdadeDias", ">=\"&P_IDADE_3M&\"")), N0),
         ("Novilhas gestantes (DDP ≥ 1)", "cab", cont(JOVEM, ("DDP", ">=1")), N0),
-        ("Novilhas com mais de 15 meses não gestantes (atrasadas)", "cab",
+        ("Novilhas > 15 meses não gestantes (atrasadas)", "cab",
          menos(cont(JOVEM, ("StatRepro", "<>Male"), ("IdadeDias", ">\"&P_IDADE_15M&\"")),
                cont(JOVEM, ("StatRepro", "<>Male"), ("IdadeDias", ">\"&P_IDADE_15M&\""),
                     ("DDP", ">=1"))), N0),
+    ]),
+    ("Complementar – rebanho", [
+        ("Total de animais", "cab", cont(), N0),
+        ("   Em lactação no tanque (lotes 1 a 6)", "cab", cont(*TANQUE), N0),
+        ("Vacas secas (adultas fora da lactação)", "cab", cont(ADULTO, ("Lactação", 0)), N0),
+        ("Novilhas em reprodução (sem machos)", "cab",
+         cont(JOVEM, ("StatRepro", "<>Male"), ("StatRepro", "<>Youngstock")), N0),
+        ("Bezerras / recria (Youngstock)", "cab", cont(JOVEM, ("StatRepro", "Youngstock")), N0),
+        ("Machos", "cab", cont(("StatRepro", "Male")), N0),
+        ("Animais com até 7 dias de idade", "cab", cont(("IdadeDias", "<=7")), N0),
+        ("Vacas paridas há até 21 dias (DEL ≤ 21)", "cab", cont(LAC, ("DEL", "<=21")), N0),
+    ]),
+    ("Complementar – produção (leite do tanque: lotes 1 a 6, vacas com leite > 0)", [
+        ("Vacas com pesagem de leite", "cab", cont(*COM_LEITE), N0),
+        ("Leite total do dia", "kg", soma("Leite", *COM_LEITE), "#,##0"),
+        ("Leite descartado – lote 10", "kg", soma("Leite", *DESCARTE), "#,##0"),
+        ("% do leite produzido que foi descartado", "%",
+         razao(soma("Leite", *DESCARTE),
+               lambda d: f"({soma('Leite', *COM_LEITE)(d)}+{soma('Leite', *DESCARTE)(d)})"), P),
+        ("Média de leite por vaca (tanque)", "kg/vaca", media("Leite", *COM_LEITE), N1),
+        ("Média de leite 7 dias (tanque)", "kg/vaca", media("Leite7", *TANQUE, ("Leite7", ">0")), N1),
+        ("Média primíparas (LACT 1)", "kg/vaca", media("Leite", *COM_LEITE, ("LACT", 1)), N1),
+        ("Média multíparas (LACT ≥ 2)", "kg/vaca", media("Leite", *COM_LEITE, ("LACT", ">=2")), N1),
+        ("Vacas com leite < 20 kg", "cab", cont(*COM_LEITE, ("Leite", "<20")), N0),
+        ("DEL médio (lotes 1 a 6)", "dias", media("DEL", *TANQUE), N0),
+        ("Gordura média", "%", media("%Gord", *TANQUE, ("%Gord", ">0")), N2),
+        ("Proteína média", "%", media("Prot%", *TANQUE, ("Prot%", ">0")), N2),
+    ]),
+    ("Complementar – reprodução das vacas em lactação (lotes 1 a 6 e 10)", [
+        ("Frescas (Fresca)", "cab", cont(LAC, ("StatRepro", "Fresca")), N0),
+        ("Inseminadas (Bred)", "cab", cont(LAC, ("StatRepro", "Bred")), N0),
+        ("Prenhas", "cab", cont(LAC, ("StatRepro", "Prenha")), N0),
+        ("Vazias", "cab", cont(LAC, ("StatRepro", "Vazia")), N0),
+        ("% prenhes das vacas em lactação", "%",
+         razao(cont(LAC, ("StatRepro", "Prenha")), cont(LAC)), P),
+        ("DEL médio ao 1º serviço (DEL1S)", "dias", media("DEL1S", LAC, ("DEL1S", ">0")), N0),
+        ("Dias em aberto médios das prenhas", "dias",
+         media("DiasVazia", LAC, ("StatRepro", "Prenha")), N0),
+        ("IAs por prenhez (prenhas)", "IAs", media("NumIAs", LAC, ("StatRepro", "Prenha")), N2),
+    ]),
+    ("Complementar – reprodução das novilhas", [
+        ("Novilhas inseminadas (Bred)", "cab", cont(JOVEM, ("StatRepro", "Bred")), N0),
+        ("Novilhas prenhas", "cab", cont(JOVEM, ("StatRepro", "Prenha")), N0),
+        ("Novilhas vazias", "cab", cont(JOVEM, ("StatRepro", "Vazia")), N0),
+    ]),
+    ("Animais por lote", [
+        (f"Lote {lt}", "cab", cont(("Lote", lt)), N0) for lt in LOTES
     ]),
 ]
 
@@ -335,6 +396,72 @@ ws.page_setup.fitToHeight = 0
 ws.sheet_properties.pageSetUpPr.fitToPage = True
 ws.print_title_rows = f"{HR}:{HR}"
 
+# ---------------------------------------------------------------- Produção por lote
+wl["A1"] = "ARKAFLA – Produção por lote (vacas adultas com leite > 0)"
+wl["A1"].font = font(bold=True, size=14, color=AZUL)
+wl["A2"] = ("Média e desvio padrão (amostral) da coluna Leite em cada dia · "
+            "um lote por linha para acompanhar o histórico")
+wl["A2"].font = font(italic=True, size=9, color="5E6B63")
+LH = 4
+wl.cell(LH, 1, "Lote")
+wl.merge_cells(start_row=LH, start_column=1, end_row=LH + 1, end_column=1)
+for k, d in enumerate(DIAS):
+    c0 = 2 + 2 * k
+    wl.cell(LH, c0, d).number_format = "DD/MM/YYYY"
+    wl.merge_cells(start_row=LH, start_column=c0, end_row=LH, end_column=c0 + 1)
+    wl.cell(LH + 1, c0, "Média")
+    wl.cell(LH + 1, c0 + 1, "Desvio padrão")
+for rr in (LH, LH + 1):
+    for j in range(1, 2 + 2 * ND):
+        c = wl.cell(rr, j)
+        c.font = font(bold=True, size=9)
+        c.fill = HFILL
+        c.border = BOX
+        c.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+LINHAS_LOTE = [(f"Lote {lt}", [("Lote", lt)]) for lt in range(1, 7)] + [
+    ("Lote 10 (tratamento – descarte)", [("Lote", 10)]),
+    ("Todas em lactação (1 a 6 e 10)", [LAC]),
+]
+
+
+def desvio(conds, d):
+    """Desvio padrão amostral sem fórmula matricial: √((Σx² − (Σx)²/n)/(n − 1))."""
+    m = [f"({R('Data')}={d})", f"({R('LACT')}>0)", f"({R('Leite')}>0)"]
+    for campo, v in conds:
+        m.append(f"({R(campo)}={v})")
+    sq = f"SUMPRODUCT({'*'.join(m)},{R('Leite')},{R('Leite')})"
+    s1 = f"SUMPRODUCT({'*'.join(m)},{R('Leite')})"
+    n = f"SUMPRODUCT({'*'.join(m)})"
+    return f'=IF({n}<2,"",SQRT(MAX(0,({sq}-{s1}^2/{n})/({n}-1))))'
+
+
+for i, (rot, conds) in enumerate(LINHAS_LOTE):
+    rr = LH + 2 + i
+    wl.cell(rr, 1, rot).font = font(bold=(i == len(LINHAS_LOTE) - 1))
+    for k in range(ND):
+        c0 = 2 + 2 * k
+        d = f"{L(c0)}${LH}"
+        c = wl.cell(rr, c0, "=" + media("Leite", ADULTO, ("Leite", ">0"), *conds)(d))
+        c.number_format = N1
+        c.font = font(bold=True)
+        c = wl.cell(rr, c0 + 1, desvio(conds, d))
+        c.number_format = N1
+        c.font = font(color="5E6B63")
+    for j in range(1, 2 + 2 * ND):
+        wl.cell(rr, j).border = BOX
+        if i % 2:
+            wl.cell(rr, j).fill = ZEBRA
+wl.column_dimensions["A"].width = 32
+for j in range(2, 2 + 2 * ND):
+    wl.column_dimensions[L(j)].width = 10
+wl.row_dimensions[LH + 1].height = 26
+wl.freeze_panes = f"B{LH + 2}"
+wl.sheet_view.showGridLines = False
+wl.page_setup.orientation = "landscape"
+wl.page_setup.fitToWidth = 1
+wl.page_setup.fitToHeight = 0
+wl.sheet_properties.pageSetUpPr.fitToPage = True
+
 # ---------------------------------------------------------------- Notas
 notas = [
     ("Fonte", "Relatório zootécnico diário (\"Zootécnico Jorge atualizado DD-MM-AAAA.xlsx\"), "
@@ -365,6 +492,11 @@ notas = [
                 "do relatório. Saldo = entradas − saídas."),
     ("Comparações", "\"Dia anterior\" é o relatório anterior guardado. Sem ele, a célula fica vazia. "
                     "Se faltar um dia, a comparação é com o último relatório que existe."),
+    ("Produção por lote", "Aba própria: um lote por linha; em cada dia, média e desvio padrão "
+                          "amostral (n − 1) do Leite das adultas do lote com Leite > 0."),
+    ("Blocos complementares", "Indicadores da primeira versão. Leite do tanque = lotes 1 a 6; o lote 10 "
+                              "aparece como leite descartado. Secas = adultas fora dos lotes 1 a 6 e 10. "
+                              "Novilhas = jovens sem machos e sem Youngstock."),
     ("Jovens ≥ 3 meses", "IdadeDias ≥ parâmetro (90 dias)."),
     ("Novilhas atrasadas", "LACT = 0, exceto machos, com IdadeDias acima do parâmetro "
                            "(456 dias ≈ 15 meses) e DDP vazio."),

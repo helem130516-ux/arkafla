@@ -2,5 +2,9 @@
  {"data": "2026-10-04", "tanque": 2, "cpp": 14, "proteina": 3.39, "gordura": 3.56, "ccs": 266, "st": 12.66, "ureia": 12.4, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png", "grupo": "Mensagem recebida 15/10/2026"},
  {"data": "2026-10-04", "tanque": 3, "cpp": 13, "proteina": 3.38, "gordura": 3.54, "ccs": 224, "st": 12.63, "ureia": 14.4, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png", "grupo": "Mensagem recebida 15/10/2026"},
  {"data": "2026-10-05", "tanque": 1, "cpp": 7, "proteina": 3.39, "gordura": 3.18, "ccs": 253, "st": 12.26, "ureia": 12.4, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png", "grupo": "Mensagem recebida 15/10/2026"},
- {"data": "2026-10-05", "tanque": 4, "cpp": 9, "proteina": 3.42, "gordura": 3.53, "ccs": 309, "st": 12.64, "ureia": 14.7, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png", "grupo": "Mensagem recebida 15/10/2026"}
+ {"data": "2026-10-05", "tanque": 4, "cpp": 9, "proteina": 3.42, "gordura": 3.53, "ccs": 309, "st": 12.64, "ureia": 14.7, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-15.png", "grupo": "Mensagem recebida 15/10/2026"},
+ {"data": "2026-10-12", "tanque": 2, "cpp": 15, "proteina": 3.32, "gordura": 3.43, "lactose": 4.73, "ccs": 158, "st": 12.46, "ureia": 12.9, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-16.png", "grupo": "Mensagem recebida 16/10/2026"},
+ {"data": "2026-10-13", "tanque": 1, "cpp": 11, "proteina": 3.35, "gordura": 3.4, "lactose": 4.75, "ccs": 220, "st": 12.49, "ureia": 10.5, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-16.png", "grupo": "Mensagem recebida 16/10/2026"},
+ {"data": "2026-10-12", "tanque": 3, "cpp": 16, "proteina": 3.52, "gordura": 3.93, "lactose": 4.61, "ccs": 363, "st": 13.04, "ureia": 14.6, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-16.png", "grupo": "Mensagem recebida 16/10/2026"},
+ {"data": "2026-10-13", "tanque": 4, "cpp": 18, "proteina": 3.4, "gordura": 3.92, "lactose": 4.68, "ccs": 283, "st": 12.97, "ureia": 13.1, "fonte": "analise_tanque/WhatsApp_recebido_2026-10-16.png", "grupo": "Mensagem recebida 16/10/2026"}
 ]

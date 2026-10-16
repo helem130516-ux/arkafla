@@ -256,3 +256,11 @@
   - 44,7 kg/vaca (ECM 46,2).
   - DairyPlan 70.126 kg contra 64.939 L vendidos, diferença de +8,0%.
   - Vazias com IA há > 35 dias caíram de 81 para 50: 31 delas foram inseminadas em 15/10 e viraram Bred.
+- Análises do tanque, segunda mensagem (recebida em 16/10, "Pool Leite": "Análise de Parâmetros de Qualidade"):
+  - Tanques: 12/10 T-2 e T-3; 13/10 T-1 e T-4. Formam um grupo que vale a partir de 12/10; 132.982 L.
+  - O formato traz lactose (nova linha e coluna) e chama a CPP de CBT. A ureia vem com "%", mas foi tratada na
+    mesma escala das mensagens anteriores (mg/dL).
+  - Média ponderada pelo volume: gordura 3,65%, proteína 3,39%, lactose 4,70%, ST 12,72%, CCS 251, CBT 15,
+    ureia 12,7.
+  - Cada item é ponderado só pelos tanques que têm valor; no grupo de 04/10 a lactose fica vazia.
+  - ECM: 14/10 = 45,9 e 15/10 = 47,4 kg (gordura mais alta que no grupo de 04/10).

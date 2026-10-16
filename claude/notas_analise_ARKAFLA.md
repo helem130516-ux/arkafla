@@ -264,3 +264,13 @@
     ureia 12,7.
   - Cada item é ponderado só pelos tanques que têm valor; no grupo de 04/10 a lactose fica vazia.
   - ECM: 14/10 = 45,9 e 15/10 = 47,4 kg (gordura mais alta que no grupo de 04/10).
+- Zootécnico "_3" ("ajuste de dados"): mesmo dia do "_2" (DtNasc + IdadeDias = 16/10, a data de exportação;
+  os dados são de 15/10). Substituiu `Zootecnico_2026-10-15.xlsx`.
+  - Diferenças em relação ao "_2": coluna nova DtÚltParto, 12 bezerros novos (nascidos de 14 a 16/10) e partos
+    lançados (8 vacas com DEL reiniciado; novilhas que pariram passaram a adultas).
+  - Regra observada: a data de exportação do DairyPlan é o dia seguinte ao do relatório. Por isso aparecem
+    IA e parto com data D+1 no relatório do dia D.
+  - "Vacas que começaram a lactação" agora é contada pela DtÚltParto: adultas com parto depois da data do
+    relatório anterior e até a data do relatório. Relatórios sem a coluna continuam com a comparação por brinco.
+  - 15/10: 3 partos; 1.666 vacas em lactação; 105 paridas há ≤ 21 dias.
+  - Os 4 partos datados de 16/10 entram no relatório de 16/10.

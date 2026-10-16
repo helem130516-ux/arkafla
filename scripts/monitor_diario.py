@@ -99,10 +99,14 @@ dados = pd.concat(frames, ignore_index=True).sort_values(["Brinco", "Data"], kin
 if "DATA da IA" not in dados.columns:
     dados["DATA da IA"] = pd.NaT
 dados["DATA da IA"] = pd.to_datetime(dados["DATA da IA"], errors="coerce")
+# Data do último parto: coluna nova no relatório (a partir de 15/10/2026).
+if "DtÚltParto" not in dados.columns:
+    dados["DtÚltParto"] = pd.NaT
+dados["DtÚltParto"] = pd.to_datetime(dados["DtÚltParto"], errors="coerce")
 COLS = list(dados.columns)
 NR = len(dados) + 1  # última linha da aba Dados
 
-AUX = ["Fêmea", "DNB", "Dias desde IA", "DiaNº", "Lactação", "Lote10", "Lactação ant.", "Lote10 ant.",
+AUX = ["Fêmea", "DNB", "Dias desde IA", "Pariu no período", "DiaNº", "Lactação", "Lote10", "Lactação ant.", "Lote10 ant.",
        "Iniciou lactação", "Entrou lote 10", "Saída adulto em", "Saída lote 10 em"]
 C = {c: L(i + 1) for i, c in enumerate(COLS + AUX)}
 
@@ -252,7 +256,7 @@ for i, row in enumerate(dados.itertuples(index=False), 2):
         if isinstance(v, pd.Timestamp):
             v = v.date()
         wd.cell(i, j, v)
-        if j == 1 or COLS[j - 1] == "DATA da IA":
+        if j == 1 or COLS[j - 1] in ("DATA da IA", "DtÚltParto"):
             wd.cell(i, j).number_format = "DD/MM/YYYY"
     x = {k: f"{C[k]}{i}" for k in C}          # esta linha
     a = {k: f"{C[k]}{i - 1}" for k in C}      # linha de cima (mesmo animal, dia anterior?)
@@ -265,6 +269,9 @@ for i, row in enumerate(dados.itertuples(index=False), 2):
         "Fêmea": f'=IF({h}="Male",0,1)',
         "DNB": f'=IF(OR({h}="DNB",{h}="Dry DNB"),1,0)',
         "Dias desde IA": f'=IF(ISNUMBER({x["DATA da IA"]}),{x["Data"]}-{x["DATA da IA"]},"")',
+        # parto depois do relatório anterior e até o dia do relatório (sem anterior: só o próprio dia)
+        "Pariu no período": (f'=IF(AND({lac}>0,ISNUMBER({x["DtÚltParto"]})),IF(AND({x["DtÚltParto"]}<={x["Data"]},'
+                             f'{x["DtÚltParto"]}>IF({x["DiaNº"]}=1,{x["Data"]}-1,INDEX(DATAS,{x["DiaNº"]}-1))),1,0),"")'),
         "DiaNº": f"=MATCH({x['Data']},DATAS,0)",
         "Lactação": f"=IF(AND({lac}>0,OR(AND({lt}>=1,{lt}<=6),{lt}=10)),1,0)",
         "Lote10": f"=IF(AND({lac}>0,{lt}=10),1,0)",
@@ -312,6 +319,13 @@ def media(campo, *conds):
 
 def menos(f1, f2):
     return lambda d: f"({f1(d)}-{f2(d)})"
+
+
+def partos(d):
+    """Pela data do parto quando o relatório traz DtÚltParto; senão, comparação com o dia anterior."""
+    novo = cont(ADULTO, ("Pariu no período", 1))(d)
+    antigo = comparado(cont(("Iniciou lactação", 1)))(d)
+    return f'IF(COUNTIFS({R("Data")},{d},{R("DtÚltParto")},">0")>0,{novo},{antigo})'
 
 
 def com_ia(f1):
@@ -394,7 +408,7 @@ GRUPOS = [
         ("   Animais em tratamento (lote 10)", "cab", cont(ADULTO, ("Lote", 10)), N0),
         ("Vacas secas (adultas fora da lactação)", "cab", cont(ADULTO, ("Lactação", 0)), N0),
         ("Vacas paridas há até 21 dias (DEL ≤ 21)", "cab", cont(LAC, ("DEL", "<=21")), N0),
-        ("Vacas que começaram a lactação", "cab", comparado(cont(("Iniciou lactação", 1))), N0),
+        ("Vacas que começaram a lactação (partos)", "cab", partos, N0),
         ("Saída de animais adultos", "cab",
          comparado(lambda d: f"COUNTIFS({R('Saída adulto em')},{d})"), N0),
         ("   Lote 10 – entradas", "cab", comparado(ent10), N0),
@@ -587,8 +601,10 @@ notas = [
                         "do relatório desde 14/10/2026). Inseminadas: StatRepro Bred (adultas também Dry "
                         "Bred); vazias: StatRepro Vazia; sem DNB. Dias sem a coluna ficam vazios."),
     ("DEL > 70 sem IA", "Vacas em lactação, sem DNB, com DEL acima do parâmetro e NumIAs = 0."),
-    ("Começaram a lactação", "Vacas em lactação no dia que não estavam em lactação (ou não estavam "
-                             "no relatório) no dia anterior. Comparação por brinco."),
+    ("Começaram a lactação", "Partos: adultas com DtÚltParto depois da data do relatório anterior e até "
+                             "a data do relatório (sem relatório anterior na aba Dados: parto no próprio "
+                             "dia). Relatórios sem a coluna DtÚltParto (antes de 15/10/2026): vacas em "
+                             "lactação no dia que não estavam em lactação no dia anterior, por brinco."),
     ("Saída de adultos", "Adultos que estavam no relatório do dia anterior e não estão no do dia."),
     ("Lote 10", "Entradas: adultas no lote 10 no dia que não estavam no lote 10 no dia anterior. "
                 "Saídas: estavam no lote 10 no dia anterior e no dia estão em outro lote ou saíram "

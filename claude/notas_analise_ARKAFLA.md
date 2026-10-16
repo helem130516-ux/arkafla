@@ -244,3 +244,15 @@
     - Adultas: Bred ou Dry Bred com IA há > 35 dias = 20; Vazia com IA há > 35 dias = 81.
     - Jovens: Bred com IA há > 35 dias = 3; Vazia com IA há > 35 dias = 2.
   - Dias de relatórios sem a coluna ficam vazios nessas linhas.
+
+## Atualização 16/10/2026
+- Zootécnico "Zoot_cnico_Jorge_atualizado_2.xlsx", sem data no nome: IdadeDias = 14/10 + 1 em todos os animais,
+  portanto relatório de 15/10/2026 (`Zootecnico_2026-10-15.xlsx`). 3.962 animais; 8 saíram, nenhum entrou.
+- Coletas: PDF emitido em 16/10/2026 às 14:02 (35 coletas, Total Período 1.120.394 L conferido).
+  - 15/10: 64.939 L (coletas 15/10 10:34 T-2 e 18:05 T-3).
+  - 16/10: 35.029 L, ainda parcial.
+- 15/10:
+  - 1.652 vacas em lactação; 62 no lote 10 (5 entradas, 0 saídas).
+  - 44,7 kg/vaca (ECM 46,2).
+  - DairyPlan 70.126 kg contra 64.939 L vendidos, diferença de +8,0%.
+  - Vazias com IA há > 35 dias caíram de 81 para 50: 31 delas foram inseminadas em 15/10 e viraram Bred.

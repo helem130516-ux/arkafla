@@ -1,0 +1,7 @@
+{"_nota": "Análises de tanque avulsas recebidas por mensagem do Pool Leite (PC 484). CBT = contagem bacteriana total (mesmo que CPP), mil UFC/mL; CCS em mil céls/mL; demais em %. Não trazem volume: entram como média simples, separadas do mapa mensal.",
+ "analises": [
+  {"data": "2026-10-12", "tanque": 2, "GOR": 3.43, "PROT": 3.32, "LACT": 4.73, "SOL": 12.46, "CCS": 158, "CPP": 15, "UREIA": 12.90, "fonte": "mensagem Pool Leite"},
+  {"data": "2026-10-13", "tanque": 1, "GOR": 3.40, "PROT": 3.35, "LACT": 4.75, "SOL": 12.49, "CCS": 220, "CPP": 11, "UREIA": 10.50, "fonte": "mensagem Pool Leite"},
+  {"data": "2026-10-12", "tanque": 3, "GOR": 3.93, "PROT": 3.52, "LACT": 4.61, "SOL": 13.04, "CCS": 363, "CPP": 16, "UREIA": 14.60, "fonte": "mensagem Pool Leite"},
+  {"data": "2026-10-13", "tanque": 4, "GOR": 3.92, "PROT": 3.40, "LACT": 4.68, "SOL": 12.97, "CCS": 283, "CPP": 18, "UREIA": 13.10, "fonte": "mensagem Pool Leite"}
+ ]}

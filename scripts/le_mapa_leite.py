@@ -88,7 +88,13 @@ if __name__ == "__main__":
         for r in tq:  # o mapa mais recente substitui o mesmo tanque/mês/período
             regs[(r["tanque"], r["mes"][3:] + r["mes"][:2], r["periodo"])] = dict(r, fonte=cab["arquivo"])
     R = [regs[k] for k in sorted(regs)]
-    json.dump(dict(mapas=mapas, registros=R), open("dados/mapa_leite.json", "w"), ensure_ascii=False, indent=1)
+    # análises avulsas (mensagens do Pool), sem volume; ficam separadas do mapa
+    try:
+        av = sorted(json.load(open("dados/tanque_avulsas.json"))["analises"], key=lambda x: (x["data"], x["tanque"]))
+    except FileNotFoundError:
+        av = []
+    json.dump(dict(mapas=mapas, registros=R, avulsas=av), open("dados/mapa_leite.json", "w"), ensure_ascii=False, indent=1)
+    print(len(av), "análises avulsas")
     for c in mapas:
         print(c["mes"], c["arquivo"], "média pagto", c["media_pagto"], "pool", c["media_pool"])
         for x in c.get("premiacoes", []):

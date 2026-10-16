@@ -166,3 +166,10 @@
 ## REB 47238 → 70105 confirmado (01/10/2026)
 - A fazenda informou que a APCBRH confirmou: houve mudança no código do produtor. É o mesmo rebanho.
 - A análise já tratava os controles de 02/02 a 18/06 (REB 47238) e de 17/07 em diante (REB 70105) como uma série única. Nada muda nos números.
+
+## Análises de tanque avulsas – out/2026 (16/10/2026, painel versão 11)
+- Fonte: mensagens do Pool Leite (PC 484), registradas em `dados/tanque_avulsas.json`. Para incluir uma nova análise, basta acrescentar uma linha nesse arquivo.
+- 12/10: tanque 2 com CCS 158 e CBT 15; tanque 3 com CCS 363 e CBT 16. 13/10: tanque 1 com CCS 220 e CBT 11; tanque 4 com CCS 283 e CBT 18.
+- Média simples da CCS: 256 (sem volume, não ponderada). É uma prévia: o mapa de out/26 vai substituir esses valores.
+- CCS ponderada de set/26 por tanque, para comparar: tanque 1 316, tanque 2 300, tanque 3 347, tanque 4 383.
+- Painel: bloco "Análises avulsas recebidas" na aba Tanque. Traz CCS, CBT, gordura, proteína, lactose, sólidos e ureia, e compara com a CCS real do último mapa.

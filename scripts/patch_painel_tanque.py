@@ -5,6 +5,7 @@ s = open(src, encoding='utf-8').read()
 J = json.load(open(mj, encoding='utf-8'))
 TQ = [[r['tanque'], r['mes'], r['periodo'], r['volume_l'], r['CCS'], r['CPP'], r['GOR.'], r['PROT.'], r['SOL.'], r['UREIA']] for r in J['registros']]
 MAPAS = J['mapas']
+AV = J.get('avulsas', [])
 
 def rep(a, b, n=1):
     global s
@@ -20,6 +21,7 @@ sec = '''<section id="tab-tanque" class="grid" hidden>
       <div class="panel"><h2>CCS real do tanque por mês × estimativa do controle</h2><p class="note">Barra = CCS real (média das análises do mês ponderada pelo volume) · traço = estimativa do controle APCBRH do mês, sem o lote 10</p><div id="tqMes"></div><div class="lgd"><span><i class="sw" style="background:var(--accent)"></i>CCS real (laticínio)</span><span><i class="pvk"></i>estimativa do controle (sem lote 10)</span></div><div class="tbl" style="margin-top:12px"><table id="tqCmp"></table></div><p class="note" id="tqCmpNote" style="margin-top:8px"></p></div>
       <div class="panel"><h2>Premiações do mês</h2><p class="note" id="tqPremNote"></p><div class="tbl"><table id="tqPrem"></table></div></div>
     </div>
+    <div class="panel"><h2>Análises avulsas recebidas (mensagens do Pool)</h2><p class="note" id="avNote"></p><div id="avBar"></div><div class="tbl" style="margin-top:12px"><table id="avTab"></table></div></div>
     <div class="panel"><h2>CCS por período de coleta</h2><p class="note">Mil células/mL · linha grossa = média ponderada dos tanques no período · linhas finas = cada tanque</p><div class="chart" style="max-width:820px"><div id="tqLine"></div></div></div>
     <div class="panel"><h2>Análises por tanque e período</h2><p class="note">CCS em mil céls/mL e CPP em mil UFC/mL · CCS ≥ 400 em vermelho, 300 a 399 em laranja · CPP ≥ 100 em vermelho · vazio = sem análise no mapa</p>
       <div class="tbl"><table id="tqCcs" class="abmap"></table></div><div class="tbl" style="margin-top:12px"><table id="tqCpp" class="abmap"></table></div></div>
@@ -35,6 +37,7 @@ js = r'''
 // ---------- tanque (mapa de pagamento do laticínio) ----------
 const TQ = ''' + json.dumps(TQ, ensure_ascii=False) + r'''.map(a=>({tq:a[0],mes:a[1],per:a[2],vol:a[3],CCS:a[4],CPP:a[5],GOR:a[6],PROT:a[7],SOL:a[8],UREIA:a[9]}));
 const MAPAS = ''' + json.dumps(MAPAS, ensure_ascii=False) + r''';
+const AV = ''' + json.dumps(AV, ensure_ascii=False) + r''';
 const mKey = m => m.slice(3)+'-'+m.slice(0,2);
 const TQM = [...new Set(TQ.map(r=>r.mes))].sort((a,b)=>mKey(a).localeCompare(mKey(b)));
 const wavg = (xs,k) => { const y=xs.filter(r=>r[k]!=null); const v=y.reduce((s,r)=>s+r.vol,0); return v? y.reduce((s,r)=>s+r.vol*r[k],0)/v : null; };
@@ -76,6 +79,19 @@ function renderTanque(){
     `<tr><td><b>Ponderada</b></td>`+per.map(([m,p])=>{ const v=wavg(TQ.filter(y=>y.mes===m&&y.per===p),k); return `<td><b>${v==null?'·':fmt(v,d)}</b></td>`; }).join('')+'</tr></tbody>';
   document.getElementById('tqCcs').innerHTML = grid('CCS',400,300,0).replace('<th>Tanque</th>','<th>CCS</th>');
   document.getElementById('tqCpp').innerHTML = grid('CPP',100,null,0).replace('<th>Tanque</th>','<th>CPP</th>');
+  // análises avulsas
+  const avM = [...new Set(AV.map(x=>x.data.slice(5,7)+'/'+x.data.slice(0,4)))].filter(m=>!TQM.includes(m));
+  const avN = AV.filter(x=>avM.includes(x.data.slice(5,7)+'/'+x.data.slice(0,4)));
+  if(!AV.length){ document.getElementById('avNote').textContent='Nenhuma análise avulsa.'; }
+  else {
+    const mean = k => { const y=avN.filter(x=>x[k]!=null); return y.length? y.reduce((s,x)=>s+x[k],0)/y.length : null; };
+    document.getElementById('avNote').innerHTML = `${AV.length} análises por tanque (${[...new Set(AV.map(x=>fmtD(x.data)))].join(', ')}). Não trazem volume: a média abaixo é <b>simples</b> (não ponderada) e é uma prévia; o mapa mensal do laticínio substitui estes valores.` + (avN.length?` Média simples da CCS em ${avM.map(mesLab).join(', ')}: <b>${fmt(mean('CCS'))}</b> (${avN.length} tanques) · CBT/CPP ${fmt(mean('CPP'),1)}.`:'');
+    document.getElementById('avBar').innerHTML = hbRows(AV.map(x=>({lb:`Tanque ${x.tq||x.tanque}<small>${fmtD(x.data)}</small>`, v:x.CCS, color:x.CCS>=400?'var(--crit)':x.CCS>=300?'var(--serious)':'var(--accent)', val:`<b>${fmt(x.CCS)}</b>`, sub:'CBT '+fmt(x.CPP),
+      tip:`Tanque ${x.tanque} · ${fmtD(x.data)} · CCS ${fmt(x.CCS)} · CBT ${fmt(x.CPP)} · gordura ${fmt(x.GOR,2)}% · proteína ${fmt(x.PROT,2)}%`})), {max:Math.max(500,...AV.map(x=>x.CCS))*1.05, ref:L.ccs}) +
+      `<div class="lgd"><span><i class="rfk"></i>CCS real do último mês do mapa (${mesLab(L.m)}: ${fmt(L.ccs)})</span><span><i class="sw" style="background:var(--serious)"></i>300 a 399</span><span><i class="sw" style="background:var(--crit)"></i>≥ 400</span></div>`;
+    document.getElementById('avTab').innerHTML = '<thead><tr><th>Data</th><th>Tanque</th><th>CCS</th><th>CBT (CPP)</th><th>Gordura</th><th>Proteína</th><th>Lactose</th><th>Sólidos</th><th>Ureia</th></tr></thead><tbody>'+
+      AV.map(x=>`<tr><td>${fmtD(x.data)}</td><td>${x.tanque}</td><td class="${x.CCS>=400?'hot':''}"><b>${fmt(x.CCS)}</b></td><td>${fmt(x.CPP)}</td><td>${fmt(x.GOR,2)}</td><td>${fmt(x.PROT,2)}</td><td>${x.LACT!=null?fmt(x.LACT,2):'–'}</td><td>${fmt(x.SOL,2)}</td><td>${fmt(x.UREIA,2)}</td></tr>`).join('')+'</tbody>';
+  }
   const K=[['CCS','CCS',0],['CPP','CPP',1],['GOR','GOR.',2],['PROT','PROT.',2],['SOL','SOL.',2],['UREIA','UREIA',2]];
   document.getElementById('tqComp').innerHTML = '<thead><tr><th>Análise</th>'+TQM.map(m=>`<th>${mesLab(m)}</th>`).join('')+'<th>Média Pagto</th><th>Média POOL</th></tr></thead><tbody>'+
     K.map(([k,mk,d])=>`<tr><td class="l">${mk.replace('.','')}</td>`+TQM.map(m=>{ const v=wavg(TQ.filter(y=>y.mes===m),k); return `<td>${v==null?'–':fmt(v,d)}</td>`; }).join('')+`<td><b>${fmt(ult.media_pagto[mk],d)}</b></td><td>${fmt(ult.media_pool[mk],d)}</td></tr>`).join('')+'</tbody>';

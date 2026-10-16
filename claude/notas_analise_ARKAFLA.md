@@ -173,3 +173,15 @@
 - Média simples da CCS: 256 (sem volume, não ponderada). É uma prévia: o mapa de out/26 vai substituir esses valores.
 - CCS ponderada de set/26 por tanque, para comparar: tanque 1 316, tanque 2 300, tanque 3 347, tanque 4 383.
 - Painel: bloco "Análises avulsas recebidas" na aba Tanque. Traz CCS, CBT, gordura, proteína, lactose, sólidos e ureia, e compara com a CCS real do último mapa.
+
+## Oficial × diária do amostrador (16/10/2026)
+- Arquivo: `dados/amostrador/Resultados_amostrador_PC_484.xlsx` (399 amostras diárias, de 31/12/2025 a 11/10/2026, uma por coleta). Script `scripts/compara_oficial_diaria.py` → `dados/oficial_x_diaria.json`.
+- Data da oficial: o mapa só informa o período. Uma vez por semana, as diárias ficam 1 a 2 dias sem amostra; o k-ésimo intervalo sem amostra do mês é o k-ésimo período (04 a 06/10 contém a oficial de 05/10).
+  - Conferência: correlação da CCS de 0,45 com o período certo, contra 0,13 e 0,23 deslocando um período.
+- 39 pares (mesmo tanque, diárias em ±7 dias): nenhuma diferença sistemática.
+  - CCS: +6 mil (t = 0,6). Gordura: +0,05. Proteína: −0,01. CPP: +1,3 (sem picos). Ureia: 0.
+  - A CCS oficial ficou a até 50 mil da diária em 28 dos 39 pares. A média da semana prevê melhor que a amostra mais próxima (erro médio de 39 contra 52).
+  - A conclusão anterior (oficial 33 mil acima, só com outubro) não se confirmou.
+- 22 diárias (5,5%) com erro de coleta: gordura < 2,6% junto com CCS baixa (tanque sem agitação), ou sem resultado. Ficam fora da comparação. Tanque 1 com 10 delas.
+- CPP > 100 nas diárias: 11 dos 12 casos entre o dia 29 e o dia 3 (29/04 a 02/05, 01 a 03/07, 02 a 03/10).
+- Página para compartilhar: https://claude.ai/artifact/FcBnPP9FLvJyFEzctuk6ak

@@ -274,3 +274,21 @@
     relatório anterior e até a data do relatório. Relatórios sem a coluna continuam com a comparação por brinco.
   - 15/10: 3 partos; 1.666 vacas em lactação; 105 paridas há ≤ 21 dias.
   - Os 4 partos datados de 16/10 entram no relatório de 16/10.
+
+## Atualização 17/10/2026 – relatório direto do BoviSync
+- Com a rede liberada para bovisync.farm, `scripts/baixa_bovisync.py` baixa o relatório "Zootécnico Jorge
+  atualizado" (https://bovisync.farm/report/CTBOCW) e grava `dados/zootecnico/Zootecnico_AAAA-MM-DD.xlsx` no
+  mesmo formato do Excel.
+  - Login por BOV_USER e BOV_PASS, variáveis de ambiente nunca gravadas em arquivo.
+  - A grade do site depende de um aviso por SSE que não chega pelo proxy. O script consulta
+    `/api/report/data/item` até as colunas ficarem READY e busca cada coluna em `/api/report/data/fetch`,
+    de dentro da página.
+  - Status vêm em inglês: Preg → Prenha, Fresh → Fresca, Open → Vazia; os demais são iguais.
+  - Data do relatório = DtNasc + IdadeDias − 1. Baixado em 17/10, portanto relatório de 16/10 (3.974 animais).
+- Leite vendido: `le_leite_vendido.py` agora refaz os totais com todos os PDFs guardados e ignora coletas com
+  data igual ou posterior à emissão do PDF (dia incompleto). 16/10 tinha só 35.029 L e saiu até chegar o
+  próximo PDF.
+- 16/10:
+  - 4 partos; lote 10 com 7 entradas e 15 saídas (54 vacas).
+  - Produção média 44,2 kg (ECM 46,8). DairyPlan 69.517 kg.
+  - Vazias com IA há > 35 dias: 78. São +33 vacas inseminadas em 10/09 que completaram 36 dias.

@@ -292,3 +292,5 @@
   - 4 partos; lote 10 com 7 entradas e 15 saídas (54 vacas).
   - Produção média 44,2 kg (ECM 46,8). DairyPlan 69.517 kg.
   - Vazias com IA há > 35 dias: 78. São +33 vacas inseminadas em 10/09 que completaram 36 dias.
+- Leite vendido: a cooperativa não lança coletas no fim de semana. O PDF de coletas chega na segunda-feira;
+  até lá as linhas "Leite vendido" e "Diferença DairyPlan × vendido" ficam em branco a partir de 16/10.

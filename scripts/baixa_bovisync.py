@@ -10,7 +10,8 @@ Data do relatório: o BoviSync calcula idade e DEL na data de hoje (exportação
 arquivos Excel, o relatório corresponde ao dia anterior (DtNasc + IdadeDias − 1).
 
 Uso:
-    BOV_USER=... BOV_PASS=... python3 scripts/baixa_bovisync.py [url_do_relatorio]
+    BOV_USER=... BOV_PASS=... python3 scripts/baixa_bovisync.py [url_do_relatorio] [--substituir]
+Se o arquivo do dia já existir, não grava nada (a menos que se passe --substituir).
 Requer: pip install playwright (usa o Chromium em /opt/pw-browsers/chromium).
 """
 import json
@@ -23,7 +24,7 @@ from urllib.parse import unquote
 import pandas as pd
 from playwright.sync_api import sync_playwright
 
-URL = sys.argv[1] if len(sys.argv) > 1 else "https://bovisync.farm/report/CTBOCW"
+URL = next((a for a in sys.argv[1:] if a.startswith("http")), None) or "https://bovisync.farm/report/CTBOCW"
 PASTA = "dados/zootecnico"
 CHROMIUM = "/opt/pw-browsers/chromium"
 # item da API -> coluna do Excel exportado
@@ -97,5 +98,8 @@ if __name__ == "__main__":
     t, dia = converte(baixa())
     os.makedirs(PASTA, exist_ok=True)
     dest = os.path.join(PASTA, f"Zootecnico_{dia.isoformat()}.xlsx")
+    if os.path.exists(dest) and "--substituir" not in sys.argv:
+        # não sobrescreve um relatório que já existe (ex.: arquivo enviado pelo usuário com a data no nome)
+        raise SystemExit(f"{dest} já existe; nada foi gravado (use --substituir para trocar)")
     t.to_excel(dest, index=False)
     print(f"{dest}: {len(t)} animais, relatório de {dia:%d/%m/%Y}")

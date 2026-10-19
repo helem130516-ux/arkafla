@@ -294,3 +294,16 @@
   - Vazias com IA há > 35 dias: 78. São +33 vacas inseminadas em 10/09 que completaram 36 dias.
 - Leite vendido: a cooperativa não lança coletas no fim de semana. O PDF de coletas chega na segunda-feira;
   até lá as linhas "Leite vendido" e "Diferença DairyPlan × vendido" ficam em branco a partir de 16/10.
+
+## Atualização 19/10/2026
+- Zootécnico "Zoot_cnico_Jorge_atualizado_18-10.xlsx": registrado como 18/10, conforme o nome e o usuário.
+  Atenção: DtNasc + IdadeDias = 18/10. Pela regra dos arquivos anteriores (exportação = dia seguinte) seria 17/10;
+  provavelmente foi exportado no próprio dia 18. 17/10 ficou sem relatório.
+- Coletas: PDF emitido em 19/10 às 09:56 (40 coletas, Total Período 1.290.251 L).
+  - Dias completos: 16/10 = 68.815 L, 17/10 = 72.071 L, 18/10 = 64.000 L.
+- 18/10:
+  - Diferença DairyPlan 69.898 kg × vendido 64.000 L = +9,2%. Em 16/10 foi +1,0%.
+  - Lote 10 com 48 vacas (0 entradas, 6 saídas). 1 parto entre 17 e 18/10.
+  - Produção 44,0 kg (ECM 46,6). Vazias com IA há > 35 dias: 83.
+- Rotina diária (trig_016TMVvrfCBFKNtTAUKUc2Jd): em 18/10 parou sem BOV_USER e BOV_PASS no ambiente; falta
+  cadastrar os secrets. `baixa_bovisync.py` agora não sobrescreve um dia que já existe (opção `--substituir`).

@@ -307,3 +307,13 @@
   - Produção 44,0 kg (ECM 46,6). Vazias com IA há > 35 dias: 83.
 - Rotina diária (trig_016TMVvrfCBFKNtTAUKUc2Jd): em 18/10 parou sem BOV_USER e BOV_PASS no ambiente; falta
   cadastrar os secrets. `baixa_bovisync.py` agora não sobrescreve um dia que já existe (opção `--substituir`).
+- Correção (usuário, 19/10): o arquivo "atualizado_18-10" tem dados de 17/10. A regra vale sempre: data do
+  relatório = DtNasc + IdadeDias − 1, ou seja, o dia anterior à exportação.
+  - Ficou `Zootecnico_2026-10-17.xlsx`.
+  - O "atualizado_5", recebido em 19/10 com referência 19, virou `Zootecnico_2026-10-18.xlsx`.
+- 17/10: DairyPlan 69.898 kg × vendido 72.071 L = −3,0%; lote 10 com 48 vacas.
+- 18/10:
+  - DairyPlan 69.890 kg × vendido 64.000 L = +9,2%.
+  - 1.674 vacas em lactação; lote 10 com 47 (0 entradas, 1 saída); 0 partos.
+  - 43,8 kg/vaca (ECM 46,4). Vacas com < 20 kg: 70 (eram 56).
+  - Gestantes: 997 (+19). DNB: 63 (+4). Vazias com IA há > 35 dias: 94.

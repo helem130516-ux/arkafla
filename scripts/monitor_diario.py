@@ -322,8 +322,12 @@ def menos(f1, f2):
 
 
 def partos(d):
-    """Pela data do parto quando o relatório traz DtÚltParto; senão, comparação com o dia anterior."""
-    novo = cont(ADULTO, ("Pariu no período", 1))(d)
+    """Partos pela DtÚltParto do relatório MAIS RECENTE (pega lançamentos atrasados), contados no dia
+    do parto: depois do relatório anterior e até o dia. Sem a coluna no dia: comparação com o dia anterior."""
+    ult = "MAX(DATAS)"
+    ant = f"IF(MATCH({d},DATAS,0)=1,{d}-1,INDEX(DATAS,MATCH({d},DATAS,0)-1))"
+    novo = (f'COUNTIFS({R("Data")},{ult},{R("Fêmea")},1,{R("LACT")},">0",'
+            f'{R("DtÚltParto")},">"&{ant},{R("DtÚltParto")},"<="&{d})')
     antigo = comparado(cont(("Iniciou lactação", 1)))(d)
     return f'IF(COUNTIFS({R("Data")},{d},{R("DtÚltParto")},">0")>0,{novo},{antigo})'
 
@@ -601,9 +605,10 @@ notas = [
                         "do relatório desde 14/10/2026). Inseminadas: StatRepro Bred (adultas também Dry "
                         "Bred); vazias: StatRepro Vazia; sem DNB. Dias sem a coluna ficam vazios."),
     ("DEL > 70 sem IA", "Vacas em lactação, sem DNB, com DEL acima do parâmetro e NumIAs = 0."),
-    ("Começaram a lactação", "Partos: adultas com DtÚltParto depois da data do relatório anterior e até "
-                             "a data do relatório (sem relatório anterior na aba Dados: parto no próprio "
-                             "dia). Relatórios sem a coluna DtÚltParto (antes de 15/10/2026): vacas em "
+    ("Começaram a lactação", "Partos: adultas do relatório mais recente com DtÚltParto depois da data do "
+                             "relatório anterior e até a data do dia (sem relatório anterior na aba Dados: "
+                             "parto no próprio dia). Usar o relatório mais recente faz partos lançados com "
+                             "atraso entrarem no dia certo. Relatórios sem a coluna DtÚltParto (antes de 15/10/2026): vacas em "
                              "lactação no dia que não estavam em lactação no dia anterior, por brinco."),
     ("Saída de adultos", "Adultos que estavam no relatório do dia anterior e não estão no do dia."),
     ("Lote 10", "Entradas: adultas no lote 10 no dia que não estavam no lote 10 no dia anterior. "

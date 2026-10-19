@@ -317,3 +317,10 @@
   - 1.674 vacas em lactação; lote 10 com 47 (0 entradas, 1 saída); 0 partos.
   - 43,8 kg/vaca (ECM 46,4). Vacas com < 20 kg: 70 (eram 56).
   - Gestantes: 997 (+19). DNB: 63 (+4). Vazias com IA há > 35 dias: 94.
+- "atualizado_6" (19/10, "dados com os partos corretos"): é o relatório de 18/10 com os partos atrasados
+  lançados (5 vacas paridas em 17/10, 1 em 18/10, 1 em 19/10) e 6 bezerros novos. O leite é igual.
+  Substituiu `Zootecnico_2026-10-18.xlsx`.
+- Regra nova de partos: contados pela DtÚltParto do relatório mais recente, no dia do parto (depois do relatório
+  anterior e até o dia). Assim, lançamentos atrasados corrigem os dias anteriores.
+  - Partos: 15/10 = 3, 16/10 = 4, 17/10 = 6 (antes 1), 18/10 = 1.
+  - 18/10: 1.675 vacas em lactação, 188 secas, 991 gestantes.

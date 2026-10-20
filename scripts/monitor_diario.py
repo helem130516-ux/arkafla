@@ -95,6 +95,9 @@ for d, p in zip(DATAS, arquivos):
     frames.append(df)
 # Ordenado por brinco e data: a linha de cima é o mesmo animal no relatório anterior.
 dados = pd.concat(frames, ignore_index=True).sort_values(["Brinco", "Data"], kind="stable")
+# Lotes equivalentes (pedido do usuário, 20/10/2026): o lote 20 conta como lote 2 e o 30 como lote 3.
+LOTE_EQUIV = {20: 2, 30: 3}
+dados["Lote"] = dados["Lote"].replace(LOTE_EQUIV)
 # Data da última inseminação: coluna nova no relatório (a partir de 14/10/2026); antes não existia.
 if "DATA da IA" not in dados.columns:
     dados["DATA da IA"] = pd.NaT
@@ -577,6 +580,8 @@ notas = [
                     "mesma data substitui o anterior."),
     ("Machos", "Fora de todos os números (StatRepro = Male). Tudo é calculado só sobre fêmeas."),
     ("Adultos / jovens", "Adultas: LACT > 0. Jovens: LACT = 0."),
+    ("Lotes 20 e 30", "Desde 19/10/2026, o lote 20 é contado como lote 2 e o lote 30 como lote 3 (troca feita na "
+                      "carga dos dados; a aba Dados já mostra 2 e 3)."),
     ("Vacas em lactação", "Adultas (LACT > 0) nos lotes 1, 2, 3, 4, 5, 6 e 10. O lote 10 são vacas "
                           "em tratamento com leite descartado."),
     ("DEL médio", "Média de DEL das vacas em lactação."),

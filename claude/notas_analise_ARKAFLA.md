@@ -324,3 +324,14 @@
   anterior e até o dia). Assim, lançamentos atrasados corrigem os dias anteriores.
   - Partos: 15/10 = 3, 16/10 = 4, 17/10 = 6 (antes 1), 18/10 = 1.
   - 18/10: 1.675 vacas em lactação, 188 secas, 991 gestantes.
+
+## Atualização 20/10/2026
+- Zootécnico "atualizado_7" (referência 20/10, portanto relatório de 19/10).
+  - Lotes novos 20 e 30, com vacas vindas dos lotes 2 e 3. Pedido do usuário: o lote 20 conta como lote 2 e o
+    30 como lote 3 (`LOTE_EQUIV` em `monitor_diario.py`, aplicado na carga).
+  - Lote 2 = 2 + 20: 55,2 kg (DP 9,8), 212 vacas. Lote 3 = 3 + 30: 54,0 kg (DP 11,5), 220 vacas.
+- Coletas: PDF emitido em 20/10 às 10:10 (42 coletas). 19/10 = 69.462 L; DairyPlan 69.506 kg, diferença +0,1%.
+- 19/10:
+  - 8 adultas saíram do relatório (6 DNB, mais 5814 do lote 1 e 3445 do lote 6, as duas Bred). 1.664 em lactação.
+  - Lote 10 com 42 vacas (9 entradas, 14 saídas). 1 parto.
+  - 43,6 kg/vaca (ECM 46,2). Vazias com IA há > 35 dias: 97.

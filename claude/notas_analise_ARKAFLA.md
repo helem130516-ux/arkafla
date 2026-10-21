@@ -403,3 +403,18 @@
   linha extra com o número em negrito e a sparkline embaixo. Altura 82 pt; gráficos de cima reduzidos para 158 pt.
 - Título do cabeçalho: "Monitoramento diário" (sem "ARCAFLA"; a logo identifica a fazenda). Página 2:
   "Monitoramento diário · Tabela completa dos indicadores".
+
+## PADRÃO DO PDF (aprovado pelo usuário em 21/10/2026)
+Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuário. Versão marcada com a tag git
+`padrao-pdf-2026-10-21`.
+- A4 paisagem, 2 páginas. Cor principal cinza-escuro (#2E3338), fundo da página #F3F4F5, cantos arredondados.
+- Página 1:
+  - Cabeçalho com a logo (`dados/logo_arcafla.png`) e o título "Monitoramento diário".
+  - 6 cartões: faixa do juízo, valor grande, selo "vs ontem", média 10 dias, linha extra e sparkline.
+  - Gráficos: produção por vaca (azul = produção, verde = ECM, com valores) e produção por lote (cores dos lotes, ± DP).
+  - Gráficos: DairyPlan × vendido (azul/verde, mil kg/L, com a linha "dif." %), vacas < 20 kg, % gestantes e atrasos
+    reprodutivos.
+  - Quadro "⚠ Atenção hoje".
+- Página 2: tabela completa ocupando a página toda; linhas dos lotes no tom claro da cor do lote; último dia em azul.
+- Cores dos lotes: L1 amarelo, L2 azul, L3 vermelho, L4 verde, L5 roxo, L6 laranja.
+- Subtítulos dos gráficos sem "bom quando sobe/cai".

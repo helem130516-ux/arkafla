@@ -701,7 +701,7 @@ def cabecalho_p2():
                            ("LEFTPADDING", (0, 0), (-1, -1), 10), ("RIGHTPADDING", (0, 0), (-1, -1), 10),
                            ("TOPPADDING", (0, 0), (-1, -1), 4), ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
                            ("VALIGN", (0, 0), (-1, -1), "MIDDLE")]))
-    return com_logo(t, 22)
+    return t
 
 
 def rodape(c, d):

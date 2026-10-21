@@ -184,11 +184,11 @@ st_cab = est("cab", "LibB", 18, colors.white, 19)
 st_cab2 = est("cab2", "Lib", 9.5, colors.HexColor("#C9CDD1"), 10.5)
 st_cabd = est("cabd", "LibB", 12, colors.white, 14, 2)
 st_k = est("k", "LibB", 7.6, TINTA2, 8.8)
-st_kv = est("kv", "LibB", 20, TINTA, 21)
+st_kv = est("kv", "LibB", 25, TINTA, 26)
 st_ks = est("ks", "Lib", 7.4, TINTA2, 8.6)
 st_gt = est("gt", "LibB", 9.5, TINTA, 11)
 st_gs = est("gs", "Lib", 7.3, TINTA2, 8.6)
-st_at = est("at", "Lib", 8.4, TINTA, 10.4)
+st_at = est("at", "Lib", 9, TINTA, 11)
 st_ath = est("ath", "LibB", 9.5, RUIM, 11)
 st_t2 = est("t2", "LibB", 11, AZUL, 13)
 st_d2 = est("d2", "Lib", 7.5, TINTA2, 9, 2)
@@ -227,7 +227,7 @@ def eixo_x(d, x0, y0, larg, n, rotulos):
         if (n - 1 - i) % passo:
             continue
         x = x0 + (larg * (i + 0.5) / n)
-        d.add(String(x, y0 - 10, r, fontName="Lib", fontSize=7, fillColor=TINTA2, textAnchor="middle"))
+        d.add(String(x, y0 - 10, r, fontName="Lib", fontSize=7.6, fillColor=TINTA2, textAnchor="middle"))
 
 
 def grade_y(d, x0, y0, larg, alt, lo, hi, nf, ticks=3):
@@ -235,13 +235,13 @@ def grade_y(d, x0, y0, larg, alt, lo, hi, nf, ticks=3):
         v = lo + (hi - lo) * t / ticks
         y = y0 + alt * t / ticks
         d.add(Line(x0, y, x0 + larg, y, strokeColor=GRADE, strokeWidth=0.5))
-        d.add(String(x0 - 3, y - 2, fmt(v, nf), fontName="Lib", fontSize=6.8, fillColor=TINTA2, textAnchor="end"))
+        d.add(String(x0 - 3, y - 2, fmt(v, nf), fontName="Lib", fontSize=7.6, fillColor=TINTA2, textAnchor="end"))
 
 
 def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False):
     """series: [(nome, valores, cor)]. Rótulo direto no último ponto de cada série."""
     d = Drawing(w, h)
-    x0, y0, larg, alt = 28, 14, w - 28 - 42, h - 22
+    x0, y0, larg, alt = 34, 14, w - 34 - 52, h - 22
     todos = [v for _, vs, _ in series for v in vs]
     lo, hi = escala(todos, zero)
     grade_y(d, x0, y0, larg, alt, lo, hi, nf)
@@ -258,16 +258,16 @@ def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False):
     # rótulos no fim das linhas sem sobreposição (afasta verticalmente os que ficam a < 8 pt)
     rotulos.sort(key=lambda r: r[1])
     for i in range(1, len(rotulos)):
-        if rotulos[i][1] - rotulos[i - 1][1] < 8:
-            rotulos[i][1] = rotulos[i - 1][1] + 8
+        if rotulos[i][1] - rotulos[i - 1][1] < 11:
+            rotulos[i][1] = rotulos[i - 1][1] + 11
     for x, y, txt in rotulos:
-        d.add(String(x0 + larg + 4, y - 2.5, txt, fontName="LibB", fontSize=8, fillColor=TINTA))
+        d.add(String(x0 + larg + 4, y - 3, txt, fontName="LibB", fontSize=10, fillColor=TINTA))
     return d
 
 
 def grafico_barras(rotulos, vals, w, h, nf, cor=S1, erros=None, destaque_ult=False, cores=None):
     d = Drawing(w, h)
-    x0, y0, larg, alt = 26, 14, w - 26 - 6, h - 24
+    x0, y0, larg, alt = 30, 14, w - 30 - 6, h - 28
     topo = [(v or 0) + ((erros[i] or 0) if erros else 0) for i, v in enumerate(vals)]
     lo, hi = escala(topo + [0], zero=True, folga=0.16)
     grade_y(d, x0, y0, larg, alt, lo, hi, nf.replace(".0", "") if "%" not in nf else nf)
@@ -275,7 +275,7 @@ def grafico_barras(rotulos, vals, w, h, nf, cor=S1, erros=None, destaque_ult=Fal
     bw = larg / n * 0.56
     for i, v in enumerate(vals):
         cx = x0 + larg * (i + 0.5) / n
-        d.add(String(cx, y0 - 10, rotulos[i], fontName="Lib", fontSize=7, fillColor=TINTA2, textAnchor="middle"))
+        d.add(String(cx, y0 - 10, rotulos[i], fontName="Lib", fontSize=7.6, fillColor=TINTA2, textAnchor="middle"))
         if v is None:
             continue
         c = (cores[i] if cores else cor)
@@ -289,7 +289,7 @@ def grafico_barras(rotulos, vals, w, h, nf, cor=S1, erros=None, destaque_ult=Fal
             d.add(Line(cx, y0 + hb - e, cx, y0 + hb + e, strokeColor=TINTA2, strokeWidth=0.7))
             d.add(Line(cx - 2.5, y0 + hb + e, cx + 2.5, y0 + hb + e, strokeColor=TINTA2, strokeWidth=0.7))
             topo_txt = y0 + hb + e + 2
-        d.add(String(cx, topo_txt, fmt(v, nf), fontName="LibB", fontSize=8, fillColor=TINTA, textAnchor="middle"))
+        d.add(String(cx, topo_txt, fmt(v, nf), fontName="LibB", fontSize=10, fillColor=TINTA, textAnchor="middle"))
     return d
 
 
@@ -361,7 +361,7 @@ def cartao(titulo, rot, extra, w):
         l2 += f"<br/>{extra}"
     corpo = Table([[Paragraph(titulo.upper(), st_k)], [Paragraph(valor, st_kv)], [Paragraph(l2, st_ks)],
                    [sparkline([num(v) for v in it["vals"]], w - 12, 13, cor_juizo(j))]],
-                  colWidths=[w - 4], rowHeights=[10, 22, 20, 14])
+                  colWidths=[w - 4], rowHeights=[10, 26, 20, 13])
     corpo.setStyle(TableStyle([("LEFTPADDING", (0, 0), (-1, -1), 6), ("RIGHTPADDING", (0, 0), (-1, -1), 2),
                                ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
                                ("VALIGN", (0, 0), (-1, -1), "MIDDLE")]))
@@ -392,7 +392,7 @@ cards = [
     cartao("Vazias com IA há > 35 dias", "Vazias com IA há > 35 dias",
            f'inseminadas há > 35 dias: {v_ult("Inseminadas (Bred) com IA há > 35 dias", "0")}', CW),
 ]
-painel = Table([cards], colWidths=[CW] * 6, rowHeights=[70])
+painel = Table([cards], colWidths=[CW] * 6, rowHeights=[73])
 painel.setStyle(TableStyle([("BOX", (0, 0), (-1, -1), 0.6, LINHA), ("INNERGRID", (0, 0), (-1, -1), 0.6, LINHA),
                             ("BACKGROUND", (0, 0), (-1, -1), colors.white), ("VALIGN", (0, 0), (-1, -1), "TOP"),
                             ("LEFTPADDING", (0, 0), (-1, -1), 1), ("RIGHTPADDING", (0, 0), (-1, -1), 1),
@@ -400,7 +400,7 @@ painel.setStyle(TableStyle([("BOX", (0, 0), (-1, -1), 0.6, LINHA), ("INNERGRID",
 
 # ---------------------------------------------------------------- página 1: gráficos
 G1W, G2W = LARG * 0.58 - 3, LARG * 0.42 - 3
-GH1 = 172
+GH1 = 166
 g_prod = caixa("Produção por vaca nos últimos dias",
                legenda_series([("Produção média 24 h", S1), ("Leite ECM (gordura e proteína do tanque)", S2)])
                + " · kg/vaca",
@@ -417,7 +417,7 @@ g_lote = caixa(f"Produção por lote em {ultimo:%d/%m}",
                G2W)
 
 G3W = LARG / 4 - 4.5
-GH2 = 140
+GH2 = 134
 dp_s, vd_s = serie("Leite Total dia DairyPlan"), serie("Leite vendido no dia (coletas do laticínio)")
 dif = itens.get("Diferença DairyPlan × vendido")
 dif_med = fmt(dif["media"], dif["mfmt"]) if dif and dif["media"] not in (None, "") else "–"
@@ -490,7 +490,8 @@ CVAR = CMED + 1 if vcol else None
 n_linhas = 1 + sum(1 for l in linhas if l["tipo"] != "bloco")
 ALT = min(11, (ALTP - 20 - 22 - 10) / n_linhas)
 FS = min(8.4, ALT - 0.9)
-st_c = est("c", "Lib", FS, TINTA, FS + 0.3, 2)
+FSN = min(9.2, ALT - 0.6)  # números da tabela, maiores que os rótulos
+st_c = est("c", "Lib", FSN, TINTA, FSN + 0.2, 2)
 dados = [cabec]
 estilo = [
     ("FONT", (0, 0), (-1, -1), "Lib", FS), ("TEXTCOLOR", (0, 0), (-1, -1), TINTA),
@@ -498,13 +499,14 @@ estilo = [
     ("ALIGN", (2, 0), (-1, -1), "CENTER"), ("ALIGN", (CDIA0, 1), (-1, -1), "RIGHT"),
     ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("LINEBELOW", (0, 0), (-1, -1), 0.25, LINHA),
     ("BOX", (0, 0), (-1, -1), 0.5, LINHA),
-    ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0.8),
+    ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 1.4),
     ("LEFTPADDING", (0, 0), (-1, -1), 2.5), ("RIGHTPADDING", (0, 0), (-1, -1), 2.5),
     ("TEXTCOLOR", (2, 1), (2, -1), TINTA2), ("FONTSIZE", (2, 1), (2, -1), FS - 1),
     ("FONT", (3, 1), (3, -1), "Sym", FS), ("TEXTCOLOR", (3, 1), (3, -1), AZUL),
     ("BACKGROUND", (CDIA0 + ND - 1, 1), (CDIA0 + ND - 1, -1), HOJE),
     ("BACKGROUND", (CMED, 1), (CMED, -1), MEDIA),
-    ("FONT", (CDIA0 + ND - 1, 0), (CDIA0 + ND - 1, -1), "LibB", FS), ("FONT", (CMED, 0), (CMED, -1), "LibB", FS),
+    ("FONTSIZE", (CDIA0, 1), (CMED, -1), FSN),
+    ("FONT", (CDIA0 + ND - 1, 0), (CDIA0 + ND - 1, -1), "LibB", FSN), ("FONT", (CMED, 0), (CMED, -1), "LibB", FSN),
 ]
 blocos, bloco_ini, bloco_rot, n = [], None, None, 0
 
@@ -534,7 +536,7 @@ for l in linhas:
     vals = [fmt(v, f) for v, f in zip(l["vals"], l["fmts"])]
     linha = ["", ("    " if l["sub"] else "") + l["rot"], l["un"], l["melhor"]] + vals + [fmt(l["media"], l["mfmt"])]
     if vcol:
-        linha.append(Paragraph(var_html(l, FS), st_c))
+        linha.append(Paragraph(var_html(l, FSN), st_c))
         j = juizo(l["melhor"], l["var"])
         if j:
             estilo.append(("BACKGROUND", (CVAR, i), (CVAR, i), BOM_BG if j == "bom" else RUIM_BG))
@@ -552,7 +554,7 @@ for l in linhas:
                    ("FONT", (1, i), (1, i), "LibB", FS)]
     for k, v in enumerate(l["vals"]):
         if isinstance(v, str):
-            estilo.append(("FONTSIZE", (CDIA0 + k, i), (CDIA0 + k, i), FS - 0.6))
+            estilo.append(("FONTSIZE", (CDIA0 + k, i), (CDIA0 + k, i), FSN - 0.9))
     n += 1
 fecha_bloco(len(dados) - 1)
 for ini, fim, rot in blocos:

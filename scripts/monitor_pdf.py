@@ -55,7 +55,7 @@ GRADE = colors.HexColor("#E4E7E5")
 LINHA = colors.HexColor("#C9D1CB")
 BORDA = colors.HexColor("#DADDE0")
 FUNDO_PAG = colors.HexColor("#F3F4F5")
-ZEBRA = colors.HexColor("#F6F8F7")
+ZEBRA = colors.HexColor("#F7F8F9")
 HOJE = colors.HexColor("#EAF2FB")
 MEDIA = colors.HexColor("#F1F4F7")
 INFILL = colors.HexColor("#FFF6D6")
@@ -519,13 +519,17 @@ for t in (linha1, linha2):
 
 
 # ---------------------------------------------------------------- página 2: tabela
+w_bl, w_un, w_mel, w_med, w_rot = 70, 30, 30, 50, 196
+w_var = 46 if vcol else 0
+
+
 cabec = (["", "Indicador", "Un.", "Melhor"] + [d.strftime("%d/%m") for d in dias]
          + ["Média 10 dias"] + (["Var. (dia)"] if vcol else []))
 NC = len(cabec)
 CDIA0, CMED = 4, 4 + ND
 CVAR = CMED + 1 if vcol else None
 n_linhas = 1 + sum(1 for l in linhas if l["tipo"] != "bloco")
-ALT = min(11, (ALTP - 20 - 22 - 10) / n_linhas)
+ALT = min(12, (ALTP - 27 - 28 - 8) / n_linhas)  # tabela ocupa toda a altura livre
 FS = min(8.4, ALT - 0.9)
 FSN = min(9.2, ALT - 0.6)  # números da tabela, maiores que os rótulos
 st_c = est("c", "Lib", FSN, TINTA, FSN + 0.2, 2)
@@ -533,15 +537,17 @@ dados = [cabec]
 estilo = [
     ("BACKGROUND", (0, 0), (-1, -1), colors.white), ("ROUNDEDCORNERS", [6, 6, 6, 6]),
     ("FONT", (0, 0), (-1, -1), "Lib", FS), ("TEXTCOLOR", (0, 0), (-1, -1), TINTA),
-    ("FONT", (0, 0), (-1, 0), "LibB", FS), ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#E6ECE8")),
+    ("FONT", (0, 0), (-1, 0), "LibB", FS), ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#4A5158")),
+    ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
     ("ALIGN", (2, 0), (-1, -1), "CENTER"), ("ALIGN", (CDIA0, 1), (-1, -1), "RIGHT"),
-    ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("LINEBELOW", (0, 0), (-1, -1), 0.25, LINHA),
+    ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("LINEBELOW", (0, 1), (-1, -1), 0.25, colors.HexColor("#E6E8EA")),
     ("BOX", (0, 0), (-1, -1), 0.5, LINHA),
     ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 1.4),
     ("LEFTPADDING", (0, 0), (-1, -1), 2.5), ("RIGHTPADDING", (0, 0), (-1, -1), 2.5),
     ("TEXTCOLOR", (2, 1), (2, -1), TINTA2), ("FONTSIZE", (2, 1), (2, -1), FS - 1),
     ("FONT", (3, 1), (3, -1), "Sym", FS), ("TEXTCOLOR", (3, 1), (3, -1), AZUL),
     ("BACKGROUND", (CDIA0 + ND - 1, 1), (CDIA0 + ND - 1, -1), HOJE),
+    ("BACKGROUND", (CDIA0 + ND - 1, 0), (CDIA0 + ND - 1, 0), colors.HexColor("#2A78D6")),
     ("BACKGROUND", (CMED, 1), (CMED, -1), MEDIA),
     ("FONTSIZE", (CDIA0, 1), (CMED, -1), FSN),
     ("FONT", (CDIA0 + ND - 1, 0), (CDIA0 + ND - 1, -1), "LibB", FSN), ("FONT", (CMED, 0), (CMED, -1), "LibB", FSN),
@@ -598,11 +604,9 @@ fecha_bloco(len(dados) - 1)
 for ini, fim, rot in blocos:
     dados[ini][0] = Paragraph(rot, st_bl)
     estilo += [("SPAN", (0, ini), (0, fim)), ("BACKGROUND", (0, ini), (0, fim), AZUL_CLARO),
-               ("LINEBELOW", (0, fim), (-1, fim), 0.8, AZUL)]
+               ("LINEBELOW", (0, fim), (-1, fim), 0.9, colors.HexColor("#9AA0A6"))]
 
-w_bl, w_un, w_mel, w_med, w_rot = 70, 32, 28, 50, 200
-w_var = 46 if vcol else 0
-w_dia = min((LARG - w_bl - w_rot - w_un - w_mel - w_med - w_var) / ND, 60)
+w_dia = (LARG - w_bl - w_rot - w_un - w_mel - w_med - w_var) / ND  # tabela na largura toda da página
 tab = Table(dados, colWidths=[w_bl, w_rot, w_un, w_mel] + [w_dia] * ND + [w_med] + ([w_var] if vcol else []),
             rowHeights=[ALT + 1] + [ALT] * (len(dados) - 1))
 tab.setStyle(TableStyle(estilo))
@@ -631,12 +635,14 @@ def cabecalho_p1():
 
 
 def cabecalho_p2():
-    t = Table([[Paragraph("ARCAFLA · Tabela completa dos indicadores", st_t2),
-                Paragraph(f"Dados de <b>{ultimo:%d/%m/%Y}</b> · página 2 de 2", st_d2)]],
-              colWidths=[LARG * 0.6, LARG * 0.4])
-    t.setStyle(TableStyle([("LEFTPADDING", (0, 0), (-1, -1), 0), ("RIGHTPADDING", (0, 0), (-1, -1), 0),
-                           ("VALIGN", (0, 0), (-1, -1), "BOTTOM"), ("BOTTOMPADDING", (0, 0), (-1, -1), 2),
-                           ("LINEBELOW", (0, 0), (-1, 0), 1.2, AZUL)]))
+    t = Table([[Paragraph("ARCAFLA · <font size=10 color='#C9CDD1'>Tabela completa dos indicadores</font>",
+                          est("t2b", "LibB", 13, colors.white, 15)),
+                Paragraph(f"Dados de {ultimo:%d/%m/%Y}", est("d2b", "LibB", 10, colors.white, 12, 2))]],
+              colWidths=[LARG * 0.65, LARG * 0.35])
+    t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), AZUL), ("ROUNDEDCORNERS", [8, 8, 8, 8]),
+                           ("LEFTPADDING", (0, 0), (-1, -1), 10), ("RIGHTPADDING", (0, 0), (-1, -1), 10),
+                           ("TOPPADDING", (0, 0), (-1, -1), 4), ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+                           ("VALIGN", (0, 0), (-1, -1), "MIDDLE")]))
     return t
 
 

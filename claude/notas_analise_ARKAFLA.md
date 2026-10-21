@@ -411,6 +411,10 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Página 1:
   - Cabeçalho com a logo (`dados/logo_arcafla.png`) e o título "Monitoramento diário".
   - 6 cartões: faixa do juízo, valor grande, selo "vs ontem", média 10 dias, linha extra e sparkline.
+    - Os 6 seguem a mesma grade: título, valor, média e linha extra nas mesmas alturas.
+    - Título e valor têm um só tamanho para os 6: o maior que cabe no cartão mais apertado.
+    - O selo tem largura fixa, encostado à direita; "vs ontem" fica centrado embaixo dele, na linha da média.
+    - A sparkline termina alinhada à borda direita do selo.
   - Gráficos: produção por vaca (azul = produção, verde = ECM, com valores) e produção por lote (cores dos lotes, ± DP).
   - Gráficos: DairyPlan × comercializado (azul/verde, mil kg/L, com a linha "dif." %), vacas < 20 kg, % gestantes e atrasos
     reprodutivos.
@@ -441,3 +445,7 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   do WhatsApp. Os nomes de arquivos (`dados/leite_vendido.json`, `scripts/le_leite_vendido.py`) não mudaram.
 - Na página 2, a linha "Leite comercializado no dia" ficou em destaque: marca verde à esquerda (o mesmo verde do
   gráfico), fundo verde-claro na linha toda e números em negrito. Na legenda, "verde = leite comercializado (L)".
+
+### 21/10/2026 – alinhamento dos cartões
+- Antes, o título "DairyPlan × comercializado" passava da borda, o selo e o "vs ontem" mudavam de lugar em cada
+  cartão, e valor e título tinham tamanhos diferentes. Agora tudo segue uma grade fixa (ver PADRÃO DO PDF).

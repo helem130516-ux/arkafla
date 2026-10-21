@@ -403,7 +403,7 @@ def texto(d, x, y, partes, tam):
         x += pdfmetrics.stringWidth(t, f, tam)
 
 
-def cartao(titulo, rot, extra, w, h):
+def cartao(titulo, rot, extra, w, h, tv=None):
     """Cartão-resumo: título, valor grande, selo da variação, média, linha extra e sparkline."""
     d = Drawing(w, h)
     it = itens.get(rot)
@@ -414,37 +414,40 @@ def cartao(titulo, rot, extra, w, h):
     j = juizo(it["melhor"], it["var"])
     cj = cor_juizo(j)
     d.add(Rect(0, 6, 3, h - 12, fillColor=cj, strokeColor=None, rx=1.5, ry=1.5))  # faixa do juízo
-    x = 10
-    d.add(String(x, h - 13, titulo.upper(), fontName="LibB", fontSize=7.4, fillColor=TINTA2))
-    # selo da variação vs ontem
+    x, dir_ = 10, w - 6  # margens: o texto começa em x e tudo termina em dir_
+    y_tit, y_val, y_med, y_ext = h - 13, h - 40, h - 51, h - 61  # linhas de base iguais em todos os cartões
+    d.add(String(x, y_tit, titulo.upper(), fontName="LibB", fontSize=TIT_TAM, fillColor=TINTA2))
+    # selo da variação vs ontem: mesma largura e posição em todos os cartões
     v = it["var"]
-    wt = 0
+    pw = 0
     if isinstance(v, (int, float)):
         txt = fmt(v, it["vfmt"], sinal=True)
         simb = "=" if txt == "0" else "▲" if v > 0 else "▼"
         txt = txt.lstrip("+-") if txt != "0" else "0"
-        wt = pdfmetrics.stringWidth(txt, "LibB", 8.6) + pdfmetrics.stringWidth(simb, "Sym", 7) + 11
+        ws_, wt_ = pdfmetrics.stringWidth(simb, "Sym", 7), pdfmetrics.stringWidth(txt, "LibB", 8.6)
+        pw = max(44, ws_ + wt_ + 10)
         fundo = BOM_BG if j == "bom" else RUIM_BG if j == "ruim" else AZUL_CLARO
-        px = w - wt - 6
-        d.add(Rect(px, h - 39, wt, 14, fillColor=fundo, strokeColor=None, rx=7, ry=7))
-        d.add(String(px + 5, h - 34.5, simb, fontName="Sym", fontSize=7, fillColor=cj))
-        d.add(String(px + 5 + pdfmetrics.stringWidth(simb, "Sym", 7) + 2, h - 35, txt, fontName="LibB",
-                     fontSize=8.6, fillColor=cj))
-        d.add(String(w - 6 - wt / 2, h - 47, "vs ontem", fontName="Lib", fontSize=6.2, fillColor=TINTA3,
-                     textAnchor="middle"))
-    livre = w - x - (wt + 10 if wt else 6)  # o valor encolhe se não couber ao lado do selo
-    tv = min(27, livre / pdfmetrics.stringWidth(valor, "LibB", 1))
-    d.add(String(x, h - 40, valor, fontName="LibB", fontSize=tv, fillColor=TINTA))
+        px, cx = dir_ - pw, dir_ - pw / 2
+        d.add(Rect(px, y_val + 2.5, pw, 15, fillColor=fundo, strokeColor=None, rx=7.5, ry=7.5))
+        x0 = cx - (ws_ + 2 + wt_) / 2
+        d.add(String(x0, y_val + 7, simb, fontName="Sym", fontSize=7, fillColor=cj))
+        d.add(String(x0 + ws_ + 2, y_val + 6.8, txt, fontName="LibB", fontSize=8.6, fillColor=cj))
+        d.add(String(cx, y_med, "vs ontem", fontName="Lib", fontSize=6.2, fillColor=TINTA3, textAnchor="middle"))
+    livre = dir_ - x - (pw + 6 if pw else 0)  # o valor encolhe se não couber ao lado do selo
+    TAM_VALOR.append(min(27, livre / pdfmetrics.stringWidth(valor, "LibB", 1)))
+    tv = tv or TAM_VALOR[-1]
+    d.add(String(x, y_val, valor, fontName="LibB", fontSize=tv, fillColor=TINTA))
     linha = []
     if k is not None and k != ND - 1:
         linha.append((f"dado de {dias[k]:%d/%m} · ", True, RUIM))
     if it["media"] not in (None, ""):
         rot_med = "média 10 dias " if k == ND - 1 else "méd. "
         linha += [(rot_med, False, TINTA2), (fmt(it["media"], it["mfmt"]), True, TINTA2)]
-    texto(d, x, h - 51, linha, 7.4)
+    texto(d, x, y_med, linha, 7.4)
     if extra:
-        texto(d, x, h - 61, [(extra[0] + " " if extra[0] else "", False, TINTA2), (extra[1], True, TINTA)], 7.4)
-    sparkline(d, [num(v) for v in it["vals"]], x, 4, w - x - 8, 13, cj)
+        texto(d, x, y_ext, [(extra[0] + " " if extra[0] else "", False, TINTA2), (extra[1], True, TINTA)], 7.4)
+    # sparkline de x até dir_ (o ponto final fica alinhado à borda direita do selo)
+    sparkline(d, [num(v) for v in it["vals"]], x, 4, dir_ - x + 1, 13, cj)
     return d
 
 
@@ -460,19 +463,31 @@ dif_txt = (("", f'{fmt(dpl["vals"][kv], "#,##0")} kg × {fmt(vdd["vals"][kv], "#
            if kv is not None else ("aguardando coletas", ""))
 CW = LARG / 6
 CH = 82  # altura dos cartões
-cards = [
-    cartao("Vacas em lactação", "Vacas em lactação (lotes 1 a 6 e 10)",
-           ("no tanque:", v_ult("Em lactação no tanque (lotes 1 a 6)", "0")), CW - 7, CH - 2),
-    cartao("Produção 24 h (kg/vaca)", "Produção média nas últimas 24 h (DP)",
-           ("ECM:", v_ult("Média de leite ECM (gordura e proteína do tanque)", "0.0") + " kg"), CW - 7, CH - 2),
-    cartao("DairyPlan × comercializado", "Diferença DairyPlan × comercializado", dif_txt, CW - 7, CH - 2),
-    cartao("Gestantes (sem DNB)", "% gestantes ÷ (adultas − DNB)",
-           ("vacas gestantes:", v_ult("Vacas gestantes (DDP ≥ 1, sem DNB)", "0")), CW - 7, CH - 2),
-    cartao("Em tratamento (lote 10)", "Animais em tratamento (lote 10)",
-           ("leite descartado:", v_ult("Leite descartado – lote 10", "#,##0") + " kg"), CW - 7, CH - 2),
-    cartao("Vazias com IA há > 35 dias", "Vazias com IA há > 35 dias",
-           ("inseminadas > 35 d:", v_ult("Inseminadas (Bred) com IA há > 35 dias", "0")), CW - 7, CH - 2),
-]
+TITULOS = ["Vacas em lactação", "Produção 24 h (kg/vaca)", "DairyPlan × comercializado", "Gestantes (sem DNB)",
+           "Em tratamento (lote 10)", "Vazias com IA há > 35 dias"]
+# um só tamanho de título para os 6 cartões: o maior que faz o título mais comprido caber
+TIT_TAM = min(7.4, min((CW - 7 - 16) / pdfmetrics.stringWidth(t.upper(), "LibB", 1) for t in TITULOS))
+def monta_cartoes(tv=None):
+    return [
+        cartao("Vacas em lactação", "Vacas em lactação (lotes 1 a 6 e 10)",
+               ("no tanque:", v_ult("Em lactação no tanque (lotes 1 a 6)", "0")), CW - 7, CH - 2, tv),
+        cartao("Produção 24 h (kg/vaca)", "Produção média nas últimas 24 h (DP)",
+               ("ECM:", v_ult("Média de leite ECM (gordura e proteína do tanque)", "0.0") + " kg"), CW - 7, CH - 2, tv),
+        cartao("DairyPlan × comercializado", "Diferença DairyPlan × comercializado", dif_txt, CW - 7, CH - 2, tv),
+        cartao("Gestantes (sem DNB)", "% gestantes ÷ (adultas − DNB)",
+               ("vacas gestantes:", v_ult("Vacas gestantes (DDP ≥ 1, sem DNB)", "0")), CW - 7, CH - 2, tv),
+        cartao("Em tratamento (lote 10)", "Animais em tratamento (lote 10)",
+               ("leite descartado:", v_ult("Leite descartado – lote 10", "#,##0") + " kg"), CW - 7, CH - 2, tv),
+        cartao("Vazias com IA há > 35 dias", "Vazias com IA há > 35 dias",
+               ("inseminadas > 35 d:", v_ult("Inseminadas (Bred) com IA há > 35 dias", "0")), CW - 7, CH - 2, tv),
+    ]
+
+
+TAM_VALOR = []
+monta_cartoes()  # 1ª passada: tamanho que cada valor precisa
+cards = monta_cartoes(min(TAM_VALOR))  # todos os valores no mesmo tamanho
+
+
 def embrulha(conteudo, w, h):
     t = Table([[conteudo]], colWidths=[w], rowHeights=[h])
     t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), colors.white), ("BOX", (0, 0), (-1, -1), 0.5, BORDA),

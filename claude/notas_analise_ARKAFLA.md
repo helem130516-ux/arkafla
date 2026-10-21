@@ -358,6 +358,6 @@
   - 17/10 T-3 e T-2; 18/10 T-4 e T-1. Ureia do T-1 = 9,7, informada pelo usuário.
   - Grupo válido a partir de 17/10: gordura 3,37%, proteína 3,38%, CCS 243, CBT 19, ureia 12,4.
 - 20/10:
-  - 1.646 vacas em lactação (−18); lote 10 com 32 (10 entradas, 4 saídas? ver saldo −10); 2 partos.
+  - 1.646 vacas em lactação (−18); lote 10 com 32 (0 entradas, 10 saídas); 2 partos.
   - 43,5 kg/vaca (ECM 44,4). Lote 6 caiu para 21,9 kg; vacas com < 20 kg: 77.
   - Gestantes: 54,6%. Vazias com IA há > 35 dias: 97.

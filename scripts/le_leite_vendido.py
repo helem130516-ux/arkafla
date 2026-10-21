@@ -7,8 +7,9 @@ análises do tanque pelo volume. O PDF é guardado em dados/leite_vendido/.
 
 A cada execução os totais são refeitos com todos os PDFs guardados, do mais antigo ao mais
 novo (as datas de um PDF mais novo substituem as dos anteriores). Coletas com data igual ou
-posterior à de emissão do PDF são ignoradas: o dia ainda está incompleto (ex.: PDF emitido
-em 16/10 às 14:02 só tinha a primeira coleta de 16/10).
+posterior à de emissão do PDF são ignoradas, e também a última data de coleta do PDF: esses dias
+podem estar incompletos (ex.: PDF emitido em 21/10 às 14:31 só tinha uma coleta com data de 20/10).
+O próximo PDF completa esses dias.
 
 Uso:
     python3 scripts/le_leite_vendido.py relatorio.pdf [...]
@@ -50,10 +51,11 @@ def le(pdf):
     if tot and int(tot[1].replace(".", "")) != sum(dias.values()):
         raise SystemExit(f"{pdf}: soma das coletas ({sum(dias.values())}) ≠ Total Período ({tot[1]})")
     em = EMITIDO.search(txt)
-    if em:  # dia da emissão (e depois) ainda incompleto
-        corte = datetime.strptime(em[1], "%d/%m/%Y").date().isoformat()
-        dias = OrderedDict((d, v) for d, v in dias.items() if d < corte)
-        col = [c for c in col if c["data"] < corte]
+    # dia da emissão (e depois) e a última data de coleta do relatório podem estar incompletos
+    corte = datetime.strptime(em[1], "%d/%m/%Y").date().isoformat() if em else "9999"
+    corte = min(corte, max(dias)) if dias else corte
+    dias = OrderedDict((d, v) for d, v in dias.items() if d < corte)
+    col = [c for c in col if c["data"] < corte]
     return dias, n, em, col
 
 

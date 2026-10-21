@@ -335,3 +335,29 @@
   - 8 adultas saíram do relatório (6 DNB, mais 5814 do lote 1 e 3445 do lote 6, as duas Bred). 1.664 em lactação.
   - Lote 10 com 42 vacas (9 entradas, 14 saídas). 1 parto.
   - 43,6 kg/vaca (ECM 46,2). Vazias com IA há > 35 dias: 97.
+
+## Atualização 21/10/2026 – nome ARCAFLA e novo visual
+- O usuário pediu "ARCAFLA" em vez de "ARKAFLA" nas saídas. Arquivos renomeados para
+  `monitoramento/Monitoramento_Diario_ARCAFLA*.xlsx/pdf`; a rotina também foi atualizada. O repositório e os
+  nomes antigos das notas continuam como estão.
+- Novo visual ("melhore a gestão visual e deixe mais didático"):
+  - Planilha:
+    - Blocos: Rebanho e movimentação · Produção por vaca · Leite produzido e entregue · Qualidade do leite do
+      tanque · Reprodução; jovens = Recria.
+    - Coluna "Melhor" (↑ bom quando sobe, ↓ bom quando desce, 0 bom perto de zero).
+    - Variação verde quando melhora e vermelha quando piora (formatação condicional pela coluna Melhor).
+  - PDF:
+    - Painel com 6 cartões: valor, seta de melhora/piora, média e minigráfico. São vacas em lactação,
+      produção 24 h + ECM, DairyPlan × vendido, % gestantes, lote 10 e vazias com IA há > 35 dias.
+    - Tabela com coluna lateral de blocos, seta colorida na variação e legenda "Como ler".
+- Dados:
+  - Zootécnico "atualizado_8" = 20/10 (referência 21/10).
+  - Coletas: PDF emitido em 21/10 às 14:31. Regra nova: a última data de coleta de cada PDF também fica de fora
+    (20/10 tinha uma coleta só, 28.826 L, e daria diferença falsa de +139%).
+- Análises do tanque (print de 21/10, imagem não chegou ao ambiente; valores transcritos):
+  - 17/10 T-3 e T-2; 18/10 T-4 e T-1. Ureia do T-1 = 9,7, informada pelo usuário.
+  - Grupo válido a partir de 17/10: gordura 3,37%, proteína 3,38%, CCS 243, CBT 19, ureia 12,4.
+- 20/10:
+  - 1.646 vacas em lactação (−18); lote 10 com 32 (10 entradas, 4 saídas? ver saldo −10); 2 partos.
+  - 43,5 kg/vaca (ECM 44,4). Lote 6 caiu para 21,9 kg; vacas com < 20 kg: 77.
+  - Gestantes: 54,6%. Vazias com IA há > 35 dias: 97.

@@ -1,4 +1,4 @@
-"""Planilha de monitoramento diário da ARKAFLA a partir do relatório zootécnico
+"""Planilha de monitoramento diário da ARCAFLA a partir do relatório zootécnico
 diário ("Zootécnico Jorge atualizado DD-MM-AAAA.xlsx").
 
 Cada relatório corresponde à data escrita no nome do arquivo. Os relatórios ficam
@@ -25,14 +25,14 @@ from datetime import date
 
 import pandas as pd
 from openpyxl import Workbook
-from openpyxl.formatting.rule import CellIsRule
+from openpyxl.formatting.rule import CellIsRule, FormulaRule
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter as L
 from openpyxl.workbook.defined_name import DefinedName
 
 PASTA = "dados/zootecnico"
 VENDIDO = "dados/leite_vendido.json"
-OUT = "monitoramento/Monitoramento_Diario_ARKAFLA.xlsx"
+OUT = "monitoramento/Monitoramento_Diario_ARCAFLA.xlsx"
 NDIAS = 10
 F = "Arial"
 AZUL = "1F5F8B"
@@ -407,93 +407,107 @@ def IA35(status, grupo):
     return cont(grupo, REPRO, ("StatRepro", status), ("Dias desde IA", ">\"&P_DIAS_IA&\""))
 
 
+# Cada item: (rótulo, unidade, fórmula, formato, melhor). melhor: "↑" bom quando sobe, "↓" bom quando
+# desce, "0" bom quando se aproxima de zero, "" sem sentido definido. ("§", título) abre um bloco.
+SUB = "§"
 GRUPOS = [
     ("Animais adultos (fêmeas, LACT > 0)", [
-        ("Vacas adultas", "cab", cont(ADULTO), N0),
-        ("Vacas em lactação (lotes 1 a 6 e 10)", "cab", cont(LAC), N0),
-        ("   Em lactação no tanque (lotes 1 a 6)", "cab", cont(*TANQUE), N0),
-        ("   Animais em tratamento (lote 10)", "cab", cont(ADULTO, ("Lote", 10)), N0),
-        ("Vacas secas (adultas fora da lactação)", "cab", cont(ADULTO, ("Lactação", 0)), N0),
-        ("Vacas paridas há até 21 dias (DEL ≤ 21)", "cab", cont(LAC, ("DEL", "<=21")), N0),
-        ("Vacas que começaram a lactação (partos)", "cab", partos, N0),
+        (SUB, "Rebanho e movimentação"),
+        ("Vacas adultas", "cab", cont(ADULTO), N0, ""),
+        ("Vacas em lactação (lotes 1 a 6 e 10)", "cab", cont(LAC), N0, ""),
+        ("   Em lactação no tanque (lotes 1 a 6)", "cab", cont(*TANQUE), N0, "↑"),
+        ("   Animais em tratamento (lote 10)", "cab", cont(ADULTO, ("Lote", 10)), N0, "↓"),
+        ("Vacas secas (adultas fora da lactação)", "cab", cont(ADULTO, ("Lactação", 0)), N0, ""),
+        ("Vacas paridas há até 21 dias (DEL ≤ 21)", "cab", cont(LAC, ("DEL", "<=21")), N0, ""),
+        ("Vacas que começaram a lactação (partos)", "cab", partos, N0, ""),
         ("Saída de animais adultos", "cab",
-         comparado(lambda d: f"COUNTIFS({R('Saída adulto em')},{d})"), N0),
-        ("   Lote 10 – entradas", "cab", comparado(ent10), N0),
-        ("   Lote 10 – saídas", "cab", comparado(sai10), N0),
-        ("   Lote 10 – saldo (entradas − saídas)", "cab", comparado(menos(ent10, sai10)), N0),
-        ("DEL médio da lactação", "dias", media("DEL", LAC), N0),
-        ("DEL médio (lotes 1 a 6)", "dias", media("DEL", *TANQUE), N0),
-        ("Produção média nas últimas 24 h (DP)", "kg/vaca", PROD24, N1),
-        ("Média de leite ECM (gordura e proteína do tanque)", "kg/vaca", ecm, N1),
+         comparado(lambda d: f"COUNTIFS({R('Saída adulto em')},{d})"), N0, ""),
+        ("   Lote 10 – entradas", "cab", comparado(ent10), N0, "↓"),
+        ("   Lote 10 – saídas", "cab", comparado(sai10), N0, ""),
+        ("   Lote 10 – saldo (entradas − saídas)", "cab", comparado(menos(ent10, sai10)), N0, "↓"),
+        ("DEL médio da lactação", "dias", media("DEL", LAC), N0, ""),
+        ("DEL médio (lotes 1 a 6)", "dias", media("DEL", *TANQUE), N0, ""),
+        (SUB, "Produção por vaca"),
+        ("Produção média nas últimas 24 h (DP)", "kg/vaca", PROD24, N1, "↑"),
+        ("Média de leite ECM (gordura e proteína do tanque)", "kg/vaca", ecm, N1, "↑"),
         *[(f"   Produção média do lote {lt} (DP)", "kg/vaca",
-           media_dp(("LACT", ">0"), ("Lote", lt), ("Leite", ">0")), N1) for lt in range(1, 7)],
-        ("Média de leite por vaca (tanque)", "kg/vaca", media("Leite", *COM_LEITE), N1),
-        ("Média primíparas (LACT 1, tanque)", "kg/vaca", media("Leite", *COM_LEITE, ("LACT", 1)), N1),
+           media_dp(("LACT", ">0"), ("Lote", lt), ("Leite", ">0")), N1, "↑") for lt in range(1, 7)],
+        ("Média de leite por vaca (tanque)", "kg/vaca", media("Leite", *COM_LEITE), N1, "↑"),
+        ("Média primíparas (LACT 1, tanque)", "kg/vaca", media("Leite", *COM_LEITE, ("LACT", 1)), N1, "↑"),
         ("Média multíparas (LACT ≥ 2, tanque)", "kg/vaca",
-         media("Leite", *COM_LEITE, ("LACT", ">=2")), N1),
-        ("Vacas com leite < 20 kg (tanque)", "cab", cont(*COM_LEITE, ("Leite", "<20")), N0),
-        ("Vacas com pesagem de leite (tanque)", "cab", cont(*COM_LEITE), N0),
-        ("% vacas com leitura de leite (tanque)", "%", razao(cont(*COM_LEITE), cont(*TANQUE)), P),
-        ("Leite Total dia DairyPlan", "kg", soma("Leite", *COM_LEITE), "#,##0"),
-        ("Leite vendido no dia (coletas do laticínio)", "L", vendido_dia, "#,##0"),
-        ("Diferença DairyPlan × vendido", "%", dif_vendido, "+0.0%;-0.0%;0.0%"),
-        ("Leite descartado – lote 10", "kg", soma("Leite", *DESCARTE), "#,##0"),
+         media("Leite", *COM_LEITE, ("LACT", ">=2")), N1, "↑"),
+        ("Vacas com leite < 20 kg (tanque)", "cab", cont(*COM_LEITE, ("Leite", "<20")), N0, "↓"),
+        ("Vacas com pesagem de leite (tanque)", "cab", cont(*COM_LEITE), N0, ""),
+        ("% vacas com leitura de leite (tanque)", "%", razao(cont(*COM_LEITE), cont(*TANQUE)), P, "↑"),
+        (SUB, "Leite produzido e entregue"),
+        ("Leite Total dia DairyPlan", "kg", soma("Leite", *COM_LEITE), "#,##0", "↑"),
+        ("Leite vendido no dia (coletas do laticínio)", "L", vendido_dia, "#,##0", "↑"),
+        ("Diferença DairyPlan × vendido", "%", dif_vendido, "+0.0%;-0.0%;0.0%", "0"),
+        ("Leite descartado – lote 10", "kg", soma("Leite", *DESCARTE), "#,##0", "↓"),
         ("% do leite produzido que foi descartado", "%",
          razao(soma("Leite", *DESCARTE),
-               lambda d: f"({soma('Leite', *COM_LEITE)(d)}+{soma('Leite', *DESCARTE)(d)})"), P),
-        ("Análise do tanque vigente desde", "data", data_tanque, "DD/MM/YYYY"),
-        ("Gordura – análise do tanque", "%", tanque("TQ_GORD"), N2),
-        ("Proteína – análise do tanque", "%", tanque("TQ_PROT"), N2),
-        ("Lactose – análise do tanque", "%", tanque("TQ_LACT"), N2),
-        ("Sólidos totais – análise do tanque", "%", tanque("TQ_ST"), N2),
-        ("CCS – análise do tanque", "mil/mL", tanque("TQ_CCS"), N0),
-        ("CPP (CBT) – análise do tanque", "mil UFC", tanque("TQ_CPP"), N0),
-        ("Ureia – análise do tanque", "mg/dL", tanque("TQ_UREIA"), N1),
-        ("Vacas gestantes (DDP ≥ 1, sem DNB)", "cab", cont(ADULTO, REPRO, ("DDP", ">=1")), N0),
+               lambda d: f"({soma('Leite', *COM_LEITE)(d)}+{soma('Leite', *DESCARTE)(d)})"), P, "↓"),
+        (SUB, "Qualidade do leite do tanque (laticínio)"),
+        ("Análise do tanque vigente desde", "data", data_tanque, "DD/MM/YYYY", ""),
+        ("Gordura – análise do tanque", "%", tanque("TQ_GORD"), N2, "↑"),
+        ("Proteína – análise do tanque", "%", tanque("TQ_PROT"), N2, "↑"),
+        ("Lactose – análise do tanque", "%", tanque("TQ_LACT"), N2, "↑"),
+        ("Sólidos totais – análise do tanque", "%", tanque("TQ_ST"), N2, "↑"),
+        ("CCS – análise do tanque", "mil/mL", tanque("TQ_CCS"), N0, "↓"),
+        ("CPP (CBT) – análise do tanque", "mil UFC", tanque("TQ_CPP"), N0, "↓"),
+        ("Ureia – análise do tanque", "mg/dL", tanque("TQ_UREIA"), N1, ""),
+        (SUB, "Reprodução"),
+        ("Vacas gestantes (DDP ≥ 1, sem DNB)", "cab", cont(ADULTO, REPRO, ("DDP", ">=1")), N0, "↑"),
         ("% gestantes ÷ (adultas − DNB)", "%",
-         razao(cont(ADULTO, REPRO, ("DDP", ">=1")), cont(ADULTO, REPRO)), P),
-        ("DEL > 150 não gestantes (sem DNB)", "cab", ng150, N0),
-        ("% DEL > 150 não gestantes ÷ em lactação", "%", razao(ng150, cont(LAC)), P),
-        ("Vacas a descartar (DNB)", "cab", cont(ADULTO, ("DNB", 1)), N0),
+         razao(cont(ADULTO, REPRO, ("DDP", ">=1")), cont(ADULTO, REPRO)), P, "↑"),
+        ("DEL > 150 não gestantes (sem DNB)", "cab", ng150, N0, "↓"),
+        ("% DEL > 150 não gestantes ÷ em lactação", "%", razao(ng150, cont(LAC)), P, "↓"),
+        ("Vacas a descartar (DNB)", "cab", cont(ADULTO, ("DNB", 1)), N0, "↓"),
         ("DEL > 70 sem IA (NumIAs = 0, sem DNB)", "cab",
-         cont(LAC, REPRO, ("DEL", ">\"&P_DEL_SEM_IA&\""), ("NumIAs", 0)), N0),
+         cont(LAC, REPRO, ("DEL", ">\"&P_DEL_SEM_IA&\""), ("NumIAs", 0)), N0, "↓"),
         ("Inseminadas (Bred) com IA há > 35 dias", "cab",
-         com_ia(lambda d: f'({IA35("Bred", ADULTO)(d)}+{IA35("Dry Bred", ADULTO)(d)})'), N0),
-        ("Vazias com IA há > 35 dias", "cab", com_ia(IA35("Vazia", ADULTO)), N0),
+         com_ia(lambda d: f'({IA35("Bred", ADULTO)(d)}+{IA35("Dry Bred", ADULTO)(d)})'), N0, "↓"),
+        ("Vazias com IA há > 35 dias", "cab", com_ia(IA35("Vazia", ADULTO)), N0, "↓"),
     ]),
     ("Animais jovens (fêmeas, LACT = 0)", [
-        ("Animais jovens totais", "cab", cont(JOVEM), N0),
-        ("Animais com < 3 meses", "cab", cont(JOVEM, ("IdadeDias", "<\"&P_IDADE_3M&\"")), N0),
-        ("Nascidas há até 7 dias", "cab", cont(JOVEM, ("IdadeDias", "<=7")), N0),
-        ("Novilhas gestantes (DDP ≥ 1, sem DNB)", "cab", cont(JOVEM, REPRO, ("DDP", ">=1")), N0),
+        ("Animais jovens totais", "cab", cont(JOVEM), N0, ""),
+        ("Animais com < 3 meses", "cab", cont(JOVEM, ("IdadeDias", "<\"&P_IDADE_3M&\"")), N0, ""),
+        ("Nascidas há até 7 dias", "cab", cont(JOVEM, ("IdadeDias", "<=7")), N0, ""),
+        ("Novilhas gestantes (DDP ≥ 1, sem DNB)", "cab", cont(JOVEM, REPRO, ("DDP", ">=1")), N0, "↑"),
         ("Novilhas > 15 meses não gestantes", "cab",
          menos(cont(JOVEM, REPRO, ("IdadeDias", ">\"&P_IDADE_15M&\"")),
-               cont(JOVEM, REPRO, ("IdadeDias", ">\"&P_IDADE_15M&\""), ("DDP", ">=1"))), N0),
-        ("Novilhas inseminadas (Bred) com IA há > 35 dias", "cab", com_ia(IA35("Bred", JOVEM)), N0),
-        ("Novilhas vazias com IA há > 35 dias", "cab", com_ia(IA35("Vazia", JOVEM)), N0),
+               cont(JOVEM, REPRO, ("IdadeDias", ">\"&P_IDADE_15M&\""), ("DDP", ">=1"))), N0, "↓"),
+        ("Novilhas inseminadas (Bred) com IA há > 35 dias", "cab", com_ia(IA35("Bred", JOVEM)), N0, "↓"),
+        ("Novilhas vazias com IA há > 35 dias", "cab", com_ia(IA35("Vazia", JOVEM)), N0, "↓"),
     ]),
 ]
 
-DC = [L(3 + k) for k in range(ND)]   # colunas dos dias: C, D, ...
-MC = L(3 + ND)                        # média dos dias exibidos
-VC = L(4 + ND)                        # variação último − anterior
-LAST = 4 + ND
+C0 = 4                                 # primeira coluna de dia (A rótulo, B unidade, C melhor)
+DC = [L(C0 + k) for k in range(ND)]    # colunas dos dias
+MC = L(C0 + ND)                        # média dos dias exibidos
+VC = L(C0 + 1 + ND)                    # variação último − anterior
+LAST = C0 + 1 + ND
+VERDE, VERMELHO, CINZA = "0B7A0B", "B42D2D", "6B6B66"
+SUBFILL2 = PatternFill("solid", fgColor="E3ECF3")
 
-ws["A1"] = "ARKAFLA – Monitoramento diário do rebanho"
+ws["A1"] = "ARCAFLA – Monitoramento diário do rebanho"
 ws["A1"].font = font(bold=True, size=14, color=AZUL)
 ws["A2"] = (f"Relatório zootécnico diário · {ND} dias mais recentes "
-            f"({DIAS[0]:%d/%m/%Y} a {DIAS[-1]:%d/%m/%Y}) · definições na aba Notas")
+            f"({DIAS[0]:%d/%m/%Y} a {DIAS[-1]:%d/%m/%Y}) · "
+            "Melhor: ↑ bom quando sobe, ↓ bom quando desce, 0 bom perto de zero · "
+            "variação verde = melhorou, vermelha = piorou · definições na aba Notas")
 ws["A2"].font = font(italic=True, size=9, color="5E6B63")
 
 HR = 4
-for j, t in enumerate(["Indicador", "Unidade"] + [None] * ND + ["Média\n10 dias", "Variação\n(último − anterior)"], 1):
+for j, t in enumerate(["Indicador", "Unidade", "Melhor"] + [None] * ND
+                      + ["Média\n10 dias", "Variação\n(último − anterior)"], 1):
     c = ws.cell(HR, j, t)
     c.font = font(bold=True, size=9)
     c.fill = HFILL
     c.border = BOX
     c.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
 for k, d in enumerate(DIAS):
-    ws.cell(HR, 3 + k, d).number_format = "DD/MM/YYYY"  # data vem do nome do arquivo
+    ws.cell(HR, C0 + k, d).number_format = "DD/MM/YYYY"  # data do relatório
 ws.row_dimensions[HR].height = 30
 
 r = HR + 1
@@ -502,21 +516,32 @@ for grupo, itens in GRUPOS:
     for j in range(1, LAST + 1):
         ws.cell(r, j).fill = SECFILL
     r += 1
-    for n, (rotulo, un, f, fmt) in enumerate(itens):
+    n = 0
+    for item in itens:
+        if item[0] == SUB:  # faixa de bloco
+            ws.cell(r, 1, item[1]).font = font(bold=True, color=AZUL)
+            for j in range(1, LAST + 1):
+                ws.cell(r, j).fill = SUBFILL2
+            r += 1
+            n = 0
+            continue
+        rotulo, un, f, fmt, melhor = item
         ws.cell(r, 1, rotulo).font = font()
         ws.cell(r, 2, un).font = font(size=9, color="5E6B63")
         ws.cell(r, 2).alignment = Alignment(horizontal="center")
+        ws.cell(r, 3, melhor or None).font = font(bold=True, color=AZUL)
+        ws.cell(r, 3).alignment = Alignment(horizontal="center")
         for k, col in enumerate(DC):
             if f is vendido_dia:
-                c = ws.cell(r, 3 + k, vendido.get(DIAS[k].isoformat()))
+                c = ws.cell(r, C0 + k, vendido.get(DIAS[k].isoformat()))
                 c.fill = INFILL
                 c.font = font(color="0000FF")
             elif f is dif_vendido:  # linhas de cima: DairyPlan (r − 2) e vendido (r − 1)
                 dp, vd = f"{col}{r - 2}", f"{col}{r - 1}"
-                c = ws.cell(r, 3 + k, f'=IF(OR({dp}="",{vd}="",{vd}=0),"",({dp}-{vd})/{vd})')
+                c = ws.cell(r, C0 + k, f'=IF(OR({dp}="",{vd}="",{vd}=0),"",({dp}-{vd})/{vd})')
                 c.font = font()
             else:
-                c = ws.cell(r, 3 + k, "=" + f(f"{col}${HR}"))
+                c = ws.cell(r, C0 + k, "=" + f(f"{col}${HR}"))
                 c.font = font()
                 if hasattr(f, "media"):
                     c.alignment = Alignment(horizontal="right")
@@ -533,13 +558,14 @@ for grupo, itens in GRUPOS:
             c = ws.cell(r, LAST - 1, f'=IFERROR(AVERAGE({DC[0]}{r}:{DC[-1]}{r}),"")')
         c.number_format = fmt
         c.font = font(bold=True)
-        c.fill = PatternFill("solid", fgColor="EEF3F7")
         if ND >= 2 and not sem_media:
             if hasattr(f, "media"):  # célula com texto "média (DP)": variação da média
                 a, b = f.media(f"{DC[-1]}${HR}"), f.media(f"{DC[-2]}${HR}")
-                c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",{a}-{b})')
             else:
                 a, b = f"{DC[-1]}{r}", f"{DC[-2]}{r}"
+            if melhor == "0":  # bom quando se aproxima de zero: variação do valor absoluto
+                c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",ABS({a})-ABS({b}))')
+            else:
                 c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",{a}-{b})')
             c.number_format = fmt if fmt.startswith("+") else "+" + fmt + ";-" + fmt + ";0"
             c.font = font(bold=True)
@@ -547,20 +573,27 @@ for grupo, itens in GRUPOS:
             ws.cell(r, j).border = BOX
             if n % 2 and f is not vendido_dia:
                 ws.cell(r, j).fill = ZEBRA
+        ws.cell(r, LAST - 1).fill = PatternFill("solid", fgColor="EEF3F7")
         r += 1
+        n += 1
 
+# variação colorida pelo sentido desejado (coluna C): verde melhorou, vermelho piorou
 rng = f"{VC}{HR + 1}:{VC}{r - 1}"
-ws.conditional_formatting.add(rng, CellIsRule(operator="greaterThan", formula=["0"],
-                                              font=Font(name=F, bold=True, color="1E7B45")))
-ws.conditional_formatting.add(rng, CellIsRule(operator="lessThan", formula=["0"],
-                                              font=Font(name=F, bold=True, color="B03A2E")))
-ws.column_dimensions["A"].width = 56
+v1 = f"{VC}{HR + 1}"
+bom = f'AND(ISNUMBER({v1}),OR(AND($C{HR + 1}="↑",{v1}>0),AND($C{HR + 1}="↓",{v1}<0),AND($C{HR + 1}="0",{v1}<0)))'
+ruim = f'AND(ISNUMBER({v1}),OR(AND($C{HR + 1}="↑",{v1}<0),AND($C{HR + 1}="↓",{v1}>0),AND($C{HR + 1}="0",{v1}>0)))'
+ws.conditional_formatting.add(rng, FormulaRule(formula=[bom], font=Font(name=F, bold=True, color=VERDE),
+                                               fill=PatternFill("solid", fgColor="E3F4E3")))
+ws.conditional_formatting.add(rng, FormulaRule(formula=[ruim], font=Font(name=F, bold=True, color=VERMELHO),
+                                               fill=PatternFill("solid", fgColor="FBE6E6")))
+ws.column_dimensions["A"].width = 52
 ws.column_dimensions["B"].width = 9
+ws.column_dimensions["C"].width = 8
 for col in DC:
     ws.column_dimensions[col].width = 11.5
 ws.column_dimensions[MC].width = 11
 ws.column_dimensions[VC].width = 14
-ws.freeze_panes = f"C{HR + 1}"
+ws.freeze_panes = f"D{HR + 1}"
 ws.sheet_view.showGridLines = False
 ws.page_setup.orientation = "landscape"
 ws.page_setup.fitToWidth = 1
@@ -632,8 +665,11 @@ notas = [
                       "Nas linhas média (DP): média das médias diárias."),
     ("% leitura de leite", "Vacas do tanque (lotes 1 a 6) com Leite > 0 ÷ vacas em lactação nos lotes 1 a 6."),
     ("Leite Total dia DairyPlan", "Soma da coluna Leite das vacas dos lotes 1 a 6 no relatório do DairyPlan."),
-    ("Variação", "Último dia menos o dia anterior exibido. Verde = subiu, vermelho = caiu "
-                 "(a cor não indica se é bom ou ruim)."),
+    ("Como ler", "Coluna Melhor: ↑ = bom quando sobe; ↓ = bom quando desce; 0 = bom quando se aproxima de "
+                 "zero (diferença DairyPlan × vendido); vazio = sem sentido definido (ex.: partos)."),
+    ("Variação", "Último dia menos o dia anterior exibido. Fica verde quando melhorou e vermelha quando "
+                 "piorou, de acordo com a coluna Melhor; sem cor quando não há sentido definido. Na diferença "
+                 "DairyPlan × vendido a variação é da distância até zero."),
 ]
 wn["A1"] = "Notas e definições"
 wn["A1"].font = font(bold=True, size=14, color=AZUL)

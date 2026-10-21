@@ -418,3 +418,17 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Página 2: tabela completa ocupando a página toda; linhas dos lotes no tom claro da cor do lote; último dia em azul.
 - Cores dos lotes: L1 amarelo, L2 azul, L3 vermelho, L4 verde, L5 roxo, L6 laranja.
 - Subtítulos dos gráficos sem "bom quando sobe/cai".
+
+### 21/10/2026 – revisão de erros
+- Recálculo sem erros (362 mil fórmulas). Os indicadores de 20/10 foram refeitos à parte com pandas a partir do
+  arquivo bruto e bateram todos: lactação, tanque, lote 10, produção e DP por lote, < 20 kg, gestantes, DNB,
+  DEL > 150, DEL > 70 sem IA e jovens.
+- Corrigido: a variação agora é arredondada às casas exibidas (ROUND na fórmula). Antes, uma variação que aparecia
+  como "= 0" (ex.: lote 5 −0,04 kg; % leitura −0,05 p.p.) ainda era pintada de verde ou vermelho e podia entrar no
+  "Atenção hoje".
+- Vazias com IA > 35 d em 15/10 = 50 (81 → 50 → 78) está certo pelo arquivo bruto. É um lote de IATF cruzando os
+  35 dias.
+- Cadastro (DairyPlan/BoviSync): 4 vacas "Bred" sem DATA da IA (brincos 5557, 3291, 5541 e 5791) ficam fora de
+  "Inseminadas com IA > 35 d". A 5791 tem a 1ª IA com 16 DEL: conferir.
+- A diferença DairyPlan × vendido compara kg com L sem conversão (decisão anterior). Com densidade de 1,032, os kg
+  viram ~3% menos litros.

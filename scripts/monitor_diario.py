@@ -575,10 +575,13 @@ for grupo, itens in GRUPOS:
                 a, b = f.media(f"{DC[-1]}${HR}"), f.media(f"{DC[-2]}${HR}")
             else:
                 a, b = f"{DC[-1]}{r}", f"{DC[-2]}{r}"
+            # variação arredondada às casas exibidas: o que aparece como "0" não ganha cor de melhorou/piorou
+            base = fmt.split(";")[0]
+            casas = (len(base.split(".")[1].rstrip("%")) if "." in base else 0) + (2 if "%" in base else 0)
             if melhor == "0":  # bom quando se aproxima de zero: variação do valor absoluto
-                c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",ABS({a})-ABS({b}))')
+                c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",ROUND(ABS({a})-ABS({b}),{casas}))')
             else:
-                c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",{a}-{b})')
+                c = ws.cell(r, LAST, f'=IF(OR({a}="",{b}=""),"",ROUND({a}-{b},{casas}))')
             c.number_format = fmt if fmt.startswith("+") else "+" + fmt + ";-" + fmt + ";0"
             c.font = font(bold=True)
         for j in range(1, LAST + 1):

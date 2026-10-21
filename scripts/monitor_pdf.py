@@ -520,10 +520,10 @@ g_leite = caixa("Leite DairyPlan × vendido",
                 GLW)
 m20 = serie("Vacas com leite < 20 kg (tanque)")
 g_20 = caixa("Vacas com leite abaixo de 20 kg",
-             "Lotes 1 a 6 · 20 kg ≈ 19,4 L · bom quando cai",
+             "Lotes 1 a 6 · 20 kg ≈ 19,4 L",
              grafico_barras([x.strftime("%d/%m") for x in dias], m20, G3W - 10, GH2, "0", destaque_ult=True),
              G3W)
-g_gest = caixa("Vacas gestantes (% sem DNB)", "Gestantes ÷ (adultas − DNB) · bom quando sobe",
+g_gest = caixa("Vacas gestantes (% sem DNB)", "Gestantes ÷ (adultas − DNB)",
                grafico_linhas([("gest", serie("% gestantes ÷ (adultas − DNB)"), S1)], G3W - 10, GH2, "0.0%", area=True), G3W)
 g_rep = caixa("Atrasos reprodutivos",
               legenda_series([("Vazias IA > 35 d", S2), ("DEL > 150 não gest.", S1)]),

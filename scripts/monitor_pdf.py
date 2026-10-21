@@ -382,42 +382,70 @@ def legenda_series(pares):
 
 
 # ---------------------------------------------------------------- página 1: cartões
-def sparkline(vals, w, h, cor_ult):
-    d = Drawing(w, h)
+def sparkline(d, vals, x, y, w, h, cor_ult):
+    """Linha dos últimos dias no rodapé do cartão (área suave, ponto final na cor do juízo)."""
     pts = [(i, v) for i, v in enumerate(vals) if v is not None]
     if len(pts) < 2:
-        return d
+        return
     lo, hi = escala([v for _, v in pts], folga=0)
     n = max(len(vals) - 1, 1)
-    xy = [(3 + (w - 8) * i / n, 3 + (h - 6) * (v - lo) / (hi - lo)) for i, v in pts]
-    d.add(curva(xy, S1, area_y=1, largura=1.5))
-    d.add(curva(xy, S1, largura=1.5))
-    d.add(Circle(xy[-1][0], xy[-1][1], 2.6, fillColor=cor_ult, strokeColor=colors.white, strokeWidth=0.8))
-    return d
+    xy = [(x + (w - 4) * i / n, y + 2 + (h - 4) * (v - lo) / (hi - lo)) for i, v in pts]
+    d.add(curva(xy, S1, area_y=y, largura=1.6))
+    d.add(curva(xy, S1, largura=1.6))
+    d.add(Circle(xy[-1][0], xy[-1][1], 2.8, fillColor=cor_ult, strokeColor=colors.white, strokeWidth=1))
 
 
-def cartao(titulo, rot, extra, w):
+def texto(d, x, y, partes, tam):
+    """Escreve (texto, negrito, cor) em sequência na mesma linha."""
+    for t, neg, cor in partes:
+        f = "LibB" if neg else "Lib"
+        d.add(String(x, y, t, fontName=f, fontSize=tam, fillColor=cor))
+        x += pdfmetrics.stringWidth(t, f, tam)
+
+
+def cartao(titulo, rot, extra, w, h):
+    """Cartão-resumo: título, valor grande, selo da variação, média, linha extra e sparkline."""
+    d = Drawing(w, h)
     it = itens.get(rot)
     if not it:
-        return Paragraph(titulo, st_k)
+        return d
     k, ult = ultimo_valor(it)
     valor = fmt(num(ult), "0.0") if isinstance(ult, str) else (fmt(ult, it["fmts"][k]) if k is not None else "–")
-    if k is not None and k != ND - 1:
-        valor += f' <font size="7" color="#5E6B63">({dias[k]:%d/%m})</font>'
     j = juizo(it["melhor"], it["var"])
-    l2 = var_html(it, 7.5)
-    l2 = (l2 + " vs ontem") if l2 else '<font color="#8A8A85">sem dia anterior</font>'
+    cj = cor_juizo(j)
+    d.add(Rect(0, 6, 3, h - 12, fillColor=cj, strokeColor=None, rx=1.5, ry=1.5))  # faixa do juízo
+    x = 10
+    d.add(String(x, h - 13, titulo.upper(), fontName="LibB", fontSize=7.4, fillColor=TINTA2))
+    # selo da variação vs ontem
+    v = it["var"]
+    wt = 0
+    if isinstance(v, (int, float)):
+        txt = fmt(v, it["vfmt"], sinal=True)
+        simb = "=" if txt == "0" else "▲" if v > 0 else "▼"
+        txt = txt.lstrip("+-") if txt != "0" else "0"
+        wt = pdfmetrics.stringWidth(txt, "LibB", 8.6) + pdfmetrics.stringWidth(simb, "Sym", 7) + 11
+        fundo = BOM_BG if j == "bom" else RUIM_BG if j == "ruim" else AZUL_CLARO
+        px = w - wt - 6
+        d.add(Rect(px, h - 39, wt, 14, fillColor=fundo, strokeColor=None, rx=7, ry=7))
+        d.add(String(px + 5, h - 34.5, simb, fontName="Sym", fontSize=7, fillColor=cj))
+        d.add(String(px + 5 + pdfmetrics.stringWidth(simb, "Sym", 7) + 2, h - 35, txt, fontName="LibB",
+                     fontSize=8.6, fillColor=cj))
+        d.add(String(w - 6 - wt / 2, h - 47, "vs ontem", fontName="Lib", fontSize=6.2, fillColor=TINTA3,
+                     textAnchor="middle"))
+    livre = w - x - (wt + 10 if wt else 6)  # o valor encolhe se não couber ao lado do selo
+    tv = min(27, livre / pdfmetrics.stringWidth(valor, "LibB", 1))
+    d.add(String(x, h - 40, valor, fontName="LibB", fontSize=tv, fillColor=TINTA))
+    linha = []
+    if k is not None and k != ND - 1:
+        linha.append((f"dado de {dias[k]:%d/%m} · ", True, RUIM))
     if it["media"] not in (None, ""):
-        l2 += f' · méd. {fmt(it["media"], it["mfmt"])}'
+        rot_med = "média 10 dias " if k == ND - 1 else "méd. "
+        linha += [(rot_med, False, TINTA2), (fmt(it["media"], it["mfmt"]), True, TINTA2)]
+    texto(d, x, h - 51, linha, 7.4)
     if extra:
-        l2 += f"<br/>{extra}"
-    corpo = Table([[Paragraph(titulo.upper(), st_k)], [Paragraph(valor, st_kv)], [Paragraph(l2, st_ks)],
-                   [sparkline([num(v) for v in it["vals"]], w - 12, 13, cor_juizo(j))]],
-                  colWidths=[w - 4], rowHeights=[10, 26, 20, 13])
-    corpo.setStyle(TableStyle([("LEFTPADDING", (0, 0), (-1, -1), 6), ("RIGHTPADDING", (0, 0), (-1, -1), 2),
-                               ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
-                               ("VALIGN", (0, 0), (-1, -1), "MIDDLE")]))
-    return corpo
+        texto(d, x, h - 61, [(extra[0] + " " if extra[0] else "", False, TINTA2), (extra[1], True, TINTA)], 7.4)
+    sparkline(d, [num(v) for v in it["vals"]], x, 4, w - x - 8, 13, cj)
+    return d
 
 
 def v_ult(rot, nf):
@@ -428,38 +456,39 @@ def v_ult(rot, nf):
 dpl = itens.get("Leite Total dia DairyPlan")
 vdd = itens.get("Leite vendido no dia (coletas do laticínio)")
 kv = next((i for i in range(ND - 1, -1, -1) if vdd and vdd["vals"][i] not in (None, "")), None)
-dif_txt = (f'{fmt(dpl["vals"][kv], "#,##0")} kg × {fmt(vdd["vals"][kv], "#,##0")} L'
-           if kv is not None else "aguardando coletas")
+dif_txt = (("", f'{fmt(dpl["vals"][kv], "#,##0")} kg × {fmt(vdd["vals"][kv], "#,##0")} L')
+           if kv is not None else ("aguardando coletas", ""))
 CW = LARG / 6
+CH = 82  # altura dos cartões
 cards = [
     cartao("Vacas em lactação", "Vacas em lactação (lotes 1 a 6 e 10)",
-           f'no tanque: {v_ult("Em lactação no tanque (lotes 1 a 6)", "0")}', CW),
+           ("no tanque:", v_ult("Em lactação no tanque (lotes 1 a 6)", "0")), CW - 7, CH - 2),
     cartao("Produção 24 h (kg/vaca)", "Produção média nas últimas 24 h (DP)",
-           f'ECM: <b>{v_ult("Média de leite ECM (gordura e proteína do tanque)", "0.0")} kg</b>', CW),
-    cartao("DairyPlan × leite vendido", "Diferença DairyPlan × vendido", dif_txt, CW),
+           ("ECM:", v_ult("Média de leite ECM (gordura e proteína do tanque)", "0.0") + " kg"), CW - 7, CH - 2),
+    cartao("DairyPlan × leite vendido", "Diferença DairyPlan × vendido", dif_txt, CW - 7, CH - 2),
     cartao("Gestantes (sem DNB)", "% gestantes ÷ (adultas − DNB)",
-           f'{v_ult("Vacas gestantes (DDP ≥ 1, sem DNB)", "0")} vacas gestantes', CW),
+           ("vacas gestantes:", v_ult("Vacas gestantes (DDP ≥ 1, sem DNB)", "0")), CW - 7, CH - 2),
     cartao("Em tratamento (lote 10)", "Animais em tratamento (lote 10)",
-           f'leite descartado: {v_ult("Leite descartado – lote 10", "#,##0")} kg', CW),
+           ("leite descartado:", v_ult("Leite descartado – lote 10", "#,##0") + " kg"), CW - 7, CH - 2),
     cartao("Vazias com IA há > 35 dias", "Vazias com IA há > 35 dias",
-           f'inseminadas há > 35 dias: {v_ult("Inseminadas (Bred) com IA há > 35 dias", "0")}', CW),
+           ("inseminadas > 35 d:", v_ult("Inseminadas (Bred) com IA há > 35 dias", "0")), CW - 7, CH - 2),
 ]
 def embrulha(conteudo, w, h):
     t = Table([[conteudo]], colWidths=[w], rowHeights=[h])
     t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), colors.white), ("BOX", (0, 0), (-1, -1), 0.5, BORDA),
                            ("ROUNDEDCORNERS", [7, 7, 7, 7]), ("VALIGN", (0, 0), (-1, -1), "TOP"),
                            ("LEFTPADDING", (0, 0), (-1, -1), 1), ("RIGHTPADDING", (0, 0), (-1, -1), 1),
-                           ("TOPPADDING", (0, 0), (-1, -1), 5), ("BOTTOMPADDING", (0, 0), (-1, -1), 0)]))
+                           ("TOPPADDING", (0, 0), (-1, -1), 1), ("BOTTOMPADDING", (0, 0), (-1, -1), 0)]))
     return t
 
 
-painel = Table([[embrulha(c, CW - 5, 74) for c in cards]], colWidths=[CW] * 6)
+painel = Table([[embrulha(c, CW - 5, CH) for c in cards]], colWidths=[CW] * 6)
 painel.setStyle(TableStyle([("LEFTPADDING", (0, 0), (-1, -1), 0), ("RIGHTPADDING", (0, 0), (-1, -1), 5),
                             ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0)]))
 
 # ---------------------------------------------------------------- página 1: gráficos
 G1W, G2W = LARG * 0.58 - 3, LARG * 0.42 - 3
-GH1 = 166
+GH1 = 158
 g_prod = caixa("Produção por vaca nos últimos dias",
                legenda_series([("Produção média 24 h", S1), ("Leite ECM (gordura e proteína do tanque)", S3)])
                + " · kg/vaca",
@@ -680,8 +709,8 @@ def com_logo(t, alt):
 
 
 def cabecalho_p1():
-    t = Table([[Paragraph("ARCAFLA", st_cab), Paragraph(f"Dados de {ultimo:%d/%m/%Y}", st_cabd)],
-               [Paragraph(f"Monitoramento diário do rebanho · {ND} dia(s): {dias[0]:%d/%m} a {ultimo:%d/%m}",
+    t = Table([[Paragraph("Monitoramento diário", st_cab), Paragraph(f"Dados de {ultimo:%d/%m/%Y}", st_cabd)],
+               [Paragraph(f"Rebanho · {ND} dia(s): {dias[0]:%d/%m} a {ultimo:%d/%m}",
                           st_cab2), Paragraph("", st_cab2)]],
               colWidths=[LARG * 0.65, LARG * 0.35])
     t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), AZUL), ("LEFTPADDING", (0, 0), (-1, -1), 10),
@@ -693,7 +722,7 @@ def cabecalho_p1():
 
 
 def cabecalho_p2():
-    t = Table([[Paragraph("ARCAFLA · <font size=10 color='#C9CDD1'>Tabela completa dos indicadores</font>",
+    t = Table([[Paragraph("Monitoramento diário · <font size=10 color='#C9CDD1'>Tabela completa dos indicadores</font>",
                           est("t2b", "LibB", 13, colors.white, 15)),
                 Paragraph(f"Dados de {ultimo:%d/%m/%Y}", est("d2b", "LibB", 10, colors.white, 12, 2))]],
               colWidths=[LARG * 0.65, LARG * 0.35])

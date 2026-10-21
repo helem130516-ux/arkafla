@@ -396,3 +396,10 @@
 ### 21/10/2026 – logo no PDF
 - Logo da fazenda (enviada pelo usuário) recortada sem a margem branca e salva em `dados/logo_arcafla.png` (900×535).
 - Aparece só no cabeçalho da página 1, numa faixa branca à esquerda (altura 46 pt). Se o arquivo não existir, o PDF sai sem logo.
+
+### 21/10/2026 – cartões e título do PDF
+- Os 6 cartões da página 1 foram redesenhados: faixa lateral na cor do juízo (verde melhorou, vermelho piorou, cinza
+  neutro), valor grande (encolhe se não couber), selo arredondado com a variação "vs ontem", "média 10 dias",
+  linha extra com o número em negrito e a sparkline embaixo. Altura 82 pt; gráficos de cima reduzidos para 158 pt.
+- Título do cabeçalho: "Monitoramento diário" (sem "ARCAFLA"; a logo identifica a fazenda). Página 2:
+  "Monitoramento diário · Tabela completa dos indicadores".

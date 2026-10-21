@@ -31,7 +31,7 @@ from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+from reportlab.platypus import Image, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 XLSX = next((a for a in sys.argv[1:] if a.endswith(".xlsx")), None) or "monitoramento/Monitoramento_Diario_ARCAFLA.xlsx"
 LIB = "/usr/share/fonts/truetype/liberation"
@@ -650,6 +650,35 @@ legenda = Paragraph(
 
 
 # ---------------------------------------------------------------- cabeçalhos e montagem
+LOGO = "dados/logo_arcafla.png"  # logo já recortada (sem a margem branca); se não existir, sai sem logo
+
+
+def logo(alt):
+    """Logo da fazenda com altura alt; None se o arquivo não existir."""
+    if not os.path.exists(LOGO):
+        return None
+    from PIL import Image as PILImage
+    w, h = PILImage.open(LOGO).size
+    return Image(LOGO, width=alt * w / h, height=alt)
+
+
+def com_logo(t, alt):
+    """Põe a logo numa faixa branca à esquerda do cabeçalho t (mesmos cantos arredondados)."""
+    lg = logo(alt)
+    if lg is None:
+        return t
+    wl = lg.drawWidth + 12
+    t._argW[0] -= wl  # a logo ocupa parte da coluna do título
+    t.setStyle(TableStyle([("ROUNDEDCORNERS", None)]))  # quem arredonda agora é a tabela de fora
+    tab = Table([[lg, t]], colWidths=[wl, LARG - wl])
+    tab.setStyle(TableStyle([("BACKGROUND", (0, 0), (0, 0), colors.white), ("BACKGROUND", (1, 0), (1, 0), AZUL),
+                             ("VALIGN", (0, 0), (-1, -1), "MIDDLE"), ("ALIGN", (0, 0), (0, 0), "CENTER"),
+                             ("LEFTPADDING", (0, 0), (-1, -1), 0), ("RIGHTPADDING", (0, 0), (-1, -1), 0),
+                             ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
+                             ("ROUNDEDCORNERS", [8, 8, 8, 8])]))
+    return tab
+
+
 def cabecalho_p1():
     t = Table([[Paragraph("ARCAFLA", st_cab), Paragraph(f"Dados de {ultimo:%d/%m/%Y}", st_cabd)],
                [Paragraph(f"Monitoramento diário do rebanho · {ND} dia(s): {dias[0]:%d/%m} a {ultimo:%d/%m}",
@@ -660,7 +689,7 @@ def cabecalho_p1():
                            ("BOTTOMPADDING", (0, -1), (-1, -1), 5), ("TOPPADDING", (0, 1), (-1, 1), 0),
                            ("BOTTOMPADDING", (0, 0), (-1, 0), 0), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
                            ("ROUNDEDCORNERS", [8, 8, 8, 8])]))
-    return t
+    return com_logo(t, 38)
 
 
 def cabecalho_p2():
@@ -672,7 +701,7 @@ def cabecalho_p2():
                            ("LEFTPADDING", (0, 0), (-1, -1), 10), ("RIGHTPADDING", (0, 0), (-1, -1), 10),
                            ("TOPPADDING", (0, 0), (-1, -1), 4), ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
                            ("VALIGN", (0, 0), (-1, -1), "MIDDLE")]))
-    return t
+    return com_logo(t, 22)
 
 
 def rodape(c, d):

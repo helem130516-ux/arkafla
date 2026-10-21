@@ -72,9 +72,9 @@ def resumo():
     if isinstance(g, (int, float)):
         t.append(f"Gestantes: {br(g * 100, 1)}% · Vazias com IA > 35 dias: "
                  f"{br(v('Vazias com IA há > 35 dias') or 0)}")
-    dif = v("Diferença DairyPlan × vendido")
+    dif = v("Diferença DairyPlan × comercializado")
     if isinstance(dif, (int, float)):
-        t.append(f"DairyPlan × leite vendido: {'+' if dif > 0 else ''}{br(dif * 100, 1)}%")
+        t.append(f"DairyPlan × leite comercializado: {'+' if dif > 0 else ''}{br(dif * 100, 1)}%")
     t.append("Relatório completo no PDF anexo.")
     return "\n".join(t)
 

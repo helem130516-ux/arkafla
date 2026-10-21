@@ -441,8 +441,8 @@ GRUPOS = [
         ("% vacas com leitura de leite (tanque)", "%", razao(cont(*COM_LEITE), cont(*TANQUE)), P, "↑"),
         (SUB, "Leite produzido e entregue"),
         ("Leite Total dia DairyPlan", "kg", soma("Leite", *COM_LEITE), "#,##0", "↑"),
-        ("Leite vendido no dia (coletas do laticínio)", "L", vendido_dia, "#,##0", "↑"),
-        ("Diferença DairyPlan × vendido", "%", dif_vendido, "+0.0%;-0.0%;0.0%", "0"),
+        ("Leite comercializado no dia (coletas do laticínio)", "L", vendido_dia, "#,##0", "↑"),
+        ("Diferença DairyPlan × comercializado", "%", dif_vendido, "+0.0%;-0.0%;0.0%", "0"),
         ("Leite descartado – lote 10", "kg", soma("Leite", *DESCARTE), "#,##0", "↓"),
         ("% do leite produzido que foi descartado", "%",
          razao(soma("Leite", *DESCARTE),
@@ -647,11 +647,11 @@ notas = [
     ("Leite ECM", "Produção média nas últimas 24 h × (0,327 + 0,1295 × gordura % + 0,0765 × proteína %), "
                   "com gordura e proteína da análise do tanque (Sjaunja et al., 1990; fatores na aba "
                   "Parâmetros)."),
-    ("Leite vendido", "Valor de entrada (azul/amarelo), em litros, lido de dados/leite_vendido.json. "
+    ("Leite comercializado", "Valor de entrada (azul/amarelo), em litros, lido de dados/leite_vendido.json. "
                       "Vem do \"Demonstrativo das Coletas de Leite\" (scripts/le_leite_vendido.py): soma "
                       "do Volume de todas as coletas com a mesma Data Coleta."),
-    ("Diferença DairyPlan × vendido", "(Leite Total dia DairyPlan − leite vendido) ÷ leite vendido. "
-                                      "Negativo = DairyPlan abaixo do vendido. O DairyPlan está em kg e o "
+    ("Diferença DairyPlan × comercializado", "(Leite Total dia DairyPlan − leite comercializado) ÷ leite comercializado. "
+                                      "Negativo = DairyPlan abaixo do comercializado. O DairyPlan está em kg e o "
                                       "laticínio em litros; não há conversão."),
     ("DNB", "StatRepro = DNB ou Dry DNB. Ficam fora de todos os indicadores de reprodução "
             "(só aparecem na própria contagem de DNB)."),
@@ -685,10 +685,10 @@ notas = [
     ("% leitura de leite", "Vacas do tanque (lotes 1 a 6) com Leite > 0 ÷ vacas em lactação nos lotes 1 a 6."),
     ("Leite Total dia DairyPlan", "Soma da coluna Leite das vacas dos lotes 1 a 6 no relatório do DairyPlan."),
     ("Como ler", "Coluna Melhor: ↑ = bom quando sobe; ↓ = bom quando desce; 0 = bom quando se aproxima de "
-                 "zero (diferença DairyPlan × vendido); vazio = sem sentido definido (ex.: partos)."),
+                 "zero (diferença DairyPlan × comercializado); vazio = sem sentido definido (ex.: partos)."),
     ("Variação", "Último dia menos o dia anterior exibido. Fica verde quando melhorou e vermelha quando "
                  "piorou, de acordo com a coluna Melhor; sem cor quando não há sentido definido. Na diferença "
-                 "DairyPlan × vendido a variação é da distância até zero."),
+                 "DairyPlan × comercializado a variação é da distância até zero."),
 ]
 wn["A1"] = "Notas e definições"
 wn["A1"].font = font(bold=True, size=14, color=AZUL)

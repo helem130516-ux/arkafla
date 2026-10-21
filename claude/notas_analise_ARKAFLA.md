@@ -432,3 +432,9 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   "Inseminadas com IA > 35 d". A 5791 tem a 1ª IA com 16 DEL: conferir.
 - A diferença DairyPlan × vendido compara kg com L sem conversão (decisão anterior). Com densidade de 1,032, os kg
   viram ~3% menos litros.
+
+### 21/10/2026 – "leite comercializado"
+- Onde aparecia "vendido" agora aparece "comercializado": planilha, PDF (cartão, gráfico, legenda, tabela) e resumo
+  do WhatsApp. Os nomes de arquivos (`dados/leite_vendido.json`, `scripts/le_leite_vendido.py`) não mudaram.
+- Na página 2, a linha "Leite comercializado no dia" ficou em destaque: marca verde à esquerda (o mesmo verde do
+  gráfico), fundo verde-claro na linha toda e números em negrito. Na legenda, "verde = leite comercializado (L)".

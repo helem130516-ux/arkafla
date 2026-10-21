@@ -6,7 +6,7 @@ monitoramento/Monitoramento_Diario_ARCAFLA_AAAA-MM-DD.pdf (data do último dia).
 Página 1 – painel visual:
   cabeçalho; 6 cartões de destaque (valor do dia, seta de melhora/piora, média e minigráfico);
   gráficos: produção por vaca e ECM nos dias exibidos, produção por lote (média e desvio padrão),
-  leite DairyPlan × vendido, vacas com leite < 20 kg, % de gestantes e vazias/não gestantes;
+  leite DairyPlan × comercializado, vacas com leite < 20 kg, % de gestantes e vazias/não gestantes;
   quadro "Atenção hoje" com os indicadores que mais pioraram.
 Página 2 – tabela completa por blocos, coluna "Melhor" (↑/↓/0), variação com seta colorida e
   legenda "Como ler".
@@ -454,7 +454,7 @@ def v_ult(rot, nf):
 
 
 dpl = itens.get("Leite Total dia DairyPlan")
-vdd = itens.get("Leite vendido no dia (coletas do laticínio)")
+vdd = itens.get("Leite comercializado no dia (coletas do laticínio)")
 kv = next((i for i in range(ND - 1, -1, -1) if vdd and vdd["vals"][i] not in (None, "")), None)
 dif_txt = (("", f'{fmt(dpl["vals"][kv], "#,##0")} kg × {fmt(vdd["vals"][kv], "#,##0")} L')
            if kv is not None else ("aguardando coletas", ""))
@@ -465,7 +465,7 @@ cards = [
            ("no tanque:", v_ult("Em lactação no tanque (lotes 1 a 6)", "0")), CW - 7, CH - 2),
     cartao("Produção 24 h (kg/vaca)", "Produção média nas últimas 24 h (DP)",
            ("ECM:", v_ult("Média de leite ECM (gordura e proteína do tanque)", "0.0") + " kg"), CW - 7, CH - 2),
-    cartao("DairyPlan × leite vendido", "Diferença DairyPlan × vendido", dif_txt, CW - 7, CH - 2),
+    cartao("DairyPlan × comercializado", "Diferença DairyPlan × comercializado", dif_txt, CW - 7, CH - 2),
     cartao("Gestantes (sem DNB)", "% gestantes ÷ (adultas − DNB)",
            ("vacas gestantes:", v_ult("Vacas gestantes (DDP ≥ 1, sem DNB)", "0")), CW - 7, CH - 2),
     cartao("Em tratamento (lote 10)", "Animais em tratamento (lote 10)",
@@ -505,14 +505,14 @@ g_lote = caixa(f"Produção por lote em {ultimo:%d/%m}",
                G2W)
 
 G3W = LARG * 0.22 - 6      # gráficos menores da 2ª fileira
-GLW = LARG * 0.34 - 6      # leite DairyPlan × vendido, mais largo (dois conjuntos de valores)
+GLW = LARG * 0.34 - 6      # leite DairyPlan × comercializado, mais largo (dois conjuntos de valores)
 GH2 = 134
-dp_s, vd_s = serie("Leite Total dia DairyPlan"), serie("Leite vendido no dia (coletas do laticínio)")
+dp_s, vd_s = serie("Leite Total dia DairyPlan"), serie("Leite comercializado no dia (coletas do laticínio)")
 dp_s, vd_s = [[v / 1000 if v is not None else None for v in x] for x in (dp_s, vd_s)]  # em mil
-dif = itens.get("Diferença DairyPlan × vendido")
+dif = itens.get("Diferença DairyPlan × comercializado")
 dif_med = fmt(dif["media"], dif["mfmt"]) if dif and dif["media"] not in (None, "") else "–"
-g_leite = caixa("Leite DairyPlan × vendido",
-                legenda_series([("DairyPlan (mil kg)", S1), ("Vendido (mil L)", S3)]) + f" · dif. méd. <b>{dif_med}</b>",
+g_leite = caixa("Leite DairyPlan × comercializado",
+                legenda_series([("DairyPlan (mil kg)", S1), ("Comercializado (mil L)", S3)]) + f" · dif. méd. <b>{dif_med}</b>",
                 grafico_linhas([("dp", dp_s, S1), ("vd", vd_s, S3)], GLW - 10, GH2, "0.0",
                                area="todas", valores=True,
                                faixa=("dif.", [fmt(v, "+0.0%;-0.0%;0.0%", sinal=True) if isinstance(v, (int, float))
@@ -654,6 +654,10 @@ for l in linhas:
         estilo += [("LINEBEFORE", (1, i), (1, i), 4, c_l), ("TEXTCOLOR", (1, i), (1, i), TINTA),
                    ("FONT", (1, i), (1, i), "LibB", FS),
                    ("BACKGROUND", (1, i), (CMED, i), clarear(c_l))]  # linha no tom claro da cor do lote
+    if l["rot"].startswith("Leite comercializado"):  # destaque: verde do gráfico DairyPlan × comercializado
+        estilo += [("LINEBEFORE", (1, i), (1, i), 4, S3), ("BACKGROUND", (1, i), (CMED, i), clarear(S3, 0.78)),
+                   ("FONT", (1, i), (1, i), "LibB", FS), ("TEXTCOLOR", (1, i), (CMED, i), TINTA),
+                   ("FONT", (CDIA0, i), (CMED, i), "LibB", FSN)]
     for k, v in enumerate(l["vals"]):
         if isinstance(v, str):
             estilo.append(("FONTSIZE", (CDIA0 + k, i), (CDIA0 + k, i), FSN - 0.9))
@@ -675,7 +679,7 @@ legenda = Paragraph(
     "<b>0</b> bom perto de zero · Var. = último dia − anterior: <font name='Sym' color='#0B7A0B'>▲▼</font> melhorou, "
     "<font name='Sym' color='#B42D2D'>▲▼</font> piorou, <font name='Sym' color='#8A8A85'>▲▼</font> sem sentido "
     "definido · azul-claro = último dia · Produção = média (desvio padrão) · só fêmeas · lactação = lotes 1–6 e 10 "
-    "(10 = tratamento; 20/30 contam como 2/3) · amarelo = leite vendido (L).", st_leg)
+    "(10 = tratamento; 20/30 contam como 2/3) · verde = leite comercializado (L).", st_leg)
 
 
 # ---------------------------------------------------------------- cabeçalhos e montagem

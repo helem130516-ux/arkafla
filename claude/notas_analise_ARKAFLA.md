@@ -449,3 +449,13 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 ### 21/10/2026 – alinhamento dos cartões
 - Antes, o título "DairyPlan × comercializado" passava da borda, o selo e o "vs ontem" mudavam de lugar em cada
   cartão, e valor e título tinham tamanhos diferentes. Agora tudo segue uma grade fixa (ver PADRÃO DO PDF).
+
+### 21/10/2026 – teste da rotina e datas nos gráficos estreitos
+- Conferido para a rotina das 11h:
+  - BOV_USER e BOV_PASS cadastradas; o login funcionou na execução de 21/10.
+  - Bibliotecas, fontes, LibreOffice e pdftoppm estão instalados, e a logo está versionada.
+  - Uma cópia nova do branch gerou a planilha sem erros e o PDF com 2 páginas.
+- A simulação com 8 dias mostrou datas encavaladas nos gráficos estreitos e a linha "dif." apertada. Correções:
+  - eixo_x calcula o passo pela largura do rótulo (a última data sempre aparece).
+  - Na faixa "dif.", se os textos não cabem lado a lado, eles alternam em duas linhas.
+  - Testado com 8 dias: 2 páginas. O teste com 10 dias não foi feito (interrompido pelo usuário).

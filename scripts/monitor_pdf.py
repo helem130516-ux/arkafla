@@ -19,6 +19,7 @@ melhorou/piorou, sempre com seta.
 Uso:
     python3 scripts/monitor_pdf.py [planilha.xlsx]
 """
+import math
 import os
 import re
 import sys
@@ -229,7 +230,8 @@ def escala(vals, zero=False, folga=0.12):
 
 
 def eixo_x(d, x0, y0, larg, n, rotulos):
-    passo = 1 if larg / n >= 30 else 2  # em gráficos estreitos, uma data sim, outra não
+    # em gráficos estreitos pula datas (sempre mantendo a última) para os rótulos não se encostarem
+    passo = max(1, math.ceil((pdfmetrics.stringWidth("00/00", "Lib", 7.6) + 6) / (larg / n)))
     for i, r in enumerate(rotulos):
         if (n - 1 - i) % passo:
             continue
@@ -270,13 +272,19 @@ def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False, area=False, valore
     """series: [(nome, valores, cor)]. Rótulo direto no último ponto de cada série.
     faixa: (título, [texto por dia]) – linha de valores abaixo das datas (ex.: diferença %)."""
     d = Drawing(w, h)
-    extra = 12 if faixa else 0
-    x0, y0, larg, alt = 34, 14 + extra, w - 34 - 52, h - 22 - extra
+    larg = w - 34 - 52
+    # faixa: se os textos não cabem lado a lado, alterna em duas linhas (um dia em cima, outro embaixo)
+    larg_txt = max((pdfmetrics.stringWidth(t, "LibB", 7.4) for t in (faixa[1] if faixa else []) if t), default=0)
+    duas = bool(faixa) and larg_txt + 3 > larg / ND
+    extra = (20 if duas else 12) if faixa else 0
+    x0, y0, alt = 34, 14 + extra, h - 22 - extra
     if faixa:
-        d.add(String(x0 - 3, 3, faixa[0], fontName="LibB", fontSize=7, fillColor=TINTA2, textAnchor="end"))
+        d.add(String(x0 - 3, 7 if duas else 3, faixa[0], fontName="LibB", fontSize=7, fillColor=TINTA2,
+                     textAnchor="end"))
         for i, t in enumerate(faixa[1]):
             if t:
-                d.add(String(x0 + larg * (i + 0.5) / ND, 3, t, fontName="LibB", fontSize=7.4, fillColor=TINTA,
+                y = (11 if (ND - 1 - i) % 2 else 3) if duas else 3
+                d.add(String(x0 + larg * (i + 0.5) / ND, y, t, fontName="LibB", fontSize=7.4, fillColor=TINTA,
                              textAnchor="middle"))
     todos = [v for _, vs, _ in series for v in vs]
     lo, hi = escala(todos, zero)

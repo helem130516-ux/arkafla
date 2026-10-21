@@ -368,3 +368,12 @@
   - Precisa liberar api.z-api.io na rede. A rotina roda o envio (passo 10) só quando as variáveis existem.
   - Os endpoints seguem o padrão do Z-API, mas não foram conferidos na documentação, porque o site estava
     bloqueado. Confirmar no primeiro teste.
+- PDF redesenhado (21/10, pedido do usuário: letra maior, mais visual, menos informação, nova aparência, cor
+  principal cinza-escuro #2E3338). Agora tem 2 páginas, A4 paisagem:
+  - Página 1: cabeçalho escuro; 6 cartões; quadros de produção por vaca + ECM nos dias exibidos, produção por lote
+    (barras com ± DP), leite DairyPlan × vendido, vacas com leite < 20 kg (pedido do usuário; 20 kg ≈ 19,4 L),
+    % gestantes e atrasos reprodutivos (vazias com IA > 35 d e DEL > 150 não gestantes); quadro
+    "Atenção hoje" com os 6 indicadores que mais pioraram. Não há gráfico do lote 10 (o usuário pediu para tirar).
+  - Página 2: tabela completa com letra ~7,5 pt e legenda.
+  - Cores dos dados: azul #2A78D6, laranja #EB6834, verde-água #1BAF7A, validadas pelo validate_palette.js; todos
+    os gráficos têm rótulos com valores. A planilha também usa o cinza-escuro.

@@ -35,14 +35,14 @@ VENDIDO = "dados/leite_vendido.json"
 OUT = "monitoramento/Monitoramento_Diario_ARCAFLA.xlsx"
 NDIAS = 10
 F = "Arial"
-AZUL = "1F5F8B"
+AZUL = "2E3338"  # cor principal: cinza-escuro
 
 thin = Side(style="thin", color="C9D1CB")
 BOX = Border(top=thin, bottom=thin, left=thin, right=thin)
 HFILL = PatternFill("solid", fgColor="E6ECE8")
 INFILL = PatternFill("solid", fgColor="FFF6D6")
 SECFILL = PatternFill("solid", fgColor=AZUL)
-SUBFILL = PatternFill("solid", fgColor="D5E3EC")
+SUBFILL = PatternFill("solid", fgColor="DFE2E4")
 ZEBRA = PatternFill("solid", fgColor="F5F8F6")
 
 
@@ -488,7 +488,7 @@ MC = L(C0 + ND)                        # média dos dias exibidos
 VC = L(C0 + 1 + ND)                    # variação último − anterior
 LAST = C0 + 1 + ND
 VERDE, VERMELHO, CINZA = "0B7A0B", "B42D2D", "6B6B66"
-SUBFILL2 = PatternFill("solid", fgColor="E3ECF3")
+SUBFILL2 = PatternFill("solid", fgColor="ECEEEF")
 
 ws["A1"] = "ARCAFLA – Monitoramento diário do rebanho"
 ws["A1"].font = font(bold=True, size=14, color=AZUL)

@@ -361,3 +361,10 @@
   - 1.646 vacas em lactação (−18); lote 10 com 32 (0 entradas, 10 saídas); 2 partos.
   - 43,5 kg/vaca (ECM 44,4). Lote 6 caiu para 21,9 kg; vacas com < 20 kg: 77.
   - Gestantes: 54,6%. Vazias com IA há > 35 dias: 97.
+- Envio por WhatsApp (pedido do usuário: mandar o relatório do WhatsApp dele para o Cleverson):
+  `scripts/envia_whatsapp.py` usa o Z-API, com o WhatsApp do usuário conectado por QR Code.
+  - Envia um resumo em texto (`/send-text`) e o PDF (`/send-document/pdf`, em base64).
+  - Variáveis de ambiente: ZAPI_INSTANCE, ZAPI_TOKEN, ZAPI_CLIENT_TOKEN (opcional) e WPP_DESTINO.
+  - Precisa liberar api.z-api.io na rede. A rotina roda o envio (passo 10) só quando as variáveis existem.
+  - Os endpoints seguem o padrão do Z-API, mas não foram conferidos na documentação, porque o site estava
+    bloqueado. Confirmar no primeiro teste.

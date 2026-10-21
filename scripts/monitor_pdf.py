@@ -266,10 +266,18 @@ def curva(pts, cor, area_y=None, largura=2.2):
     return p
 
 
-def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False, area=False, valores=False):
-    """series: [(nome, valores, cor)]. Rótulo direto no último ponto de cada série."""
+def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False, area=False, valores=False, faixa=None):
+    """series: [(nome, valores, cor)]. Rótulo direto no último ponto de cada série.
+    faixa: (título, [texto por dia]) – linha de valores abaixo das datas (ex.: diferença %)."""
     d = Drawing(w, h)
-    x0, y0, larg, alt = 34, 14, w - 34 - 52, h - 22
+    extra = 12 if faixa else 0
+    x0, y0, larg, alt = 34, 14 + extra, w - 34 - 52, h - 22 - extra
+    if faixa:
+        d.add(String(x0 - 3, 3, faixa[0], fontName="LibB", fontSize=7, fillColor=TINTA2, textAnchor="end"))
+        for i, t in enumerate(faixa[1]):
+            if t:
+                d.add(String(x0 + larg * (i + 0.5) / ND, 3, t, fontName="LibB", fontSize=7.4, fillColor=TINTA,
+                             textAnchor="middle"))
     todos = [v for _, vs, _ in series for v in vs]
     lo, hi = escala(todos, zero)
     grade_y(d, x0, y0, larg, alt, lo, hi, nf)
@@ -477,7 +485,9 @@ dif_med = fmt(dif["media"], dif["mfmt"]) if dif and dif["media"] not in (None, "
 g_leite = caixa("Leite DairyPlan × vendido",
                 legenda_series([("DairyPlan (mil kg)", S1), ("Vendido (mil L)", S3)]) + f" · dif. méd. <b>{dif_med}</b>",
                 grafico_linhas([("dp", dp_s, S1), ("vd", vd_s, S3)], GLW - 10, GH2, "0.0",
-                               area="todas", valores=True),
+                               area="todas", valores=True,
+                               faixa=("dif.", [fmt(v, "+0.0%;-0.0%;0.0%", sinal=True) if isinstance(v, (int, float))
+                                               else "" for v in (dif["vals"] if dif else [])])),
                 GLW)
 m20 = serie("Vacas com leite < 20 kg (tanque)")
 g_20 = caixa("Vacas com leite abaixo de 20 kg",

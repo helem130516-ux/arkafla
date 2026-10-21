@@ -266,7 +266,7 @@ def curva(pts, cor, area_y=None, largura=2.2):
     return p
 
 
-def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False, area=False):
+def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False, area=False, valores=False):
     """series: [(nome, valores, cor)]. Rótulo direto no último ponto de cada série."""
     d = Drawing(w, h)
     x0, y0, larg, alt = 34, 14, w - 34 - 52, h - 22
@@ -278,11 +278,17 @@ def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False, area=False):
     for k, (nome, vs, cor) in enumerate(series):
         pts = [(x0 + larg * (i + 0.5) / ND, y0 + alt * (v - lo) / (hi - lo)) for i, v in enumerate(vs) if v is not None]
         if len(pts) >= 2:
-            if k == 0 and area:  # área clara sob a série principal
+            if area is True and k == 0 or area == "todas":  # área clara sob a(s) série(s)
                 d.add(curva(pts, cor, area_y=y0))
             d.add(curva(pts, cor))
-        for x, y in pts[:-1]:
-            d.add(Circle(x, y, 1.3, fillColor=cor, strokeColor=None))
+        vals_ok = [v for v in vs if v is not None]
+        for idx, (x, y) in enumerate(pts[:-1]):
+            d.add(Circle(x, y, 2.2 if valores else 1.3, fillColor=cor, strokeColor=colors.white,
+                         strokeWidth=0.8 if valores else 0))
+            if valores:  # valor de cada dia: série de cima acima do ponto, a de baixo abaixo
+                dy = 6 if k == len(series) - 1 else -11
+                d.add(String(x, y + dy, fmt(vals_ok[idx], nf_rot or nf), fontName="LibB", fontSize=7.4,
+                             fillColor=TINTA2, textAnchor="middle"))
         if pts:
             d.add(Circle(pts[-1][0], pts[-1][1], 3.4, fillColor=cor, strokeColor=colors.white, strokeWidth=1.4))
             rotulos.append([pts[-1][0], pts[-1][1], fmt([v for v in vs if v is not None][-1], nf_rot or nf)])
@@ -443,11 +449,11 @@ painel.setStyle(TableStyle([("LEFTPADDING", (0, 0), (-1, -1), 0), ("RIGHTPADDING
 G1W, G2W = LARG * 0.58 - 3, LARG * 0.42 - 3
 GH1 = 166
 g_prod = caixa("Produção por vaca nos últimos dias",
-               legenda_series([("Produção média 24 h", S1), ("Leite ECM (gordura e proteína do tanque)", S2)])
+               legenda_series([("Produção média 24 h", S1), ("Leite ECM (gordura e proteína do tanque)", S3)])
                + " · kg/vaca",
                grafico_linhas([("prod", serie("Produção média nas últimas 24 h (DP)"), S1),
-                               ("ecm", serie("Média de leite ECM (gordura e proteína do tanque)"), S2)],
-                              G1W - 10, GH1, "0.0", area=True), G1W)
+                               ("ecm", serie("Média de leite ECM (gordura e proteína do tanque)"), S3)],
+                              G1W - 10, GH1, "0.0", area="todas", valores=True), G1W)
 lotes = [itens.get(f"Produção média do lote {lt} (DP)") for lt in range(1, 7)]
 v_lote = [num(it["vals"][-1]) if it else None for it in lotes]
 e_lote = [dp(it["vals"][-1]) if it else None for it in lotes]

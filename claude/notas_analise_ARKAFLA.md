@@ -1,5 +1,7 @@
 # Notas de análise – Qualidade do Leite ARKAFLA (2026)
 
+**Preferência do usuário:** responder sempre em português.
+
 ## Sessão de 30/09/2026
 
 **Dados recebidos:** os 9 Relatórios 2.2 da APCBRH, salvos em `dados/apcbrh/R22_AAAA-MM-DD.xlsx`:

@@ -285,8 +285,11 @@ def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False, area=False, valore
         for idx, (x, y) in enumerate(pts[:-1]):
             d.add(Circle(x, y, 2.2 if valores else 1.3, fillColor=cor, strokeColor=colors.white,
                          strokeWidth=0.8 if valores else 0))
-            if valores:  # valor de cada dia: série de cima acima do ponto, a de baixo abaixo
-                dy = 6 if k == len(series) - 1 else -11
+            if valores:  # valor de cada dia, do lado de fora: acima se a série está por cima naquele dia
+                i_dia = [i for i, v in enumerate(vs) if v is not None][idx]
+                outros = [o[1][i_dia] for o in series if o[1] is not vs and o[1][i_dia] is not None]
+                por_cima = all(vs[i_dia] >= o for o in outros) if outros else True
+                dy = 6 if por_cima else -11
                 d.add(String(x, y + dy, fmt(vals_ok[idx], nf_rot or nf), fontName="LibB", fontSize=7.4,
                              fillColor=TINTA2, textAnchor="middle"))
         if pts:
@@ -312,7 +315,8 @@ def grafico_barras(rotulos, vals, w, h, nf, cor=S1, erros=None, destaque_ult=Fal
     bw = larg / n * 0.56
     for i, v in enumerate(vals):
         cx = x0 + larg * (i + 0.5) / n
-        d.add(String(cx, y0 - 10, rotulos[i], fontName="Lib", fontSize=7.6, fillColor=TINTA2, textAnchor="middle"))
+        if larg / n >= 30 or (n - 1 - i) % 2 == 0:  # em gráficos estreitos, um rótulo sim, outro não
+            d.add(String(cx, y0 - 10, rotulos[i], fontName="Lib", fontSize=7.6, fillColor=TINTA2, textAnchor="middle"))
         if v is None:
             continue
         c = (cores[i] if cores else cor)
@@ -463,15 +467,18 @@ g_lote = caixa(f"Produção por lote em {ultimo:%d/%m}",
                               cores=[COR_LOTE[i] for i in range(1, 7)]),
                G2W)
 
-G3W = LARG / 4 - 4.5
+G3W = LARG * 0.22 - 6      # gráficos menores da 2ª fileira
+GLW = LARG * 0.34 - 6      # leite DairyPlan × vendido, mais largo (dois conjuntos de valores)
 GH2 = 134
 dp_s, vd_s = serie("Leite Total dia DairyPlan"), serie("Leite vendido no dia (coletas do laticínio)")
+dp_s, vd_s = [[v / 1000 if v is not None else None for v in x] for x in (dp_s, vd_s)]  # em mil
 dif = itens.get("Diferença DairyPlan × vendido")
 dif_med = fmt(dif["media"], dif["mfmt"]) if dif and dif["media"] not in (None, "") else "–"
 g_leite = caixa("Leite DairyPlan × vendido",
-                legenda_series([("DairyPlan (kg)", S1), ("Vendido (L)", S2)]) + f" · dif. média <b>{dif_med}</b>",
-                grafico_linhas([("dp", dp_s, S1), ("vd", vd_s, S2)], G3W - 10, GH2, "#,##0"),
-                G3W)
+                legenda_series([("DairyPlan (mil kg)", S1), ("Vendido (mil L)", S3)]) + f" · dif. méd. <b>{dif_med}</b>",
+                grafico_linhas([("dp", dp_s, S1), ("vd", vd_s, S3)], GLW - 10, GH2, "0.0",
+                               area="todas", valores=True),
+                GLW)
 m20 = serie("Vacas com leite < 20 kg (tanque)")
 g_20 = caixa("Vacas com leite abaixo de 20 kg",
              "Lotes 1 a 6 · 20 kg ≈ 19,4 L · bom quando cai",
@@ -522,7 +529,7 @@ quadro_at.setStyle(TableStyle([("SPAN", (0, 0), (-1, 0)), ("VALIGN", (0, 0), (-1
                                ("TOPPADDING", (0, 0), (-1, -1), 2), ("BOTTOMPADDING", (0, 0), (-1, -1), 3)]))
 
 linha1 = Table([[g_prod, g_lote]], colWidths=[G1W + 6, G2W + 6])
-linha2 = Table([[g_leite, g_20, g_gest, g_rep]], colWidths=[G3W + 6] * 4)
+linha2 = Table([[g_leite, g_20, g_gest, g_rep]], colWidths=[GLW + 6] + [G3W + 6] * 3)
 for t in (linha1, linha2):
     t.setStyle(TableStyle([("LEFTPADDING", (0, 0), (-1, -1), 0), ("RIGHTPADDING", (0, 0), (-1, -1), 6),
                            ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0),

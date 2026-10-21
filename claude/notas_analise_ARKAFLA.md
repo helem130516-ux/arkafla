@@ -377,3 +377,9 @@
   - Página 2: tabela completa com letra ~7,5 pt e legenda.
   - Cores dos dados: azul #2A78D6, laranja #EB6834, verde-água #1BAF7A, validadas pelo validate_palette.js; todos
     os gráficos têm rótulos com valores. A planilha também usa o cinza-escuro.
+- Cores de identidade dos lotes (definidas pela fazenda em 21/10): lote 1 amarelo #EDA100, lote 2 azul #2A78D6,
+  lote 3 vermelho #E34948, lote 4 verde #008300, lote 5 roxo #6250D6, lote 6 laranja #EB6834. Validadas com o
+  validate_palette.js: aviso de daltonismo entre verde e vermelho (ΔE 7,2) e amarelo com contraste baixo, por isso
+  o nome do lote vai sempre escrito junto.
+  - PDF: barras do gráfico "Produção por lote" e marca colorida nas linhas de lote da tabela.
+  - Planilha: borda grossa colorida à esquerda das linhas "Produção média do lote N".

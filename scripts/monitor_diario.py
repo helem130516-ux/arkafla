@@ -488,6 +488,8 @@ MC = L(C0 + ND)                        # média dos dias exibidos
 VC = L(C0 + 1 + ND)                    # variação último − anterior
 LAST = C0 + 1 + ND
 VERDE, VERMELHO, CINZA = "0B7A0B", "B42D2D", "6B6B66"
+# cor de identidade de cada lote (definida pela fazenda)
+COR_LOTE = {"1": "EDA100", "2": "2A78D6", "3": "E34948", "4": "008300", "5": "6250D6", "6": "EB6834"}
 SUBFILL2 = PatternFill("solid", fgColor="ECEEEF")
 
 ws["A1"] = "ARCAFLA – Monitoramento diário do rebanho"
@@ -527,6 +529,11 @@ for grupo, itens in GRUPOS:
             continue
         rotulo, un, f, fmt, melhor = item
         ws.cell(r, 1, rotulo).font = font()
+        m_lote = re.search(r"Produção média do lote (\d)", rotulo)
+        if m_lote and m_lote[1] in COR_LOTE:  # cor de identidade do lote (barra à esquerda + negrito)
+            ws.cell(r, 1).font = font(bold=True)
+            ws.cell(r, 1).border = Border(left=Side(style="thick", color=COR_LOTE[m_lote[1]]),
+                                          top=thin, bottom=thin, right=thin)
         ws.cell(r, 2, un).font = font(size=9, color="5E6B63")
         ws.cell(r, 2).alignment = Alignment(horizontal="center")
         ws.cell(r, 3, melhor or None).font = font(bold=True, color=AZUL)
@@ -570,7 +577,8 @@ for grupo, itens in GRUPOS:
             c.number_format = fmt if fmt.startswith("+") else "+" + fmt + ";-" + fmt + ";0"
             c.font = font(bold=True)
         for j in range(1, LAST + 1):
-            ws.cell(r, j).border = BOX
+            if not (j == 1 and m_lote and m_lote[1] in COR_LOTE):
+                ws.cell(r, j).border = BOX
             if n % 2 and f is not vendido_dia:
                 ws.cell(r, j).fill = ZEBRA
         ws.cell(r, LAST - 1).fill = PatternFill("solid", fgColor="EEF3F7")

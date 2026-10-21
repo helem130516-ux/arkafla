@@ -47,6 +47,10 @@ AZUL = colors.HexColor("#2E3338")      # cor principal: cinza-escuro
 AZUL_ESC = colors.HexColor("#1E2226")
 AZUL_CLARO = colors.HexColor("#ECEEEF")
 S1, S2, S3 = colors.HexColor("#2A78D6"), colors.HexColor("#EB6834"), colors.HexColor("#1BAF7A")
+# cor de identidade de cada lote (escolhida pela fazenda; validada com validate_palette.js – sempre com o
+# nome do lote escrito ao lado, porque verde × vermelho ficam próximos para daltônicos)
+COR_LOTE = {1: colors.HexColor("#EDA100"), 2: colors.HexColor("#2A78D6"), 3: colors.HexColor("#E34948"),
+            4: colors.HexColor("#008300"), 5: colors.HexColor("#6250D6"), 6: colors.HexColor("#EB6834")}
 GRADE = colors.HexColor("#E4E7E5")
 LINHA = colors.HexColor("#C9D1CB")
 ZEBRA = colors.HexColor("#F6F8F7")
@@ -405,7 +409,8 @@ v_lote = [num(it["vals"][-1]) if it else None for it in lotes]
 e_lote = [dp(it["vals"][-1]) if it else None for it in lotes]
 g_lote = caixa(f"Produção por lote em {ultimo:%d/%m}",
                "Média em kg/vaca · traço = ± desvio padrão (quanto maior, mais desigual o lote)",
-               grafico_barras([f"Lote {i}" for i in range(1, 7)], v_lote, G2W - 10, GH1, "0.0", erros=e_lote),
+               grafico_barras([f"Lote {i}" for i in range(1, 7)], v_lote, G2W - 10, GH1, "0.0", erros=e_lote,
+                              cores=[COR_LOTE[i] for i in range(1, 7)]),
                G2W)
 
 G3W = LARG / 4 - 4.5
@@ -532,6 +537,11 @@ for l in linhas:
         estilo.append(("BACKGROUND", (1, i), (CDIA0 + ND - 2, i), ZEBRA))
     if l["sub"]:
         estilo.append(("TEXTCOLOR", (1, i), (1, i), TINTA2))
+    m_lote = re.search(r"lote (\d+)", l["rot"])
+    if m_lote and int(m_lote[1]) in COR_LOTE and "Produção" in l["rot"]:  # marca colorida do lote
+        c_l = COR_LOTE[int(m_lote[1])]
+        estilo += [("LINEBEFORE", (1, i), (1, i), 4, c_l), ("TEXTCOLOR", (1, i), (1, i), TINTA),
+                   ("FONT", (1, i), (1, i), "LibB", FS)]
     for k, v in enumerate(l["vals"]):
         if isinstance(v, str):
             estilo.append(("FONTSIZE", (CDIA0 + k, i), (CDIA0 + k, i), FS - 0.6))

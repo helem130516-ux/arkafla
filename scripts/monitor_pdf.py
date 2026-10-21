@@ -128,6 +128,11 @@ def cor_juizo(j):
     return BOM if j == "bom" else RUIM if j == "ruim" else NEUTRO
 
 
+def clarear(c, f=0.80):
+    """Tom claro de uma cor (mistura com branco)."""
+    return colors.Color(c.red + (1 - c.red) * f, c.green + (1 - c.green) * f, c.blue + (1 - c.blue) * f)
+
+
 def hexa(c):
     return "#" + c.hexval()[2:]
 
@@ -595,7 +600,8 @@ for l in linhas:
     if m_lote and int(m_lote[1]) in COR_LOTE and "Produção" in l["rot"]:  # marca colorida do lote
         c_l = COR_LOTE[int(m_lote[1])]
         estilo += [("LINEBEFORE", (1, i), (1, i), 4, c_l), ("TEXTCOLOR", (1, i), (1, i), TINTA),
-                   ("FONT", (1, i), (1, i), "LibB", FS)]
+                   ("FONT", (1, i), (1, i), "LibB", FS),
+                   ("BACKGROUND", (1, i), (CMED, i), clarear(c_l))]  # linha no tom claro da cor do lote
     for k, v in enumerate(l["vals"]):
         if isinstance(v, str):
             estilo.append(("FONTSIZE", (CDIA0 + k, i), (CDIA0 + k, i), FSN - 0.9))

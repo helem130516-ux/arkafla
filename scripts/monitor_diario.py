@@ -488,6 +488,11 @@ MC = L(C0 + ND)                        # média dos dias exibidos
 VC = L(C0 + 1 + ND)                    # variação último − anterior
 LAST = C0 + 1 + ND
 VERDE, VERMELHO, CINZA = "0B7A0B", "B42D2D", "6B6B66"
+def clarear_hex(h, f=0.80):
+    """Tom claro de uma cor hexadecimal (mistura com branco)."""
+    return "".join(f"{round(int(h[k:k + 2], 16) + (255 - int(h[k:k + 2], 16)) * f):02X}" for k in (0, 2, 4))
+
+
 # cor de identidade de cada lote (definida pela fazenda)
 COR_LOTE = {"1": "EDA100", "2": "2A78D6", "3": "E34948", "4": "008300", "5": "6250D6", "6": "EB6834"}
 SUBFILL2 = PatternFill("solid", fgColor="ECEEEF")
@@ -579,9 +584,12 @@ for grupo, itens in GRUPOS:
         for j in range(1, LAST + 1):
             if not (j == 1 and m_lote and m_lote[1] in COR_LOTE):
                 ws.cell(r, j).border = BOX
-            if n % 2 and f is not vendido_dia:
+            if m_lote and m_lote[1] in COR_LOTE and j < LAST:  # linha do lote no tom claro da sua cor
+                ws.cell(r, j).fill = PatternFill("solid", fgColor=clarear_hex(COR_LOTE[m_lote[1]]))
+            elif n % 2 and f is not vendido_dia:
                 ws.cell(r, j).fill = ZEBRA
-        ws.cell(r, LAST - 1).fill = PatternFill("solid", fgColor="EEF3F7")
+        if not (m_lote and m_lote[1] in COR_LOTE):
+            ws.cell(r, LAST - 1).fill = PatternFill("solid", fgColor="EEF3F7")
         r += 1
         n += 1
 

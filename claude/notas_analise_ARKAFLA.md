@@ -404,20 +404,23 @@
 - Título do cabeçalho: "Monitoramento diário" (sem "ARCAFLA"; a logo identifica a fazenda). Página 2:
   "Monitoramento diário · Tabela completa dos indicadores".
 
-## PADRÃO DO PDF (aprovado pelo usuário em 21/10/2026)
+## PADRÃO DO PDF (aprovado pelo usuário em 21/10/2026; atualizado no mesmo dia)
 Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuário. Versão de referência: commit
-`2e23580` (branch claude/tender-clarke-13z0dx).
+`a8acdb6` (branch claude/tender-clarke-13z0dx).
 - A4 paisagem, 2 páginas. Cor principal cinza-escuro (#2E3338), fundo da página #F3F4F5, cantos arredondados.
 - Página 1:
   - Cabeçalho com a logo (`dados/logo_arcafla.png`) e o título "Monitoramento diário".
   - 6 cartões: faixa do juízo, valor grande, selo "vs ontem", média 10 dias, linha extra e sparkline.
   - Gráficos: produção por vaca (azul = produção, verde = ECM, com valores) e produção por lote (cores dos lotes, ± DP).
-  - Gráficos: DairyPlan × vendido (azul/verde, mil kg/L, com a linha "dif." %), vacas < 20 kg, % gestantes e atrasos
+  - Gráficos: DairyPlan × comercializado (azul/verde, mil kg/L, com a linha "dif." %), vacas < 20 kg, % gestantes e atrasos
     reprodutivos.
   - Quadro "⚠ Atenção hoje".
 - Página 2: tabela completa ocupando a página toda; linhas dos lotes no tom claro da cor do lote; último dia em azul.
 - Cores dos lotes: L1 amarelo, L2 azul, L3 vermelho, L4 verde, L5 roxo, L6 laranja.
 - Subtítulos dos gráficos sem "bom quando sobe/cai".
+- Termo "leite comercializado" (nunca "vendido"). Na página 2, a linha "Leite comercializado no dia" fica em destaque:
+  marca verde, fundo verde-claro e números em negrito.
+- A variação é arredondada às casas exibidas, então "= 0" fica sem cor.
 
 ### 21/10/2026 – revisão de erros
 - Recálculo sem erros (362 mil fórmulas). Os indicadores de 20/10 foram refeitos à parte com pandas a partir do

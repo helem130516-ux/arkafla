@@ -65,9 +65,9 @@ BOM_BG = colors.HexColor("#E3F4E3")
 RUIM_BG = colors.HexColor("#FBE6E6")
 MM = 2.835
 PAG = landscape(A4)
-MARG = 10 * MM
+MARG = 6 * MM
 LARG = PAG[0] - 2 * MARG
-ALTP = PAG[1] - 2 * 7 * MM
+ALTP = PAG[1] - 2 * 5 * MM
 
 
 # ---------------------------------------------------------------- formatação
@@ -180,20 +180,20 @@ def est(nome, fonte="Lib", tam=7, cor=TINTA, lead=None, al=0):
                           alignment=al)
 
 
-st_cab = est("cab", "LibB", 17, colors.white, 19)
-st_cab2 = est("cab2", "Lib", 8.5, colors.HexColor("#C9CDD1"), 10.5)
-st_cabd = est("cabd", "LibB", 10, colors.white, 12, 2)
-st_k = est("k", "LibB", 6.6, TINTA2, 7.8)
-st_kv = est("kv", "LibB", 17, TINTA, 18.5)
-st_ks = est("ks", "Lib", 6.5, TINTA2, 7.8)
-st_gt = est("gt", "LibB", 8, TINTA, 9.5)
-st_gs = est("gs", "Lib", 6.3, TINTA2, 7.5)
-st_at = est("at", "Lib", 7.2, TINTA, 9.2)
-st_ath = est("ath", "LibB", 8, RUIM, 9.5)
+st_cab = est("cab", "LibB", 18, colors.white, 19)
+st_cab2 = est("cab2", "Lib", 9.5, colors.HexColor("#C9CDD1"), 10.5)
+st_cabd = est("cabd", "LibB", 12, colors.white, 14, 2)
+st_k = est("k", "LibB", 7.6, TINTA2, 8.8)
+st_kv = est("kv", "LibB", 20, TINTA, 21)
+st_ks = est("ks", "Lib", 7.4, TINTA2, 8.6)
+st_gt = est("gt", "LibB", 9.5, TINTA, 11)
+st_gs = est("gs", "Lib", 7.3, TINTA2, 8.6)
+st_at = est("at", "Lib", 8.4, TINTA, 10.4)
+st_ath = est("ath", "LibB", 9.5, RUIM, 11)
 st_t2 = est("t2", "LibB", 11, AZUL, 13)
 st_d2 = est("d2", "Lib", 7.5, TINTA2, 9, 2)
-st_leg = est("leg", "Lib", 6.6, TINTA2, 8)
-st_bl = est("bl", "LibB", 7, AZUL, 8, 1)
+st_leg = est("leg", "Lib", 7, TINTA2, 8.4)
+st_bl = est("bl", "LibB", 7.8, AZUL, 9, 1)
 
 
 def var_html(it, tam):
@@ -222,9 +222,12 @@ def escala(vals, zero=False, folga=0.12):
 
 
 def eixo_x(d, x0, y0, larg, n, rotulos):
+    passo = 1 if larg / n >= 30 else 2  # em gráficos estreitos, uma data sim, outra não
     for i, r in enumerate(rotulos):
+        if (n - 1 - i) % passo:
+            continue
         x = x0 + (larg * (i + 0.5) / n)
-        d.add(String(x, y0 - 9, r, fontName="Lib", fontSize=6, fillColor=TINTA3, textAnchor="middle"))
+        d.add(String(x, y0 - 10, r, fontName="Lib", fontSize=7, fillColor=TINTA2, textAnchor="middle"))
 
 
 def grade_y(d, x0, y0, larg, alt, lo, hi, nf, ticks=3):
@@ -232,7 +235,7 @@ def grade_y(d, x0, y0, larg, alt, lo, hi, nf, ticks=3):
         v = lo + (hi - lo) * t / ticks
         y = y0 + alt * t / ticks
         d.add(Line(x0, y, x0 + larg, y, strokeColor=GRADE, strokeWidth=0.5))
-        d.add(String(x0 - 3, y - 2, fmt(v, nf), fontName="Lib", fontSize=5.8, fillColor=TINTA3, textAnchor="end"))
+        d.add(String(x0 - 3, y - 2, fmt(v, nf), fontName="Lib", fontSize=6.8, fillColor=TINTA2, textAnchor="end"))
 
 
 def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False):
@@ -258,7 +261,7 @@ def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False):
         if rotulos[i][1] - rotulos[i - 1][1] < 8:
             rotulos[i][1] = rotulos[i - 1][1] + 8
     for x, y, txt in rotulos:
-        d.add(String(x0 + larg + 4, y - 2, txt, fontName="LibB", fontSize=6.6, fillColor=TINTA))
+        d.add(String(x0 + larg + 4, y - 2.5, txt, fontName="LibB", fontSize=8, fillColor=TINTA))
     return d
 
 
@@ -272,7 +275,7 @@ def grafico_barras(rotulos, vals, w, h, nf, cor=S1, erros=None, destaque_ult=Fal
     bw = larg / n * 0.56
     for i, v in enumerate(vals):
         cx = x0 + larg * (i + 0.5) / n
-        d.add(String(cx, y0 - 9, rotulos[i], fontName="Lib", fontSize=6, fillColor=TINTA3, textAnchor="middle"))
+        d.add(String(cx, y0 - 10, rotulos[i], fontName="Lib", fontSize=7, fillColor=TINTA2, textAnchor="middle"))
         if v is None:
             continue
         c = (cores[i] if cores else cor)
@@ -286,7 +289,7 @@ def grafico_barras(rotulos, vals, w, h, nf, cor=S1, erros=None, destaque_ult=Fal
             d.add(Line(cx, y0 + hb - e, cx, y0 + hb + e, strokeColor=TINTA2, strokeWidth=0.7))
             d.add(Line(cx - 2.5, y0 + hb + e, cx + 2.5, y0 + hb + e, strokeColor=TINTA2, strokeWidth=0.7))
             topo_txt = y0 + hb + e + 2
-        d.add(String(cx, topo_txt, fmt(v, nf), fontName="LibB", fontSize=6.4, fillColor=TINTA, textAnchor="middle"))
+        d.add(String(cx, topo_txt, fmt(v, nf), fontName="LibB", fontSize=8, fillColor=TINTA, textAnchor="middle"))
     return d
 
 
@@ -351,14 +354,14 @@ def cartao(titulo, rot, extra, w):
         valor += f' <font size="7" color="#5E6B63">({dias[k]:%d/%m})</font>'
     j = juizo(it["melhor"], it["var"])
     l2 = var_html(it, 7.5)
-    l2 = (l2 + " vs dia anterior") if l2 else '<font color="#8A8A85">sem dia anterior</font>'
+    l2 = (l2 + " vs ontem") if l2 else '<font color="#8A8A85">sem dia anterior</font>'
     if it["media"] not in (None, ""):
-        l2 += f' · média {fmt(it["media"], it["mfmt"])}'
+        l2 += f' · méd. {fmt(it["media"], it["mfmt"])}'
     if extra:
         l2 += f"<br/>{extra}"
     corpo = Table([[Paragraph(titulo.upper(), st_k)], [Paragraph(valor, st_kv)], [Paragraph(l2, st_ks)],
                    [sparkline([num(v) for v in it["vals"]], w - 12, 13, cor_juizo(j))]],
-                  colWidths=[w - 4], rowHeights=[9, 19, 17, 14])
+                  colWidths=[w - 4], rowHeights=[10, 22, 20, 14])
     corpo.setStyle(TableStyle([("LEFTPADDING", (0, 0), (-1, -1), 6), ("RIGHTPADDING", (0, 0), (-1, -1), 2),
                                ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0),
                                ("VALIGN", (0, 0), (-1, -1), "MIDDLE")]))
@@ -379,17 +382,17 @@ CW = LARG / 6
 cards = [
     cartao("Vacas em lactação", "Vacas em lactação (lotes 1 a 6 e 10)",
            f'no tanque: {v_ult("Em lactação no tanque (lotes 1 a 6)", "0")}', CW),
-    cartao("Produção média 24 h (kg/vaca)", "Produção média nas últimas 24 h (DP)",
+    cartao("Produção 24 h (kg/vaca)", "Produção média nas últimas 24 h (DP)",
            f'ECM: <b>{v_ult("Média de leite ECM (gordura e proteína do tanque)", "0.0")} kg</b>', CW),
     cartao("DairyPlan × leite vendido", "Diferença DairyPlan × vendido", dif_txt, CW),
-    cartao("Vacas gestantes (sem DNB)", "% gestantes ÷ (adultas − DNB)",
+    cartao("Gestantes (sem DNB)", "% gestantes ÷ (adultas − DNB)",
            f'{v_ult("Vacas gestantes (DDP ≥ 1, sem DNB)", "0")} vacas gestantes', CW),
     cartao("Em tratamento (lote 10)", "Animais em tratamento (lote 10)",
            f'leite descartado: {v_ult("Leite descartado – lote 10", "#,##0")} kg', CW),
     cartao("Vazias com IA há > 35 dias", "Vazias com IA há > 35 dias",
            f'inseminadas há > 35 dias: {v_ult("Inseminadas (Bred) com IA há > 35 dias", "0")}', CW),
 ]
-painel = Table([cards], colWidths=[CW] * 6, rowHeights=[64])
+painel = Table([cards], colWidths=[CW] * 6, rowHeights=[70])
 painel.setStyle(TableStyle([("BOX", (0, 0), (-1, -1), 0.6, LINHA), ("INNERGRID", (0, 0), (-1, -1), 0.6, LINHA),
                             ("BACKGROUND", (0, 0), (-1, -1), colors.white), ("VALIGN", (0, 0), (-1, -1), "TOP"),
                             ("LEFTPADDING", (0, 0), (-1, -1), 1), ("RIGHTPADDING", (0, 0), (-1, -1), 1),
@@ -397,7 +400,7 @@ painel.setStyle(TableStyle([("BOX", (0, 0), (-1, -1), 0.6, LINHA), ("INNERGRID",
 
 # ---------------------------------------------------------------- página 1: gráficos
 G1W, G2W = LARG * 0.58 - 3, LARG * 0.42 - 3
-GH1 = 150
+GH1 = 172
 g_prod = caixa("Produção por vaca nos últimos dias",
                legenda_series([("Produção média 24 h", S1), ("Leite ECM (gordura e proteína do tanque)", S2)])
                + " · kg/vaca",
@@ -414,7 +417,7 @@ g_lote = caixa(f"Produção por lote em {ultimo:%d/%m}",
                G2W)
 
 G3W = LARG / 4 - 4.5
-GH2 = 122
+GH2 = 140
 dp_s, vd_s = serie("Leite Total dia DairyPlan"), serie("Leite vendido no dia (coletas do laticínio)")
 dif = itens.get("Diferença DairyPlan × vendido")
 dif_med = fmt(dif["media"], dif["mfmt"]) if dif and dif["media"] not in (None, "") else "–"
@@ -430,7 +433,7 @@ g_20 = caixa("Vacas com leite abaixo de 20 kg",
 g_gest = caixa("Vacas gestantes (% sem DNB)", "Gestantes ÷ (adultas − DNB) · bom quando sobe",
                grafico_linhas([("gest", serie("% gestantes ÷ (adultas − DNB)"), S1)], G3W - 10, GH2, "0.0%"), G3W)
 g_rep = caixa("Atrasos reprodutivos",
-              legenda_series([("Vazias com IA > 35 dias", S2), ("DEL > 150 não gestantes", S1)]) + " · cab",
+              legenda_series([("Vazias IA > 35 d", S2), ("DEL > 150 não gest.", S1)]),
               grafico_linhas([("vaz", serie("Vazias com IA há > 35 dias"), S2),
                               ("ng", serie("DEL > 150 não gestantes (sem DNB)"), S1)], G3W - 10, GH2, "0"), G3W)
 
@@ -458,10 +461,15 @@ def atencao(max_n=6):
 
 
 at = atencao()
-txt_at = "<br/>".join(at) if at else "Nenhum indicador piorou em relação ao dia anterior."
-quadro_at = Table([[Paragraph("Atenção hoje – o que mais piorou", st_ath)], [Paragraph(txt_at, st_at)]],
-                  colWidths=[LARG])
-quadro_at.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#FDF3F3")),
+if at:  # duas colunas para ocupar menos altura
+    meio = (len(at) + 1) // 2
+    col_at = [Paragraph("<br/>".join(at[:meio]), st_at), Paragraph("<br/>".join(at[meio:]), st_at)]
+else:
+    col_at = [Paragraph("Nenhum indicador piorou em relação ao dia anterior.", st_at), ""]
+quadro_at = Table([[Paragraph("Atenção hoje – o que mais piorou", st_ath), ""], col_at],
+                  colWidths=[LARG / 2, LARG / 2])
+quadro_at.setStyle(TableStyle([("SPAN", (0, 0), (-1, 0)), ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                               ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#FDF3F3")),
                                ("LINEBEFORE", (0, 0), (0, -1), 3, RUIM), ("LEFTPADDING", (0, 0), (-1, -1), 8),
                                ("TOPPADDING", (0, 0), (-1, -1), 2), ("BOTTOMPADDING", (0, 0), (-1, -1), 3)]))
 
@@ -480,8 +488,8 @@ NC = len(cabec)
 CDIA0, CMED = 4, 4 + ND
 CVAR = CMED + 1 if vcol else None
 n_linhas = 1 + sum(1 for l in linhas if l["tipo"] != "bloco")
-ALT = min(10.5, (ALTP - 22 - 40 - 14) / n_linhas)
-FS = min(7.8, ALT - 1.0)
+ALT = min(11, (ALTP - 20 - 22 - 10) / n_linhas)
+FS = min(8.4, ALT - 0.9)
 st_c = est("c", "Lib", FS, TINTA, FS + 0.3, 2)
 dados = [cabec]
 estilo = [
@@ -552,7 +560,7 @@ for ini, fim, rot in blocos:
     estilo += [("SPAN", (0, ini), (0, fim)), ("BACKGROUND", (0, ini), (0, fim), AZUL_CLARO),
                ("LINEBELOW", (0, fim), (-1, fim), 0.8, AZUL)]
 
-w_bl, w_un, w_mel, w_med, w_rot = 66, 30, 26, 46, 180
+w_bl, w_un, w_mel, w_med, w_rot = 70, 32, 28, 50, 200
 w_var = 46 if vcol else 0
 w_dia = min((LARG - w_bl - w_rot - w_un - w_mel - w_med - w_var) / ND, 60)
 tab = Table(dados, colWidths=[w_bl, w_rot, w_un, w_mel] + [w_dia] * ND + [w_med] + ([w_var] if vcol else []),
@@ -561,14 +569,11 @@ tab.setStyle(TableStyle(estilo))
 tab.hAlign = "LEFT"
 
 legenda = Paragraph(
-    "<b>Como ler.</b> <b>Melhor</b>: <font name='Sym'>↑</font> bom quando sobe · <font name='Sym'>↓</font> "
-    "bom quando desce · <b>0</b> bom perto de zero · vazio = sem sentido definido. "
-    "<b>Var.</b>: último dia − dia anterior; <font name='Sym' color='#0B7A0B'>▲▼</font> verde = melhorou, "
-    "<font name='Sym' color='#B42D2D'>▲▼</font> vermelho = piorou, <font name='Sym' color='#8A8A85'>▲▼</font> "
-    "cinza = sem sentido definido. Coluna azul-clara = último dia; cinza = média dos dias exibidos. "
-    "Produção: média (desvio padrão). Só fêmeas; adultas = LACT &gt; 0; lactação = lotes 1 a 6 e 10 "
-    "(10 = tratamento, leite descartado; lotes 20/30 contam como 2/3); DNB fora da reprodução. "
-    "Leite vendido (amarelo) = coletas do laticínio, em litros.", st_leg)
+    "<b>Como ler:</b> Melhor <font name='Sym'>↑</font> bom quando sobe, <font name='Sym'>↓</font> bom quando desce, "
+    "<b>0</b> bom perto de zero · Var. = último dia − anterior: <font name='Sym' color='#0B7A0B'>▲▼</font> melhorou, "
+    "<font name='Sym' color='#B42D2D'>▲▼</font> piorou, <font name='Sym' color='#8A8A85'>▲▼</font> sem sentido "
+    "definido · azul-claro = último dia · Produção = média (desvio padrão) · só fêmeas · lactação = lotes 1–6 e 10 "
+    "(10 = tratamento; 20/30 contam como 2/3) · amarelo = leite vendido (L).", st_leg)
 
 
 # ---------------------------------------------------------------- cabeçalhos e montagem
@@ -599,17 +604,17 @@ def rodape(c, d):
     c.saveState()
     c.setFont("LibI", 6.2)
     c.setFillColor(TINTA3)
-    c.drawString(MARG, 4.5 * MM, "ARCAFLA · Monitoramento diário · fonte: relatório zootécnico (BoviSync/DairyPlan), "
+    c.drawString(MARG, 2.2 * MM, "ARCAFLA · Monitoramento diário · fonte: relatório zootécnico (BoviSync/DairyPlan), "
                                  "coletas e análises do laticínio")
-    c.drawRightString(PAG[0] - MARG, 4.5 * MM, f"página {d.page} de 2")
+    c.drawRightString(PAG[0] - MARG, 2.2 * MM, f"página {d.page} de 2")
     c.restoreState()
 
 
 OUT = os.path.join(os.path.dirname(XLSX), f"Monitoramento_Diario_ARCAFLA_{ultimo:%Y-%m-%d}.pdf")
-doc = SimpleDocTemplate(OUT, pagesize=PAG, leftMargin=MARG, rightMargin=MARG, topMargin=7 * MM,
-                        bottomMargin=7 * MM, title=f"ARCAFLA – Monitoramento diário {ultimo:%d/%m/%Y}")
-doc.build([cabecalho_p1(), Spacer(1, 6), painel, Spacer(1, 7), linha1, Spacer(1, 7), linha2, Spacer(1, 7),
-           quadro_at, PageBreak(), cabecalho_p2(), Spacer(1, 4), tab, Spacer(1, 3), legenda],
+doc = SimpleDocTemplate(OUT, pagesize=PAG, leftMargin=MARG, rightMargin=MARG, topMargin=5 * MM,
+                        bottomMargin=5 * MM, title=f"ARCAFLA – Monitoramento diário {ultimo:%d/%m/%Y}")
+doc.build([cabecalho_p1(), Spacer(1, 4), painel, Spacer(1, 5), linha1, Spacer(1, 5), linha2, Spacer(1, 5),
+           quadro_at, PageBreak(), cabecalho_p2(), Spacer(1, 2), tab, Spacer(1, 2), legenda],
           onFirstPage=rodape, onLaterPages=rodape)
 from pypdf import PdfReader  # noqa: E402
 

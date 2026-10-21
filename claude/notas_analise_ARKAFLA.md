@@ -392,3 +392,7 @@
     A Catmull-Rom foi descartada porque criava vales falsos.
   - Área clara sob a série principal (produção e % gestantes); ponto destacado só no último dia.
   - Grade tracejada; barras com cantos arredondados.
+
+### 21/10/2026 – logo no PDF
+- Logo da fazenda (enviada pelo usuário) recortada sem a margem branca e salva em `dados/logo_arcafla.png` (900×535).
+- Aparece só no cabeçalho da página 1, numa faixa branca à esquerda (altura 46 pt). Se o arquivo não existir, o PDF sai sem logo.

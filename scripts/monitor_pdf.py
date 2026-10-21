@@ -689,7 +689,7 @@ def cabecalho_p1():
                            ("BOTTOMPADDING", (0, -1), (-1, -1), 5), ("TOPPADDING", (0, 1), (-1, 1), 0),
                            ("BOTTOMPADDING", (0, 0), (-1, 0), 0), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
                            ("ROUNDEDCORNERS", [8, 8, 8, 8])]))
-    return com_logo(t, 38)
+    return com_logo(t, 46)
 
 
 def cabecalho_p2():

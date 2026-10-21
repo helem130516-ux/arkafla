@@ -383,3 +383,10 @@
   o nome do lote vai sempre escrito junto.
   - PDF: barras do gráfico "Produção por lote" e marca colorida nas linhas de lote da tabela.
   - Planilha: borda grossa colorida à esquerda das linhas "Produção média do lote N".
+- Visual moderno no PDF (21/10, pedido do usuário):
+  - Cantos arredondados em cabeçalho, cartões, quadros de gráfico, "Atenção hoje" e tabela.
+  - Fundo da página #F3F4F5 com cartões brancos separados.
+  - Linhas suaves com interpolação monotônica (Fritsch–Carlson), que não ultrapassa os valores reais.
+    A Catmull-Rom foi descartada porque criava vales falsos.
+  - Área clara sob a série principal (produção e % gestantes); ponto destacado só no último dia.
+  - Grade tracejada; barras com cantos arredondados.

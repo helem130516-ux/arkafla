@@ -25,7 +25,7 @@ import sys
 from datetime import datetime
 
 from openpyxl import load_workbook
-from reportlab.graphics.shapes import Circle, Drawing, Line, PolyLine, Rect, String
+from reportlab.graphics.shapes import Circle, Drawing, Line, Path, PolyLine, Rect, String
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.styles import ParagraphStyle
@@ -53,6 +53,8 @@ COR_LOTE = {1: colors.HexColor("#EDA100"), 2: colors.HexColor("#2A78D6"), 3: col
             4: colors.HexColor("#008300"), 5: colors.HexColor("#6250D6"), 6: colors.HexColor("#EB6834")}
 GRADE = colors.HexColor("#E4E7E5")
 LINHA = colors.HexColor("#C9D1CB")
+BORDA = colors.HexColor("#DADDE0")
+FUNDO_PAG = colors.HexColor("#F3F4F5")
 ZEBRA = colors.HexColor("#F6F8F7")
 HOJE = colors.HexColor("#EAF2FB")
 MEDIA = colors.HexColor("#F1F4F7")
@@ -234,11 +236,32 @@ def grade_y(d, x0, y0, larg, alt, lo, hi, nf, ticks=3):
     for t in range(ticks + 1):
         v = lo + (hi - lo) * t / ticks
         y = y0 + alt * t / ticks
-        d.add(Line(x0, y, x0 + larg, y, strokeColor=GRADE, strokeWidth=0.5))
+        d.add(Line(x0, y, x0 + larg, y, strokeColor=GRADE, strokeWidth=0.6, strokeDashArray=[2, 2.5]))
         d.add(String(x0 - 3, y - 2, fmt(v, nf), fontName="Lib", fontSize=7.6, fillColor=TINTA2, textAnchor="end"))
 
 
-def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False):
+def curva(pts, cor, area_y=None, largura=2.2):
+    """Linha suave que passa exatamente pelos pontos sem ultrapassá-los (interpolação monotônica de
+    Fritsch–Carlson): não cria picos nem vales que não existem nos dados. Com area_y, área clara até essa altura."""
+    p = Path(strokeColor=None if area_y is not None else cor, strokeWidth=largura,
+             fillColor=colors.Color(cor.red, cor.green, cor.blue, alpha=0.10) if area_y is not None else None,
+             strokeLineCap=1, strokeLineJoin=1)
+    n = len(pts)
+    dx = [pts[k + 1][0] - pts[k][0] for k in range(n - 1)]
+    dl = [(pts[k + 1][1] - pts[k][1]) / dx[k] for k in range(n - 1)]
+    m = [dl[0]] + [0 if dl[k - 1] * dl[k] <= 0 else 2 / (1 / dl[k - 1] + 1 / dl[k]) for k in range(1, n - 1)] + [dl[-1]]
+    p.moveTo(*pts[0])
+    for k in range(n - 1):
+        (x1, y1), (x2, y2), h = pts[k], pts[k + 1], dx[k]
+        p.curveTo(x1 + h / 3, y1 + m[k] * h / 3, x2 - h / 3, y2 - m[k + 1] * h / 3, x2, y2)
+    if area_y is not None:
+        p.lineTo(pts[-1][0], area_y)
+        p.lineTo(pts[0][0], area_y)
+        p.closePath()
+    return p
+
+
+def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False, area=False):
     """series: [(nome, valores, cor)]. Rótulo direto no último ponto de cada série."""
     d = Drawing(w, h)
     x0, y0, larg, alt = 34, 14, w - 34 - 52, h - 22
@@ -247,13 +270,16 @@ def grafico_linhas(series, w, h, nf, nf_rot=None, zero=False):
     grade_y(d, x0, y0, larg, alt, lo, hi, nf)
     eixo_x(d, x0, y0, larg, ND, [x.strftime("%d/%m") for x in dias])
     rotulos = []
-    for nome, vs, cor in series:
+    for k, (nome, vs, cor) in enumerate(series):
         pts = [(x0 + larg * (i + 0.5) / ND, y0 + alt * (v - lo) / (hi - lo)) for i, v in enumerate(vs) if v is not None]
         if len(pts) >= 2:
-            d.add(PolyLine([c for p in pts for c in p], strokeColor=cor, strokeWidth=1.6))
-        for x, y in pts:
-            d.add(Circle(x, y, 1.8, fillColor=cor, strokeColor=colors.white, strokeWidth=0.6))
+            if k == 0 and area:  # área clara sob a série principal
+                d.add(curva(pts, cor, area_y=y0))
+            d.add(curva(pts, cor))
+        for x, y in pts[:-1]:
+            d.add(Circle(x, y, 1.3, fillColor=cor, strokeColor=None))
         if pts:
+            d.add(Circle(pts[-1][0], pts[-1][1], 3.4, fillColor=cor, strokeColor=colors.white, strokeWidth=1.4))
             rotulos.append([pts[-1][0], pts[-1][1], fmt([v for v in vs if v is not None][-1], nf_rot or nf)])
     # rótulos no fim das linhas sem sobreposição (afasta verticalmente os que ficam a < 8 pt)
     rotulos.sort(key=lambda r: r[1])
@@ -282,7 +308,7 @@ def grafico_barras(rotulos, vals, w, h, nf, cor=S1, erros=None, destaque_ult=Fal
         if destaque_ult and i < n - 1:
             c = colors.HexColor("#9EC5F4")
         hb = alt * (v - lo) / (hi - lo)
-        d.add(Rect(cx - bw / 2, y0, bw, hb, fillColor=c, strokeColor=None, rx=1.5, ry=1.5))
+        d.add(Rect(cx - bw / 2, y0, bw, hb, fillColor=c, strokeColor=None, rx=3.5, ry=3.5))
         topo_txt = y0 + hb + 2
         if erros and erros[i]:
             e = alt * erros[i] / (hi - lo)
@@ -322,7 +348,9 @@ def caixa(titulo, sub, desenho, w):
     t = Table([[Paragraph(titulo, st_gt)], [Paragraph(sub, st_gs)], [desenho]], colWidths=[w])
     t.setStyle(TableStyle([("LEFTPADDING", (0, 0), (-1, -1), 6), ("RIGHTPADDING", (0, 0), (-1, -1), 4),
                            ("TOPPADDING", (0, 0), (-1, -1), 1), ("BOTTOMPADDING", (0, 0), (-1, -1), 1),
-                           ("BOX", (0, 0), (-1, -1), 0.6, LINHA), ("BACKGROUND", (0, 0), (-1, -1), colors.white)]))
+                           ("TOPPADDING", (0, 0), (0, 0), 5),
+                           ("BOX", (0, 0), (-1, -1), 0.5, BORDA), ("BACKGROUND", (0, 0), (-1, -1), colors.white),
+                           ("ROUNDEDCORNERS", [7, 7, 7, 7])]))
     return t
 
 
@@ -338,9 +366,10 @@ def sparkline(vals, w, h, cor_ult):
         return d
     lo, hi = escala([v for _, v in pts], folga=0)
     n = max(len(vals) - 1, 1)
-    xy = [c for i, v in pts for c in (2 + (w - 6) * i / n, 2 + (h - 5) * (v - lo) / (hi - lo))]
-    d.add(PolyLine(xy, strokeColor=S1, strokeWidth=1.3))
-    d.add(Circle(xy[-2], xy[-1], 2.2, fillColor=cor_ult, strokeColor=colors.white, strokeWidth=0.6))
+    xy = [(3 + (w - 8) * i / n, 3 + (h - 6) * (v - lo) / (hi - lo)) for i, v in pts]
+    d.add(curva(xy, S1, area_y=1, largura=1.5))
+    d.add(curva(xy, S1, largura=1.5))
+    d.add(Circle(xy[-1][0], xy[-1][1], 2.6, fillColor=cor_ult, strokeColor=colors.white, strokeWidth=0.8))
     return d
 
 
@@ -392,11 +421,18 @@ cards = [
     cartao("Vazias com IA há > 35 dias", "Vazias com IA há > 35 dias",
            f'inseminadas há > 35 dias: {v_ult("Inseminadas (Bred) com IA há > 35 dias", "0")}', CW),
 ]
-painel = Table([cards], colWidths=[CW] * 6, rowHeights=[73])
-painel.setStyle(TableStyle([("BOX", (0, 0), (-1, -1), 0.6, LINHA), ("INNERGRID", (0, 0), (-1, -1), 0.6, LINHA),
-                            ("BACKGROUND", (0, 0), (-1, -1), colors.white), ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                            ("LEFTPADDING", (0, 0), (-1, -1), 1), ("RIGHTPADDING", (0, 0), (-1, -1), 1),
-                            ("TOPPADDING", (0, 0), (-1, -1), 4), ("BOTTOMPADDING", (0, 0), (-1, -1), 0)]))
+def embrulha(conteudo, w, h):
+    t = Table([[conteudo]], colWidths=[w], rowHeights=[h])
+    t.setStyle(TableStyle([("BACKGROUND", (0, 0), (-1, -1), colors.white), ("BOX", (0, 0), (-1, -1), 0.5, BORDA),
+                           ("ROUNDEDCORNERS", [7, 7, 7, 7]), ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                           ("LEFTPADDING", (0, 0), (-1, -1), 1), ("RIGHTPADDING", (0, 0), (-1, -1), 1),
+                           ("TOPPADDING", (0, 0), (-1, -1), 5), ("BOTTOMPADDING", (0, 0), (-1, -1), 0)]))
+    return t
+
+
+painel = Table([[embrulha(c, CW - 5, 74) for c in cards]], colWidths=[CW] * 6)
+painel.setStyle(TableStyle([("LEFTPADDING", (0, 0), (-1, -1), 0), ("RIGHTPADDING", (0, 0), (-1, -1), 5),
+                            ("TOPPADDING", (0, 0), (-1, -1), 0), ("BOTTOMPADDING", (0, 0), (-1, -1), 0)]))
 
 # ---------------------------------------------------------------- página 1: gráficos
 G1W, G2W = LARG * 0.58 - 3, LARG * 0.42 - 3
@@ -406,7 +442,7 @@ g_prod = caixa("Produção por vaca nos últimos dias",
                + " · kg/vaca",
                grafico_linhas([("prod", serie("Produção média nas últimas 24 h (DP)"), S1),
                                ("ecm", serie("Média de leite ECM (gordura e proteína do tanque)"), S2)],
-                              G1W - 10, GH1, "0.0"), G1W)
+                              G1W - 10, GH1, "0.0", area=True), G1W)
 lotes = [itens.get(f"Produção média do lote {lt} (DP)") for lt in range(1, 7)]
 v_lote = [num(it["vals"][-1]) if it else None for it in lotes]
 e_lote = [dp(it["vals"][-1]) if it else None for it in lotes]
@@ -431,7 +467,7 @@ g_20 = caixa("Vacas com leite abaixo de 20 kg",
              grafico_barras([x.strftime("%d/%m") for x in dias], m20, G3W - 10, GH2, "0", destaque_ult=True),
              G3W)
 g_gest = caixa("Vacas gestantes (% sem DNB)", "Gestantes ÷ (adultas − DNB) · bom quando sobe",
-               grafico_linhas([("gest", serie("% gestantes ÷ (adultas − DNB)"), S1)], G3W - 10, GH2, "0.0%"), G3W)
+               grafico_linhas([("gest", serie("% gestantes ÷ (adultas − DNB)"), S1)], G3W - 10, GH2, "0.0%", area=True), G3W)
 g_rep = caixa("Atrasos reprodutivos",
               legenda_series([("Vazias IA > 35 d", S2), ("DEL > 150 não gest.", S1)]),
               grafico_linhas([("vaz", serie("Vazias com IA há > 35 dias"), S2),
@@ -466,11 +502,12 @@ if at:  # duas colunas para ocupar menos altura
     col_at = [Paragraph("<br/>".join(at[:meio]), st_at), Paragraph("<br/>".join(at[meio:]), st_at)]
 else:
     col_at = [Paragraph("Nenhum indicador piorou em relação ao dia anterior.", st_at), ""]
-quadro_at = Table([[Paragraph("Atenção hoje", st_ath), ""], col_at],
+quadro_at = Table([[Paragraph('<font name="Sym">⚠</font> Atenção hoje', st_ath), ""], col_at],
                   colWidths=[LARG / 2, LARG / 2])
 quadro_at.setStyle(TableStyle([("SPAN", (0, 0), (-1, 0)), ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                               ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#FDF3F3")),
-                               ("LINEBEFORE", (0, 0), (0, -1), 3, RUIM), ("LEFTPADDING", (0, 0), (-1, -1), 8),
+                               ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#FDF0F0")),
+                               ("BOX", (0, 0), (-1, -1), 0.5, colors.HexColor("#F2C9C9")),
+                               ("ROUNDEDCORNERS", [7, 7, 7, 7]), ("LEFTPADDING", (0, 0), (-1, -1), 10),
                                ("TOPPADDING", (0, 0), (-1, -1), 2), ("BOTTOMPADDING", (0, 0), (-1, -1), 3)]))
 
 linha1 = Table([[g_prod, g_lote]], colWidths=[G1W + 6, G2W + 6])
@@ -494,6 +531,7 @@ FSN = min(9.2, ALT - 0.6)  # números da tabela, maiores que os rótulos
 st_c = est("c", "Lib", FSN, TINTA, FSN + 0.2, 2)
 dados = [cabec]
 estilo = [
+    ("BACKGROUND", (0, 0), (-1, -1), colors.white), ("ROUNDEDCORNERS", [6, 6, 6, 6]),
     ("FONT", (0, 0), (-1, -1), "Lib", FS), ("TEXTCOLOR", (0, 0), (-1, -1), TINTA),
     ("FONT", (0, 0), (-1, 0), "LibB", FS), ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#E6ECE8")),
     ("ALIGN", (2, 0), (-1, -1), "CENTER"), ("ALIGN", (CDIA0, 1), (-1, -1), "RIGHT"),
@@ -588,7 +626,7 @@ def cabecalho_p1():
                            ("RIGHTPADDING", (0, 0), (-1, -1), 10), ("TOPPADDING", (0, 0), (-1, 0), 5),
                            ("BOTTOMPADDING", (0, -1), (-1, -1), 5), ("TOPPADDING", (0, 1), (-1, 1), 0),
                            ("BOTTOMPADDING", (0, 0), (-1, 0), 0), ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-                           ("LINEBELOW", (0, -1), (-1, -1), 2, S2)]))
+                           ("ROUNDEDCORNERS", [8, 8, 8, 8])]))
     return t
 
 
@@ -604,6 +642,8 @@ def cabecalho_p2():
 
 def rodape(c, d):
     c.saveState()
+    c.setFillColor(FUNDO_PAG)  # fundo cinza bem claro: os cartões brancos se destacam
+    c.rect(0, 0, PAG[0], PAG[1], stroke=0, fill=1)
     c.setFont("LibI", 6.2)
     c.setFillColor(TINTA3)
     c.drawString(MARG, 2.2 * MM, "ARCAFLA · Monitoramento diário · fonte: relatório zootécnico (BoviSync/DairyPlan), "

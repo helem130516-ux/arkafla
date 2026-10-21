@@ -466,7 +466,7 @@ if at:  # duas colunas para ocupar menos altura
     col_at = [Paragraph("<br/>".join(at[:meio]), st_at), Paragraph("<br/>".join(at[meio:]), st_at)]
 else:
     col_at = [Paragraph("Nenhum indicador piorou em relação ao dia anterior.", st_at), ""]
-quadro_at = Table([[Paragraph("Atenção hoje – o que mais piorou", st_ath), ""], col_at],
+quadro_at = Table([[Paragraph("Atenção hoje", st_ath), ""], col_at],
                   colWidths=[LARG / 2, LARG / 2])
 quadro_at.setStyle(TableStyle([("SPAN", (0, 0), (-1, 0)), ("VALIGN", (0, 0), (-1, -1), "TOP"),
                                ("BACKGROUND", (0, 0), (-1, -1), colors.HexColor("#FDF3F3")),

@@ -459,3 +459,10 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - eixo_x calcula o passo pela largura do rótulo (a última data sempre aparece).
   - Na faixa "dif.", se os textos não cabem lado a lado, eles alternam em duas linhas.
   - Testado com 8 dias: 2 páginas. O teste com 10 dias não foi feito (interrompido pelo usuário).
+
+### 22/10/2026 – coletas (PDF emitido em 22/10 às 10:16)
+- Completa 20/10: 62.438 L (duas coletas, às 19:54 e às 20:03). DairyPlan 68.881 kg, diferença +10,3%.
+- Atenção: a coleta de 19/10 às 23:19 (34.821 L) é praticamente leite de 20/10. Pela regra combinada (soma por
+  data de coleta), ela conta em 19/10. Por isso a diferença diária oscila (+9,2% em 18/10, +10,3% em 20/10).
+  Pela média dos dias, a diferença fica em torno de +3%.
+- 21/10 (35.380 + 36.584 L até agora) fica para o próximo PDF.

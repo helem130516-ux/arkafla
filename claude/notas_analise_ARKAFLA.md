@@ -476,3 +476,9 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - DairyPlan: 69.121 kg; comercializado de 21/10 ainda pendente.
 - "Vazias com IA > 35 d" caiu de 97 para 38: 55 vacas foram reinseminadas (IATF) com data de IA de 22/10 (o
   BoviSync baixado às 11h já inclui o lançamento da manhã). Outras 4 foram para DNB.
+
+### 22/10/2026 – correção da rotina (push 403)
+- Causa: a rotina abria uma sessão nova por dia, sem o repositório autorizado. O push dava 403, e o add_repo com
+  push esperava a usuária aprovar no app.
+- Correção: nova Routine `trig_01Ebntwen6FKHeU9uyxqdMZi`, às 10h48, rodando dentro da conversa principal (que tem
+  permissão de gravação). A antiga, `trig_016TMVvrfCBFKNtTAUKUc2Jd`, foi desativada, não apagada.

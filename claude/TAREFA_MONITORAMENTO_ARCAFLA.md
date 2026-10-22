@@ -135,26 +135,21 @@ Depois:
 
 ## 5. Automação diária (Routine)
 
-- **Routine** `trig_016TMVvrfCBFKNtTAUKUc2Jd`, "Monitoramento diário ARCAFLA".
-- Roda todo dia às **10h48 (America/Sao_Paulo)**, numa sessão nova a cada execução, com notificação push.
-- Passos, nesta ordem, para que o relatório chegue ao celular mesmo se a gravação no GitHub falhar:
-  1. Clonar o repositório para leitura e fazer checkout do branch.
-  2. Baixar do BoviSync.
-  3. Rodar `le_leite_vendido.py`, `monitor_diario.py`, `recalc.py` e `monitor_pdf.py`, e gerar os PNG.
-  4. Conferir números estranhos.
-  5. **Mandar ao celular** a imagem da página 1, o PDF e a planilha.
-  6. Só então registrar o dia nas notas, pedir permissão de gravação (`add_repo`, access "push"), fazer commit e
-     push.
-  7. Escrever um resumo de 4 a 6 linhas, dizendo se ficou salvo no repositório.
-- **Problema em aberto (22/10)**:
-  - A execução de 22/10 baixou, gerou e enviou tudo, mas o **push falhou com 403**, porque a sessão da rotina não
-    tinha o repositório autorizado. O dia 21/10 foi refeito e salvo manualmente.
-  - A rotina foi ajustada para pedir permissão de gravação (`add_repo` com access "push") só no final.
-  - Num teste, a sessão nova parou esperando a usuária aprovar o "Add Repo" no app. Se a rotina também parar
-    nesse ponto, o relatório já terá sido enviado ao celular.
-  - Se continuar falhando, a usuária precisa reconectar o GitHub em https://claude.ai/connect-github.
-
----
+- **Routine ativa**: `trig_01Ebntwen6FKHeU9uyxqdMZi`, "Monitoramento diário ARCAFLA (nesta conversa)".
+  - Roda todo dia às **10h48 (America/Sao_Paulo)**, **dentro da conversa principal**, que já tem permissão de
+    gravação no repositório.
+  - Passos:
+    1. `git pull` do branch.
+    2. Baixar do BoviSync.
+    3. Rodar `le_leite_vendido.py`, `monitor_diario.py`, `recalc.py` e `monitor_pdf.py`, e gerar os PNG.
+    4. Conferir números estranhos.
+    5. Mandar ao celular a imagem da página 1, o PDF e a planilha.
+    6. Registrar nas notas, fazer commit e push.
+    7. Escrever um resumo de 4 a 6 linhas.
+- **Routine antiga**: `trig_016TMVvrfCBFKNtTAUKUc2Jd`, **desativada** em 22/10 (não apagada).
+  - Ela abria uma sessão nova a cada dia, e essa sessão nascia sem permissão de gravação no GitHub.
+  - Em 22/10 o push falhou com 403. Para gravar, ela precisava que a usuária aprovasse o "Add Repo" no app, o que
+    não funciona às 11h sem ninguém olhando.
 
 ## 6. PADRÃO DO PDF (aprovado pela usuária)
 

@@ -467,7 +467,7 @@ def v_ult(rot, nf):
 dpl = itens.get("Leite Total dia DairyPlan")
 vdd = itens.get("Leite comercializado no dia (coletas do laticínio)")
 kv = next((i for i in range(ND - 1, -1, -1) if vdd and vdd["vals"][i] not in (None, "")), None)
-dif_txt = (("", f'{fmt(dpl["vals"][kv], "#,##0")} kg × {fmt(vdd["vals"][kv], "#,##0")} L')
+dif_txt = (("", f'{fmt(dpl["vals"][kv], "#,##0")} kg × {fmt(vdd["vals"][kv], "#,##0")} kg')
            if kv is not None else ("aguardando coletas", ""))
 CW = LARG / 6
 CH = 82  # altura dos cartões
@@ -528,14 +528,14 @@ g_lote = caixa(f"Produção por lote em {ultimo:%d/%m}",
                G2W)
 
 G3W = LARG * 0.22 - 6      # gráficos menores da 2ª fileira
-GLW = LARG * 0.34 - 6      # leite DairyPlan × comercializado, mais largo (dois conjuntos de valores)
+GLW = LARG * 0.34 - 6      # leite DairyPlan × comercializado (kg), mais largo (dois conjuntos de valores)
 GH2 = 134
 dp_s, vd_s = serie("Leite Total dia DairyPlan"), serie("Leite comercializado no dia (coletas do laticínio)")
 dp_s, vd_s = [[v / 1000 if v is not None else None for v in x] for x in (dp_s, vd_s)]  # em mil
 dif = itens.get("Diferença DairyPlan × comercializado")
 dif_med = fmt(dif["media"], dif["mfmt"]) if dif and dif["media"] not in (None, "") else "–"
 g_leite = caixa("Leite DairyPlan × comercializado",
-                legenda_series([("DairyPlan (mil kg)", S1), ("Comercializado (mil L)", S3)]) + f" · dif. méd. <b>{dif_med}</b>",
+                legenda_series([("DairyPlan (mil kg)", S1), ("Comercializado (mil kg)", S3)]) + f" · dif. méd. <b>{dif_med}</b>",
                 grafico_linhas([("dp", dp_s, S1), ("vd", vd_s, S3)], GLW - 10, GH2, "0.0",
                                area="todas", valores=True,
                                faixa=("dif.", [fmt(v, "+0.0%;-0.0%;0.0%", sinal=True) if isinstance(v, (int, float))
@@ -702,7 +702,7 @@ legenda = Paragraph(
     "<b>0</b> bom perto de zero · Var. = último dia − anterior: <font name='Sym' color='#0B7A0B'>▲▼</font> melhorou, "
     "<font name='Sym' color='#B42D2D'>▲▼</font> piorou, <font name='Sym' color='#8A8A85'>▲▼</font> sem sentido "
     "definido · azul-claro = último dia · Produção = média (desvio padrão) · só fêmeas · lactação = lotes 1–6 e 10 "
-    "(10 = tratamento; 20/30 contam como 2/3) · verde = leite comercializado (L).", st_leg)
+    "(10 = tratamento; 20/30 contam como 2/3) · verde = leite comercializado (kg).", st_leg)
 
 
 # ---------------------------------------------------------------- cabeçalhos e montagem

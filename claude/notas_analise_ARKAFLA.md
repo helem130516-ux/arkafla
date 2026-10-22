@@ -422,7 +422,7 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Página 2: tabela completa ocupando a página toda; linhas dos lotes no tom claro da cor do lote; último dia em azul.
 - Cores dos lotes: L1 amarelo, L2 azul, L3 vermelho, L4 verde, L5 roxo, L6 laranja.
 - Subtítulos dos gráficos sem "bom quando sobe/cai".
-- Termo "leite comercializado" (nunca "vendido"). Na página 2, a linha "Leite comercializado no dia" fica em destaque:
+- Leite comercializado em kg (litros × 1,032; parâmetro P_DENSIDADE). Termo "leite comercializado" (nunca "vendido"). Na página 2, a linha "Leite comercializado no dia" fica em destaque:
   marca verde, fundo verde-claro e números em negrito.
 - A variação é arredondada às casas exibidas, então "= 0" fica sem cor.
 
@@ -482,3 +482,9 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   push esperava a usuária aprovar no app.
 - Correção: nova Routine `trig_01Ebntwen6FKHeU9uyxqdMZi`, às 10h48, rodando dentro da conversa principal (que tem
   permissão de gravação). A antiga, `trig_016TMVvrfCBFKNtTAUKUc2Jd`, foi desativada, não apagada.
+
+### 22/10/2026 – comercializado em kg
+- A usuária decidiu: o leite comercializado é convertido para kg (litros × 1,032, parâmetro P_DENSIDADE na aba
+  Parâmetros). A diferença DairyPlan × comercializado passa a ser kg × kg.
+- Efeito: a diferença média caiu de +3,1% para −0,1%. Por dia, 20/10 foi de +10,3% para +6,9% e 19/10 de +0,1%
+  para −3,0%.

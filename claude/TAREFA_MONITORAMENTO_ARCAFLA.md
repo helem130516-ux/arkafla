@@ -110,8 +110,8 @@ Depois:
     "vendido".** É a soma dos volumes por **data de coleta**.
   - Ficam fora a data de emissão do PDF (e as posteriores) e a última data de coleta de cada PDF, porque podem estar
     incompletas.
-  - "Diferença DairyPlan × comercializado" = (DP − comercializado) ÷ comercializado, kg contra litros, **sem
-    conversão**. Converter (1 L ≈ 1,032 kg) é decisão pendente da usuária.
+  - "Diferença DairyPlan × comercializado" = (DP − comercializado) ÷ comercializado, em kg: o
+    comercializado é **convertido de litros para kg × 1,032** (parâmetro P_DENSIDADE), por decisão da usuária em 22/10.
   - A diferença diária oscila conforme o horário das coletas (ex.: a coleta das 23h é praticamente leite do dia
     seguinte).
   - Leite descartado do lote 10 e % do leite produzido que foi descartado.
@@ -207,7 +207,6 @@ Depois:
 ## 7. Pontos em aberto
 
 1. Confirmar se o push da rotina passou a funcionar (teste de 22/10 e execução de 23/10).
-2. Decisão da usuária: converter os kg do DairyPlan em litros (÷ 1,032) na diferença DairyPlan × comercializado?
 3. Cadastro a corrigir no DairyPlan/BoviSync:
    - 4 vacas "Bred" sem DATA da IA (brincos 5557, 3291, 5541, 5791).
    - A 5791 tem a 1ª IA com 16 DEL, o que parece erro de lançamento.

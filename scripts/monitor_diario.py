@@ -147,6 +147,7 @@ params = [
     ("P_ECM_BASE", "ECM: fator do leite (Sjaunja et al., 1990)", 0.327),
     ("P_ECM_GORD", "ECM: fator por ponto % de gordura (12,95 ÷ 100)", 0.1295),
     ("P_ECM_PROT", "ECM: fator por ponto % de proteína (7,65 ÷ 100)", 0.0765),
+    ("P_DENSIDADE", "Densidade do leite (kg por litro): converte o leite comercializado de L para kg", 1.032),
 ]
 for j, t in enumerate(["Parâmetro", "Valor", "Nome"], 1):
     c = wp.cell(4, j, t)
@@ -441,7 +442,7 @@ GRUPOS = [
         ("% vacas com leitura de leite (tanque)", "%", razao(cont(*COM_LEITE), cont(*TANQUE)), P, "↑"),
         (SUB, "Leite produzido e entregue"),
         ("Leite Total dia DairyPlan", "kg", soma("Leite", *COM_LEITE), "#,##0", "↑"),
-        ("Leite comercializado no dia (coletas do laticínio)", "L", vendido_dia, "#,##0", "↑"),
+        ("Leite comercializado no dia (coletas do laticínio)", "kg", vendido_dia, "#,##0", "↑"),
         ("Diferença DairyPlan × comercializado", "%", dif_vendido, "+0.0%;-0.0%;0.0%", "0"),
         ("Leite descartado – lote 10", "kg", soma("Leite", *DESCARTE), "#,##0", "↓"),
         ("% do leite produzido que foi descartado", "%",
@@ -545,7 +546,8 @@ for grupo, itens in GRUPOS:
         ws.cell(r, 3).alignment = Alignment(horizontal="center")
         for k, col in enumerate(DC):
             if f is vendido_dia:
-                c = ws.cell(r, C0 + k, vendido.get(DIAS[k].isoformat()))
+                litros = vendido.get(DIAS[k].isoformat())  # litros do laticínio, convertidos para kg
+                c = ws.cell(r, C0 + k, f"={litros}*P_DENSIDADE" if litros is not None else None)
                 c.fill = INFILL
                 c.font = font(color="0000FF")
             elif f is dif_vendido:  # linhas de cima: DairyPlan (r − 2) e vendido (r − 1)
@@ -647,12 +649,12 @@ notas = [
     ("Leite ECM", "Produção média nas últimas 24 h × (0,327 + 0,1295 × gordura % + 0,0765 × proteína %), "
                   "com gordura e proteína da análise do tanque (Sjaunja et al., 1990; fatores na aba "
                   "Parâmetros)."),
-    ("Leite comercializado", "Valor de entrada (azul/amarelo), em litros, lido de dados/leite_vendido.json. "
-                      "Vem do \"Demonstrativo das Coletas de Leite\" (scripts/le_leite_vendido.py): soma "
-                      "do Volume de todas as coletas com a mesma Data Coleta."),
+    ("Leite comercializado", "Em kg: litros lidos de dados/leite_vendido.json × densidade (aba Parâmetros, "
+                      "1,032 kg/L). Vem do \"Demonstrativo das Coletas de Leite\" (scripts/le_leite_vendido.py): "
+                      "soma do Volume de todas as coletas com a mesma Data Coleta."),
     ("Diferença DairyPlan × comercializado", "(Leite Total dia DairyPlan − leite comercializado) ÷ leite comercializado. "
-                                      "Negativo = DairyPlan abaixo do comercializado. O DairyPlan está em kg e o "
-                                      "laticínio em litros; não há conversão."),
+                                      "Negativo = DairyPlan abaixo do comercializado. Os dois em kg (o "
+                                      "comercializado é convertido de litros pela densidade)."),
     ("DNB", "StatRepro = DNB ou Dry DNB. Ficam fora de todos os indicadores de reprodução "
             "(só aparecem na própria contagem de DNB)."),
     ("Gestantes", "DDP (dias de prenhez) ≥ 1, sem DNB; inclui secas. % = gestantes ÷ (adultas − DNB)."),

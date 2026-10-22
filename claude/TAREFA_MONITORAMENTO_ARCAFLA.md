@@ -72,6 +72,17 @@ Depois:
 3. **Prints das análises do tanque**: acrescentar um **grupo novo** em `dados/analise_tanque.json`, transcrevendo
    os valores e guardando a imagem.
 
+**Tentativa de automatizar os itens 2 e 3 (22/10).** As análises e o PDF ficam no portal do cooperado Castrolanda
+(`https://cooperado.castrolanda.coop.br/specuario-resultados-analises`; ali se entra no mês de referência e se veem
+os dias).
+- A usuária cadastrou `CASTROLANDA_USER` e `CASTROLANDA_PASS` nas variáveis de ambiente.
+- O **servidor da Castrolanda derruba a conexão** vinda do ambiente em nuvem (o próprio castrolanda.coop.br também),
+  enquanto outros sites abrem normalmente. Provavelmente é um firewall do lado deles.
+- Alternativas sugeridas:
+  - envio automático por e-mail pelo portal, para ler pelo conector de e-mail;
+  - pedir liberação ou API ao TI da Castrolanda.
+- Até lá, a usuária manda os arquivos pelo clipe.
+
 ---
 
 ## 4. Regras dos indicadores (planilha e PDF)
@@ -106,8 +117,8 @@ Depois:
   DairyPlan.
 - **Leite**:
   - "Leite Total dia DairyPlan" é a soma dos lotes 1–6, em kg.
-  - **"Leite comercializado no dia"** vem da cooperativa, em litros. **Usar sempre "comercializado", nunca
-    "vendido".** É a soma dos volumes por **data de coleta**.
+  - **"Leite comercializado no dia"** vem da cooperativa, em litros, e é **mostrado em kg** (litros × 1,032).
+    **Usar sempre "comercializado", nunca "vendido".** É a soma dos volumes por **data de coleta**.
   - Ficam fora a data de emissão do PDF (e as posteriores) e a última data de coleta de cada PDF, porque podem estar
     incompletas.
   - "Diferença DairyPlan × comercializado" = (DP − comercializado) ÷ comercializado, em kg: o
@@ -181,7 +192,7 @@ Depois:
      curva monotônica, que não ultrapassa os dados.
    - **Produção por lote** no último dia: barras arredondadas nas cores dos lotes, com ± DP.
 4. **Gráficos da linha de baixo**:
-   - **Leite DairyPlan × comercializado**: azul/verde, em mil kg/L, com a linha **"dif."** de % por dia embaixo
+   - **Leite DairyPlan × comercializado**: azul/verde, em mil kg, com a linha **"dif."** de % por dia embaixo
      das datas. A linha alterna em duas alturas quando não cabe.
    - **Vacas com leite abaixo de 20 kg**: barras, último dia em destaque.
    - **Vacas gestantes (% sem DNB)**.
@@ -206,7 +217,8 @@ Depois:
 
 ## 7. Pontos em aberto
 
-1. Confirmar se o push da rotina passou a funcionar (teste de 22/10 e execução de 23/10).
+1. Confirmar se o push da rotina passou a funcionar (primeira execução na conversa principal: 23/10).
+2. Automatizar o PDF de coletas e as análises do tanque (portal Castrolanda bloqueia o acesso; ver seção 3).
 3. Cadastro a corrigir no DairyPlan/BoviSync:
    - 4 vacas "Bred" sem DATA da IA (brincos 5557, 3291, 5541, 5791).
    - A 5791 tem a 1ª IA com 16 DEL, o que parece erro de lançamento.
@@ -223,4 +235,4 @@ Depois:
 - Vacas < 20 kg: 57 (−20). Partos: 7. DNB: 65 (+6).
 - Vazias com IA > 35 d: 38 (eram 97). Caiu porque 55 vacas foram reinseminadas (IATF) com data de 22/10.
 - DairyPlan: 69.121 kg. Leite comercializado de 21/10: pendente (chega no próximo PDF da cooperativa).
-- 20/10: comercializado 62.438 L × DairyPlan 68.881 kg, ou seja, +10,3%.
+- 20/10: comercializado 62.438 L = 64.436 kg × DairyPlan 68.881 kg, ou seja, +6,9%.

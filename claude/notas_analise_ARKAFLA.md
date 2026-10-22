@@ -466,3 +466,13 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   data de coleta), ela conta em 19/10. Por isso a diferença diária oscila (+9,2% em 18/10, +10,3% em 20/10).
   Pela média dos dias, a diferença fica em torno de +3%.
 - 21/10 (35.380 + 36.584 L até agora) fica para o próximo PDF.
+
+### 22/10/2026 – relatório de 21/10
+- Rotina das 10h49: baixou, gerou e enviou ao celular, mas o push falhou (403, o repositório não está nas fontes
+  da rotina). O 21/10 foi baixado de novo nesta sessão e salvo aqui.
+- 21/10:
+  - Lactação: 1.650 (+4); lote 10: 41 (+16 entradas / −7 saídas).
+  - Produção: 43,8 kg (ECM 44,7). Vacas < 20 kg: 57 (−20). Partos: 7. DNB: 65 (+6).
+  - DairyPlan: 69.121 kg; comercializado de 21/10 ainda pendente.
+- "Vazias com IA > 35 d" caiu de 97 para 38: 55 vacas foram reinseminadas (IATF) com data de IA de 22/10 (o
+  BoviSync baixado às 11h já inclui o lançamento da manhã). Outras 4 foram para DNB.

@@ -137,20 +137,21 @@ Depois:
 
 - **Routine** `trig_016TMVvrfCBFKNtTAUKUc2Jd`, "Monitoramento diário ARCAFLA".
 - Roda todo dia às **10h48 (America/Sao_Paulo)**, numa sessão nova a cada execução, com notificação push.
-- Passos:
-  1. Anexar o repositório com permissão de gravação: `add_repo`, access `push`.
-  2. Clonar e fazer checkout do branch.
-  3. Baixar do BoviSync.
-  4. Rodar `le_leite_vendido.py`, `monitor_diario.py`, `recalc.py` e `monitor_pdf.py`, e gerar os PNG.
-  5. Conferir números estranhos.
-  6. Registrar o dia nas notas, fazer commit e push.
-  7. Mandar ao celular a imagem da página 1, o PDF e a planilha.
-  8. Escrever um resumo de 4 a 6 linhas.
+- Passos, nesta ordem, para que o relatório chegue ao celular mesmo se a gravação no GitHub falhar:
+  1. Clonar o repositório para leitura e fazer checkout do branch.
+  2. Baixar do BoviSync.
+  3. Rodar `le_leite_vendido.py`, `monitor_diario.py`, `recalc.py` e `monitor_pdf.py`, e gerar os PNG.
+  4. Conferir números estranhos.
+  5. **Mandar ao celular** a imagem da página 1, o PDF e a planilha.
+  6. Só então registrar o dia nas notas, pedir permissão de gravação (`add_repo`, access "push"), fazer commit e
+     push.
+  7. Escrever um resumo de 4 a 6 linhas, dizendo se ficou salvo no repositório.
 - **Problema em aberto (22/10)**:
   - A execução de 22/10 baixou, gerou e enviou tudo, mas o **push falhou com 403**, porque a sessão da rotina não
     tinha o repositório autorizado. O dia 21/10 foi refeito e salvo manualmente.
-  - A rotina foi ajustada para chamar `add_repo` com access "push" antes de clonar.
-  - Um teste dessa correção estava em andamento quando este documento foi gerado.
+  - A rotina foi ajustada para pedir permissão de gravação (`add_repo` com access "push") só no final.
+  - Num teste, a sessão nova parou esperando a usuária aprovar o "Add Repo" no app. Se a rotina também parar
+    nesse ponto, o relatório já terá sido enviado ao celular.
   - Se continuar falhando, a usuária precisa reconectar o GitHub em https://claude.ai/connect-github.
 
 ---

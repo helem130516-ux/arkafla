@@ -514,3 +514,4 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   15h53, na conversa principal.
 - Ela baixa o BoviSync de novo com `--substituir`, para pegar partos lançados depois das 11h, gera tudo de novo e só
   envia e salva se algum número mudou.
+- Teste de gravação da rotina (sessão nova com add_repo push): OK.

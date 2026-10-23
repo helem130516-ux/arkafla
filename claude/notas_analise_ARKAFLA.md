@@ -499,3 +499,12 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   lançamento ainda não feito. Como os partos são contados pelo relatório mais recente, o dia se corrige sozinho
   quando forem lançados.
 - Leite comercializado de 21 e 22/10: pendente (falta o PDF da cooperativa).
+
+### 23/10/2026 – coletas (PDF emitido em 23/10 às 11:45) e BoviSync baixado de novo
+- Leite comercializado de 21/10: 71.964 L = 74.267 kg. DairyPlan 69.121 kg, diferença −6,9%. 22/10 fica para o
+  próximo PDF.
+- A pedido da usuária, o BoviSync foi baixado de novo à tarde (`--substituir`, relatório de 22/10) para pegar os
+  partos lançados depois.
+  - Partos de 22/10: 0 → 4. Partos de 21/10: 7 → 8.
+  - Nascidas até 7 dias: 21. Lactação: 1.655. Lote 10: 39 (4 entradas, 6 saídas). Produção: 44,8 kg; ECM 45,8.
+  - DairyPlan: 70.513 kg.

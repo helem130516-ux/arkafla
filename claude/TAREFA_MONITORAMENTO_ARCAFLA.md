@@ -157,6 +157,10 @@ os dias).
     5. Mandar ao celular a imagem da página 1, o PDF e a planilha.
     6. Registrar nas notas, fazer commit e push.
     7. Escrever um resumo de 4 a 6 linhas.
+- **Atualização da tarde**: `trig_01NS4miGnNSiY4d6HbGKRdUq`, todo dia às **15h53**, também na conversa principal
+  (pedido da usuária em 23/10).
+  - Baixa o BoviSync de novo com `--substituir`, para pegar os partos lançados depois das 11h, e gera tudo de novo.
+  - Só envia e salva se algum número mudou. Se nada mudou, responde "sem mudanças".
 - **Routine antiga**: `trig_016TMVvrfCBFKNtTAUKUc2Jd`, **desativada** em 22/10 (não apagada).
   - Ela abria uma sessão nova a cada dia, e essa sessão nascia sem permissão de gravação no GitHub.
   - Em 22/10 o push falhou com 403. Para gravar, ela precisava que a usuária aprovasse o "Add Repo" no app, o que

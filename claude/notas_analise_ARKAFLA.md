@@ -508,3 +508,9 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Partos de 22/10: 0 → 4. Partos de 21/10: 7 → 8.
   - Nascidas até 7 dias: 21. Lactação: 1.655. Lote 10: 39 (4 entradas, 6 saídas). Produção: 44,8 kg; ECM 45,8.
   - DairyPlan: 70.513 kg.
+
+### 23/10/2026 – atualização da tarde
+- A usuária aprovou uma segunda execução diária por volta das 16h: Routine `trig_01NS4miGnNSiY4d6HbGKRdUq`, às
+  15h53, na conversa principal.
+- Ela baixa o BoviSync de novo com `--substituir`, para pegar partos lançados depois das 11h, gera tudo de novo e só
+  envia e salva se algum número mudou.

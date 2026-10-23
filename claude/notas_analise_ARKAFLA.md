@@ -488,3 +488,14 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   Parâmetros). A diferença DairyPlan × comercializado passa a ser kg × kg.
 - Efeito: a diferença média caiu de +3,1% para −0,1%. Por dia, 20/10 foi de +10,3% para +6,9% e 19/10 de +0,1%
   para −3,0%.
+
+### 23/10/2026 – rotina automática (relatório de 22/10)
+- Primeira execução da rotina dentro da conversa principal: baixou, gerou, enviou e salvou.
+- 22/10:
+  - Lactação: 1.651 (+1); lote 10: 44 (+4 entradas / −1 saída).
+  - Produção: 44,8 kg (+1,0); ECM 45,8. Vacas < 20 kg: 50 (−7).
+  - DairyPlan: 70.379 kg. Vazias com IA > 35 d: 31 (−7). DNB: 65.
+- Partos em 22/10 = 0. O arquivo bruto não tem nenhum parto (DtÚltParto) nem nascimento com data de 22/10; deve ser
+  lançamento ainda não feito. Como os partos são contados pelo relatório mais recente, o dia se corrige sozinho
+  quando forem lançados.
+- Leite comercializado de 21 e 22/10: pendente (falta o PDF da cooperativa).

@@ -525,3 +525,7 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Vazias com IA > 35 d: 31 → 60 (+29). Todas as 29 que entraram estão como Vazia, com a última IA há exatamente
   36 dias. É um lote de IATF de 17/09 cruzando os 35 dias, não erro.
 - Leite comercializado de 22 e 23/10: pendente (falta o PDF da cooperativa).
+- Atualização da tarde (24/10, 15h53), relatório de 23/10:
+  - Lote 10: 44 → 48 (entradas 5 → 9). No tanque: 1.616 → 1.612.
+  - Vacas < 20 kg: 44 → 43. DairyPlan: 70.955 → 70.949 kg. Leite descartado: 564 → 570 kg.
+  - Inseminadas > 35 d: 25 → 24. Partos sem mudança (2).

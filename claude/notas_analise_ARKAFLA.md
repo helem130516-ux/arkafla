@@ -515,3 +515,13 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Ela baixa o BoviSync de novo com `--substituir`, para pegar partos lançados depois das 11h, gera tudo de novo e só
   envia e salva se algum número mudou.
 - Teste de gravação da rotina (sessão nova com add_repo push): OK.
+
+### 24/10/2026 – rotina automática (relatório de 23/10)
+- Primeira vez com os 10 dias completos (14/10 a 23/10). Planilha sem erros; PDF com 2 páginas.
+- 23/10:
+  - Lactação: 1.660 (+5); lote 10: 44 (+5 entradas, 0 saídas).
+  - Produção: 44,6 kg (−0,2); ECM 45,6. Vacas < 20 kg: 44 (−8). Partos: 2.
+  - DairyPlan: 70.955 kg.
+- Vazias com IA > 35 d: 31 → 60 (+29). Todas as 29 que entraram estão como Vazia, com a última IA há exatamente
+  36 dias. É um lote de IATF de 17/09 cruzando os 35 dias, não erro.
+- Leite comercializado de 22 e 23/10: pendente (falta o PDF da cooperativa).

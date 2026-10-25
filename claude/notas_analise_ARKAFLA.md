@@ -529,3 +529,19 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Lote 10: 44 → 48 (entradas 5 → 9). No tanque: 1.616 → 1.612.
   - Vacas < 20 kg: 44 → 43. DairyPlan: 70.955 → 70.949 kg. Leite descartado: 564 → 570 kg.
   - Inseminadas > 35 d: 25 → 24. Partos sem mudança (2).
+
+### 25/10/2026 – rotina automática (relatório de 24/10, sábado)
+- Janela agora de 15/10 a 24/10 (10 dias; o 14/10 saiu). Planilha sem erros; PDF com 2 páginas.
+- 24/10:
+  - Lactação: 1.660 (=); lote 10: 48 (0 entradas / 0 saídas).
+  - Produção: 44,7 kg; ECM 45,6. Vacas < 20 kg: 42. Partos: 3. DNB: 63 (−2).
+  - DairyPlan: 70.604 kg.
+- **Achado – a atualização da tarde desloca eventos de um dia para o anterior:**
+  - O BoviSync é uma foto do momento do download. O download das 15h53 do dia D (gravado como relatório de D−1) já
+    traz os lançamentos da manhã e da tarde de D.
+  - Exemplo: as 3 vacas paridas em 24/10 (DtÚltParto 24/10; brincos 6223, 5195, 5277) já estavam Frescas, nos lotes
+    1, 3 e 10, no "relatório de 23/10" baixado às 15h53 de 24/10. As 4 entradas a mais no lote 10 desse download
+    eram, provavelmente, movimentos de 24/10. Por isso 24/10 aparece com 0 entradas e 0 saídas e com a lactação igual.
+  - Os partos não são afetados, porque já são contados pela DtÚltParto do relatório mais recente: o atraso de
+    lançamento se corrige sozinho no dia seguinte, mesmo sem a atualização da tarde.
+  - Recomendação feita à usuária: desligar a atualização da tarde ou limitá-la. Aguardando a decisão.

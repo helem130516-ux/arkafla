@@ -253,3 +253,15 @@
 - Pedido explícito do usuário. Gerado por `scripts/gera_pdf_dinamica.js` a partir do painel montado, com as abas "Painel do mês" e "Evolução", controle de 16/10/2026.
 - Saída: `relatorios/ARKAFLA_Dinamica_CCS_16-10-2026.pdf`, A4 retrato, 3 páginas.
 - Para outro controle: `PW=$(npm root -g)/playwright node scripts/gera_pdf_dinamica.js painel/painel_qualidade_ARKAFLA.html relatorios/ARKAFLA_Dinamica_CCS_dd-mm-aaaa.pdf <nº do controle>`.
+
+## Folha "Dinâmica da CCS no rebanho" no layout do modelo da fazenda (26/10/2026)
+- O usuário trouxe o modelo impresso (APCBRH Relatório 2, controles de nov/25 a set/26, emitido em 24/09/2026) e pediu o mesmo layout com os dados atualizados.
+- Gerada por `scripts/gera_pdf_dinamica_modelo.py` (HTML) e `scripts/html_para_pdf.js` (PDF). Saída: `relatorios/ARKAFLA_Dinamica_CCS_modelo_16-10-2026.pdf`, 1 página A4 paisagem.
+- Layout do modelo: 4 cartões com o 1º controle para comparar, colunas 100% empilhadas por controle com n, tabela por controle e quadro de critérios.
+- Cores e critérios do projeto, não do modelo:
+  - cores: Sadia verde, Recuperada cinza, Nova infecção azul escuro, Crônica vermelho;
+  - limite: < 200 = baixa, ≥ 200 = elevada;
+  - comparação com o controle seguinte da mesma lactação; pós-parto e sem histórico ficam fora da base.
+- Diferenças em relação ao modelo:
+  - o modelo começa em nov/25; os nossos dados começam no controle de 02/02/26 (a 1ª classificação é 17/02);
+  - em set/26, o modelo tem base de 1.456 vacas (S 61,6 / N 11,7 / C 18,1 / R 8,5); o nosso tem 1.438 (61,8 / 11,7 / 18,2 / 8,3). Diferença provável: o tratamento das recém-paridas e das faltas ao controle.

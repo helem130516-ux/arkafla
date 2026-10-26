@@ -248,3 +248,8 @@
   - aba Cultura com a nova seção "OnFarm – por vaca": cartões, agentes por grau, CCS antes, cultura × tratamento e lista filtrável;
   - resumo mensal atualizado até out/26 (parcial);
   - Histórico da vaca com a lista de culturas OnFarm.
+
+## PDF "Dinâmica da CCS no rebanho" (26/10/2026)
+- Pedido explícito do usuário. Gerado por `scripts/gera_pdf_dinamica.js` a partir do painel montado, com as abas "Painel do mês" e "Evolução", controle de 16/10/2026.
+- Saída: `relatorios/ARKAFLA_Dinamica_CCS_16-10-2026.pdf`, A4 retrato, 3 páginas.
+- Para outro controle: `PW=$(npm root -g)/playwright node scripts/gera_pdf_dinamica.js painel/painel_qualidade_ARKAFLA.html relatorios/ARKAFLA_Dinamica_CCS_dd-mm-aaaa.pdf <nº do controle>`.

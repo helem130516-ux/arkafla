@@ -2,7 +2,8 @@ import json, sys
 src, dst, cj = sys.argv[1], sys.argv[2], sys.argv[3]
 s = open(src, encoding='utf-8').read()
 C = json.load(open(cj, encoding='utf-8'))
-cult = {"agentes": C["agentes"], "meses": C["meses"], "n": [C["n"][m] for m in C["meses"]], "impresso": "11/09/2026"}
+cult = {"agentes": C["agentes"], "meses": C["meses"], "n": [C["n"][m] for m in C["meses"]], "parcial": C.get("parcial", [C["meses"][-1]]), "fonte": [C.get("fonte", {}).get(m, "gráfico") for m in C["meses"]]}
+DESCR = C.get("descricao", "Resultados com agente isolado, agregados por mês.")
 
 def rep(a, b, n=1):
     global s
@@ -14,7 +15,7 @@ rep('<button role="tab" data-tab="ficha" aria-selected="false">Histórico da vac
 
 sec = '''<section id="tab-cultura" class="grid" hidden>
     <div class="panel"><h2>Cultura microbiológica na fazenda (OnFarm)</h2>
-      <p class="note" style="margin:0">Resultados com agente isolado, agregados por mês (out/2025 a set/2026; setembro parcial, relatório impresso em 11/09/2026). O relatório não traz vaca, quarto, data da coleta nem antibiograma, por isso não dá para ligar os resultados às vacas, à CCS ou ao registro de mastite. As amostras sem crescimento não aparecem.</p></div>
+      <p class="note" style="margin:0">''' + DESCR + ''' Nesta seção os resultados estão somados por mês; a análise por vaca está mais acima.</p></div>
     <div class="hero" id="cuHero"></div>
     <div class="panel"><h2>Agentes isolados por mês</h2>
       <div class="row"><div class="seg" id="segCult" role="group" aria-label="Escala"><button data-m="n" aria-pressed="true">Nº de culturas</button><button data-m="p" aria-pressed="false">% do mês</button></div></div>
@@ -75,7 +76,7 @@ function renderCultura(){
   const pr = CULT.agentes.indexOf('Prototheca / Levedura');
   const prMax = rows.reduce((b,r,i)=>r[pr]>rows[b][pr]?i:b,0);
   document.getElementById('cuHero').innerHTML =
-    tile('Culturas com agente', fmt(N), mLab(M[0])+' a '+mLab(M[last])+' ('+mLab(M[last])+' parcial) · '+fmt(N/M.length,0)+' por mês') +
+    tile('Culturas com agente', fmt(N), mLab(M[0])+' a '+mLab(M[last])+(CULT.parcial.includes(M[last])?' ('+mLab(M[last])+' parcial)':'')+' · '+fmt(N/M.length,0)+' por mês') +
     tile('Strep. agalactiae / dysgalactiae', pct(G[gi('Strep. agalactiae / dysgalactiae')]/N), fmt(G[0])+' culturas · contagioso (agalactiae) / ambiental-contagioso (dysgalactiae)') +
     tile('Staph. aureus', pct(G[gi('Staph. aureus')]/N), fmt(G[1])+' culturas · contagioso') +
     tile('Prototheca / Levedura', pct(G[gi('Prototheca / Levedura')]/N), fmt(G[6])+' culturas · pico em '+mLab(M[prMax])+' ('+rows[prMax][pr]+') · não responde a antibiótico');
@@ -86,7 +87,7 @@ function renderCultura(){
   let h = '<div class="sb">';
   for(let i=last;i>=0;i--){ const g = cGroups(rows[i]), t = tot[i];
     const wbar = cultMode==='n' ? 100*t/mx : 100;
-    h += `<div class="m">${mLab(M[i])}${i===last?'<small>parcial</small>':''}</div><div><div class="bx" style="width:${wbar.toFixed(2)}%">` +
+    h += `<div class="m">${mLab(M[i])}${CULT.parcial.includes(M[i])?'<small>parcial</small>':''}</div><div><div class="bx" style="width:${wbar.toFixed(2)}%">` +
       g.map((v,j)=> v ? `<span style="flex:${v} 1 0;background:${CGRP[j].c}" data-tip="${esc(mLab(M[i])+' · '+CGRP[j].k+': '+v+' culturas ('+pct(v/t)+' do mês)')}">${(v/t)*wbar>=5.5?(cultMode==='n'?v:pct(v/t,0)):''}</span>` : '').join('') +
       `</div></div><div class="t">${t}</div>`; }
   document.getElementById('cuMes').innerHTML = h + '</div>';
@@ -99,7 +100,7 @@ function renderCultura(){
   const tr = {}; MC.forEach(c=>{ const k=c.ini.slice(0,7); tr[k]=(tr[k]||0)+1; });
   let tb = '<thead><tr><th>Mês</th><th>Tratamentos</th><th>Culturas</th><th>Culturas por 100 trat.</th><th>% Strep. ag./dysg.</th><th>% Staph. aureus</th></tr></thead><tbody>';
   M.forEach((m,i)=>{ const t=tr[m]; const g=cGroups(rows[i]);
-    tb += `<tr><td class="l">${mLab(m)}${i===last?' (parcial)':''}</td><td>${t!=null?fmt(t):'–'}</td><td>${tot[i]}</td><td>${t?fmt(100*tot[i]/t,0):'–'}</td><td>${pct(g[0]/tot[i],0)}</td><td>${pct(g[1]/tot[i],0)}</td></tr>`; });
+    tb += `<tr><td class="l">${mLab(m)}${CULT.parcial.includes(m)?' (parcial)':''}</td><td>${t!=null?fmt(t):'–'}</td><td>${tot[i]}</td><td>${t?fmt(100*tot[i]/t,0):'–'}</td><td>${pct(g[0]/tot[i],0)}</td><td>${pct(g[1]/tot[i],0)}</td></tr>`; });
   document.getElementById('cuTrat').innerHTML = tb + '</tbody>';
   document.getElementById('cuTratNote').textContent = 'Em alguns meses há mais culturas que tratamentos (ago/26: 90 culturas para 79 tratamentos). O OnFarm pode incluir amostras de vacas com CCS alta sem sinais clínicos ou mais de um quarto por caso. É preciso confirmar com a fazenda o que entra na cultura.';
   // tabela completa

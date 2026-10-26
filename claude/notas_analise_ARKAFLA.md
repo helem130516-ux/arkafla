@@ -66,7 +66,7 @@
 - Cópia local do painel em `painel/painel_qualidade_ARKAFLA.html`. O script de alteração é `scripts/patch_painel_mes.py`.
 
 ## Culturas microbiológicas 2026 (30/09/2026, painel versão 7)
-**OnFarm** (`dados/OnFarm_2026.pdf` → `dados/cultura_onfarm_2026.json`)
+**OnFarm** (`dados/cultura_onfarm/OnFarm_grafico_2026-09-11.pdf` → `dados/cultura_onfarm_2026.json`; arquivo movido em 26/10)
 - Gráfico com o nº de resultados com agente por mês, de out/25 a set/26 (setembro parcial, impresso em 11/09).
 - Total: 634 resultados. Staph não aureus 29,8% (189), Strep. agalactiae/dysgalactiae 29,7% (188), Outros Gram-pos 14,5%, Prototheca/Levedura 8,0% (51, com pico de 17 em ago/26), Staph. aureus 5,0%.
 - Transcrevi os rótulos e conferi cada total mensal pelo comprimento da barra.
@@ -227,3 +227,24 @@
   - as mensagens avulsas ficaram como "confirmadas";
   - nova tabela de ácidos graxos por tanque e coleta (o relatório não traz as unidades).
 - Quando chegar o mapa de pagamento de outubro, ele passa a valer para o mês, com volume. As análises oficiais continuam na tabela de ácidos graxos.
+
+## OnFarm por vaca (26/10/2026, painel versão 15)
+- Arquivo: `dados/cultura_onfarm/onfarm_2026-10-19.xlsx` (exportação por vaca), lido por `scripts/le_onfarm_vacas.py`. Gera dois arquivos:
+  - `dados/cultura_onfarm_vacas.json`: as 839 culturas;
+  - `dados/cultura_onfarm_mensal.json`: o resumo mensal, que usa o gráfico até jan/26 e a planilha de fev/26 em diante.
+- Período: 26/01 a 19/10/2026. São 752 culturas de mastite clínica e 87 de secagem.
+  - Resultados: 419 positivos, 341 negativos, 70 contaminados (todos com 3 ou mais agentes) e 9 "fazer leitura".
+  - Grau nos casos clínicos: 474 leves, 71 moderados e 229 graves.
+  - A planilha não traz antibiograma nem tratamento (colunas vazias). Status "Em aberto" em todas as linhas.
+- Validação: em resultados "Positivo", o nº de agentes por mês bate exatamente com o gráfico em PDF de fev a ago/26. Em ago/26 bate agente por agente, o que confirma a transcrição do PDF, inclusive a separação dos cinzas.
+  - Jan/26: a planilha começa em 26/01 (19 contra 69 no gráfico). Set/26: o gráfico estava parcial (30 contra 55).
+- Casos clínicos:
+  - 40% negativos (300) e 9% contaminados (68).
+  - Entre os positivos (378): Strep. agalactiae/dysgalactiae 42% (157; 43% graves), Staph não aureus 36%, Outros Gram-pos 21%, Prototheca/Levedura 9%, Gram-negativos 9%, Strep. uberis 7% (42% graves) e Staph. aureus 6%.
+  - CCS ≥ 200 no controle anterior à cultura: Strep. ag/dysg 69%, Prototheca 84%, Staph. aureus 76% e negativas 66%.
+- Cultura × registro de mastite: 220 de 844 tratamentos (26%) têm cultura OnFarm da mesma vaca até 3 dias do início. Em 73 deles (33%) a cultura foi negativa.
+  - A cobertura de cultura caiu de 44–64% (fev–abr) para 8–22% (jun–out).
+- Painel:
+  - aba Cultura com a nova seção "OnFarm – por vaca": cartões, agentes por grau, CCS antes, cultura × tratamento e lista filtrável;
+  - resumo mensal atualizado até out/26 (parcial);
+  - Histórico da vaca com a lista de culturas OnFarm.

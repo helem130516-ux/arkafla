@@ -196,3 +196,18 @@
   - Hiperqueratose escore 4: 39% com CCS ≥ 200 (rebanho 26%) e NI de 17% (rebanho 12,4%). A diferença diminuiu; o escore é de 01/05.
 - Registro de mastite só até 28/09: os 37 tratamentos do intervalo de 18/09 a 16/10 estão incompletos. O painel marca isso com "*" e um aviso no relatório do mês.
 - A regra de "queda de produção" agora aceita falta no controle, na mesma lactação, como no painel. Os números de queda de 14/08 e 18/09 nas notas antigas (61 e 79) passaram a 63 e 82.
+
+## Registro de mastite atualizado até 24/10/2026 (26/10/2026, painel versão 13)
+- Arquivo: `dados/mastite_tratamentos_2026.xlsx` (aba "Planilha1", mesmo layout da aba 2026).
+  - `scripts/le_registro_mastite.py` lê os tratamentos desse arquivo, se ele existir. Hiperqueratose, secagem e doenças continuam vindo do `dados/MASTITE_2026.xlsx`.
+- Total: 844 tratamentos. Os 773 anteriores não mudaram em nenhum campo; há 71 novos, de 29/09 a 24/10.
+  - Produtos dos novos: 33 sem produto ("Mastite clinica"), 13 Ubrolexin, 13 Mastjet e 12 Mastgen.
+  - 2 tratamentos novos estão sem quarto.
+  - A coluna O agora só tem "MORTA" (vaca 6000, 13/07); o grau de hiperqueratose saiu desta planilha.
+- Intervalo de 18/09 a 16/10: 86 tratamentos (antes eram 37, com o registro incompleto); 5,8 por 100 vacas a cada 30 dias.
+  - 16 retratamentos.
+  - 80% (67 de 84) em vacas que já estavam com CCS ≥ 200.
+  - Mais casos nos lotes 5 (23), 2 (20), 3 (16) e 6 (11).
+- Depois de 16/10 já há 22 tratamentos, que vão contar no próximo controle.
+- Vacas com 3 ou mais tratamentos em 2026: 83.
+- O aviso de "registro incompleto" saiu do painel, porque o registro agora cobre o controle de 16/10.

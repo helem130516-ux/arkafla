@@ -11,7 +11,13 @@ wb = openpyxl.load_workbook("dados/MASTITE_2026.xlsx", data_only=True)
 NUL = (None, "", "\xa0")
 d = lambda x: x.date().isoformat() if isinstance(x, dt.datetime) else None  # noqa: E731
 
-ws = wb["2026"]
+# tratamentos: arquivo mais recente da fazenda (aba "Planilha1"), se existir; senão a aba 2026 do MASTITE_2026.xlsx
+import os
+if os.path.exists("dados/mastite_tratamentos_2026.xlsx"):
+    _wb = openpyxl.load_workbook("dados/mastite_tratamentos_2026.xlsx", data_only=True)
+    ws = _wb["2026"] if "2026" in _wb.sheetnames else _wb.worksheets[0]
+else:
+    ws = wb["2026"]
 trat = []
 for r in range(2, ws.max_row + 1):
     v = [ws.cell(r, c).value for c in range(1, 17)]

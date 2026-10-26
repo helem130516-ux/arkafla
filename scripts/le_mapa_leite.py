@@ -93,7 +93,12 @@ if __name__ == "__main__":
         av = sorted(json.load(open("dados/tanque_avulsas.json"))["analises"], key=lambda x: (x["data"], x["tanque"]))
     except FileNotFoundError:
         av = []
-    json.dump(dict(mapas=mapas, registros=R, avulsas=av), open("dados/mapa_leite.json", "w"), ensure_ascii=False, indent=1)
+    # análises oficiais por coleta (relatório "Resultado Análise Leite"), sem volume
+    try:
+        of = [dict(r, mes=b["mes"], fonte=b["arquivo"]) for b in json.load(open("dados/analise_oficial.json")) for r in b["registros"]]
+    except FileNotFoundError:
+        of = []
+    json.dump(dict(mapas=mapas, registros=R, avulsas=av, oficiais=of), open("dados/mapa_leite.json", "w"), ensure_ascii=False, indent=1)
     print(len(av), "análises avulsas")
     for c in mapas:
         print(c["mes"], c["arquivo"], "média pagto", c["media_pagto"], "pool", c["media_pool"])

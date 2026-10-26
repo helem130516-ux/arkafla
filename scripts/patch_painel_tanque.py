@@ -6,6 +6,15 @@ J = json.load(open(mj, encoding='utf-8'))
 TQ = [[r['tanque'], r['mes'], r['periodo'], r['volume_l'], r['CCS'], r['CPP'], r['GOR.'], r['PROT.'], r['SOL.'], r['UREIA']] for r in J['registros']]
 MAPAS = J['mapas']
 AV = J.get('avulsas', [])
+OF = J.get('oficiais', [])
+meses_mapa = {r['mes'] for r in J['registros']}
+# análises oficiais entram como registros de tanque/período nos meses que ainda não têm mapa (sem volume)
+for o in OF:
+    if o['mes'] not in meses_mapa:
+        TQ.append([o['tanque'], o['mes'], o['coleta'], None, o.get('CCS'), o.get('CPP'), o.get('GOR'), o.get('PROT'), o.get('SOL'), o.get('UREIA')])
+cobertas = {(o['tanque'], o['data_coleta']) for o in OF}
+AV = [a for a in AV if (a['tanque'], a['data'][8:10] + '/' + a['data'][5:7] + '/' + a['data'][:4]) not in cobertas]
+ACID = [k for k in (OF[0].keys() if OF else []) if k not in ('tanque','coleta','data_coleta','data_analise','mes','fonte','CCS','CPP','GOR','PROT','LACT','SOL','UREIA')]
 
 def rep(a, b, n=1):
     global s
@@ -25,6 +34,7 @@ sec = '''<section id="tab-tanque" class="grid" hidden>
     <div class="panel"><h2>CCS por período de coleta</h2><p class="note">Mil células/mL · linha grossa = média ponderada dos tanques no período · linhas finas = cada tanque</p><div class="chart" style="max-width:820px"><div id="tqLine"></div></div></div>
     <div class="panel"><h2>Análises por tanque e período</h2><p class="note">CCS em mil céls/mL e CPP em mil UFC/mL · CCS ≥ 400 em vermelho, 300 a 399 em laranja · CPP ≥ 100 em vermelho · vazio = sem análise no mapa</p>
       <div class="tbl"><table id="tqCcs" class="abmap"></table></div><div class="tbl" style="margin-top:12px"><table id="tqCpp" class="abmap"></table></div></div>
+    <div class="panel"><h2>Perfil de ácidos graxos (análise oficial)</h2><p class="note" id="agNote"></p><div class="tbl"><table id="agTab" class="abmap"></table></div></div>
     <div class="panel"><h2>Composição do leite por mês</h2><p class="note">Médias ponderadas pelo volume · última coluna = "Média Pagto" e "Média POOL" do mapa mais recente</p><div class="tbl"><table id="tqComp"></table></div></div>
   </section>
 
@@ -38,21 +48,24 @@ js = r'''
 const TQ = ''' + json.dumps(TQ, ensure_ascii=False) + r'''.map(a=>({tq:a[0],mes:a[1],per:a[2],vol:a[3],CCS:a[4],CPP:a[5],GOR:a[6],PROT:a[7],SOL:a[8],UREIA:a[9]}));
 const MAPAS = ''' + json.dumps(MAPAS, ensure_ascii=False) + r''';
 const AV = ''' + json.dumps(AV, ensure_ascii=False) + r''';
+const OF = ''' + json.dumps(OF, ensure_ascii=False) + r''';
+const ACID = ''' + json.dumps(ACID, ensure_ascii=False) + r''';
 const mKey = m => m.slice(3)+'-'+m.slice(0,2);
 const TQM = [...new Set(TQ.map(r=>r.mes))].sort((a,b)=>mKey(a).localeCompare(mKey(b)));
-const wavg = (xs,k) => { const y=xs.filter(r=>r[k]!=null); const v=y.reduce((s,r)=>s+r.vol,0); return v? y.reduce((s,r)=>s+r.vol*r[k],0)/v : null; };
+const wavg = (xs,k) => { const y=xs.filter(r=>r[k]!=null); const wt=r=>r.vol==null?1:r.vol; const v=y.reduce((s,r)=>s+wt(r),0); return v? y.reduce((s,r)=>s+wt(r)*r[k],0)/v : null; };
+const semVol = m => TQ.some(r=>r.mes===m && r.vol==null);
 const realMes = m => wavg(TQ.filter(r=>r.mes===m),'CCS');
 const ctrlDoMes = m => ctrls.filter(c=>c.date.slice(0,7)===mKey(m));
 const mesLab = m => MESN[+m.slice(0,2)-1]+'/'+m.slice(5);
 function renderTanque(){
   const ult = MAPAS[MAPAS.length-1];
-  document.getElementById('tqIntro').textContent = `Mapa de fornecimento do Pool Leite (mês ${ult.mes}, emitido em ${ult.emissao}) · ${TQ.length} análises de ${new Set(TQ.map(r=>r.tq)).size} tanques, ${TQM.map(mesLab).join(', ')}, até 4 períodos por mês. Estes são os valores reais medidos pelo laticínio. As estimativas do controle APCBRH vêm das vacas no dia do controle e ficam separadas.`;
+  document.getElementById('tqIntro').textContent = (OF.length?`Análises oficiais por coleta de ${[...new Set(OF.map(o=>o.mes))].join(', ')} (${OF.length} coletas×tanque) · `:'')+`Mapa de fornecimento do Pool Leite (mês ${ult.mes}, emitido em ${ult.emissao}) · ${TQ.length} análises de ${new Set(TQ.map(r=>r.tq)).size} tanques, ${TQM.map(mesLab).join(', ')}, até 4 períodos por mês. Estes são os valores reais medidos pelo laticínio. As estimativas do controle APCBRH vêm das vacas no dia do controle e ficam separadas.`;
   const r = TQM.map(m=>({m, ccs:realMes(m), cpp:wavg(TQ.filter(x=>x.mes===m),'CPP'), n:TQ.filter(x=>x.mes===m).length}));
   const L = r[r.length-1], P = r[r.length-2];
   const tile = (t,v,u,d,sub) => `<div class="htile"><span class="k">${t}</span><div class="row1"><span class="v">${v}</span>${u?`<span class="u">${u}</span>`:''}${d||''}</div><span class="s">${sub}</span></div>`;
   const prem = (ult.premiacoes||[]).find(x=>/^CCS/.test(x.indicador));
   document.getElementById('tqHero').innerHTML =
-    tile('CCS real do tanque · '+mesLab(L.m), fmt(L.ccs), 'mil/mL', P?deltaChip(L.ccs,P.ccs,false,0,false):'', `média ponderada de ${L.n} análises`+(P?` · ${mesLab(P.m)}: ${fmt(P.ccs)}`:'')) +
+    tile('CCS real do tanque · '+mesLab(L.m), fmt(L.ccs), 'mil/mL', P?deltaChip(L.ccs,P.ccs,false,0,false):'', (semVol(L.m)?`média simples de ${L.n} análises oficiais (sem volume; mapa do mês ainda não chegou)`:`média ponderada de ${L.n} análises`)+(P?` · ${mesLab(P.m)}: ${fmt(P.ccs)}`:'')) +
     tile('"Média Pagto" CCS (mapa)', fmt(ult.media_pagto.CCS), 'mil/mL', '', `média do POOL: ${fmt(ult.media_pool.CCS)} · fazenda ${fmt(ult.media_pagto.CCS-ult.media_pool.CCS)} acima`) +
     tile('"Média Pagto" CPP (mapa)', fmt(ult.media_pagto.CPP,1), 'mil UFC/mL', '', `média do POOL: ${fmt(ult.media_pool.CPP,1)}`) +
     tile('Prêmio de CCS', prem?fmt(prem.pct,2)+'%':'–', '', '', prem?`R$ ${fmt(prem.rs_litro,4)}/L · R$ ${fmt(prem.total,2)} no mês · preço final R$ ${fmt(ult.preco_final_litro,4)}/L`:'');
@@ -60,8 +73,8 @@ function renderTanque(){
     return {lb:mesLab(o.m), v:o.ccs, pv:e, color:'var(--accent)', val:`<b>${fmt(o.ccs)}</b>`, sub:e!=null?'estim. '+fmt(e):'',
       tip:`${mesLab(o.m)}: CCS real ${fmt(o.ccs)} (${o.n} análises)`+(c?` · controle ${lab(c)}: estimativa sem lote 10 ${fmt(e)}, "Média CCS tanque" APCBRH ${fmt(c.apcbrh)}`:'')}; }), {max:Math.max(...r.map(o=>o.ccs), ...r.map(o=>{const c=ctrlDoMes(o.m).pop(); return c?A[c.ci-1].semDesvio:0;}))*1.1});
   document.getElementById('tqCmp').innerHTML = '<thead><tr><th>Mês</th><th>CCS real</th><th>Controle</th><th>Estim. s/ lote 10</th><th>APCBRH</th><th>Real − estim.</th></tr></thead><tbody>'+
-    r.map(o=>{ const c=ctrlDoMes(o.m).pop(); const e=c?A[c.ci-1].semDesvio:null; return `<tr><td class="l">${mesLab(o.m)}</td><td><b>${fmt(o.ccs)}</b></td><td>${c?lab(c):'–'}</td><td>${e!=null?fmt(e):'–'}</td><td>${c?fmt(c.apcbrh):'–'}</td><td class="${e!=null&&o.ccs-e>0?'hot':''}">${e!=null?(o.ccs-e>0?'+':'−')+fmt(Math.abs(o.ccs-e)):'–'}</td></tr>`; }).join('')+'</tbody>';
-  document.getElementById('tqCmpNote').textContent = 'A estimativa é de um só dia (dia do controle) e só das vacas controladas; o laticínio mede o leite de todo o período. Diferenças grandes podem vir de leite do lote 10 ou de vacas em carência indo para o tanque, de vacas fora do controle ou da variação entre os dias.';
+    r.map(o=>{ const c=ctrlDoMes(o.m).pop(); const e=c?A[c.ci-1].semDesvio:null; return `<tr><td class="l">${mesLab(o.m)}${semVol(o.m)?'*':''}</td><td><b>${fmt(o.ccs)}</b></td><td>${c?lab(c):'–'}</td><td>${e!=null?fmt(e):'–'}</td><td>${c?fmt(c.apcbrh):'–'}</td><td class="${e!=null&&o.ccs-e>0?'hot':''}">${e!=null?(o.ccs-e>0?'+':'−')+fmt(Math.abs(o.ccs-e)):'–'}</td></tr>`; }).join('')+'</tbody>';
+  document.getElementById('tqCmpNote').textContent = (TQM.some(semVol)?'* Mês sem mapa de pagamento: média simples das análises oficiais por coleta (sem volume). ':'')+'A estimativa é de um só dia (dia do controle) e só das vacas controladas; o laticínio mede o leite de todo o período. Diferenças grandes podem vir de leite do lote 10 ou de vacas em carência indo para o tanque, de vacas fora do controle ou da variação entre os dias.';
   const pr = ult.premiacoes||[];
   document.getElementById('tqPremNote').textContent = `Mapa de ${ult.mes} · total de premiações R$ ${fmt(ult.total_premiacoes,2)}`;
   document.getElementById('tqPrem').innerHTML = '<thead><tr><th>Indicador</th><th>% prêmio</th><th>R$/litro</th><th>Total (R$)</th></tr></thead><tbody>'+
@@ -82,7 +95,7 @@ function renderTanque(){
   // análises avulsas
   const avM = [...new Set(AV.map(x=>x.data.slice(5,7)+'/'+x.data.slice(0,4)))].filter(m=>!TQM.includes(m));
   const avN = AV.filter(x=>avM.includes(x.data.slice(5,7)+'/'+x.data.slice(0,4)));
-  if(!AV.length){ document.getElementById('avNote').textContent='Nenhuma análise avulsa.'; }
+  if(!AV.length){ document.getElementById('avNote').textContent='Nenhuma análise avulsa pendente: as mensagens recebidas foram confirmadas pela análise oficial do laboratório.'; document.getElementById('avBar').innerHTML=''; document.getElementById('avTab').innerHTML=''; }
   else {
     const mean = k => { const y=avN.filter(x=>x[k]!=null); return y.length? y.reduce((s,x)=>s+x[k],0)/y.length : null; };
     document.getElementById('avNote').innerHTML = `${AV.length} análises por tanque (${[...new Set(AV.map(x=>fmtD(x.data)))].join(', ')}). Não trazem volume: a média abaixo é <b>simples</b> (não ponderada) e é uma prévia; o mapa mensal do laticínio substitui estes valores.` + (avN.length?` Média simples da CCS em ${avM.map(mesLab).join(', ')}: <b>${fmt(mean('CCS'))}</b> (${avN.length} tanques) · CBT/CPP ${fmt(mean('CPP'),1)}.`:'');
@@ -91,6 +104,12 @@ function renderTanque(){
       `<div class="lgd"><span><i class="rfk"></i>CCS real do último mês do mapa (${mesLab(L.m)}: ${fmt(L.ccs)})</span><span><i class="sw" style="background:var(--serious)"></i>300 a 399</span><span><i class="sw" style="background:var(--crit)"></i>≥ 400</span></div>`;
     document.getElementById('avTab').innerHTML = '<thead><tr><th>Data</th><th>Tanque</th><th>CCS</th><th>CBT (CPP)</th><th>Gordura</th><th>Proteína</th><th>Lactose</th><th>Sólidos</th><th>Ureia</th></tr></thead><tbody>'+
       AV.map(x=>`<tr><td>${fmtD(x.data)}</td><td>${x.tanque}</td><td class="${x.CCS>=400?'hot':''}"><b>${fmt(x.CCS)}</b></td><td>${fmt(x.CPP)}</td><td>${fmt(x.GOR,2)}</td><td>${fmt(x.PROT,2)}</td><td>${x.LACT!=null?fmt(x.LACT,2):'–'}</td><td>${fmt(x.SOL,2)}</td><td>${fmt(x.UREIA,2)}</td></tr>`).join('')+'</tbody>';
+  }
+  if(OF.length){
+    const cs = OF.slice().sort((a,b)=>a.coleta-b.coleta||a.tanque-b.tanque);
+    document.getElementById('agNote').textContent = 'Por tanque e coleta (data da coleta) · valores como no relatório do laboratório, que não informa as unidades · os ácidos graxos ajudam a acompanhar a dieta e a saúde do rúmen, não a CCS.';
+    document.getElementById('agTab').innerHTML = '<thead><tr><th>Análise</th>'+cs.map(o=>`<th>T${o.tanque}<br>${(o.data_coleta||'').slice(0,5)}</th>`).join('')+'</tr></thead><tbody>'+
+      ['GOR','PROT','LACT','SOL','UREIA',...ACID].map(k=>`<tr><td>${{GOR:'Gordura',PROT:'Proteína',LACT:'Lactose',SOL:'Sólidos totais',UREIA:'Ureia'}[k]||k}</td>`+cs.map(o=>`<td>${o[k]!=null?fmt(o[k],2):'·'}</td>`).join('')+'</tr>').join('')+'</tbody>';
   }
   const K=[['CCS','CCS',0],['CPP','CPP',1],['GOR','GOR.',2],['PROT','PROT.',2],['SOL','SOL.',2],['UREIA','UREIA',2]];
   document.getElementById('tqComp').innerHTML = '<thead><tr><th>Análise</th>'+TQM.map(m=>`<th>${mesLab(m)}</th>`).join('')+'<th>Média Pagto</th><th>Média POOL</th></tr></thead><tbody>'+

@@ -211,3 +211,19 @@
 - Depois de 16/10 já há 22 tratamentos, que vão contar no próximo controle.
 - Vacas com 3 ou mais tratamentos em 2026: 83.
 - O aviso de "registro incompleto" saiu do painel, porque o registro agora cobre o controle de 16/10.
+
+## Análise oficial do tanque – out/2026 (26/10/2026, painel versão 14)
+- Arquivo: `dados/analise_oficial/analise_2026-10_emitido-2026-10-26.pdf`, o relatório "Resultado Análise Leite" do Sistema Controle de Leite, emitido em 26/10/2026.
+  - Lido por `scripts/le_analise_oficial.py` → `dados/analise_oficial.json`. Cada linha é lida pela posição de suas colunas (tipo, data, tanque, resultado).
+- Conteúdo: 204 linhas, ou seja, 17 análises × 4 tanques × 3 coletas.
+  - Coletas: 04–05/10, 12–13/10 e 17–18/10. As análises de CCS, CPP etc. trazem a data da análise; os ácidos graxos trazem a data da coleta.
+  - Pareamento: a k-ésima análise de cada tanque corresponde à k-ésima coleta. A 2ª coleta bate exatamente com as 4 mensagens de 12–13/10 (7 campos cada).
+- CCS por tanque nas coletas 1 / 2 / 3: T1 253/220/268; T2 266/158/203; T3 224/363/219; T4 309/283/290.
+  - Média simples de out/26: 255, contra 332 de set/26 (ponderada). Sem volume: é prévia até chegar o mapa de outubro.
+- CPP entre 7 e 22.
+- Controle de 16/10: estimativa sem lote 10 de 290 e APCBRH de 305. A CCS real ficou 35 abaixo da estimativa.
+- Painel, aba Tanque:
+  - outubro entra como coletas 1–3 (sem volume, marcado com "*");
+  - as mensagens avulsas ficaram como "confirmadas";
+  - nova tabela de ácidos graxos por tanque e coleta (o relatório não traz as unidades).
+- Quando chegar o mapa de pagamento de outubro, ele passa a valer para o mês, com volume. As análises oficiais continuam na tabela de ácidos graxos.

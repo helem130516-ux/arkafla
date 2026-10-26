@@ -16,6 +16,7 @@ py = lambda *a: subprocess.run([sys.executable, *a], check=True)  # noqa: E731
 py(f"{S}/le_cultura_labvet.py")
 py(f"{S}/le_registro_mastite.py")
 py(f"{S}/le_antibiograma.py")
+py(f"{S}/le_analise_oficial.py")
 py(f"{S}/le_mapa_leite.py")
 py(f"{S}/gera_data_painel.py")
 base = open("painel/base_original.html", encoding="utf-8").read()

@@ -553,3 +553,16 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - 24/10: 71.876 L = 74.176 kg; DairyPlan 70.604, diferença −4,8%.
 - Média dos 10 dias: −0,8%.
 - 25/10 fica para o próximo PDF.
+
+### 26/10/2026 – rotina automática (relatório de 25/10, domingo)
+- **Produção de 25/10 incompleta no BoviSync/DairyPlan:**
+  - Leite 24 h médio de 20,6 kg (normal ~45); total DairyPlan de 32.674 kg (normal ~70.000).
+  - Em todas as vacas, o leite do dia veio com mediana de 42% do Leite7 (no dia 24/10 era 103%). Faltam ordenhas de
+    25/10 na importação, não é queda real.
+  - Baixado de novo às 10h56: igual. Enviado à usuária com aviso.
+  - A Leite7 também caiu (43,8 → 40,4) porque inclui esse dia parcial.
+  - Corrigir com novo download quando as ordenhas entrarem.
+- Demais números de 25/10 (corretos):
+  - Lactação: 1.672 (+12). No tanque: 1.626. Lote 10: 46 (0 entradas, 2 saídas). Secas: 196 (−9).
+  - Partos: 10. Nascidas até 7 dias: 28. DNB: 67 (+4). Vazias com IA > 35 d: 68 (+8). Gestantes: 982 (54,5%).
+- Leite comercializado de 25/10: pendente (próximo PDF).

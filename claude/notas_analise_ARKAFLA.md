@@ -545,3 +545,11 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Os partos não são afetados, porque já são contados pela DtÚltParto do relatório mais recente: o atraso de
     lançamento se corrige sozinho no dia seguinte, mesmo sem a atualização da tarde.
   - Recomendação feita à usuária: desligar a atualização da tarde ou limitá-la. Aguardando a decisão.
+
+### 26/10/2026 – coletas (PDF emitido em 26/10 às 10:21)
+- Completa de 22 a 24/10:
+  - 22/10: 68.408 L = 70.597 kg; DairyPlan 70.513, diferença −0,1%.
+  - 23/10: 70.089 L = 72.332 kg; DairyPlan 70.949, diferença −1,9%.
+  - 24/10: 71.876 L = 74.176 kg; DairyPlan 70.604, diferença −4,8%.
+- Média dos 10 dias: −0,8%.
+- 25/10 fica para o próximo PDF.

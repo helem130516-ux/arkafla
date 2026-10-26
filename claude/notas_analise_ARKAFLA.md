@@ -265,3 +265,30 @@
 - Diferenças em relação ao modelo:
   - o modelo começa em nov/25; os nossos dados começam no controle de 02/02/26 (a 1ª classificação é 17/02);
   - em set/26, o modelo tem base de 1.456 vacas (S 61,6 / N 11,7 / C 18,1 / R 8,5); o nosso tem 1.438 (61,8 / 11,7 / 18,2 / 8,3). Diferença provável: o tratamento das recém-paridas e das faltas ao controle.
+
+## Folha "Eficiência de secagem" no layout do modelo (26/10/2026)
+- Modelo trazido pelo usuário: "Eficiência de secagem", com dados de nov/25 a jul/26 (secagem_2026 + APCBRH Relatório 2, emitido em 24/09).
+- Gerada por `scripts/eficiencia_secagem.py` (cálculo → `saida/eficiencia_secagem.json`) e `scripts/gera_pdf_secagem_modelo.py` (folha). Saída: `relatorios/ARKAFLA_Eficiencia_Secagem_16-10-2026.pdf`, A4 paisagem.
+- Regras, como no modelo:
+  - CCS à secagem = média dos controles nos 60 dias antes da secagem;
+  - pós-parto = 1º controle após o parto;
+  - período seco de 20 a 120 dias;
+  - limite do projeto: ≥ 200 = elevada.
+- Novilhas = idade ao parto ≤ 30 meses. O campo IDADE do R22 é a idade ao parto em anos/meses e fica fixo dentro da lactação.
+- Resultado: 423 secagens de fev a jul/26.
+
+| Secagem | Vacas | Infectadas à secagem | Cura | Infectadas pós-parto | Novilhas |
+|---|---|---|---|---|---|
+| fev/26 | 79 | 41% | 75% | 23% | 17% |
+| mar/26 | 99 | 39% | 64% | 10% | 20% |
+| abr/26 | 95 | 27% | 73% | 20% | 23% |
+| mai/26 | 76 | 36% | 81% | 24% | 17% |
+| jun/26 | 58 | 38% | 68% | 31% | 21% |
+| jul/26 (parcial) | 16 | 6% | 100% | 33% | 29% |
+
+  - Médias, sem julho: infectadas à secagem 36% (146), cura 72% (105), infectadas pós-parto 22% (54), novilhas 20% (48 de 244).
+  - Novilhas que pariram depois: ago 25%, set 23%, out 41% (n = 17).
+- Limitações:
+  - sem nov/25–jan/26, porque não há controle nos 60 dias antes dessas secagens;
+  - a aba SECAGEM vai só até 15/07/26, então julho tem 16 vacas.
+- Ficaram de fora 745 secagens antes de fev/26.

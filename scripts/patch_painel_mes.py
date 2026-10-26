@@ -128,7 +128,8 @@ function renderPainel(){
     ['% CCS ≥ 1.000', pct(a.ge1000), a.ge1000, p&&p.ge1000, a.f[3]+' vacas', false, 1],
     ['Produção média', fmt(a.prod,1), a.prod, p&&p.prod, 'kg/vaca/dia', true, 1],
     ['Elevada ≥ 2 controles seguidos', fmt(a.seq2), a.seq2, p&&p.seq2, fmt(a.seq3)+' com ≥ 3 seguidos', false, 0],
-    ['Tratamentos de mastite', a.first?'–':fmt(a.clin), a.first?null:a.clin, p&&!p.first?p.clin:null, a.first?'desde 01/01: '+casesPeriod(1).length:fmt(a.clin/a.n*100*30/a.intervalo,1)+' por 100 vacas/30 d', false, 0],
+    (()=>{ const ult = MC.reduce((m,c)=>c.ini>m?c.ini:m,''); const inc = ult && ctrls[cur-1].date>ult;
+      return ['Tratamentos de mastite', a.first?'–':fmt(a.clin)+(inc?'*':''), a.first||inc?null:a.clin, p&&!p.first?p.clin:null, a.first?'desde 01/01: '+casesPeriod(1).length:(inc?'* incompleto: registro só até '+fmtD(ult):fmt(a.clin/a.n*100*30/a.intervalo,1)+' por 100 vacas/30 d'), false, 0]; })(),
   ];
   document.getElementById('kpis').innerHTML = k.map(([t,v,val,pv,sub,upGood,dec])=>
     `<div class="kpi"><span class="k">${t}</span><span class="v">${v}</span><span class="d">${deltaChip(val,pv,t.startsWith('%'),dec,upGood)||'&nbsp;'}</span><span class="d flat">${sub}</span></div>`).join('');
@@ -197,5 +198,9 @@ tipjs = '''
 '''
 j = s.rindex('</script>')
 s = s[:j] + tipjs + s[j:]
+
+# relatório do mês: avisar quando o registro de mastite não cobre o intervalo
+s = s.replace("<li>Mastite clínica: ${cp.length} tratamentos desde",
+  "<li>Mastite clínica${(()=>{ const u=MC.reduce((m,c)=>c.ini>m?c.ini:m,''); return u&&ctrls[cur-1].date>u?' (registro só até '+fmtD(u)+', número incompleto)':''; })()}: ${cp.length} tratamentos desde", 1)
 open(dst, 'w', encoding='utf-8').write(s)
 print('ok', len(s))

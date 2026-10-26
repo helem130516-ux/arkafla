@@ -173,3 +173,26 @@
 - Média simples da CCS: 256 (sem volume, não ponderada). É uma prévia: o mapa de out/26 vai substituir esses valores.
 - CCS ponderada de set/26 por tanque, para comparar: tanque 1 316, tanque 2 300, tanque 3 347, tanque 4 383.
 - Painel: bloco "Análises avulsas recebidas" na aba Tanque. Traz CCS, CBT, gordura, proteína, lactose, sólidos e ureia, e compara com a CCS real do último mapa.
+
+## Controle de 16/10/2026 (26/10/2026, painel versão 12)
+- Arquivo: `dados/apcbrh/R22_2026-10-16.xlsx` (REB 70105, emitido em 26/10/2026). São 1.591 vacas; o nº de linhas bate com o "No ANIMAIS".
+  - Σ(prod × CCS) ÷ Σ prod = 305,02, igual à "MÉDIA CCS TANQUE" da APCBRH (305,02).
+  - Lotes 1–6 e 10. Nenhuma CCS 9.998. 26 partos em branco. Nenhum parto alterado.
+  - 139 vacas entraram e 176 saíram em relação a 18/09.
+- Resultados de 16/10 (comparados com 18/09, intervalo de 28 dias):
+  - CCS estimada do tanque sem o lote 10: 290 (309). APCBRH com o lote 10: 305 (325).
+  - Vacas com CCS ≥ 200: 26,0%, 414 vacas (29,5%, 481).
+  - Faixas: 1.177 < 200 | 181 200–499 | 89 500–999 | 144 ≥ 1.000.
+  - Base da classificação: 1.452 vacas.
+    - Sadias: 63,5% (922).
+    - Novas infecções: 9,0% (131). Taxa de NI: 12,4% (15,9%), ou 13,3% por 30 dias.
+    - Crônicas: 17,2% (250). Permanência: 62,7% (68,8%).
+    - Recuperadas: 10,3% (149).
+  - Recorrência: 50,4% (66 das 131 NI), ainda alta.
+  - CCS elevada em ≥ 3 controles seguidos: 172 vacas (190).
+  - Período seco: cura de 67,7% e NI de 13,6%. Pós-parto elevada: 16 vacas.
+  - Lote 5: 35% da CCS estimada do tanque, 48 NI e 84 crônicas. Lote 6: 48% das vacas elevadas.
+  - As 20 maiores contribuições (1,3% do leite) respondem por 22% da CCS estimada. Sem elas, a estimativa iria de 290 para 229.
+  - Hiperqueratose escore 4: 39% com CCS ≥ 200 (rebanho 26%) e NI de 17% (rebanho 12,4%). A diferença diminuiu; o escore é de 01/05.
+- Registro de mastite só até 28/09: os 37 tratamentos do intervalo de 18/09 a 16/10 estão incompletos. O painel marca isso com "*" e um aviso no relatório do mês.
+- A regra de "queda de produção" agora aceita falta no controle, na mesma lactação, como no painel. Os números de queda de 14/08 e 18/09 nas notas antigas (61 e 79) passaram a 63 e 82.

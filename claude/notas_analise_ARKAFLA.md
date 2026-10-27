@@ -315,3 +315,12 @@
   - Médias, sem setembro: infectadas à secagem 38% (204), cura 71% (145), infectadas pós-parto 20% (68), novilhas 21% (64 de 305).
 - Fora da análise: 282 vacas ainda secas e 47 que já pariram mas ainda não tiveram controle pós-parto (vão entrar nos próximos controles).
 - PDF regerado: `relatorios/ARKAFLA_Eficiencia_Secagem_16-10-2026.pdf` (1 página).
+
+## Logo oficial (27/10/2026, painel versão 16)
+- Arquivo do usuário: `assets/Logotipo_ARCAFLA.pdf`, vetorial, 1080×1080. Recortado sem a margem branca em `assets/logo_arcafla.svg` (vetorial, 38 KB) e em `assets/logo_arcafla.png` / `_small.png`.
+- Onde entrou:
+  - painel: cabeçalho e folha da aba Impressão (`scripts/patch_painel_logo.py`, último passo do `monta_painel.py`);
+  - folhas no layout do modelo (dinâmica da CCS e eficiência de secagem);
+  - PDF de dinâmica gerado do painel;
+  - planilha: Leia-me e Impressão, no `gera_planilha.py`.
+- O logo escreve **ARCAFLA** (com C); os arquivos e textos do projeto usam ARKAFLA. Perguntei ao usuário qual grafia usar nos textos.

@@ -1090,6 +1090,13 @@ for j, (a, b) in enumerate(lm):
     ws.cell(4 + j, 2, b)
 widths(ws, {"A": 34, "B": 120})
 
+# logo oficial na Leia-me e na Impressão
+from openpyxl.drawing.image import Image as _Img
+for _aba, _cel in (("Leia-me", "D1"), ("Impressão", "J1")):
+    _im = _Img("assets/logo_arcafla.png")
+    _im.height, _im.width = 70, int(70 * _im.width / _im.height)
+    S[_aba].add_image(_im, _cel)
+
 # fonte Arial em tudo o que ficou sem fonte explícita
 for w in wb.worksheets:
     for row_ in w.iter_rows():

@@ -32,7 +32,8 @@ passos = [("patch_painel_mes.py", None), ("patch_painel_cultura_onfarm.py", "dad
           ("patch_painel_registro_fazenda.py", "dados/registro_fazenda.json"),
           ("patch_painel_antibiograma.py", "dados/antibiograma.json"),
           ("patch_painel_onfarm_vacas.py", "dados/cultura_onfarm_vacas.json"),
-          ("patch_painel_tanque.py", "dados/mapa_leite.json")]
+          ("patch_painel_tanque.py", "dados/mapa_leite.json"),
+          ("patch_painel_logo.py", None)]
 cur = f0
 for k, (p, arg) in enumerate(passos, 1):
     nxt = os.path.join(tmp, f"p{k}.html")

@@ -4,6 +4,7 @@
 Uso: python3 scripts/gera_pdf_dinamica_modelo.py  -> relatorios/ARKAFLA_Dinamica_CCS_modelo_dd-mm-aaaa.html
 Depois: node scripts/html_para_pdf.js <html> <pdf>
 """
+import base64
 import json
 import os
 import subprocess
@@ -13,6 +14,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 subprocess.run([sys.executable, os.path.join(os.path.dirname(__file__), "processa_controles.py")], check=True, capture_output=True)
 C = [c for c in json.load(open("saida/controles.json")) if c["base"]]
 last, first = C[-1], C[0]
+LOGO_URI = 'data:image/svg+xml;base64,' + base64.b64encode(open('assets/logo_arcafla.svg', 'rb').read()).decode()
 COR = dict(S="#2E8B57", R="#9AA39D", N="#1B3A6B", C="#C0392B")
 NOME = dict(S="Sadias", N="Novas infecções", C="Crônicas", R="Recuperadas")
 dm = lambda d: d[8:10] + "/" + d[5:7]  # noqa: E731
@@ -63,6 +65,7 @@ html = f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>
 *{{box-sizing:border-box}}
 body{{margin:0;font-family:"Source Sans 3","DejaVu Sans",Arial,sans-serif;color:#1d2621;background:#fff}}
 .sheet{{width:275mm;height:190mm;display:flex;flex-direction:column}}
+.brand{{display:flex;align-items:center;gap:14px}} .logo{{height:58px;width:auto}}
 header{{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #1d2621;padding-bottom:6px}}
 h1{{font-family:"DejaVu Serif",Georgia,serif;font-size:25px;margin:0;letter-spacing:-.01em}}
 .sub{{font-size:12.5px;color:#3e4a43;margin-top:3px}}
@@ -87,8 +90,8 @@ tr.b td{{font-weight:700}}
 .crit{{margin-top:12px}} .crit td,.crit th{{text-align:left}}
 footer{{border-top:1px solid #9aa39d;margin-top:6px;padding-top:5px;font-size:10.5px;color:#3e4a43;line-height:1.4}}
 </style></head><body><div class="sheet">
-<header><div><h1>Qualidade do leite: dinâmica da CCS no rebanho</h1>
-<div class="sub">Armando P. Carvalho Filho e/ou Flávio A. Carvalho · Castro/PR · Rebanho 70105 (REB 47238 até jun/2026)</div></div>
+<header><div class="brand"><img class="logo" src="{LOGO_URI}" alt="ARCAFLA – Castro, Paraná"><div><h1>Qualidade do leite: dinâmica da CCS no rebanho</h1>
+<div class="sub">Armando P. Carvalho Filho e/ou Flávio A. Carvalho · Castro/PR · Rebanho 70105 (REB 47238 até jun/2026)</div></div></div>
 <div class="rt">Controles de {MES[int(first["data"][5:7])-1]}/{first["data"][:4]} a {MES[int(last["data"][5:7])-1]}/{last["data"][:4]}<br>Último controle: <b>{ultimo}</b></div></header>
 <div class="cards">{cards}</div>
 <div class="main"><div><h2>Distribuição das vacas por situação (% das vacas na base)</h2><div class="leg">{leg}</div>{g}</div>

@@ -2,6 +2,7 @@
 Uso: python3 scripts/gera_pdf_secagem_modelo.py -> relatorios/ARKAFLA_Eficiencia_Secagem_dd-mm-aaaa.html
 Depois: node scripts/html_para_pdf.js <html> <pdf>
 """
+import base64
 import json, os, subprocess, sys
 from datetime import date
 D = os.path.dirname(__file__)
@@ -9,6 +10,7 @@ subprocess.run([sys.executable, os.path.join(D, "eficiencia_secagem.py")], check
 E = json.load(open("saida/eficiencia_secagem.json"))
 MIN_N = 30
 OPA = 'opacity="0.55"'
+LOGO_URI = 'data:image/svg+xml;base64,' + base64.b64encode(open('assets/logo_arcafla.svg', 'rb').read()).decode()
 COR = dict(S="#2E8B57", R="#9AA39D", N="#1B3A6B", C="#C0392B")
 MES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"]
 ml_ = lambda m: MES[int(m[5:7]) - 1] + "/" + m[2:4]  # noqa: E731
@@ -62,6 +64,7 @@ html = f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>
 @page{{size:A4 landscape;margin:9mm 11mm}} *{{box-sizing:border-box}}
 body{{margin:0;font-family:"DejaVu Sans",Arial,sans-serif;color:#1d2621;background:#fff}}
 .sheet{{width:275mm;height:190mm;display:flex;flex-direction:column}}
+.brand{{display:flex;align-items:center;gap:14px}} .logo{{height:58px;width:auto}}
 header{{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid #1d2621;padding-bottom:6px}}
 h1{{font-family:"DejaVu Serif",Georgia,serif;font-size:25px;margin:0}} .sub{{font-size:12.5px;color:#3e4a43;margin-top:3px}}
 .rt{{text-align:right;font-size:12px;color:#3e4a43;line-height:1.5}}
@@ -76,7 +79,7 @@ th:first-child,td:first-child{{text-align:left}} tr.b td{{font-weight:700}} .cri
 .crit i{{width:10px;height:10px;border-radius:2px;display:inline-block;margin-right:6px}}
 footer{{border-top:1px solid #9aa39d;margin-top:6px;padding-top:5px;font-size:10.2px;color:#3e4a43;line-height:1.4}}
 </style></head><body><div class="sheet">
-<header><div><h1>Eficiência de secagem</h1><div class="sub">Armando P. Carvalho Filho e/ou Flávio A. Carvalho · Castro/PR · Rebanho 70105</div></div>
+<header><div class="brand"><img class="logo" src="{LOGO_URI}" alt="ARCAFLA – Castro, Paraná"><div><h1>Eficiência de secagem</h1><div class="sub">Armando P. Carvalho Filho e/ou Flávio A. Carvalho · Castro/PR · Rebanho 70105</div></div></div>
 <div class="rt">Vacas agrupadas pelo mês da secagem · {ml_(R[0]["mes"])} a {ml_(R[-1]["mes"])}<br>Último controle: <b>{ult}</b></div></header>
 <div class="cards">{cards}</div>
 <div class="main"><div><h2>Situação das vacas secas: da secagem ao 1º controle pós-parto (%)</h2><div class="leg">{leg}</div>{g}</div>

@@ -292,3 +292,26 @@
   - sem nov/25–jan/26, porque não há controle nos 60 dias antes dessas secagens;
   - a aba SECAGEM vai só até 15/07/26, então julho tem 16 vacas.
 - Ficaram de fora 745 secagens antes de fev/26.
+
+## Secagens atualizadas – exportação do rebanho (27/10/2026)
+- Arquivo: `dados/secagem/secagens_2026-10-27.xlsx` (aba "secagens"). São 5.698 animais, um por linha, com Lote, Brinco, DEL, LACT, último tratamento de secagem, data da última secagem, status reprodutivo e data do último parto.
+  - 1.724 animais têm data de secagem (de 09/06/2023 a 21/10/2026). Em 1.442 deles o parto é posterior à secagem; 282 ainda estão secos.
+- `scripts/le_registro_mastite.py` junta a aba SECAGEM (histórico até 15/07) com a exportação, usando a chave (vaca, data da secagem). Total: 1.836 secagens.
+  - Das 589 secagens de 2026 da aba antiga, 582 estão na exportação, todas com a mesma data de parto. As 7 que faltam são de vacas que tiveram outra secagem depois.
+  - A exportação traz 506 secagens novas, a maioria de jul a out/26.
+- Eficiência de secagem recalculada (553 vacas, de fev a set/26):
+
+| Secagem | Vacas | Infectadas à secagem | Cura | Infectadas pós-parto |
+|---|---|---|---|---|
+| fev/26 | 80 | 40% | 75% | 23% |
+| mar/26 | 100 | 39% | 64% | 10% |
+| abr/26 | 99 | 27% | 74% | 19% |
+| mai/26 | 79 | 37% | 83% | 24% |
+| jun/26 | 68 | 46% | 65% | 30% |
+| jul/26 | 74 | 34% | 68% | 20% |
+| ago/26 | 50 | 42% | 71% | 14% |
+| set/26 (parcial) | 3 | — | — | — |
+
+  - Médias, sem setembro: infectadas à secagem 38% (204), cura 71% (145), infectadas pós-parto 20% (68), novilhas 21% (64 de 305).
+- Fora da análise: 282 vacas ainda secas e 47 que já pariram mas ainda não tiveram controle pós-parto (vão entrar nos próximos controles).
+- PDF regerado: `relatorios/ARKAFLA_Eficiencia_Secagem_16-10-2026.pdf` (1 página).

@@ -32,7 +32,7 @@ cards = (card("#1d2621", "Infectadas à secagem", br(avg('pct_infect')) + "%", f
          card(COR["N"], "Infectadas pós-parto", br(avg('infect_pos')) + "%", f"{T['N']} vacas", "das secas sadias · variação %s–%s%%" % tuple(br(x) for x in rng('infect_pos'))) +
          card(COR["C"], "Novilhas infectadas", br(100 * nv_i / nv_n) + "%", f"{nv_i} de {nv_n} novilhas", "no 1º controle · variação %s–%s%%" % (br(min(nv_p)), br(max(nv_p)))))
 
-W, H, ml, mt, mb = 700, 500, 44, 14, 52
+W, H, ml, mt, mb = 700, 450, 44, 14, 52
 n = len(R); iw, ih = W - ml - 10, H - mt - mb; bw = iw / n
 g = f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" font-family="DejaVu Sans, Arial">'
 for t in range(0, 101, 20):
@@ -88,9 +88,9 @@ footer{{border-top:1px solid #9aa39d;margin-top:6px;padding-top:5px;font-size:10
 <tr><td><i style="background:{COR['C']}"></i>Crônica</td><td>≥ 200 mil</td><td>≥ 200 mil</td></tr></tbody></table></div></div>
 <footer>CCS em céls/mL; limite de 200 mil. À secagem: média da CCS nos controles dos 60 dias antes da data de secagem. Pós-parto: 1º controle após o parto. Só secagens com período seco de 20 a 120 dias ({sum(r["n"] for r in R)} vacas).
 Taxa de cura = curadas ÷ infectadas à secagem; infectadas pós-parto = novas infecções ÷ secas sadias. Novilhas = 1ª lactação (idade ao parto até 30 meses), % com CCS ≥ 200 no 1º controle, agrupadas pelo mês do parto.{ex_txt}
-*{", ".join(ml_(r["mes"]) for r in parc)} parcial (planilha de secagem até 15/07; só vacas que já pariram e tiveram controle até {ult}); ¹ médias e variações sem os meses parciais.
+{("*" + ", ".join(ml_(r["mes"]) for r in parc) + f" parcial: só vacas que já pariram e tiveram controle até {ult} (meses com menos de {MIN_N} vacas); ¹ médias e variações sem os meses parciais. ") if parc else ""}{X.get("sem parto depois da secagem",0)} vacas ainda secas (sem parto) não entram.
 Fora da análise: {X.get("secagem antes dos controles disponíveis",0)} secagens antes de fev/26 (sem controle nos 60 dias antes), {X.get("período seco fora de 20–120 dias",0)} com período seco fora de 20–120 dias, {X.get("sem controle nos 60 dias antes da secagem",0)} sem controle antes e {X.get("sem controle depois do parto (ainda)",0)} ainda sem controle pós-parto.
-Fontes: aba SECAGEM do registro da fazenda (MASTITE_2026.xlsx) e APCBRH – Relatório 2.2 (controles de 02/02 a {ult}).</footer>
+Fontes: aba SECAGEM do registro da fazenda (MASTITE_2026.xlsx), exportação do rebanho com a última secagem e o último parto de cada vaca (secagens_2026-10-27.xlsx) e APCBRH – Relatório 2.2 (controles de 02/02 a {ult}).</footer>
 </div></body></html>'''
 os.makedirs("relatorios", exist_ok=True)
 out = f"relatorios/ARKAFLA_Eficiencia_Secagem_{ult.replace('/','-')}.html"

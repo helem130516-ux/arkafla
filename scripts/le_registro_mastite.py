@@ -46,6 +46,28 @@ for r in range(2, ws.max_row + 1):
         sec.append(dict(vaca=int(v[1]), lote=v[0], del_=v[2], lact=v[3], produto=str(v[4]).strip(), data=d(v[5]),
                         status=v[6], parto=d(v[8])))
 
+# secagens mais recentes: exportação do rebanho (uma linha por animal, última secagem e último parto).
+# Junta com o histórico da aba SECAGEM; chave = (vaca, data da secagem). Parto só vale se for depois da secagem.
+import glob as _glob
+_chave = {(x["vaca"], x["data"]): x for x in sec}
+for _f in sorted(_glob.glob("dados/secagem/*.xlsx")):
+    _ws = openpyxl.load_workbook(_f, data_only=True).active
+    _H = [c.value for c in _ws[1]]
+    for _row in _ws.iter_rows(min_row=2, values_only=True):
+        r = dict(zip(_H, _row))
+        if not isinstance(r.get("DATA SECA"), dt.datetime) or r.get("Brinco") in NUL:
+            continue
+        pt = r.get("DtÚltParto")
+        pt = d(pt) if isinstance(pt, dt.datetime) and pt > r["DATA SECA"] else None
+        k = (int(r["Brinco"]), d(r["DATA SECA"]))
+        novo = dict(vaca=k[0], lote=r.get("Lote"), del_=r.get("DEL"), lact=r.get("LACT"), produto=str(r.get("ÚltTratSeca") or "").strip(),
+                    data=k[1], status=r.get("StatRepro"), parto=pt, fonte=_f.split("/")[-1])
+        if k in _chave:
+            _chave[k].update({kk: vv for kk, vv in novo.items() if vv not in (None, "")})
+        else:
+            _chave[k] = novo
+sec = sorted(_chave.values(), key=lambda x: (x["data"], x["vaca"]))
+
 ws = wb["DOENÇAS GERAL"]
 doe = []
 for r in range(2, ws.max_row + 1):

@@ -1,4 +1,4 @@
-"""Gera ARKAFLA_Qualidade_do_Leite_2026.xlsx (openpyxl, fórmulas) a partir dos
+"""Gera ARCAFLA_Qualidade_do_Leite_2026.xlsx (openpyxl, fórmulas) a partir dos
 relatórios APCBRH em dados/apcbrh e do registro de mastite em dados/mastite_clinica.json.
 
 Uso: python3 scripts/gera_planilha.py [saida.xlsx]
@@ -25,7 +25,7 @@ from openpyxl.worksheet.pagebreak import Break
 sys.path.insert(0, os.path.dirname(__file__))
 from processa_controles import classifica, le_relatorio  # noqa: E402
 
-OUT = sys.argv[1] if len(sys.argv) > 1 else "saida/ARKAFLA_Qualidade_do_Leite_2026.xlsx"
+OUT = sys.argv[1] if len(sys.argv) > 1 else "saida/ARCAFLA_Qualidade_do_Leite_2026.xlsx"
 F = "Arial"
 AZUL = "1F5F8B"
 COR = dict(S="2E8B57", R="9AA39D", PB="E8C547", PE="E8833A", H="FFFFFF", N="1B3A6B", C="C0392B")
@@ -353,7 +353,7 @@ RK1, RK2 = RK0 + 1, RK0 + 50
 
 # ---------------------------------------------------------------- Painel
 ws = S["Painel"]
-title(ws, "Painel de indicadores – Fazenda ARKAFLA (Castro/PR)",
+title(ws, "Painel de indicadores – Fazenda ARCAFLA (Castro/PR)",
       "Controle leiteiro APCBRH, Relatório 2.2 · CCS em mil células/mL · estimativas do tanque = Σ(produção × CCS) ÷ Σ produção no dia do controle")
 hdr(ws, 4, ["Indicador", "Unid."] + [f"=Controles!O{2+i}" for i in range(NC)])
 ws.cell(3, 3, "Nº controle →").font = font(size=8, color="5E6B63")
@@ -829,7 +829,7 @@ for i in range(1, 13):
     ws.column_dimensions[L(i)].width = 7.4
 ws.column_dimensions["A"].width = 5
 selrow = 5 + len(params) + 1
-ws["A1"] = "Qualidade do Leite · ARKAFLA"
+ws["A1"] = "Qualidade do Leite · ARCAFLA"
 ws["A1"].font = font(bold=True, size=14, color=AZUL)
 ws["A2"] = (f'="Controle de "&Parâmetros!B{selrow}&" · REB "&INDEX(Controles!$C$2:$C${NC+1},CISEL)&" · "&'
             f'TEXT({csel("Vacas")},"#.##0")&" vacas · "&IF(CISEL>1,INDEX(Controles!$H$2:$H${NC+1},CISEL)&" dias desde o controle anterior","primeiro controle")')
@@ -1063,7 +1063,7 @@ ws.column_dimensions["K"].width = 24
 
 # ---------------------------------------------------------------- Leia-me
 ws = S["Leia-me"]
-title(ws, "ARKAFLA – Qualidade do Leite 2026", "Fazenda ARKAFLA (Castro/PR) · controle leiteiro APCBRH e registro de mastite clínica")
+title(ws, "ARCAFLA – Qualidade do Leite 2026", "Fazenda ARCAFLA (Castro/PR) · controle leiteiro APCBRH e registro de mastite clínica")
 lm = [
     ("Conteúdo", ""),
     ("Painel", "10 indicadores do projeto e seções A (rebanho), B (glândula mamária) e C (mastite clínica), uma coluna por controle."),

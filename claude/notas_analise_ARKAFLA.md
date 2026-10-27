@@ -63,7 +63,7 @@
   - "10 maiores contribuições para a CCS do tanque (sem o lote 10)", com simulação (estimativa). Clicar na vaca abre o histórico dela.
 - Dica flutuante (tooltip) em todas as barras.
 - Corrigido o "−0,0 p.p." que aparecia quando não havia variação.
-- Cópia local do painel em `painel/painel_qualidade_ARKAFLA.html`. O script de alteração é `scripts/patch_painel_mes.py`.
+- Cópia local do painel em `painel/painel_qualidade_ARCAFLA.html`. O script de alteração é `scripts/patch_painel_mes.py`.
 
 ## Culturas microbiológicas 2026 (30/09/2026, painel versão 7)
 **OnFarm** (`dados/cultura_onfarm/OnFarm_grafico_2026-09-11.pdf` → `dados/cultura_onfarm_2026.json`; arquivo movido em 26/10)
@@ -136,7 +136,7 @@
    - antibiograma: `dados/antibiograma/LabVet_ATB_AAAA-MM-DD.xlsx`;
    - novo apelido de vaca: `dados/aliases_vacas.json`.
 2. Rodar `python3 scripts/monta_painel.py`. Ele lê tudo, gera o DATA (`scripts/gera_data_painel.py`) e aplica os patches sobre `painel/base_original.html`.
-3. Publicar `painel/painel_qualidade_ARKAFLA.html` no mesmo link.
+3. Publicar `painel/painel_qualidade_ARCAFLA.html` no mesmo link.
 - Conferido: o DATA gerado pelo script é idêntico ao publicado antes (9 controles, 13.798 registros, 773 tratamentos).
 - O OnFarm (PDF de gráfico) continua manual: transcrever para `dados/cultura_onfarm_2026.json`.
 
@@ -252,7 +252,7 @@
 ## PDF "Dinâmica da CCS no rebanho" (26/10/2026)
 - Pedido explícito do usuário. Gerado por `scripts/gera_pdf_dinamica.js` a partir do painel montado, com as abas "Painel do mês" e "Evolução", controle de 16/10/2026.
 - Saída: `relatorios/ARKAFLA_Dinamica_CCS_16-10-2026.pdf`, A4 retrato, 3 páginas.
-- Para outro controle: `PW=$(npm root -g)/playwright node scripts/gera_pdf_dinamica.js painel/painel_qualidade_ARKAFLA.html relatorios/ARKAFLA_Dinamica_CCS_dd-mm-aaaa.pdf <nº do controle>`.
+- Para outro controle: `PW=$(npm root -g)/playwright node scripts/gera_pdf_dinamica.js painel/painel_qualidade_ARCAFLA.html relatorios/ARKAFLA_Dinamica_CCS_dd-mm-aaaa.pdf <nº do controle>`.
 
 ## Folha "Dinâmica da CCS no rebanho" no layout do modelo da fazenda (26/10/2026)
 - O usuário trouxe o modelo impresso (APCBRH Relatório 2, controles de nov/25 a set/26, emitido em 24/09/2026) e pediu o mesmo layout com os dados atualizados.
@@ -324,3 +324,13 @@
   - PDF de dinâmica gerado do painel;
   - planilha: Leia-me e Impressão, no `gera_planilha.py`.
 - O logo escreve **ARCAFLA** (com C); os arquivos e textos do projeto usam ARKAFLA. Perguntei ao usuário qual grafia usar nos textos.
+
+## Nome oficial: ARCAFLA (27/10/2026)
+- O usuário confirmou: "a partir de agora somos ARCAFLA" (com C, como no logo).
+- Trocado ARKAFLA → ARCAFLA em todos os textos e nomes de saída:
+  - painel: título, cabeçalho, relatório e impressão, via `painel/base_original.html`. Arquivo renomeado para `painel/painel_qualidade_ARCAFLA.html`.
+  - folhas e PDFs: `relatorios/ARCAFLA_*`. Os PDFs com o nome antigo foram apagados e gerados de novo.
+  - planilha: `ARCAFLA_Qualidade_do_Leite_2026.xlsx` no `gera_planilha.py`.
+- Mantidos com o nome antigo, por serem caminhos internos: o repositório `arkafla` e esta nota (`claude/notas_analise_ARKAFLA.md`), que é o caminho que a skill espera.
+  - A skill do projeto ainda escreve ARKAFLA e cita a planilha com esse nome. Sugerir ao usuário atualizar a skill.
+- O relatório no Claude Docs ainda tem o título antigo. Oferecido atualizar.

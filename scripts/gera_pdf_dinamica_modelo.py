@@ -1,7 +1,7 @@
 """Folha "Qualidade do leite: dinâmica da CCS no rebanho" no layout do modelo da fazenda
 (cartões + colunas 100% empilhadas + tabela + critérios), A4 paisagem.
 
-Uso: python3 scripts/gera_pdf_dinamica_modelo.py  -> relatorios/ARKAFLA_Dinamica_CCS_modelo_dd-mm-aaaa.html
+Uso: python3 scripts/gera_pdf_dinamica_modelo.py  -> relatorios/ARCAFLA_Dinamica_CCS_modelo_dd-mm-aaaa.html
 Depois: node scripts/html_para_pdf.js <html> <pdf>
 """
 import base64
@@ -104,6 +104,6 @@ Ficam fora da base as recém-paridas e as vacas sem registro anterior (em {ultim
 O primeiro intervalo (02/02 → 17/02) tem 15 dias; os demais, 22 a 37 dias. Fonte: APCBRH – Relatório 2.2, {len(C)+1} controles de 02/02 a {ultimo}.</footer>
 </div></body></html>'''
 os.makedirs("relatorios", exist_ok=True)
-out = f"relatorios/ARKAFLA_Dinamica_CCS_modelo_{ultimo.replace('/','-')}.html"
+out = f"relatorios/ARCAFLA_Dinamica_CCS_modelo_{ultimo.replace('/','-')}.html"
 open(out, "w", encoding="utf-8").write(html)
 print(out)

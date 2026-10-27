@@ -1,6 +1,6 @@
 """Monta o painel completo a partir dos dados do repositório.
 
-Uso: python3 scripts/monta_painel.py  -> painel/painel_qualidade_ARKAFLA.html
+Uso: python3 scripts/monta_painel.py  -> painel/painel_qualidade_ARCAFLA.html
 Passos: lê os dados (APCBRH, mastite, culturas, antibiograma), gera o DATA e aplica,
 em ordem, os patches sobre painel/base_original.html. Depois é só publicar no mesmo link.
 """
@@ -40,5 +40,5 @@ for k, (p, arg) in enumerate(passos, 1):
     py(f"{S}/{p}", cur, nxt, *([arg] if arg else []))
     cur = nxt
 os.makedirs("painel", exist_ok=True)
-open("painel/painel_qualidade_ARKAFLA.html", "w", encoding="utf-8").write(open(cur, encoding="utf-8").read())
-print("painel/painel_qualidade_ARKAFLA.html pronto")
+open("painel/painel_qualidade_ARCAFLA.html", "w", encoding="utf-8").write(open(cur, encoding="utf-8").read())
+print("painel/painel_qualidade_ARCAFLA.html pronto")

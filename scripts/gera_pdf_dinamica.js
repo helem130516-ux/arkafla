@@ -35,6 +35,6 @@ const { chromium } = require(process.env.PW || 'playwright');
   await p.pdf({ path: out, format: 'A4', printBackground: true, scale: 0.55,
     margin: { top: '10mm', bottom: '12mm', left: '10mm', right: '10mm' },
     displayHeaderFooter: true, headerTemplate: '<span></span>',
-    footerTemplate: '<div style="font-size:8px;width:100%;text-align:center;color:#5e6b63">Fazenda ARKAFLA · Qualidade do Leite · página <span class="pageNumber"></span> de <span class="totalPages"></span></div>' });
+    footerTemplate: '<div style="font-size:8px;width:100%;text-align:center;color:#5e6b63">Fazenda ARCAFLA · Qualidade do Leite · página <span class="pageNumber"></span> de <span class="totalPages"></span></div>' });
   await b.close();
 })();

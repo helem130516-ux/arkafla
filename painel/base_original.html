@@ -1,5 +1,5 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
-<title>Painel Qualidade ARKAFLA</title>
+<title>Painel Qualidade ARCAFLA</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap">
 <style>
@@ -121,7 +121,7 @@ tr.click{cursor:pointer}
 <div class="wrap">
   <header class="top">
     <div>
-      <h1>Qualidade do Leite · ARKAFLA</h1>
+      <h1>Qualidade do Leite · ARCAFLA</h1>
       <p class="sub">Controle leiteiro APCBRH (Relatório 2.2) · CCS em mil células/mL · limite individual 200</p>
     </div>
     <div class="ctl">
@@ -548,7 +548,7 @@ function renderImpressao(){
   const cn=r=>{const s=cowSummary(r.vaca); return s.nel+' de '+s.n;};
   const st=LOTES.map(l=>[l,loteStats(cur,l)]).filter(([,s])=>s).sort((x,y)=>y[1].pw-x[1].pw);
   const cp=casesPeriod(cur);
-  let h=`<h2>Qualidade do Leite · ARKAFLA</h2><p class="meta">Controle de ${lab(c)}/${c.date.slice(0,4)} · REB ${c.reb} · ${fmt(a.n)} vacas avaliadas${a.intervalo?' · '+a.intervalo+' dias desde o controle de '+lab(ctrls[cur-2]):''} · CCS em mil células/mL · limite individual 200</p>`;
+  let h=`<h2>Qualidade do Leite · ARCAFLA</h2><p class="meta">Controle de ${lab(c)}/${c.date.slice(0,4)} · REB ${c.reb} · ${fmt(a.n)} vacas avaliadas${a.intervalo?' · '+a.intervalo+' dias desde o controle de '+lab(ctrls[cur-2]):''} · CCS em mil células/mL · limite individual 200</p>`;
   h+=`<h3>1. Indicadores do controle</h3><table><thead><tr><th class="l">Indicador</th><th>${lab(c)}</th><th>${p?lab(ctrls[cur-2]):'Anterior'}</th><th>Variação</th><th class="l">Nº exato / observação</th></tr></thead><tbody>`+rows.map(r=>`<tr><td class="l">${r[0]}</td><td><b>${r[1]}</b></td><td>${r[2]}</td>${r[3]}<td class="l">${r[4]}</td></tr>`).join('')+'</tbody></table>';
   h+=`<div class="cols"><div><h3>2. Faixas de CCS</h3><table><thead><tr><th>Faixa (mil/mL)</th><th>Vacas</th><th>%</th></tr></thead><tbody>`+['< 200','200–499','500–999','≥ 1.000'].map((f,i)=>`<tr><td>${f}</td><td>${fmt(a.f[i])}</td><td>${pct(a.f[i]/a.n)}</td></tr>`).join('')+`<tr><td><b>Total</b></td><td><b>${fmt(a.n)}</b></td><td>100%</td></tr></tbody></table></div>`;
   h+=`<div><h3>3. Classificação sanitária</h3><table><thead><tr><th class="l">Situação</th><th>Vacas</th><th>%</th></tr></thead><tbody>`+['S','R','N','C'].map(k=>`<tr><td class="l"><span style="display:inline-block;width:10px;height:10px;margin-right:6px;background:var(--cs-${k});border:1px solid #9aa39d;vertical-align:-1px"></span>${CL[k]}</td><td>${a.first?'–':fmt(a.cnt[k])}</td><td>${a.first?'–':pct(a.cnt[k]/a.n4)}</td></tr>`).join('')+`<tr><td class="l"><b>Base (CCS nos 2 controles)</b></td><td><b>${a.first?'–':fmt(a.n4)}</b></td><td>100%</td></tr><tr><td class="l small">Fora da base: recém-paridas baixa / elevada</td><td class="small">${a.cnt.PB} / ${a.cnt.PE}</td><td></td></tr><tr><td class="l small">Fora da base: sem registro anterior</td><td class="small">${a.cnt.H}</td><td></td></tr></tbody></table></div></div>`;

@@ -1,5 +1,5 @@
 """Folha "Eficiência de secagem" no layout do modelo da fazenda (A4 paisagem).
-Uso: python3 scripts/gera_pdf_secagem_modelo.py -> relatorios/ARKAFLA_Eficiencia_Secagem_dd-mm-aaaa.html
+Uso: python3 scripts/gera_pdf_secagem_modelo.py -> relatorios/ARCAFLA_Eficiencia_Secagem_dd-mm-aaaa.html
 Depois: node scripts/html_para_pdf.js <html> <pdf>
 """
 import base64
@@ -96,6 +96,6 @@ Fora da análise: {X.get("secagem antes dos controles disponíveis",0)} secagens
 Fontes: aba SECAGEM do registro da fazenda (MASTITE_2026.xlsx), exportação do rebanho com a última secagem e o último parto de cada vaca (secagens_2026-10-27.xlsx) e APCBRH – Relatório 2.2 (controles de 02/02 a {ult}).</footer>
 </div></body></html>'''
 os.makedirs("relatorios", exist_ok=True)
-out = f"relatorios/ARKAFLA_Eficiencia_Secagem_{ult.replace('/','-')}.html"
+out = f"relatorios/ARCAFLA_Eficiencia_Secagem_{ult.replace('/','-')}.html"
 open(out, "w", encoding="utf-8").write(html)
 print(out)

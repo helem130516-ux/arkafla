@@ -566,3 +566,21 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Lactação: 1.672 (+12). No tanque: 1.626. Lote 10: 46 (0 entradas, 2 saídas). Secas: 196 (−9).
   - Partos: 10. Nascidas até 7 dias: 28. DNB: 67 (+4). Vazias com IA > 35 d: 68 (+8). Gestantes: 982 (54,5%).
 - Leite comercializado de 25/10: pendente (próximo PDF).
+
+### 27/10/2026 – correção das pesagens de 25/10, relatório de 26/10 e coletas
+- **Correção pedida pela usuária:**
+  - "desconsiderar as pesagens de ontem, pq houve erro de leitura; usar as de hoje para ontem".
+  - A coluna Leite de `Zootecnico_2026-10-25.xlsx` foi trocada, vaca por vaca (pelo brinco), pela Leite de
+    `Zootecnico_2026-10-26.xlsx`. O original ficou em
+    `dados/zootecnico_original/Zootecnico_2026-10-25_pesagem_com_erro.xlsx`, e o registro em
+    `dados/correcoes_leite.json`.
+  - Efeito em 25/10: produção 20,4 → 45,7 kg; DairyPlan 32.674 → 73.529 kg.
+  - **Não rodar `baixa_bovisync.py --substituir` para 25/10**, senão o erro volta.
+- **Relatório de 26/10** (baixado às 9h21, antes da rotina; a rotina das 10h48 vai encontrar o arquivo e parar):
+  - Lactação: 1.666 (−6). No tanque: 1.603 (−23).
+  - Lote 10: 63 (+32 entradas, −15 saídas). As 32 entradas vieram de todos os lotes (10 do lote 5), com DEL de 7
+    a 409, a maioria prenhes; parece um tratamento em lote. Leite descartado: 1.533 kg (2,1%).
+  - Produção: 45,7 kg; ECM 46,7. Vacas < 20 kg: 44. Partos: 2. Saída de adultas: 6.
+  - DairyPlan: 72.719 kg.
+- **Coletas (PDF emitido em 27/10 às 9:20):** 25/10 = 70.175 L = 72.421 kg × DairyPlan 73.529 kg (corrigido),
+  diferença +1,5%. 26/10 fica para o próximo PDF.

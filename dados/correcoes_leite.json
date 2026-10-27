@@ -1,0 +1,7 @@
+{
+ "2026-10-25": {
+  "pesagens_de": "2026-10-26",
+  "motivo": "erro de leitura nas pesagens de 25/10 (ordenhas incompletas no BoviSync); pedido da usuária em 27/10: usar as pesagens de 26/10",
+  "original": "dados/zootecnico_original/Zootecnico_2026-10-25_pesagem_com_erro.xlsx"
+ }
+}

@@ -596,3 +596,11 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Leite comercializado de 26 e 27/10: pendente (próximo PDF).
 - Coletas (PDF emitido em 28/10 às 11:02): 26/10 = 70.702 L = 72.964 kg × DairyPlan 72.719 kg, diferença −0,3%.
   Média dos 10 dias: −0,3%. 27/10 fica para o próximo PDF.
+- Partos de 27/10, a pedido da usuária ("rodar novamente já com os partos lançados"):
+  - O BoviSync foi baixado às 11h36 de 28/10 numa cópia separada. No relatório oficial de 27/10 foram levados **só**
+    DtÚltParto e LACT dos animais com parto até 27/10: brincos 5945 (novilha, LACT 0 → 1), 3693 e 4723.
+  - Lotes e demais colunas ficaram iguais, para não trazer os movimentos de 28/10 para 27/10.
+  - Partos de 27/10: 0 → 3. Adultas: 1.862 → 1.863. Jovens: 1.912 → 1.911.
+  - O original ficou em `dados/zootecnico_original/Zootecnico_2026-10-27_antes_partos.xlsx` e o registro em
+    `dados/correcoes_leite.json`.
+  - Já há 4 partos lançados com data de 28/10 (novilhas 6063, 6185, 6209, 6234); entram no relatório de 28/10.

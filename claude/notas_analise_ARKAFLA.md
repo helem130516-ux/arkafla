@@ -594,3 +594,5 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Produção: 44,7 kg (−1,0); ECM 45,6. Vacas < 20 kg: 47. DairyPlan: 70.217 kg.
   - Partos: 0, ainda sem lançamento com data de 27/10. Corrige sozinho no próximo relatório se for lançado depois.
 - Leite comercializado de 26 e 27/10: pendente (próximo PDF).
+- Coletas (PDF emitido em 28/10 às 11:02): 26/10 = 70.702 L = 72.964 kg × DairyPlan 72.719 kg, diferença −0,3%.
+  Média dos 10 dias: −0,3%. 27/10 fica para o próximo PDF.

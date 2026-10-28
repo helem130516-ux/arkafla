@@ -584,3 +584,13 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - DairyPlan: 72.719 kg.
 - **Coletas (PDF emitido em 27/10 às 9:20):** 25/10 = 70.175 L = 72.421 kg × DairyPlan 73.529 kg (corrigido),
   diferença +1,5%. 26/10 fica para o próximo PDF.
+
+### 28/10/2026 – rotina automática (relatório de 27/10)
+- Pesagens normais (Leite/Leite7 com mediana de 1,10). Planilha sem erros; PDF com 2 páginas.
+- 27/10:
+  - Lactação: 1.644 (−22); secas: 218 (+22). Secagem de 22 vacas prenhes para o lote 7, já vista na comparação
+    da tarde de 27/10.
+  - Lote 10: 64 (+1 entrada / 0 saídas); leite descartado 1.503 kg (2,1%).
+  - Produção: 44,7 kg (−1,0); ECM 45,6. Vacas < 20 kg: 47. DairyPlan: 70.217 kg.
+  - Partos: 0, ainda sem lançamento com data de 27/10. Corrige sozinho no próximo relatório se for lançado depois.
+- Leite comercializado de 26 e 27/10: pendente (próximo PDF).

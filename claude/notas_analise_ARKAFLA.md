@@ -615,3 +615,5 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Novilhas gestantes: 527 → 547 (+20). 24 novilhas passaram de Bred para gestantes, com DDP de 27 a 33 dias, o que
   indica diagnóstico de gestação em 28/10.
 - Leite comercializado de 27 e 28/10: pendente (próximo PDF).
+- Coletas (PDF emitido em 29/10 às 15:13): 27/10 = 66.117 L = 68.233 kg × DairyPlan 70.217 kg, diferença +2,9%.
+  Média dos 10 dias: −0,6%. 28/10 fica para o próximo PDF.

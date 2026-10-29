@@ -1,7 +1,7 @@
 # Tarefa: Monitoramento diário do rebanho – Fazenda ARCAFLA (Castro – PR)
 
 Documento de passagem de contexto para outro Claude. Ele descreve a tarefa, as regras de cálculo, o modelo do PDF
-aprovado, a automação diária e as preferências da usuária. Atualizado em 22/10/2026.
+aprovado, a automação diária e as preferências da usuária. Atualizado em 29/10/2026. Para instalar em outro lugar, veja `instalacao/LEIA-ME_INSTALACAO.md`.
 
 ---
 
@@ -49,7 +49,7 @@ Usar sempre `/usr/bin/python3`, o Python 3.13 que tem pandas, openpyxl, reportla
 /usr/bin/python3 scripts/baixa_bovisync.py              # ou salvar o Excel enviado pela usuária
 /usr/bin/python3 scripts/le_leite_vendido.py [novo.pdf] # quando chegar PDF de coletas
 /usr/bin/python3 scripts/monitor_diario.py
-/usr/bin/python3 <skill xlsx>/scripts/recalc.py monitoramento/Monitoramento_Diario_ARCAFLA.xlsx 600  # precisa: success, 0 erros
+/usr/bin/python3 scripts/recalcula.py monitoramento/Monitoramento_Diario_ARCAFLA.xlsx 600     # precisa: success, 0 erros
 /usr/bin/python3 scripts/monitor_pdf.py                  # precisa: 2 páginas
 pdftoppm -r 130 -png monitoramento/Monitoramento_Diario_ARCAFLA_AAAA-MM-DD.pdf monitoramento/imagens/ARCAFLA_AAAA-MM-DD_pagina
 ```
@@ -84,6 +84,21 @@ os dias).
 - Até lá, a usuária manda os arquivos pelo clipe.
 
 ---
+
+**Cuidados com os dados (aprendidos em outubro/2026):**
+- **Pesagens:** conferir sempre a mediana de Leite ÷ Leite7 nas vacas do tanque (normal ≈ 1,0).
+  - Em 25/10 deu 0,42, porque as ordenhas entraram incompletas no BoviSync.
+  - A pedido da usuária, a coluna Leite de 25/10 foi trocada, vaca a vaca, pela de 26/10. O original ficou em
+    `dados/zootecnico_original/` e o registro em `dados/correcoes_leite.json`.
+  - **Não rodar `--substituir` em 25/10.**
+- **"Rodar de novo com os partos lançados":** baixar numa cópia separada e levar ao relatório oficial **só**
+  DtÚltParto e LACT dos animais com parto até o dia do relatório (feito em 27/10: brincos 5945, 3693 e 4723).
+- **Saltos grandes:** conferir no arquivo bruto antes de enviar. Exemplos já vistos:
+  - lote de IATF cruzando os 35 dias (vazias com IA > 35 d);
+  - diagnóstico de prenhez (24 novilhas em 28/10);
+  - tratamento em lote (32 entradas no lote 10 em 26/10);
+  - secagem (22 vacas para o lote 7 em 27/10).
+- **Portal Castrolanda:** recusa conexão da nuvem; PDF das coletas e análises continuam vindo pela usuária.
 
 ## 4. Regras dos indicadores (planilha e PDF)
 
@@ -157,10 +172,16 @@ os dias).
     5. Mandar ao celular a imagem da página 1, o PDF e a planilha.
     6. Registrar nas notas, fazer commit e push.
     7. Escrever um resumo de 4 a 6 linhas.
-- **Atualização da tarde**: `trig_01NS4miGnNSiY4d6HbGKRdUq`, todo dia às **15h53**, também na conversa principal
+- **Atualização da tarde**: `trig_01NS4miGnNSiY4d6HbGKRdUq`, todo dia às **15h53**, na conversa principal
   (pedido da usuária em 23/10).
-  - Baixa o BoviSync de novo com `--substituir`, para pegar os partos lançados depois das 11h, e gera tudo de novo.
-  - Só envia e salva se algum número mudou. Se nada mudou, responde "sem mudanças".
+  - Desde 25/10 roda em **modo aviso**: baixa o BoviSync numa cópia separada, compara e só avisa. **Não troca o
+    relatório oficial.**
+  - Motivo: o BoviSync é uma foto do momento. O download da tarde do dia D (gravado como D−1) já traz os
+    movimentos de D, como secagens e entradas no lote 10, e os jogaria no dia errado.
+  - Os partos não precisam disso: são contados pela DtÚltParto do relatório mais recente e entram sozinhos no
+    dia certo no relatório seguinte.
+  - A usuária ainda não respondeu se quer "desliga", "só aviso" ou "sim, só partos" (atualizar só
+    DtÚltParto e LACT).
 - **Routine antiga**: `trig_016TMVvrfCBFKNtTAUKUc2Jd`, **desativada** em 22/10 (não apagada).
   - Ela abria uma sessão nova a cada dia, e essa sessão nascia sem permissão de gravação no GitHub.
   - Em 22/10 o push falhou com 403. Para gravar, ela precisava que a usuária aprovasse o "Add Repo" no app, o que
@@ -231,12 +252,10 @@ os dias).
 
 ---
 
-## 8. Últimos números (relatório de 21/10/2026)
+## 8. Últimos números (relatório de 28/10/2026)
 
-- Lactação: 1.650 vacas (+4).
-- Lote 10: 41 animais (16 entradas, 7 saídas).
-- Produção 24 h: 43,8 kg/vaca; ECM 44,7.
-- Vacas < 20 kg: 57 (−20). Partos: 7. DNB: 65 (+6).
-- Vazias com IA > 35 d: 38 (eram 97). Caiu porque 55 vacas foram reinseminadas (IATF) com data de 22/10.
-- DairyPlan: 69.121 kg. Leite comercializado de 21/10: pendente (chega no próximo PDF da cooperativa).
-- 20/10: comercializado 62.438 L = 64.436 kg × DairyPlan 68.881 kg, ou seja, +6,9%.
+- Lactação: 1.648 vacas. Lote 10: 66 animais (12 entradas, 10 saídas).
+- Produção 24 h: 44,6 kg/vaca; ECM 45,6. Vacas < 20 kg: 48. DairyPlan: 70.000 kg.
+- Partos de 28/10: 4 no relatório (mais 2 lançados à tarde, que entram no relatório seguinte).
+- Novilhas gestantes: 547 (+20). Vazias com IA > 35 d: 66.
+- Leite comercializado até 27/10 (68.233 kg, +2,9%); média de 10 dias −0,6%.

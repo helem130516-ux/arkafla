@@ -1,0 +1,6 @@
+pandas
+openpyxl
+reportlab
+pypdf
+pillow
+playwright

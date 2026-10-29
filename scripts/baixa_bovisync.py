@@ -44,7 +44,10 @@ JS = "u => fetch(u, {credentials: 'include'}).then(r => r.text())"
 def baixa():
     req = {}
     with sync_playwright() as p:
-        b = p.chromium.launch(executable_path=CHROMIUM, args=["--no-sandbox"])
+        # Chromium pré-instalado no ambiente de nuvem; em outro computador usa o do Playwright
+        # (instalar uma vez com: python3 -m playwright install chromium)
+        exe = {"executable_path": CHROMIUM} if os.path.exists(CHROMIUM) else {}
+        b = p.chromium.launch(args=["--no-sandbox"], **exe)
         ctx = b.new_context(viewport={"width": 1600, "height": 1000}, locale="pt-BR")
         pg = ctx.new_page()
         pg.on("request", lambda r: req.setdefault("item", r.url) if "/api/report/data/item" in r.url else None)

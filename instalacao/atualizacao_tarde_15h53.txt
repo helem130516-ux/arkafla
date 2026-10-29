@@ -1,0 +1,12 @@
+Atualização da tarde do monitoramento ARCAFLA (modo aviso). Escreva em português do Brasil.
+
+Objetivo: ver se foram lançados no BoviSync, depois das 11h, partos ou outros dados do dia do relatório, SEM trocar o relatório oficial (o BoviSync é uma foto do momento; o download da tarde já traz movimentos do dia seguinte e jogaria esses movimentos no dia errado).
+
+1. git pull do branch de trabalho.
+2. Clone o repositório numa pasta temporária e, lá, rode python3 scripts/baixa_bovisync.py --substituir (só na cópia temporária).
+3. Compare a cópia com o relatório oficial do último dia (dados/zootecnico/Zootecnico_AAAA-MM-DD.xlsx):
+   - partos por DtÚltParto nos últimos 3 dias e no dia de hoje;
+   - lactação, lote 10, DNB e produção (leite médio e soma dos lotes 1–6).
+4. Se nada relevante mudou: responda só "Atualização da tarde: sem mudanças desde as 11h" (não envie arquivos, não salve nada).
+5. Se apareceram partos com data até o dia do relatório: avise quantos e quais brincos; diga que entram sozinhos no relatório de amanhã. Só atualize o relatório oficial se a usuária pedir (nesse caso leve SÓ DtÚltParto e LACT desses animais, guarde o original em dados/zootecnico_original/ e registre em dados/correcoes_leite.json).
+6. Movimentos de hoje (secagens, entradas no lote 10): apenas avise que entram no relatório de amanhã.

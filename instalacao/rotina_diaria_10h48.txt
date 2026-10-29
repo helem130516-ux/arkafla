@@ -1,0 +1,11 @@
+Rotina diária do monitoramento ARCAFLA (pedido da usuária: atualizar todo dia por volta das 11h e mandar no telefone). Escreva tudo em português do Brasil. Siga o PADRÃO DO PDF (não altere monitor_pdf.py nem o layout). Leia claude/TAREFA_MONITORAMENTO_ARCAFLA.md se precisar de contexto.
+
+1. Na pasta do repositório: git pull do branch de trabalho.
+2. BOV_USER e BOV_PASS precisam existir no ambiente; se faltarem, avise em uma linha e pare (nunca peça senha no chat). Se o playwright faltar: python3 -m pip install -q playwright.
+3. python3 scripts/baixa_bovisync.py — se disser que o arquivo do dia já existe, avise que não há novidade e pare.
+4. python3 scripts/le_leite_vendido.py ; python3 scripts/monitor_diario.py ; python3 scripts/recalcula.py monitoramento/Monitoramento_Diario_ARCAFLA.xlsx 600 (precisa status success e 0 erros) ; python3 scripts/monitor_pdf.py (precisa 2 páginas) ; pdftoppm -r 130 -png monitoramento/Monitoramento_Diario_ARCAFLA_AAAA-MM-DD.pdf monitoramento/imagens/ARCAFLA_AAAA-MM-DD_pagina
+5. Conferir as pesagens: mediana de Leite ÷ Leite7 nas vacas dos lotes 1–6 (normal ≈ 1,0). Se ficar muito abaixo (ex.: 0,4), a produção do dia está incompleta no BoviSync: envie com aviso claro na legenda e explique.
+6. Conferir números estranhos no último dia (lactação, produção, lote 10, partos, vazias com IA > 35 d, novilhas gestantes, DNB) e explicar a causa provável olhando o arquivo bruto (comparar com o dia anterior por brinco).
+7. Enviar à usuária (notificação no celular) a imagem da página 1, o PDF do dia e a planilha.
+8. Registrar o dia nas notas (claude/notas_analise_ARKAFLA.md), commit em português e git push (repetir até 4 vezes se falhar por rede).
+9. Resumo de 4 a 6 linhas: data do relatório, lactação, produção 24 h e ECM, partos, lote 10 (entradas/saídas), vacas < 20 kg, alertas e se ficou salvo no repositório.

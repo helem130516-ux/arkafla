@@ -35,11 +35,22 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Image, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
 
 XLSX = next((a for a in sys.argv[1:] if a.endswith(".xlsx")), None) or "monitoramento/Monitoramento_Diario_ARCAFLA.xlsx"
-LIB = "/usr/share/fonts/truetype/liberation"
-pdfmetrics.registerFont(TTFont("Lib", f"{LIB}/LiberationSans-Regular.ttf"))
-pdfmetrics.registerFont(TTFont("LibB", f"{LIB}/LiberationSans-Bold.ttf"))
-pdfmetrics.registerFont(TTFont("LibI", f"{LIB}/LiberationSans-Italic.ttf"))
-pdfmetrics.registerFont(TTFont("Sym", "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"))
+# fontes: pasta fontes/ do projeto (vai junto no pacote) ou as do sistema (Linux)
+PASTAS_FONTE = [os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "fontes"),
+                "/usr/share/fonts/truetype/liberation", "/usr/share/fonts/truetype/dejavu"]
+
+
+def fonte(nome):
+    for p in PASTAS_FONTE:
+        if os.path.exists(os.path.join(p, nome)):
+            return os.path.join(p, nome)
+    raise SystemExit(f"Fonte {nome} não encontrada (coloque-a na pasta fontes/)")
+
+
+pdfmetrics.registerFont(TTFont("Lib", fonte("LiberationSans-Regular.ttf")))
+pdfmetrics.registerFont(TTFont("LibB", fonte("LiberationSans-Bold.ttf")))
+pdfmetrics.registerFont(TTFont("LibI", fonte("LiberationSans-Italic.ttf")))
+pdfmetrics.registerFont(TTFont("Sym", fonte("DejaVuSans-Bold.ttf")))
 
 TINTA = colors.HexColor("#1F2328")
 TINTA2 = colors.HexColor("#5E6B63")

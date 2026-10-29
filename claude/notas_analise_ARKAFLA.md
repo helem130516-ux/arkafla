@@ -604,3 +604,14 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - O original ficou em `dados/zootecnico_original/Zootecnico_2026-10-27_antes_partos.xlsx` e o registro em
     `dados/correcoes_leite.json`.
   - Já há 4 partos lançados com data de 28/10 (novilhas 6063, 6185, 6209, 6234); entram no relatório de 28/10.
+
+### 29/10/2026 – rotina automática (relatório de 28/10)
+- Pesagens normais (mediana Leite/Leite7 de 1,10). Planilha sem erros; PDF com 2 páginas.
+- 28/10:
+  - Lactação: 1.648 (+3). Lote 10: 66 (12 entradas / 10 saídas); leite descartado 1.684 kg (2,3%).
+  - Produção: 44,6 kg; ECM 45,6. Vacas < 20 kg: 48. DairyPlan: 70.000 kg.
+  - Partos: 4 (novilhas 6063, 6185, 6209, 6234).
+  - Vazias com IA > 35 d: 66 (−6). DEL > 70 sem IA: 7 (−3).
+- Novilhas gestantes: 527 → 547 (+20). 24 novilhas passaram de Bred para gestantes, com DDP de 27 a 33 dias, o que
+  indica diagnóstico de gestação em 28/10.
+- Leite comercializado de 27 e 28/10: pendente (próximo PDF).

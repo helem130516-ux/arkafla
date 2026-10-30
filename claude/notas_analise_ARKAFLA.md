@@ -617,3 +617,12 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Leite comercializado de 27 e 28/10: pendente (próximo PDF).
 - Coletas (PDF emitido em 29/10 às 15:13): 27/10 = 66.117 L = 68.233 kg × DairyPlan 70.217 kg, diferença +2,9%.
   Média dos 10 dias: −0,6%. 28/10 fica para o próximo PDF.
+
+### 30/10/2026 – rotina automática (relatório de 29/10)
+- Pesagens normais (mediana Leite/Leite7 de 1,10). Planilha sem erros; PDF com 2 páginas.
+- 29/10:
+  - Lactação: 1.652 (+4). Lote 10: 65 (0 entradas / 1 saída); leite descartado 1.679 kg (2,3%).
+  - Produção: 44,7 kg; ECM 45,7. Vacas < 20 kg: 46. DairyPlan: 70.317 kg. Partos: 2.
+- Os partos de 28/10 foram de 4 para 6 sozinhos (os 2 lançados à tarde), sem precisar trocar o relatório. Isso
+  confirma que a contagem pela DtÚltParto do relatório mais recente corrige os atrasos.
+- Leite comercializado de 28/10: 70.987 kg (−1,4%). 29/10 pendente.

@@ -626,3 +626,15 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Os partos de 28/10 foram de 4 para 6 sozinhos (os 2 lançados à tarde), sem precisar trocar o relatório. Isso
   confirma que a contagem pela DtÚltParto do relatório mais recente corrige os atrasos.
 - Leite comercializado de 28/10: 70.987 kg (−1,4%). 29/10 pendente.
+
+### 31/10/2026 – rotina automática (relatório de 30/10)
+- Pesagens normais (mediana Leite/Leite7 de 1,09). Planilha sem erros; PDF com 2 páginas.
+- 30/10:
+  - Lactação: 1.657 (+5). No tanque: 1.607 (+20).
+  - Lote 10: 50 (9 entradas / 24 saídas). As 24 saídas voltaram todas para o lote 6, provavelmente o fim do
+    tratamento em lote de 26/10. Leite descartado: 1.373 kg (1,9%).
+  - Produção: 44,9 kg; ECM 45,9. Vacas < 20 kg: 56 (+10). DairyPlan: 70.380 kg. Partos: 2.
+- Vazias com IA > 35 d: 67 → 93 (+26).
+  - 25 são vazias com a última IA há exatamente 36 dias (lote de IATF de 24/09 cruzando os 35 dias).
+  - 1 passou de Prenha para Vazia com IA há 71 dias: possível perda gestacional, vale conferir.
+- Leite comercializado de 29 e 30/10: pendente.

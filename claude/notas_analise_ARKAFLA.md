@@ -638,3 +638,19 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - 25 são vazias com a última IA há exatamente 36 dias (lote de IATF de 24/09 cruzando os 35 dias).
   - 1 passou de Prenha para Vazia com IA há 71 dias: possível perda gestacional, vale conferir.
 - Leite comercializado de 29 e 30/10: pendente.
+
+### 01/11/2026 – rotina automática (relatório de 31/10, sábado)
+- Planilha sem erros; PDF com 2 páginas. Mediana Leite/Leite7 de 1,11 no geral.
+- **Lote 1 provavelmente com erro de registro de leite:**
+  - As mesmas 221 vacas foram de 45,1 para 56,5 kg em um dia.
+  - Leite/Leite7 mediana de 1,43 (nos outros lotes, 1,08–1,12). Razão 31/10 ÷ 30/10 por vaca: mediana 1,32.
+  - Deve ser uma ordenha a mais ou duplicada no lote 1. Isso puxa a produção geral (46,1 kg) e o DairyPlan
+    (73.310 kg, +2.931).
+  - Enviado com aviso; dados não alterados. Esperando a usuária dizer se corrige, como foi feito em 25/10.
+- **Saída de 19 adultas:**
+  - 10 do lote 1, 3 do 6, 3 do 7, 2 do 10, 1 do 14.
+  - Status: 4 Frescas, 5 DNB, 3 Bred, 3 secas, 2 prenhes, 2 vazias.
+  - DNB caiu de 65 para 58. Adultas: 1.851.
+- **Outros números de 31/10:**
+  - Lactação: 1.642 (−15). Lote 10: 44 (3 entradas / 9 saídas). Partos: 2. Vacas < 20 kg: 49.
+- Leite comercializado de 29 a 31/10: pendente.

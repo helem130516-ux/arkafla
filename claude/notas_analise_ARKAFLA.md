@@ -679,3 +679,18 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Teste com o relatório de 01/11:
   - 346 animais com DtIMPL (308 adultas e 38 novilhas).
   - Em 91 o implante é mais recente que a IA; 32 não têm IA.
+
+### 02/11/2026 – relatório de 01/11 (domingo)
+- A rotina das 10h48 não disparou (a conversa estava ocupada com o ajuste da DtIMPL); rodado à mão às 11h02.
+  Primeiro relatório baixado do BoviSync novo, com DtIMPL. Planilha sem erros; PDF com 2 páginas.
+- **Leite dos lotes 1 a 4 com provável erro de registro:**
+  - Leite/Leite7 com mediana de 1,32 a 1,36 (lotes 5 e 6: 1,07–1,09).
+  - Produção 55,2 kg (normal ~45); DairyPlan 87.636 kg.
+  - Mesmo padrão do lote 1 em 31/10, agora em 4 lotes. Provável ordenha duplicada ou erro de importação no DairyPlan.
+  - Enviado com aviso; dados não alterados. Aguardando a usuária decidir a correção (31/10 e 01/11).
+- **Diagnóstico de gestação em 01/11:**
+  - 48 vacas passaram de Bred para Prenha (DDP mediano de 32).
+  - As 24 inseminadas com IA > 35 d foram todas examinadas: 12 prenhes e 12 vazias. Inseminadas com IA > 35 d: 24 → 0.
+  - Gestantes: 968 → 1.002 (55,8%).
+- Vazias com IA > 35 d: 106 (+11), já contando a DtIMPL.
+- Lactação: 1.652. Lote 10: 44. Partos: 7. DNB: 60. Novilhas > 15 meses não gestantes: 80.

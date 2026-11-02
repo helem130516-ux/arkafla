@@ -694,3 +694,7 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Gestantes: 968 → 1.002 (55,8%).
 - Vazias com IA > 35 d: 106 (+11), já contando a DtIMPL.
 - Lactação: 1.652. Lote 10: 44. Partos: 7. DNB: 60. Novilhas > 15 meses não gestantes: 80.
+- Usuária, 02/11: **"corrigir"** o leite de 31/10 (lote 1) e 01/11 (lotes 1 a 4) com as pesagens do primeiro dia
+  normal seguinte.
+  - Ainda não há esse dia; o relatório de 02/11 sai em 03/11.
+  - A pendência ficou em `dados/correcoes_pendentes.json`, e a rotina diária confere e aplica.

@@ -1,0 +1,10 @@
+[
+ {
+  "pedido": "usuária em 02/11/2026: corrigir o leite com erro de registro usando as pesagens do primeiro dia normal seguinte (como em 25/10)",
+  "corrigir": [
+   {"relatorio": "2026-10-31", "lotes": [1], "motivo": "Leite/Leite7 com mediana de 1,43 no lote 1 (ordenha duplicada?)"},
+   {"relatorio": "2026-11-01", "lotes": [1, 2, 3, 4], "motivo": "Leite/Leite7 com mediana de 1,32 a 1,36 nos lotes 1 a 4"}
+  ],
+  "como": "Achar o primeiro relatório depois de 01/11 com pesagens normais (mediana de Leite/Leite7 entre 0,9 e 1,2 em cada lote de 1 a 6). Guardar cada original em dados/zootecnico_original/Zootecnico_AAAA-MM-DD_pesagem_com_erro.xlsx. Nas vacas desses lotes (lote do relatório com erro), trocar a coluna Leite pelo Leite do dia normal, pelo brinco; vaca sem par fica sem pesagem. Registrar em dados/correcoes_leite.json, apagar este arquivo, gerar tudo de novo e avisar a usuária."
+ }
+]

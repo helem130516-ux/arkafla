@@ -698,3 +698,11 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   normal seguinte.
   - Ainda não há esse dia; o relatório de 02/11 sai em 03/11.
   - A pendência ficou em `dados/correcoes_pendentes.json`, e a rotina diária confere e aplica.
+- Usuária, 02/11: **"ajuste pelo último dia com pesagem normal"**. Aplicado na hora, e a pendência foi apagada:
+  - 31/10, lote 1: Leite de 30/10. Média 56,5 → 45,1 kg.
+  - 01/11, lote 1: Leite de 30/10. Média 55,3 → 45,0 kg.
+  - 01/11, lotes 2 a 4: Leite de 31/10, normal nesses lotes. Média 66,3 → 51,8 kg.
+  - Vacas sem pesagem no dia de origem (15–20 no lote 1, quase todas recém-paridas) ficaram sem pesagem.
+  - Originais em `dados/zootecnico_original/*_pesagem_com_erro.xlsx`; registro em `dados/correcoes_leite.json`.
+  - Resultado: produção 31/10 = 44,6 kg (DairyPlan 70.574); 01/11 = 46,2 kg (DairyPlan 72.660).
+  - **Não rodar `--substituir` em 31/10 nem em 01/11.**

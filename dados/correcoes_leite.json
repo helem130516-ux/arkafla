@@ -14,5 +14,18 @@
   "campos": "DtÚltParto e LACT (só partos com data até 27/10; lotes e demais colunas mantidos)",
   "original": "dados/zootecnico_original/Zootecnico_2026-10-27_antes_partos.xlsx",
   "pedido": "usuária em 28/10: rodar de novo com os partos lançados"
+ },
+ "2026-10-31": {
+  "pesagens_lote_1_de": "2026-10-30",
+  "motivo": "erro de registro do leite no lote 1 (Leite/Leite7 1,43)",
+  "pedido": "usuária em 02/11: corrigir pelo último dia com pesagem normal",
+  "original": "dados/zootecnico_original/Zootecnico_2026-10-31_pesagem_com_erro.xlsx"
+ },
+ "2026-11-01": {
+  "pesagens_lote_1_de": "2026-10-30",
+  "pesagens_lotes_2_3_4_de": "2026-10-31",
+  "motivo": "erro de registro do leite nos lotes 1 a 4 (Leite/Leite7 1,32–1,36)",
+  "pedido": "usuária em 02/11: corrigir pelo último dia com pesagem normal",
+  "original": "dados/zootecnico_original/Zootecnico_2026-11-01_pesagem_com_erro.xlsx"
  }
 }

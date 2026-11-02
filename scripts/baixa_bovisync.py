@@ -34,7 +34,7 @@ COLUNAS = {
     "Milk_GenPTA": "PTAGen_Leite", "Fat_GenPTA": "Gord_PTAGen", "Pro_GenPTA": "Pro_GenPTA",
     "Fat%": "%Gord", "Prot%": "Prot%", "=acc_milk(1,100)": "ProdLeite 100DEL",
     "=acc_milk(1,200)": "ProdLeite 200DEL", "SummitMilk": "PicoLeite", "AGDAY": "IdadeDias",
-    "TBRD": "NumIAs", "BREDDate": "DATA da IA", "FDAT": "DtÚltParto",
+    "TBRD": "NumIAs", "BREDDate": "DATA da IA", "FDAT": "DtÚltParto", "IMPLDate": "DtIMPL",
 }
 # status em inglês (API) -> como sai no Excel em português
 STATUS = {"Preg": "Prenha", "Fresh": "Fresca", "Open": "Vazia"}

@@ -69,7 +69,8 @@ def baixa():
         t0 = time.time()
         while True:
             st = {i["item"]: i["status"] for i in json.loads(pg.evaluate(JS, item_url))["items"]}
-            pend = [_dec(i) for i in itens if st.get(_dec(i)) != "READY"]
+            # ApiId é um identificador interno que não usamos; em alguns relatórios ele nunca fica READY
+            pend = [_dec(i) for i in itens if st.get(_dec(i)) != "READY" and _dec(i) != "ApiId"]
             if not pend:
                 break
             if time.time() - t0 > 600:
@@ -77,6 +78,8 @@ def baixa():
             time.sleep(5)
         dados = {}
         for it in itens:
+            if _dec(it) == "ApiId":
+                continue
             txt = pg.evaluate(JS, f"https://bovisync.farm/api/report/data/fetch?instance={inst}&item={it}")
             dados[_dec(it)] = pd.DataFrame(json.loads(txt)).set_index("id")
         b.close()

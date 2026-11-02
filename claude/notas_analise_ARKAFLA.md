@@ -654,3 +654,10 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - **Outros números de 31/10:**
   - Lactação: 1.642 (−15). Lote 10: 44 (3 entradas / 9 saídas). Partos: 2. Vacas < 20 kg: 49.
 - Leite comercializado de 29 a 31/10: pendente.
+
+### 02/11/2026 – mudança de indicadores (pedido da usuária)
+- Removida a linha "DEL médio (lotes 1 a 6)". Fica só "DEL médio da lactação".
+- Nova linha no bloco Recria: **"% de fêmeas nas nascidas (últimos 7 dias)"**.
+  - Cálculo: fêmeas com idade ≤ 7 dias ÷ todos os nascidos com idade ≤ 7 dias, machos incluídos (LACT 0). Melhor ↑.
+  - É o único indicador em que os machos entram (no denominador).
+  - Valores: de 72% (22/10) a 85% (28/10); 31/10 = 69,2% (18 fêmeas e 8 machos).

@@ -427,7 +427,6 @@ GRUPOS = [
         ("   Lote 10 – saídas", "cab", comparado(sai10), N0, ""),
         ("   Lote 10 – saldo (entradas − saídas)", "cab", comparado(menos(ent10, sai10)), N0, "↓"),
         ("DEL médio da lactação", "dias", media("DEL", LAC), N0, ""),
-        ("DEL médio (lotes 1 a 6)", "dias", media("DEL", *TANQUE), N0, ""),
         (SUB, "Produção por vaca"),
         ("Produção média nas últimas 24 h (DP)", "kg/vaca", PROD24, N1, "↑"),
         ("Média de leite ECM (gordura e proteína do tanque)", "kg/vaca", ecm, N1, "↑"),
@@ -474,6 +473,10 @@ GRUPOS = [
         ("Animais jovens totais", "cab", cont(JOVEM), N0, ""),
         ("Animais com < 3 meses", "cab", cont(JOVEM, ("IdadeDias", "<\"&P_IDADE_3M&\"")), N0, ""),
         ("Nascidas há até 7 dias", "cab", cont(JOVEM, ("IdadeDias", "<=7")), N0, ""),
+        # % de fêmeas entre todos os nascidos (fêmeas + machos) nos últimos 7 dias; único indicador que olha machos
+        ("% de fêmeas nas nascidas (últimos 7 dias)", "%",
+         razao(cont(JOVEM, ("IdadeDias", "<=7")),
+               lambda d: f'COUNTIFS({R("Data")},{d},{R("LACT")},0,{R("IdadeDias")},"<=7")'), P, "↑"),
         ("Novilhas gestantes (DDP ≥ 1, sem DNB)", "cab", cont(JOVEM, REPRO, ("DDP", ">=1")), N0, "↑"),
         ("Novilhas > 15 meses não gestantes", "cab",
          menos(cont(JOVEM, REPRO, ("IdadeDias", ">\"&P_IDADE_15M&\"")),
@@ -632,7 +635,8 @@ notas = [
     ("Atualização", "python3 scripts/monitor_diario.py <novo_relatorio.xlsx> — guarda o relatório "
                     "como Zootecnico_AAAA-MM-DD.xlsx e refaz esta planilha. Um relatório novo da "
                     "mesma data substitui o anterior."),
-    ("Machos", "Fora de todos os números (StatRepro = Male). Tudo é calculado só sobre fêmeas."),
+    ("Machos", "Fora de todos os números (StatRepro = Male), exceto no denominador da % de fêmeas nas "
+               "nascidas (fêmeas ÷ todos os nascidos, machos incluídos, com idade de até 7 dias)."),
     ("Adultos / jovens", "Adultas: LACT > 0. Jovens: LACT = 0."),
     ("Lotes 20 e 30", "Desde 19/10/2026, o lote 20 é contado como lote 2 e o lote 30 como lote 3 (troca feita na "
                       "carga dos dados; a aba Dados já mostra 2 e 3)."),

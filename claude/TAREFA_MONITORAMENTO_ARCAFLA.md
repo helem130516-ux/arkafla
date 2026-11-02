@@ -107,7 +107,7 @@ os dias).
   - A variação é **arredondada às casas exibidas**: o que aparece como "= 0" fica sem cor.
   - A coluna "Melhor" indica o sentido bom: ↑ bom quando sobe, ↓ bom quando desce, 0 bom perto de zero, vazio sem
     sentido definido. Ela decide a cor verde ou vermelha da variação.
-- **Machos fora de tudo** (StatRepro = Male).
+- **Machos fora de tudo** (StatRepro = Male), exceto no denominador da % de fêmeas nas nascidas.
 - **Lote 20 conta como lote 2, e lote 30 como lote 3.**
 - **Em lactação** = lotes 1–6 e 10. O lote 10 é tratamento, com leite descartado.
   **Tanque** = lotes 1–6.
@@ -120,7 +120,7 @@ os dias).
   - partos: contados pela DtÚltParto do relatório **mais recente**, porque o parto pode ser lançado com atraso;
   - saída de adultas;
   - lote 10: entradas, saídas e saldo;
-  - DEL médio.
+  - DEL médio da lactação (a linha "DEL médio dos lotes 1 a 6" foi retirada em 02/11).
 - **Produção**:
   - produção média nas últimas 24 h com DP entre parênteses;
   - ECM;
@@ -153,7 +153,8 @@ os dias).
 
 ### Jovens (LACT = 0)
 
-- Total; animais com < 3 meses; nascidas há até 7 dias.
+- Total; animais com < 3 meses; nascidas há até 7 dias; **% de fêmeas nas nascidas (últimos 7 dias)** = fêmeas ÷
+  todos os nascidos, machos incluídos (criada em 02/11).
 - Novilhas gestantes; novilhas > 15 meses não gestantes.
 - Novilhas Bred e Vazias com IA há mais de 35 dias.
 

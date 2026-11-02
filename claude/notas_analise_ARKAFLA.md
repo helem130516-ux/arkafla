@@ -661,3 +661,8 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Cálculo: fêmeas com idade ≤ 7 dias ÷ todos os nascidos com idade ≤ 7 dias, machos incluídos (LACT 0). Melhor ↑.
   - É o único indicador em que os machos entram (no denominador).
   - Valores: de 72% (22/10) a 85% (28/10); 31/10 = 69,2% (18 fêmeas e 8 machos).
+- **Correção da usuária, no mesmo dia:** a conta é **fêmeas nascidas ÷ partos**. Os machos não entram, porque nem
+  todos são cadastrados.
+  - Linha renomeada para "% de fêmeas nascidas ÷ partos (últimos 7 dias)".
+  - Denominador: vacas e novilhas com DtÚltParto nos últimos 7 dias, no relatório do próprio dia.
+  - Valores: de 65,6% (22/10) a 78,1% (26/10); 31/10 = 66,7% (18 fêmeas em 27 partos).

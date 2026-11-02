@@ -666,3 +666,16 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Linha renomeada para "% de fêmeas nascidas ÷ partos (últimos 7 dias)".
   - Denominador: vacas e novilhas com DtÚltParto nos últimos 7 dias, no relatório do próprio dia.
   - Valores: de 65,6% (22/10) a 78,1% (26/10); 31/10 = 66,7% (18 fêmeas em 27 partos).
+
+### 02/11/2026 – data do implante de embrião (DtIMPL)
+- Pedido da usuária: incluir a data do implante de embrião e usá-la como data da última inseminação nas vacas que a
+  tiverem.
+- A usuária criou no BoviSync uma versão do relatório com a coluna (item `IMPLDate`, cabeçalho DtIMPL):
+  `https://bovisync.farm/report/insights/?report_uuid=6ca8ee06680b46ad90a1f3873a1cafa5`. O download passa a usar
+  esse relatório; o antigo era `report/CTBOCW`.
+  - Nesse relatório o item interno ApiId nunca fica pronto; o script agora o ignora.
+- Planilha: "Dias desde IA" = data − MAX(DATA da IA, DtIMPL), ou seja, vale a mais recente. Isso altera Inseminadas
+  e Vazias com IA > 35 dias (vacas e novilhas). Os relatórios antigos não têm DtIMPL.
+- Teste com o relatório de 01/11:
+  - 346 animais com DtIMPL (308 adultas e 38 novilhas).
+  - Em 91 o implante é mais recente que a IA; 32 não têm IA.

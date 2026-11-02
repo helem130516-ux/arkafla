@@ -24,7 +24,10 @@ from urllib.parse import unquote
 import pandas as pd
 from playwright.sync_api import sync_playwright
 
-URL = next((a for a in sys.argv[1:] if a.startswith("http")), None) or "https://bovisync.farm/report/CTBOCW"
+# relatório "Zootécnico Jorge atualizado" com a coluna DtIMPL (data do implante de embrião), desde 02/11/2026;
+# o antigo, sem DtIMPL, era https://bovisync.farm/report/CTBOCW
+URL = (next((a for a in sys.argv[1:] if a.startswith("http")), None)
+       or "https://bovisync.farm/report/insights/?report_uuid=6ca8ee06680b46ad90a1f3873a1cafa5")
 PASTA = "dados/zootecnico"
 CHROMIUM = "/opt/pw-browsers/chromium"
 # item da API -> coluna do Excel exportado

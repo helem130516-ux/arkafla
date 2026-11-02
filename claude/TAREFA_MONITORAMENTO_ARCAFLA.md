@@ -32,7 +32,7 @@ aprovado, a automação diária e as preferências da usuária. Atualizado em 29
 
 | Arquivo | Função |
 |---|---|
-| `scripts/baixa_bovisync.py` | Baixa o relatório "Zootécnico Jorge atualizado" do BoviSync (Playwright + Chromium) e grava `dados/zootecnico/Zootecnico_AAAA-MM-DD.xlsx`. Não sobrescreve um dia que já existe; só troca com `--substituir`. |
+| `scripts/baixa_bovisync.py` | Baixa o relatório "Zootécnico Jorge atualizado" do BoviSync (Playwright + Chromium; desde 02/11 o relatório `report_uuid=6ca8ee06680b46ad90a1f3873a1cafa5`, que tem a coluna DtIMPL) e grava `dados/zootecnico/Zootecnico_AAAA-MM-DD.xlsx`. Não sobrescreve um dia que já existe; só troca com `--substituir`. |
 | `scripts/le_leite_vendido.py` | Lê o PDF "Demonstrativo das Coletas de Leite" da cooperativa e grava `dados/leite_vendido.json` (litros por dia) e `dados/coletas_leite.json`. Os PDFs ficam em `dados/leite_vendido/`. |
 | `dados/analise_tanque.json` | Análises do tanque do laticínio (gordura, proteína, lactose, ST, CCS, CPP/CBT, ureia), em grupos por mensagem recebida. As imagens ficam em `dados/analise_tanque/`. |
 | `scripts/monitor_diario.py` | Monta a planilha `monitoramento/Monitoramento_Diario_ARCAFLA.xlsx` só com fórmulas, nas abas Monitoramento, Análises do tanque, Parâmetros, Dados e Notas. |
@@ -149,7 +149,8 @@ os dias).
   - DEL > 150 não gestantes (sem DNB) e a % sobre as vacas em lactação.
   - DNB (StatRepro DNB ou Dry DNB) fica fora dos indicadores de reprodução.
   - DEL > 70 sem IA (NumIAs = 0, sem DNB).
-  - Inseminadas (Bred) e Vazias com IA há mais de 35 dias, contadas pela coluna DATA da IA.
+  - Inseminadas (Bred) e Vazias com IA há mais de 35 dias. A última inseminação é a **mais recente entre DATA da IA
+    e DtIMPL** (data do implante de embrião, coluna incluída em 02/11/2026).
 
 ### Jovens (LACT = 0)
 

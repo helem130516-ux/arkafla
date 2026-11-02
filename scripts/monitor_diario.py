@@ -106,6 +106,11 @@ dados["DATA da IA"] = pd.to_datetime(dados["DATA da IA"], errors="coerce")
 if "DtÚltParto" not in dados.columns:
     dados["DtÚltParto"] = pd.NaT
 dados["DtÚltParto"] = pd.to_datetime(dados["DtÚltParto"], errors="coerce")
+# Data do implante de embrião (DtIMPL): coluna nova no relatório (a partir de 02/11/2026). Pedido da usuária:
+# para quem tem essa data, ela conta como última inseminação (vale a mais recente entre IA e implante).
+if "DtIMPL" not in dados.columns:
+    dados["DtIMPL"] = pd.NaT
+dados["DtIMPL"] = pd.to_datetime(dados["DtIMPL"], errors="coerce")
 COLS = list(dados.columns)
 NR = len(dados) + 1  # última linha da aba Dados
 
@@ -260,7 +265,7 @@ for i, row in enumerate(dados.itertuples(index=False), 2):
         if isinstance(v, pd.Timestamp):
             v = v.date()
         wd.cell(i, j, v)
-        if j == 1 or COLS[j - 1] in ("DATA da IA", "DtÚltParto"):
+        if j == 1 or COLS[j - 1] in ("DATA da IA", "DtÚltParto", "DtIMPL"):
             wd.cell(i, j).number_format = "DD/MM/YYYY"
     x = {k: f"{C[k]}{i}" for k in C}          # esta linha
     a = {k: f"{C[k]}{i - 1}" for k in C}      # linha de cima (mesmo animal, dia anterior?)
@@ -272,7 +277,9 @@ for i, row in enumerate(dados.itertuples(index=False), 2):
     f = {
         "Fêmea": f'=IF({h}="Male",0,1)',
         "DNB": f'=IF(OR({h}="DNB",{h}="Dry DNB"),1,0)',
-        "Dias desde IA": f'=IF(ISNUMBER({x["DATA da IA"]}),{x["Data"]}-{x["DATA da IA"]},"")',
+        # última inseminação = a mais recente entre DATA da IA e DtIMPL (implante de embrião)
+        "Dias desde IA": (f'=IF(OR(ISNUMBER({x["DATA da IA"]}),ISNUMBER({x["DtIMPL"]})),'
+                          f'{x["Data"]}-MAX({x["DATA da IA"]},{x["DtIMPL"]}),"")'),
         # parto depois do relatório anterior e até o dia do relatório (sem anterior: só o próprio dia)
         "Pariu no período": (f'=IF(AND({lac}>0,ISNUMBER({x["DtÚltParto"]})),IF(AND({x["DtÚltParto"]}<={x["Data"]},'
                              f'{x["DtÚltParto"]}>IF({x["DiaNº"]}=1,{x["Data"]}-1,INDEX(DATAS,{x["DiaNº"]}-1))),1,0),"")'),
@@ -665,8 +672,8 @@ notas = [
     ("Gestantes", "DDP (dias de prenhez) ≥ 1, sem DNB; inclui secas. % = gestantes ÷ (adultas − DNB)."),
     ("DEL > 150 não gestantes", "Vacas em lactação, sem DNB, com DEL acima do parâmetro e DDP vazio. "
                                 "% = esse número ÷ todas as vacas em lactação."),
-    ("IA há > 35 dias", "Dias desde IA = data do relatório − DATA da IA (última inseminação, coluna "
-                        "do relatório desde 14/10/2026). Inseminadas: StatRepro Bred (adultas também Dry "
+    ("IA há > 35 dias", "Dias desde IA = data do relatório − última inseminação: a mais recente entre DATA da "
+                        "IA (coluna do relatório desde 14/10/2026) e DtIMPL (implante de embrião, desde 02/11/2026). Inseminadas: StatRepro Bred (adultas também Dry "
                         "Bred); vazias: StatRepro Vazia; sem DNB. Dias sem a coluna ficam vazios."),
     ("DEL > 70 sem IA", "Vacas em lactação, sem DNB, com DEL acima do parâmetro e NumIAs = 0."),
     ("Começaram a lactação", "Partos: adultas do relatório mais recente com DtÚltParto depois da data do "

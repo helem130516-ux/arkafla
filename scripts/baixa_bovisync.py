@@ -88,8 +88,11 @@ def _dec(i):
 
 
 def converte(dados):
-    t = pd.concat([dados[k] for k in dados if k in COLUNAS], axis=1)
-    t = t.rename(columns=COLUNAS)[list(COLUNAS.values())]
+    # colunas conhecidas com o nome do Excel; colunas novas acrescentadas no relatório do BoviSync vêm com o código
+    # do item (ex.: a data do implante de embrião, quando for incluída), menos o identificador interno ApiId
+    extras = [k for k in dados if k not in COLUNAS and k != "ApiId"]
+    t = pd.concat([dados[k] for k in list(COLUNAS) + extras if k in dados], axis=1)
+    t = t.rename(columns=COLUNAS)[[COLUNAS[k] for k in COLUNAS if k in dados] + extras]
     t["StatRepro"] = t["StatRepro"].replace(STATUS)
     t = t.sort_values(["Lote", "Brinco"], kind="stable").reset_index(drop=True)
     ref = (pd.to_datetime(t["DtNasc"]) + pd.to_timedelta(t["IdadeDias"], unit="D")).mode()[0]

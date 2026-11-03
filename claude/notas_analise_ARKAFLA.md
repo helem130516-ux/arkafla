@@ -716,3 +716,14 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Partos: 0, ainda sem lançamento com data de 02/11; corrige sozinho no próximo relatório.
   - Gestantes: 1.002 (55,8%). Vazias com IA > 35 d: 106.
 - Coletas de outubro (PDF do mês, emitido em 03/11): 29/10 = 68.652 L = 70.849 kg × DairyPlan 70.317 kg, −0,8%.
+- Coletas de novembro (PDF emitido em 03/11 às 13:37; período por recepção de 01/11 a 03/11).
+  - **Correção no `le_leite_vendido.py`:** antes, cada PDF novo substituía os dias do anterior, e o dia dividido
+    entre dois PDFs na virada do mês ficava errado ou sumia (30/10).
+  - Agora as coletas de todos os PDFs são juntadas pelo boleto, e só vale o corte do PDF mais recente.
+  - Conferido: todos os dias antigos ficaram iguais.
+  - Novos dias:
+    - 30/10: 62.185 L = 64.175 kg × DairyPlan 70.380, diferença +9,7% (só 2 coletas, às 13:12 e 17:48;
+      efeito do horário).
+    - 31/10: 72.311 L = 74.625 kg × 70.574 (corrigido), −5,4%.
+    - 01/11: 70.874 L = 73.142 kg × 72.660 (corrigido), −0,7%.
+  - Média de 10 dias: +0,1%. 02/11 fica para o próximo PDF.

@@ -5,11 +5,12 @@ e grava em dados/leite_vendido.json ({"AAAA-MM-DD": volume}). O detalhe de cada 
 (data, hora, tanque, volume) vai para dados/coletas_leite.json, usado para ponderar as
 análises do tanque pelo volume. O PDF é guardado em dados/leite_vendido/.
 
-A cada execução os totais são refeitos com todos os PDFs guardados, do mais antigo ao mais
-novo (as datas de um PDF mais novo substituem as dos anteriores). Coletas com data igual ou
-posterior à de emissão do PDF são ignoradas, e também a última data de coleta do PDF: esses dias
-podem estar incompletos (ex.: PDF emitido em 21/10 às 14:31 só tinha uma coleta com data de 20/10).
-O próximo PDF completa esses dias.
+A cada execução os totais são refeitos com todos os PDFs guardados: as coletas de todos eles são
+juntadas pelo número do boleto (sem repetir), e o total do dia é a soma das coletas com aquela data.
+Do PDF mais recente, são ignoradas as coletas com data igual ou posterior à de emissão e as da última
+data de coleta: esses dias podem estar incompletos (ex.: PDF emitido em 21/10 às 14:31 só tinha uma
+coleta com data de 20/10). O próximo PDF completa esses dias. Isso também resolve a virada do mês
+(relatório mensal por data de recepção: parte das coletas de 30/10 só aparece no PDF de novembro).
 
 Uso:
     python3 scripts/le_leite_vendido.py relatorio.pdf [...]
@@ -54,9 +55,7 @@ def le(pdf):
     # dia da emissão (e depois) e a última data de coleta do relatório podem estar incompletos
     corte = datetime.strptime(em[1], "%d/%m/%Y").date().isoformat() if em else "9999"
     corte = min(corte, max(dias)) if dias else corte
-    dias = OrderedDict((d, v) for d, v in dias.items() if d < corte)
-    col = [c for c in col if c["data"] < corte]
-    return dias, n, em, col
+    return n, em, col, corte
 
 
 os.makedirs(PASTA, exist_ok=True)
@@ -68,13 +67,19 @@ for pdf in sys.argv[1:]:  # guarda os PDFs novos com o nome da emissão
     dest = os.path.join(PASTA, nome)
     if os.path.abspath(pdf) != os.path.abspath(dest):
         shutil.copyfile(pdf, dest)
-vendido, coletas = {}, {}
+# Junta as coletas de todos os PDFs pelo número do boleto (sem repetir). Assim um dia que ficou dividido entre dois
+# PDFs (ex.: virada do mês, quando o relatório é por data de recepção) soma as coletas dos dois. Só o corte do PDF
+# mais recente vale: os dias anteriores a ele já estão completos.
+coletas, corte = {}, "9999"
 for pdf in sorted(os.path.join(PASTA, f) for f in os.listdir(PASTA) if f.endswith(".pdf")):
-    dias, n, em, col = le(pdf)
-    vendido.update(dias)
+    n, em, col, corte = le(pdf)
     coletas.update({c["boleto"]: c for c in col})
-    print(f"{os.path.basename(pdf)}: {n} coletas, {len(dias)} dias completos "
-          f"({min(dias)} a {max(dias)})" if dias else f"{os.path.basename(pdf)}: sem dias completos")
+    print(f"{os.path.basename(pdf)}: {n} coletas ({min(c['data'] for c in col)} a {max(c['data'] for c in col)})"
+          if col else f"{os.path.basename(pdf)}: sem coletas")
+coletas = {b: c for b, c in coletas.items() if c["data"] < corte}
+vendido = {}
+for c in coletas.values():
+    vendido[c["data"]] = vendido.get(c["data"], 0) + c["volume"]
 json.dump(dict(sorted(vendido.items())), open(JSON, "w"), indent=1)
 json.dump(sorted(coletas.values(), key=lambda c: (c["data"], c["hora"])), open(COLETAS, "w"), indent=1)
-print(f"{JSON}: {len(vendido)} dias")
+print(f"{JSON}: {len(vendido)} dias completos ({min(vendido)} a {max(vendido)}; corte do PDF mais recente: {corte})")

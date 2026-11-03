@@ -706,3 +706,13 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Originais em `dados/zootecnico_original/*_pesagem_com_erro.xlsx`; registro em `dados/correcoes_leite.json`.
   - Resultado: produção 31/10 = 44,6 kg (DairyPlan 70.574); 01/11 = 46,2 kg (DairyPlan 72.660).
   - **Não rodar `--substituir` em 31/10 nem em 01/11.**
+
+### 03/11/2026 – rotina automática (relatório de 02/11)
+- Pesagens normais em todos os lotes (Leite/Leite7: lotes 1–4 de 0,99 a 1,03; lote 5 1,14; lote 6 1,04). Sem
+  correções pendentes. Planilha sem erros; PDF com 2 páginas.
+- 02/11:
+  - Lactação: 1.653; no tanque: 1.620 (+12). Lote 10: 33 (0 entradas, 11 saídas); descarte de 615 kg (0,8%).
+  - Produção: 45,3 kg; ECM 46,3. Vacas < 20 kg: 44. DairyPlan: 72.267 kg.
+  - Partos: 0, ainda sem lançamento com data de 02/11; corrige sozinho no próximo relatório.
+  - Gestantes: 1.002 (55,8%). Vazias com IA > 35 d: 106.
+- Coletas de outubro (PDF do mês, emitido em 03/11): 29/10 = 68.652 L = 70.849 kg × DairyPlan 70.317 kg, −0,8%.

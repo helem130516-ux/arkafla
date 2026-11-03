@@ -334,3 +334,17 @@
 - Mantidos com o nome antigo, por serem caminhos internos: o repositório `arkafla` e esta nota (`claude/notas_analise_ARKAFLA.md`), que é o caminho que a skill espera.
   - A skill do projeto ainda escreve ARKAFLA e cita a planilha com esse nome. Sugerir ao usuário atualizar a skill.
 - O relatório no Claude Docs ainda tem o título antigo. Oferecido atualizar.
+
+## Mapa de pagamento de out/2026 (03/11/2026, painel versão 19)
+- Arquivo: `dados/mapa_leite/mapa_2026-10.pdf` (mês 10/2026, emitido em 03/11/2026). Traz ago, set e out/26 e substitui esses meses do mapa de setembro.
+- Out/26: 15 análises (o tanque 1 não tem o 4º período). Os períodos 1–3 batem exatamente com a análise oficial do laboratório.
+  - CCS real ponderada pelo volume: 253 (set/26: 332); estimativa do controle de 16/10 sem o lote 10: 290.
+  - CPP ponderada: 14,1. Produção do mês: 2.111.105 L.
+- O pagamento ainda não acompanha a queda da CCS:
+  - "Média Pagto" CCS 279,27 (POOL 226,98), contra 276,21 em set.
+  - Prêmio de CCS 3,02% (R$ 0,0649/L, R$ 137.010,71), contra 3,09% em set.
+  - A "Média Pagto" fica perto da média geométrica das análises dos últimos 3 meses (ago–out: 277,3), que ainda inclui setembro alto. O critério não está informado no mapa.
+- Preço final: R$ 3,0173/L. Prêmio de CPP: 5,94%.
+- Conflito de publicação: em 29/10 outra sessão publicou o painel com a 4ª coleta da análise oficial (24–25/10; relatório emitido em 29/10, cujo PDF não está aqui).
+  - Os 4 registros foram trazidos para `dados/analise_oficial_extra.json`, que `le_analise_oficial.py` junta automaticamente. Os valores batem com o mapa de outubro (T2 232, T3 305, T4 251).
+  - Publiquei por cima com as duas coisas juntas.

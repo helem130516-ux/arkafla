@@ -79,4 +79,11 @@ if __name__ == "__main__":
         print(p, mes, emit, len(linhas), "linhas;", len(tipos), "tipos;", len(regs), "coletas×tanque")
         for r in regs:
             print("  ", r["tanque"], r["coleta"], r["data_coleta"], {k: r.get(k) for k in ["CCS", "CPP", "GOR", "PROT", "LACT", "SOL", "UREIA"]})
+    # registros extras sem PDF no repositório (ex.: trazidos do painel publicado por outra sessão)
+    import os
+    if os.path.exists("dados/analise_oficial_extra.json"):
+        ex = json.load(open("dados/analise_oficial_extra.json"))
+        if ex["arquivo"] not in {t["arquivo"] for t in todos}:
+            todos.append(dict(arquivo=ex["arquivo"], mes=ex["mes"], emissao=ex["emissao"], n_linhas=None, tipos=None,
+                              registros=ex["registros"], nota=ex.get("_nota")))
     json.dump(todos, open("dados/analise_oficial.json", "w"), ensure_ascii=False, indent=1)

@@ -121,12 +121,12 @@ o PDF das coletas e as análises continuam chegando pela usuária.
    enviar. Quase sempre é um lote de IATF cruzando os 35 dias, um diagnóstico de prenhez ou um tratamento em lote.
 5. Usar o termo **"leite comercializado"** (nunca "vendido"). Ele aparece **em kg** (litros × 1,032). As coletas de
    todos os PDFs são juntadas pelo boleto: na virada do mês, o PDF é por data de recepção e um dia fica dividido.
-7. **Lotes (desde 03/11/2026):** lactação = lotes 1–7 e 10 (o 7 passou a ser lactação); secas = lote 15;
+6. **Lotes (desde 03/11/2026):** lactação = lotes 1–7 e 10 (o 7 passou a ser lactação); secas = lote 15;
    20 e 30 contam como 2 e 3.
-8. **Data do implante de embrião (DtIMPL):** vem do relatório novo do BoviSync (link dentro do
+7. **Data do implante de embrião (DtIMPL):** vem do relatório novo do BoviSync (link dentro do
    `baixa_bovisync.py`). A última inseminação é a mais recente entre DATA da IA e DtIMPL.
-9. **% de fêmeas nascidas ÷ partos (7 dias):** os machos não entram, porque nem todos são cadastrados.
-6. **Modelo do PDF aprovado**: não mudar o layout sem pedido explícito.
+8. **% de fêmeas nascidas ÷ partos (7 dias):** os machos não entram, porque nem todos são cadastrados.
+9. **Modelo do PDF aprovado**: não mudar o layout sem pedido explícito.
 
 ---
 

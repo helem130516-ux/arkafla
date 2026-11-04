@@ -109,8 +109,9 @@ os dias).
     sentido definido. Ela decide a cor verde ou vermelha da variação.
 - **Machos fora de tudo** (StatRepro = Male); nem todos são cadastrados.
 - **Lote 20 conta como lote 2, e lote 30 como lote 3.**
-- **Em lactação** = lotes 1–6 e 10. O lote 10 é tratamento, com leite descartado.
-  **Tanque** = lotes 1–6.
+- **Em lactação** = lotes 1–6 e 10; **desde 03/11/2026 também o lote 7** (antes era o das secas). O lote 10 é
+  tratamento, com leite descartado. **Tanque** = lactação menos o lote 10 (lotes 1–7). **Secas**: desde 03/11/2026
+  ficam no lote 15.
 
 ### Adultas (LACT > 0)
 
@@ -197,7 +198,7 @@ os dias).
   - Cor principal cinza-escuro `#2E3338`; fundo da página `#F3F4F5`; caixas brancas com **cantos arredondados**.
   - Fonte Liberation Sans, com DejaVu para as setas.
 - **Cores dos lotes**: L1 amarelo `#EDA100`, L2 azul `#2A78D6`, L3 vermelho `#E34948`, L4 verde `#008300`,
-  L5 roxo `#6250D6`, L6 laranja `#EB6834`.
+  L5 roxo `#6250D6`, L6 laranja `#EB6834`, L7 rosa `#D6409F` (desde 03/11).
 - **Séries dos gráficos**: azul `#2A78D6`, laranja `#EB6834`, verde `#1BAF7A`.
 
 ### Página 1 (painel)

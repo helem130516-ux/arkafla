@@ -62,7 +62,8 @@ S1, S2, S3 = colors.HexColor("#2A78D6"), colors.HexColor("#EB6834"), colors.HexC
 # cor de identidade de cada lote (escolhida pela fazenda; validada com validate_palette.js – sempre com o
 # nome do lote escrito ao lado, porque verde × vermelho ficam próximos para daltônicos)
 COR_LOTE = {1: colors.HexColor("#EDA100"), 2: colors.HexColor("#2A78D6"), 3: colors.HexColor("#E34948"),
-            4: colors.HexColor("#008300"), 5: colors.HexColor("#6250D6"), 6: colors.HexColor("#EB6834")}
+            4: colors.HexColor("#008300"), 5: colors.HexColor("#6250D6"), 6: colors.HexColor("#EB6834"),
+            7: colors.HexColor("#D6409F")}  # lote 7 (lactação desde 03/11/2026): rosa
 GRADE = colors.HexColor("#E4E7E5")
 LINHA = colors.HexColor("#C9D1CB")
 BORDA = colors.HexColor("#DADDE0")
@@ -488,8 +489,8 @@ TITULOS = ["Vacas em lactação", "Produção 24 h (kg/vaca)", "DairyPlan × com
 TIT_TAM = min(7.4, min((CW - 7 - 16) / pdfmetrics.stringWidth(t.upper(), "LibB", 1) for t in TITULOS))
 def monta_cartoes(tv=None):
     return [
-        cartao("Vacas em lactação", "Vacas em lactação (lotes 1 a 6 e 10)",
-               ("no tanque:", v_ult("Em lactação no tanque (lotes 1 a 6)", "0")), CW - 7, CH - 2, tv),
+        cartao("Vacas em lactação", "Vacas em lactação (lotes 1 a 7 e 10)",
+               ("no tanque:", v_ult("Em lactação no tanque (lotes 1 a 7)", "0")), CW - 7, CH - 2, tv),
         cartao("Produção 24 h (kg/vaca)", "Produção média nas últimas 24 h (DP)",
                ("ECM:", v_ult("Média de leite ECM (gordura e proteína do tanque)", "0.0") + " kg"), CW - 7, CH - 2, tv),
         cartao("DairyPlan × comercializado", "Diferença DairyPlan × comercializado", dif_txt, CW - 7, CH - 2, tv),
@@ -529,13 +530,13 @@ g_prod = caixa("Produção por vaca nos últimos dias",
                grafico_linhas([("prod", serie("Produção média nas últimas 24 h (DP)"), S1),
                                ("ecm", serie("Média de leite ECM (gordura e proteína do tanque)"), S3)],
                               G1W - 10, GH1, "0.0", area="todas", valores=True), G1W)
-lotes = [itens.get(f"Produção média do lote {lt} (DP)") for lt in range(1, 7)]
+lotes = [itens.get(f"Produção média do lote {lt} (DP)") for lt in range(1, 8)]
 v_lote = [num(it["vals"][-1]) if it else None for it in lotes]
 e_lote = [dp(it["vals"][-1]) if it else None for it in lotes]
 g_lote = caixa(f"Produção por lote em {ultimo:%d/%m}",
                "Média em kg/vaca · traço = ± desvio padrão (quanto maior, mais desigual o lote)",
-               grafico_barras([f"Lote {i}" for i in range(1, 7)], v_lote, G2W - 10, GH1, "0.0", erros=e_lote,
-                              cores=[COR_LOTE[i] for i in range(1, 7)]),
+               grafico_barras([f"Lote {i}" for i in range(1, 8)], v_lote, G2W - 10, GH1, "0.0", erros=e_lote,
+                              cores=[COR_LOTE[i] for i in range(1, 8)]),
                G2W)
 
 G3W = LARG * 0.22 - 6      # gráficos menores da 2ª fileira
@@ -554,7 +555,7 @@ g_leite = caixa("Leite DairyPlan × comercializado",
                 GLW)
 m20 = serie("Vacas com leite < 20 kg (tanque)")
 g_20 = caixa("Vacas com leite abaixo de 20 kg",
-             "Lotes 1 a 6 · 20 kg ≈ 19,4 L",
+             "Lotes 1 a 7 · 20 kg ≈ 19,4 L",
              grafico_barras([x.strftime("%d/%m") for x in dias], m20, G3W - 10, GH2, "0", destaque_ult=True),
              G3W)
 g_gest = caixa("Vacas gestantes (% sem DNB)", "Gestantes ÷ (adultas − DNB)",
@@ -712,7 +713,7 @@ legenda = Paragraph(
     "<b>Como ler:</b> Melhor <font name='Sym'>↑</font> bom quando sobe, <font name='Sym'>↓</font> bom quando desce, "
     "<b>0</b> bom perto de zero · Var. = último dia − anterior: <font name='Sym' color='#0B7A0B'>▲▼</font> melhorou, "
     "<font name='Sym' color='#B42D2D'>▲▼</font> piorou, <font name='Sym' color='#8A8A85'>▲▼</font> sem sentido "
-    "definido · azul-claro = último dia · Produção = média (desvio padrão) · só fêmeas · lactação = lotes 1–6 e 10 "
+    "definido · azul-claro = último dia · Produção = média (desvio padrão) · só fêmeas · lactação = lotes 1–7 e 10 "
     "(10 = tratamento; 20/30 contam como 2/3) · verde = leite comercializado (kg).", st_leg)
 
 

@@ -284,7 +284,9 @@ for i, row in enumerate(dados.itertuples(index=False), 2):
         "Pariu no período": (f'=IF(AND({lac}>0,ISNUMBER({x["DtÚltParto"]})),IF(AND({x["DtÚltParto"]}<={x["Data"]},'
                              f'{x["DtÚltParto"]}>IF({x["DiaNº"]}=1,{x["Data"]}-1,INDEX(DATAS,{x["DiaNº"]}-1))),1,0),"")'),
         "DiaNº": f"=MATCH({x['Data']},DATAS,0)",
-        "Lactação": f"=IF(AND({lac}>0,OR(AND({lt}>=1,{lt}<=6),{lt}=10)),1,0)",
+        # lote 7: lote de secas até 02/11/2026; a partir de 03/11/2026 é lote de lactação (pedido da usuária)
+        "Lactação": (f"=IF(AND({lac}>0,OR(AND({lt}>=1,{lt}<=6),{lt}=10,"
+                     f"AND({lt}=7,{x['Data']}>=DATE(2026,11,3)))),1,0)"),
         "Lote10": f"=IF(AND({lac}>0,{lt}=10),1,0)",
         "Lactação ant.": f'=IF({ontem},{a["Lactação"]},"")',
         "Lote10 ant.": f'=IF({ontem},{a["Lote10"]},"")',
@@ -399,7 +401,7 @@ def media_dp(*conds):
 
 
 N0, N1, N2, P = "0", "0.0", "0.00", "0.0%"
-TANQUE = [LAC, ("Lote", "<=6")]
+TANQUE = [LAC, ("Lote", "<>10")]  # tanque = lactação menos o lote 10 (lotes 1 a 7)
 COM_LEITE = [*TANQUE, ("Leite", ">0")]
 DESCARTE = [LAC, ("Lote", 10), ("Leite", ">0")]
 # Reprodução: DNB fica fora de todos os indicadores (exceto a contagem de DNB).
@@ -422,8 +424,8 @@ GRUPOS = [
     ("Animais adultos (fêmeas, LACT > 0)", [
         (SUB, "Rebanho e movimentação"),
         ("Vacas adultas", "cab", cont(ADULTO), N0, ""),
-        ("Vacas em lactação (lotes 1 a 6 e 10)", "cab", cont(LAC), N0, ""),
-        ("   Em lactação no tanque (lotes 1 a 6)", "cab", cont(*TANQUE), N0, "↑"),
+        ("Vacas em lactação (lotes 1 a 7 e 10)", "cab", cont(LAC), N0, ""),
+        ("   Em lactação no tanque (lotes 1 a 7)", "cab", cont(*TANQUE), N0, "↑"),
         ("   Animais em tratamento (lote 10)", "cab", cont(ADULTO, ("Lote", 10)), N0, "↓"),
         ("Vacas secas (adultas fora da lactação)", "cab", cont(ADULTO, ("Lactação", 0)), N0, ""),
         ("Vacas paridas há até 21 dias (DEL ≤ 21)", "cab", cont(LAC, ("DEL", "<=21")), N0, ""),
@@ -438,7 +440,7 @@ GRUPOS = [
         ("Produção média nas últimas 24 h (DP)", "kg/vaca", PROD24, N1, "↑"),
         ("Média de leite ECM (gordura e proteína do tanque)", "kg/vaca", ecm, N1, "↑"),
         *[(f"   Produção média do lote {lt} (DP)", "kg/vaca",
-           media_dp(("LACT", ">0"), ("Lote", lt), ("Leite", ">0")), N1, "↑") for lt in range(1, 7)],
+           media_dp(LAC, ("Lote", lt), ("Leite", ">0")), N1, "↑") for lt in range(1, 8)],
         ("Média de leite por vaca (tanque)", "kg/vaca", media("Leite", *COM_LEITE), N1, "↑"),
         ("Média primíparas (LACT 1, tanque)", "kg/vaca", media("Leite", *COM_LEITE, ("LACT", 1)), N1, "↑"),
         ("Média multíparas (LACT ≥ 2, tanque)", "kg/vaca",
@@ -505,7 +507,7 @@ def clarear_hex(h, f=0.80):
 
 
 # cor de identidade de cada lote (definida pela fazenda)
-COR_LOTE = {"1": "EDA100", "2": "2A78D6", "3": "E34948", "4": "008300", "5": "6250D6", "6": "EB6834"}
+COR_LOTE = {"1": "EDA100", "2": "2A78D6", "3": "E34948", "4": "008300", "5": "6250D6", "6": "EB6834", "7": "D6409F"}
 SUBFILL2 = PatternFill("solid", fgColor="ECEEEF")
 
 ws["A1"] = "ARCAFLA – Monitoramento diário do rebanho"
@@ -651,7 +653,7 @@ notas = [
     ("Vacas em lactação", "Adultas (LACT > 0) nos lotes 1, 2, 3, 4, 5, 6 e 10. O lote 10 são vacas "
                           "em tratamento com leite descartado."),
     ("DEL médio", "Média de DEL das vacas em lactação."),
-    ("Produção 24 h", "Média da coluna Leite das vacas em lactação com Leite > 0 (lotes 1 a 6 e 10). "
+    ("Produção 24 h", "Média da coluna Leite das vacas em lactação com Leite > 0 (lotes 1 a 7 e 10; o 7 só a partir de 03/11/2026). "
                       "Por lote: adultas do lote com Leite > 0."),
     ("Análises do tanque", "Aba própria. Valores transcritos das mensagens do laticínio (Ref. coleta = data "
                            "da coleta e tanque). As análises de uma mesma mensagem formam um grupo, tratado "
@@ -689,15 +691,15 @@ notas = [
                     "Se faltar um dia, a comparação é com o último relatório que existe."),
     ("Média (DP)", "Linhas de produção média: a célula traz a média e, entre parênteses, o desvio "
                    "padrão amostral (n − 1) do Leite. A variação compara só as médias."),
-    ("Tanque", "Leite do tanque = lotes 1 a 6; o lote 10 aparece como leite descartado. "
-               "Secas = adultas fora dos lotes 1 a 6 e 10."),
+    ("Tanque", "Leite do tanque = lotes 1 a 7 (o 7 desde 03/11/2026); o lote 10 aparece como leite "
+               "descartado. Secas = adultas fora dos lotes de lactação (desde 03/11/2026 o lote das secas é o 15)."),
     ("Jovens < 3 meses", "IdadeDias abaixo do parâmetro (90 dias)."),
     ("Novilhas", "Em reprodução = jovens que não são Youngstock. Atrasadas: sem DNB, IdadeDias acima "
                  "do parâmetro (456 dias ≈ 15 meses) e DDP vazio."),
     ("Média 10 dias", "Média de cada indicador nos dias exibidos (até 10), ignorando dias sem valor. "
                       "Nas linhas média (DP): média das médias diárias."),
-    ("% leitura de leite", "Vacas do tanque (lotes 1 a 6) com Leite > 0 ÷ vacas em lactação nos lotes 1 a 6."),
-    ("Leite Total dia DairyPlan", "Soma da coluna Leite das vacas dos lotes 1 a 6 no relatório do DairyPlan."),
+    ("% leitura de leite", "Vacas do tanque (lotes 1 a 7) com Leite > 0 ÷ vacas em lactação nos lotes 1 a 7."),
+    ("Leite Total dia DairyPlan", "Soma da coluna Leite das vacas dos lotes 1 a 7 no relatório do DairyPlan."),
     ("Como ler", "Coluna Melhor: ↑ = bom quando sobe; ↓ = bom quando desce; 0 = bom quando se aproxima de "
                  "zero (diferença DairyPlan × comercializado); vazio = sem sentido definido (ex.: partos)."),
     ("Variação", "Último dia menos o dia anterior exibido. Fica verde quando melhorou e vermelha quando "

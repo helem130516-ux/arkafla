@@ -741,3 +741,22 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   faltando. DairyPlan: 45.794 kg. Aguardando confirmação para corrigir pelo último dia normal (02/11).
 - Enviado com aviso. Partos: 1. Gestantes: 1.000. Vazias com IA > 35 d: 113.
 - Coletas (PDF emitido em 04/11 às 18:32): 02/11 = 71.398 L = 73.683 kg × DairyPlan 72.267 kg, diferença −1,9%.
+- **Decisões da usuária em 04/11:**
+  - **Lote 7 virou lote de lactação** a partir de 03/11; antes era o das secas. **Lote 15 virou o lote das secas.**
+  - "Usar pesagens do dia 2": as medidas falharam por erro de comunicação.
+- **Planilha:**
+  - Lactação = lotes 1–6 e 10, e o lote 7 com Data ≥ 03/11/2026 (fórmula com DATE(2026,11,3)).
+  - Tanque = lactação menos o lote 10 (lotes 1 a 7).
+  - Nova linha "Produção média do lote 7 (DP)", cor rosa #D6409F.
+  - Linhas renomeadas: "Vacas em lactação (lotes 1 a 7 e 10)" e "Em lactação no tanque (lotes 1 a 7)".
+  - O lote 15 entra sozinho como seca (adulta fora da lactação).
+- **PDF:** gráfico por lote com 7 barras; página 2 com a linha do lote 7. Continua com 2 páginas.
+- **Pesagens de 03/11, lotes 1–4 e 7:** trocadas, pelo brinco, pelas de 02/11. Média 33,4 → 50,5 kg; 21 vacas sem
+  par. Os lotes 5–6 ficaram como estavam (normais). Original em
+  `dados/zootecnico_original/Zootecnico_2026-11-03_pesagem_com_erro.xlsx`.
+  - **Não rodar `--substituir` em 03/11.**
+- **03/11 corrigido:**
+  - Lactação: 1.631 (22 secadas para o lote 15). No tanque: 1.597. Secas: 223.
+  - Produção: 43,9 kg; ECM 44,9. Lote 7: 54,0 kg. DairyPlan: 68.206 kg.
+  - Lote 5 caiu para 34,6 kg e lote 6 para 24,4 kg por mudança de composição: as maiores produtoras do 5 foram para
+    o 7, e o 6 recebeu 29 vacas. Vacas < 20 kg: 68, a maioria no lote 6 (45).

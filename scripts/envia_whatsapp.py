@@ -57,8 +57,8 @@ def resumo():
 
     dia = cab[ult - 1]
     t = [f"*ARCAFLA – Monitoramento {dia:%d/%m/%Y}*"]
-    t.append(f"Vacas em lactação: {br(v('Vacas em lactação (lotes 1 a 6 e 10)'))}"
-             f"{d('Vacas em lactação (lotes 1 a 6 e 10)')}")
+    t.append(f"Vacas em lactação: {br(v('Vacas em lactação (lotes 1 a 7 e 10)'))}"
+             f"{d('Vacas em lactação (lotes 1 a 7 e 10)')}")
     p, e = v("Produção média nas últimas 24 h (DP)"), v("Média de leite ECM (gordura e proteína do tanque)")
     if p:
         t.append(f"Produção média: {br(p, 1)} kg/vaca{d('Produção média nas últimas 24 h (DP)', 1)}"

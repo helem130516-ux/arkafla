@@ -27,5 +27,11 @@
   "motivo": "erro de registro do leite nos lotes 1 a 4 (Leite/Leite7 1,32–1,36)",
   "pedido": "usuária em 02/11: corrigir pelo último dia com pesagem normal",
   "original": "dados/zootecnico_original/Zootecnico_2026-11-01_pesagem_com_erro.xlsx"
+ },
+ "2026-11-03": {
+  "pesagens_lotes_1_2_3_4_7_de": "2026-11-02",
+  "motivo": "falha de comunicação nas medidas (Leite/Leite7 0,68–0,78 nos lotes 1–4 e 7)",
+  "pedido": "usuária em 04/11: usar pesagens do dia 2 (erro na comunicação)",
+  "original": "dados/zootecnico_original/Zootecnico_2026-11-03_pesagem_com_erro.xlsx"
  }
 }

@@ -740,3 +740,4 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - **Pesagens de 03/11 baixas nos lotes 1–4:** Leite/Leite7 de 0,68 a 0,73 (lotes 5–6 normais), provável ordenha
   faltando. DairyPlan: 45.794 kg. Aguardando confirmação para corrigir pelo último dia normal (02/11).
 - Enviado com aviso. Partos: 1. Gestantes: 1.000. Vazias com IA > 35 d: 113.
+- Coletas (PDF emitido em 04/11 às 18:32): 02/11 = 71.398 L = 73.683 kg × DairyPlan 72.267 kg, diferença −1,9%.

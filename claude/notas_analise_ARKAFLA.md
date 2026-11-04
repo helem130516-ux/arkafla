@@ -727,3 +727,16 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
     - 31/10: 72.311 L = 74.625 kg × 70.574 (corrigido), −5,4%.
     - 01/11: 70.874 L = 73.142 kg × 72.660 (corrigido), −0,7%.
   - Média de 10 dias: +0,1%. 02/11 fica para o próximo PDF.
+
+### 04/11/2026 – rotina automática (relatório de 03/11)
+- **Lotes renumerados pela fazenda em 03/11:**
+  - Lote 7 (antes das secas) agora tem 127 vacas em lactação, todas com leite: 47 Frescas, 40 Prenhes,
+    25 Bred, 14 Vazias.
+  - Lote 15 (antes dos machos) agora tem 105 secas e 10 machos.
+  - 147 vacas saíram dos lotes de lactação: 126 foram para o 7 e 21 para o 15.
+  - Pela regra atual (lactação = lotes 1–6 e 10; 20 e 30 contam como 2 e 3), a lactação cai de 1.653 para 1.504,
+    as secas sobem para 350 e as paridas até 21 dias caem de 89 para 46.
+  - **Aguardando a usuária confirmar os lotes de lactação** (incluir o 7?).
+- **Pesagens de 03/11 baixas nos lotes 1–4:** Leite/Leite7 de 0,68 a 0,73 (lotes 5–6 normais), provável ordenha
+  faltando. DairyPlan: 45.794 kg. Aguardando confirmação para corrigir pelo último dia normal (02/11).
+- Enviado com aviso. Partos: 1. Gestantes: 1.000. Vazias com IA > 35 d: 113.

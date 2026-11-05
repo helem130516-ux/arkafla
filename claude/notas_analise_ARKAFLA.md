@@ -760,3 +760,15 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Produção: 43,9 kg; ECM 44,9. Lote 7: 54,0 kg. DairyPlan: 68.206 kg.
   - Lote 5 caiu para 34,6 kg e lote 6 para 24,4 kg por mudança de composição: as maiores produtoras do 5 foram para
     o 7, e o 6 recebeu 29 vacas. Vacas < 20 kg: 68, a maioria no lote 6 (45).
+
+### 05/11/2026 – rotina automática (relatório de 04/11)
+- Pesagens normais em todos os lotes, de 1 a 7 (Leite/Leite7 de 0,99 a 1,08). Sem correções pendentes. Planilha
+  sem erros; PDF com 2 páginas.
+- 04/11:
+  - Lactação: 1.631; no tanque: 1.581.
+  - Lote 10: 50 (+16 entradas); descarte de 948 kg (1,4%).
+  - Produção: 42,7 kg; ECM 43,6. Lote 7: 46,0 kg.
+  - Vacas < 20 kg: 59. DairyPlan: 66.868 kg. Partos: 1.
+- Lote 7 caiu de 54,0 para 46,0 kg: em 03/11 o valor era o leite de 02/11, quando essas vacas ainda estavam nos
+  lotes de origem (correção). 46 kg é a primeira medida real do lote 7.
+- Novilhas gestantes: +9 (544), diagnóstico de prenhez. Novilhas > 15 meses não gestantes: 72 (−10).

@@ -39,6 +39,7 @@ aprovado, a automação diária e as preferências da usuária. Atualizado em 29
 | `scripts/monitor_pdf.py` | Gera `monitoramento/Monitoramento_Diario_ARCAFLA_AAAA-MM-DD.pdf`, A4 paisagem com 2 páginas. Confere que saíram exatamente 2 páginas. |
 | `dados/logo_arcafla.png` | Logo da fazenda, já recortada, que aparece só na página 1. |
 | `monitoramento/imagens/` | PNG das páginas, enviados à usuária. |
+| `scripts/quartas_quintas.py` | Acompanhamento **fora do relatório** da produção nas quartas e quintas-feiras (dias de cio): `monitoramento/analises/Quartas_Quintas_ARCAFLA.xlsx`. Atualizado pela rotina; só enviar se a usuária pedir. |
 | `scripts/envia_whatsapp.py` | Envio pelo WhatsApp via Z-API. Inativo, porque a usuária recusou. |
 
 ### Sequência para atualizar o relatório

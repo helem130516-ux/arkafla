@@ -774,3 +774,16 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Novilhas gestantes: +9 (544), diagnóstico de prenhez. Novilhas > 15 meses não gestantes: 72 (−10).
 - Coletas (PDF emitido em 05/11 às 18:39): 03/11 = 70.589 L = 72.848 kg × DairyPlan 68.206 kg (corrigido com as
   pesagens de 02/11), diferença −6,4%. Média de 10 dias: −0,5%. 04/11 fica para o próximo PDF.
+
+### 05/11/2026 – acompanhamento das quartas e quintas (dias de cio)
+- Pedido da usuária: guardar, **fora do relatório**, a variação de produção e a média de todas as quartas e
+  quintas-feiras, dias em que as vacas manifestam cio.
+- `scripts/quartas_quintas.py` gera `monitoramento/analises/Quartas_Quintas_ARCAFLA.xlsx`.
+  - Abas: Quartas e quintas, Resumo por dia da semana, Todos os dias.
+  - Produção média (kg/vaca, tanque, Leite > 0) e total do tanque, por dia.
+  - Variação vs dia anterior e vs média dos 7 dias anteriores.
+  - Usa os relatórios já corrigidos; o lote 7 entra no tanque desde 03/11.
+- A rotina diária roda o script e salva o arquivo, sem enviar.
+- Primeiro resultado (14/10 a 04/11, 7 quartas e quintas):
+  - Quartas: 43,9 kg; quintas: 45,0 kg; demais dias: 45,0 kg. Quarta é o dia de menor média.
+  - 04/11 (quarta): −1,15 kg vs terça e −2,15 kg vs média dos 7 dias.

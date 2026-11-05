@@ -772,3 +772,5 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Lote 7 caiu de 54,0 para 46,0 kg: em 03/11 o valor era o leite de 02/11, quando essas vacas ainda estavam nos
   lotes de origem (correção). 46 kg é a primeira medida real do lote 7.
 - Novilhas gestantes: +9 (544), diagnóstico de prenhez. Novilhas > 15 meses não gestantes: 72 (−10).
+- Coletas (PDF emitido em 05/11 às 18:39): 03/11 = 70.589 L = 72.848 kg × DairyPlan 68.206 kg (corrigido com as
+  pesagens de 02/11), diferença −6,4%. Média de 10 dias: −0,5%. 04/11 fica para o próximo PDF.

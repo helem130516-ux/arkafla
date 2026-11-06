@@ -798,3 +798,12 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   DEL > 70 sem IA: 22 → 11.
 - Quintas: 05/11 = 43,6 kg/vaca, +0,56 kg vs quarta e −3,0% vs média dos 7 dias anteriores. Arquivo das
   quartas e quintas atualizado.
+- 06/11 às 12h22, a pedido da usuária ("atualizar dados, pegar dados atualizados do BoviSync"):
+  - **Coletas (PDF emitido em 06/11 às 12:21):** 04/11 = 64.343 L = 66.402 kg × DairyPlan 66.868 kg, diferença
+    +0,7%. Média de 10 dias: −0,4%.
+  - **BoviSync baixado de novo:** 4 partos em 05/11 (brincos 6015, 6109, 6167 — novilhas — e 4190) levados ao
+    relatório de 05/11, só DtÚltParto e LACT. Partos de 05/11: 0 → 4. Adultas: 1.858.
+  - Original em `dados/zootecnico_original/Zootecnico_2026-11-05_antes_partos.xlsx`.
+  - Também havia 15 mudanças de lote (9 saídas do lote 10 para os lotes 2, 3 e 6; 5 recém-paridas do lote 14 para
+    o 1) e 2 partos de 06/11. Não foram levadas para 05/11 (não dá para saber se foram de 05 ou 06/11); entram no
+    relatório de 06/11.

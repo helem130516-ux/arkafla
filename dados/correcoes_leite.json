@@ -33,5 +33,17 @@
   "motivo": "falha de comunicação nas medidas (Leite/Leite7 0,68–0,78 nos lotes 1–4 e 7)",
   "pedido": "usuária em 04/11: usar pesagens do dia 2 (erro na comunicação)",
   "original": "dados/zootecnico_original/Zootecnico_2026-11-03_pesagem_com_erro.xlsx"
+ },
+ "2026-11-05": {
+  "partos_atualizados_de": "BoviSync baixado em 06/11 às 12h22",
+  "brincos": [
+   6015,
+   6109,
+   6167,
+   4190
+  ],
+  "campos": "DtÚltParto e LACT (só partos com data até 05/11; lotes e demais colunas mantidos)",
+  "original": "dados/zootecnico_original/Zootecnico_2026-11-05_antes_partos.xlsx",
+  "pedido": "usuária em 06/11: pegar dados atualizados do BoviSync"
  }
 }

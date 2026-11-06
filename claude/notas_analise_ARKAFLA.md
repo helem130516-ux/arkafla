@@ -787,3 +787,14 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Primeiro resultado (14/10 a 04/11, 7 quartas e quintas):
   - Quartas: 43,9 kg; quintas: 45,0 kg; demais dias: 45,0 kg. Quarta é o dia de menor média.
   - 04/11 (quarta): −1,15 kg vs terça e −2,15 kg vs média dos 7 dias.
+
+### 06/11/2026 – rotina automática (relatório de 05/11, quinta)
+- Pesagens normais em todos os lotes (Leite/Leite7 de 1,00 a 1,08). Planilha sem erros; PDF com 2 páginas.
+- 05/11:
+  - Lactação: 1.631 (=). Lote 10: 50 (sem entradas nem saídas). Nenhuma movimentação de lote no dia.
+  - Produção: 43,0 kg; ECM 44,0. Lote 7: 49,9 kg. Vacas < 20 kg: 69. DairyPlan: 67.776 kg.
+  - Partos: 0, ainda sem lançamento; corrige sozinho.
+- Vazias com IA > 35 d: 114 → 41, por causa das 73 IAs e implantes de 05/11 (vistos na véspera às 18h51).
+  DEL > 70 sem IA: 22 → 11.
+- Quintas: 05/11 = 43,6 kg/vaca, +0,56 kg vs quarta e −3,0% vs média dos 7 dias anteriores. Arquivo das
+  quartas e quintas atualizado.

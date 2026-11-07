@@ -807,3 +807,13 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Também havia 15 mudanças de lote (9 saídas do lote 10 para os lotes 2, 3 e 6; 5 recém-paridas do lote 14 para
     o 1) e 2 partos de 06/11. Não foram levadas para 05/11 (não dá para saber se foram de 05 ou 06/11); entram no
     relatório de 06/11.
+
+### 07/11/2026 – rotina automática (relatório de 06/11, sexta)
+- Pesagens normais em todos os lotes (Leite/Leite7 de 0,98 a 1,09). Planilha sem erros; PDF com 2 páginas.
+- 06/11:
+  - Lactação: 1.640 (+9). Lote 10: 56 (15 entradas, 9 saídas); descarte de 1.007 kg (1,5%).
+  - Produção: 42,6 kg; ECM 43,6. Lote 7: 48,0 kg. Vacas < 20 kg: 77. DairyPlan: 67.005 kg.
+  - Partos: 4. Nascidas até 7 dias: 17.
+- Vazias com IA > 35 d: 41 → 60 (+19). As 20 que entraram estão como Vazia, com a última IA há exatamente 36 dias:
+  lote de IATF de 01/10 cruzando os 35 dias.
+- Gestantes: 992 (−9); 3 prenhes pariram.

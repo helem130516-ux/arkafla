@@ -817,3 +817,12 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Vazias com IA > 35 d: 41 → 60 (+19). As 20 que entraram estão como Vazia, com a última IA há exatamente 36 dias:
   lote de IATF de 01/10 cruzando os 35 dias.
 - Gestantes: 992 (−9); 3 prenhes pariram.
+
+### 08/11/2026 – rotina automática (relatório de 07/11, sábado)
+- Pesagens normais (Leite/Leite7 de 0,95 a 1,09). Planilha sem erros; PDF com 2 páginas.
+- 07/11:
+  - Lactação: 1.640 (=). Lote 10: 52 (0 entradas, 4 saídas); descarte de 1.025 kg (1,5%).
+  - Produção: 42,7 kg; ECM 43,6. Lote 7: 49,7 kg. Lotes 5 e 6 caíram 1,4 e 1,6 kg.
+  - Vacas < 20 kg: 90 (+13). DairyPlan: 66.798 kg. Partos: 3.
+  - Gestantes: 992. Vazias com IA > 35 d: 60. Novilhas > 15 meses não gestantes: 79 (+6).
+- Leite comercializado de 05/11 em diante: pendente.

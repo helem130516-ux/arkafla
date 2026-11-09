@@ -70,7 +70,8 @@ Depois:
    - Salvar como `dados/zootecnico/Zootecnico_AAAA-MM-DD.xlsx`.
 2. **PDF de coletas da cooperativa**: rodar `le_leite_vendido.py arquivo.pdf`.
    - A cooperativa **não lança no fim de semana**; na segunda vem tudo.
-3. **Prints das análises do tanque**: acrescentar um **grupo novo** em `dados/analise_tanque.json`, transcrevendo
+3. **Prints das análises do tanque ou PDF mensal "Resultado Análise Leite" da Castrolanda** (no PDF, ligar a data da
+   análise à data de coleta do mesmo tanque pelo item DE NOVO; ácidos graxos não são usados): acrescentar um **grupo novo** em `dados/analise_tanque.json`, transcrevendo
    os valores e guardando a imagem.
 
 **Tentativa de automatizar os itens 2 e 3 (22/10).** As análises e o PDF ficam no portal do cooperado Castrolanda

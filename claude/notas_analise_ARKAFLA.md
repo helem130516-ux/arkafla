@@ -849,3 +849,15 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - **BoviSync de 14h22:** nenhum parto novo até 08/11. 7 saídas do rebanho, 9 vacas do lote 10 para o 6 e mudanças
     de status (2 prenhes → vazias, 3 para DNB) — provavelmente de 09/11, entram no relatório de amanhã. Nada alterado
     em 08/11.
+- 09/11, **análises do tanque** (PDF mensal Castrolanda "Resultado Análise Leite" de 10/2026, emitido em 09/11; guardado
+  em `dados/analise_tanque/Castrolanda_Resultado_Analise_2026-10.pdf`):
+  - O PDF dá a **data da análise** (~2 dias depois da coleta). Cada resultado foi ligado à coleta do mesmo tanque
+    (data do "DE NOVO", que é a data de coleta).
+  - As análises já transcritas dos prints (04–05/10, 12–13/10, 17–18/10) **conferem 100%**.
+  - Faltava a lactose de 04–05/10: incluída.
+  - **Grupo novo:** coletas de 24 e 25/10, tanques 2, 3 e 4. O tanque 1 dessa semana só tinha ácidos graxos.
+    Média ponderada: gordura 3,57; proteína 3,36; lactose 4,73; ST 12,64; CCS 263; CPP 11,7; ureia 11,8. Vale de
+    24/10 em diante e altera o ECM desses dias.
+  - Pedidos da usuária: **ácidos graxos não precisam** (não guardados). A linha passou a se chamar "Data da análise
+    do tanque (última coleta)" e mostra **só a última data de coleta do grupo** (ex.: 25/10). A validade continua a
+    partir da primeira data.

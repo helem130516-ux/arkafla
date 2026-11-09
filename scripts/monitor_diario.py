@@ -239,6 +239,7 @@ for i, (g, datas) in enumerate(GR, 5):
         wt.cell(i, j).font = font()
 NT = max(len(GR), 1) + 4
 name("TQ_DATA", f"'Análises do tanque'!${L(c0)}$5:${L(c0)}${NT}")
+name("TQ_ATE", f"'Análises do tanque'!${L(c0 + 1)}$5:${L(c0 + 1)}${NT}")  # última coleta do grupo
 for k, n in enumerate(["TQ_GORD", "TQ_PROT", "TQ_LACT", "TQ_ST", "TQ_CCS", "TQ_CPP", "TQ_UREIA"]):
     col = L(c0 + 4 + k)
     name(n, f"'Análises do tanque'!${col}$5:${col}${NT}")
@@ -365,7 +366,8 @@ def tanque(nome):
 
 
 def data_tanque(d):
-    return f'IFERROR(INDEX(TQ_DATA,MATCH({d},TQ_DATA,1)),"")'
+    # mostra a última data de coleta do grupo vigente (pedido da usuária em 09/11/2026)
+    return f'IFERROR(INDEX(TQ_ATE,MATCH({d},TQ_DATA,1)),"")'
 
 
 data_tanque.sem_media = True
@@ -457,7 +459,7 @@ GRUPOS = [
          razao(soma("Leite", *DESCARTE),
                lambda d: f"({soma('Leite', *COM_LEITE)(d)}+{soma('Leite', *DESCARTE)(d)})"), P, "↓"),
         (SUB, "Qualidade do leite do tanque (laticínio)"),
-        ("Análise do tanque vigente desde", "data", data_tanque, "DD/MM/YYYY", ""),
+        ("Data da análise do tanque (última coleta)", "data", data_tanque, "DD/MM/YYYY", ""),
         ("Gordura – análise do tanque", "%", tanque("TQ_GORD"), N2, "↑"),
         ("Proteína – análise do tanque", "%", tanque("TQ_PROT"), N2, "↑"),
         ("Lactose – análise do tanque", "%", tanque("TQ_LACT"), N2, "↑"),

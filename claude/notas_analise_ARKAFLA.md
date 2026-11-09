@@ -839,3 +839,13 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Concentradas no lote 6: 55 → 66 → 80.
   - DEL mediano ~300: vacas de final de lactação, perto da secagem; o lote 6 caiu de 24,0 para 20,7 kg.
 - Leite comercializado de 05/11 em diante: pendente.
+- 09/11 às 14h22, a pedido ("atualizar dados" e "atualizar dados do BoviSync também"):
+  - **Coletas (PDF emitido em 09/11 às 13:08):** completou de 05 a 07/11.
+    - 05/11: 69.268 L = 71.485 kg × DairyPlan 67.776 kg, −5,2%.
+    - 06/11: 70.870 L = 73.138 kg × 67.005 kg, −8,4%.
+    - 07/11: 38.427 L = 39.657 kg × 66.798 kg, +68,4%. **Só 1 coleta nesse dia** (16:47); as coletas
+      vizinhas foram em 06/11 às 23:02 e em 08/11 às 05:03. É efeito do horário, não falta de leite.
+    - A média de 10 dias passou a +5,7% por causa desse dia.
+  - **BoviSync de 14h22:** nenhum parto novo até 08/11. 7 saídas do rebanho, 9 vacas do lote 10 para o 6 e mudanças
+    de status (2 prenhes → vazias, 3 para DNB) — provavelmente de 09/11, entram no relatório de amanhã. Nada alterado
+    em 08/11.

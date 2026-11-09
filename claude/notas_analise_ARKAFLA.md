@@ -826,3 +826,16 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Vacas < 20 kg: 90 (+13). DairyPlan: 66.798 kg. Partos: 3.
   - Gestantes: 992. Vazias com IA > 35 d: 60. Novilhas > 15 meses não gestantes: 79 (+6).
 - Leite comercializado de 05/11 em diante: pendente.
+
+### 09/11/2026 – rotina automática (relatório de 08/11, domingo)
+- Pesagens normais (Leite/Leite7 de 0,90 a 1,07; o lote 6 no limite de baixo, 0,90). Planilha sem erros; PDF
+  com 2 páginas.
+- 08/11:
+  - Lactação: 1.650 (+10). Lote 10: 55 (5 entradas / 2 saídas).
+  - Produção: 41,8 kg (−0,9); ECM 42,7. DairyPlan: 65.528 kg. Partos: 3.
+- **Diagnóstico de gestação:** 35 vacas de Bred para prenhes (DDP de 28 a 34). Gestantes: 1.017 (56,4%).
+  DEL > 150 não gestantes: 234 (−9).
+- **Vacas < 20 kg subindo:** 77 → 90 → 103 em três dias.
+  - Concentradas no lote 6: 55 → 66 → 80.
+  - DEL mediano ~300: vacas de final de lactação, perto da secagem; o lote 6 caiu de 24,0 para 20,7 kg.
+- Leite comercializado de 05/11 em diante: pendente.

@@ -861,3 +861,11 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   - Pedidos da usuária: **ácidos graxos não precisam** (não guardados). A linha passou a se chamar "Data da análise
     do tanque (última coleta)" e mostra **só a última data de coleta do grupo** (ex.: 25/10). A validade continua a
     partir da primeira data.
+
+## 10/11/2026 – rotina diária (relatório de 09/11)
+- Pesagens normais (Leite/Leite7 por lote 1–7: 1,09 · 1,07 · 1,08 · 1,08 · 1,02 · 0,97 · 1,10); sem correções.
+- Lactação 1653 (+3); tanque 1606; produção 43,6 kg (+1,8); ECM 45,6; DairyPlan 67.802 kg.
+- 8 partos em 09/11 (3 em 08/11); lote 14 → 1 (5) e 14 → 7 (4).
+- 7 saídas de adultas: 4 DNB (lotes 6 e 10), 1 seca (lote 14), 2 do lote 10 (fresca DEL 40 e vazia DEL 131).
+- Lote 10: 4 entradas, 12 saídas (9 voltaram ao lote 6, 2 saíram do rebanho, 1 DNB saiu) → 47 animais.
+- Vacas < 20 kg: 85 (−18). Comercializado de 08/11 = 72.501 kg (−9,6% vs DairyPlan; 07/11 teve só uma coleta).

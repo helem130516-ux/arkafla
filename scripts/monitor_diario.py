@@ -577,6 +577,11 @@ for grupo, itens in GRUPOS:
         sem_media = getattr(f, "sem_media", False)  # ex.: linha de data
         if sem_media:
             c = ws.cell(r, LAST - 1)
+        elif f is dif_vendido:  # média do período: soma do DairyPlan ÷ soma do comercializado, só dias com os dois
+            dp, vd = f"{DC[0]}{r - 2}:{DC[-1]}{r - 2}", f"{DC[0]}{r - 1}:{DC[-1]}{r - 1}"
+            sdp = f'SUMIFS({dp},{vd},"<>")'
+            svd = f'SUMIFS({vd},{dp},"<>")'
+            c = ws.cell(r, LAST - 1, f'=IFERROR(({sdp}-{svd})/{svd},"")')
         elif hasattr(f, "media"):  # média das médias diárias (sem o DP), só dias com valor
             raw = [f.raw(f"{col}${HR}") for col in DC]
             num = "+".join(f"IFERROR({x},0)" for x in raw)
@@ -670,7 +675,9 @@ notas = [
                       "soma do Volume de todas as coletas com a mesma Data Coleta."),
     ("Diferença DairyPlan × comercializado", "(Leite Total dia DairyPlan − leite comercializado) ÷ leite comercializado. "
                                       "Negativo = DairyPlan abaixo do comercializado. Os dois em kg (o "
-                                      "comercializado é convertido de litros pela densidade)."),
+                                      "comercializado é convertido de litros pela densidade). Média do período = "
+                                      "(soma do DairyPlan − soma do comercializado) ÷ soma do comercializado, só nos "
+                                      "dias com coleta: assim um dia com uma coleta só (ou duas) não distorce a média."),
     ("DNB", "StatRepro = DNB ou Dry DNB. Ficam fora de todos os indicadores de reprodução "
             "(só aparecem na própria contagem de DNB)."),
     ("Gestantes", "DDP (dias de prenhez) ≥ 1, sem DNB; inclui secas. % = gestantes ÷ (adultas − DNB)."),

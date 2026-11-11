@@ -143,6 +143,10 @@ os dias).
     comercializado é **convertido de litros para kg × 1,032** (parâmetro P_DENSIDADE), por decisão da usuária em 22/10.
   - A diferença diária oscila conforme o horário das coletas (ex.: a coleta das 23h é praticamente leite do dia
     seguinte).
+  - **Média do período** (pedido da usuária em 11/11/2026): (soma do DP − soma do comercializado) ÷ soma do
+    comercializado, só nos dias com coleta. É a coluna "Média" dessa linha na planilha, o "dif. méd." do gráfico e o
+    **valor grande do cartão "DairyPlan × comercializado"** (sem selo "vs ontem"; embaixo "média de dd/mm a dd/mm
+    (N dias)" e "méd./dia: DP × comercializado kg").
   - Leite descartado do lote 10 e % do leite produzido que foi descartado.
 - **Análise do tanque**:
   - Todas as análises de uma mesma mensagem formam um grupo, ponderado pelo volume de cada tanque.

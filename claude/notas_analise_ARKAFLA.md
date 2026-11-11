@@ -881,3 +881,10 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - 3 partos; 2 saídas de adultas (Bred, lotes 6 e 10); lote 10: 0 entradas, 2 saídas → 45.
 - Vazias com IA > 35 d: 73 (+5) — 6 vazias inseminadas em 05/10 completaram 36 dias.
 - Vacas < 20 kg: 58 (−27). Comercializado de 09/11 = 76.070 kg (DairyPlan −10,9%).
+
+## 11/11/2026 – DairyPlan × comercializado pela média do período
+- Pedido: "no quadro leite comercializado x leite DairyPlan usar a média do período".
+- A média agora é (Σ DairyPlan − Σ comercializado) ÷ Σ comercializado nos dias com coleta (antes: média simples
+  das diferenças diárias, que o 07/11 com uma coleta só puxava para +2,9%). Período 01–09/11: −0,6%.
+- O cartão do PDF mostra essa média como valor principal (sem "vs ontem"), com o período e a média diária em kg.
+  O gráfico continua com a linha "dif." de cada dia e o "dif. méd." no subtítulo, agora com a mesma média.

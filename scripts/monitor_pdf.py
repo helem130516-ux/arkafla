@@ -423,22 +423,27 @@ def texto(d, x, y, partes, tam):
         x += pdfmetrics.stringWidth(t, f, tam)
 
 
-def cartao(titulo, rot, extra, w, h, tv=None):
-    """Cartão-resumo: título, valor grande, selo da variação, média, linha extra e sparkline."""
+def cartao(titulo, rot, extra, w, h, tv=None, periodo=None):
+    """Cartão-resumo: título, valor grande, selo da variação, média, linha extra e sparkline.
+
+    periodo = (valor, linha): o valor grande é a média do período (sem selo "vs ontem") e a linha de baixo diz de
+    que período é (usado no DairyPlan × comercializado, pedido da usuária em 11/11/2026)."""
     d = Drawing(w, h)
     it = itens.get(rot)
     if not it:
         return d
     k, ult = ultimo_valor(it)
     valor = fmt(num(ult), "0.0") if isinstance(ult, str) else (fmt(ult, it["fmts"][k]) if k is not None else "–")
-    j = juizo(it["melhor"], it["var"])
+    if periodo:
+        valor = periodo[0]
+    j = juizo(it["melhor"], it["var"]) if not periodo else None
     cj = cor_juizo(j)
     d.add(Rect(0, 6, 3, h - 12, fillColor=cj, strokeColor=None, rx=1.5, ry=1.5))  # faixa do juízo
     x, dir_ = 10, w - 6  # margens: o texto começa em x e tudo termina em dir_
     y_tit, y_val, y_med, y_ext = h - 13, h - 40, h - 51, h - 61  # linhas de base iguais em todos os cartões
     d.add(String(x, y_tit, titulo.upper(), fontName="LibB", fontSize=TIT_TAM, fillColor=TINTA2))
     # selo da variação vs ontem: mesma largura e posição em todos os cartões
-    v = it["var"]
+    v = it["var"] if not periodo else None
     pw = 0
     if isinstance(v, (int, float)):
         txt = fmt(v, it["vfmt"], sinal=True)
@@ -458,9 +463,11 @@ def cartao(titulo, rot, extra, w, h, tv=None):
     tv = tv or TAM_VALOR[-1]
     d.add(String(x, y_val, valor, fontName="LibB", fontSize=tv, fillColor=TINTA))
     linha = []
-    if k is not None and k != ND - 1:
+    if periodo:
+        linha = [(periodo[1], False, TINTA2)]
+    elif k is not None and k != ND - 1:
         linha.append((f"dado de {dias[k]:%d/%m} · ", True, RUIM))
-    if it["media"] not in (None, ""):
+    if it["media"] not in (None, "") and not periodo:
         rot_med = "média 10 dias " if k == ND - 1 else "méd. "
         linha += [(rot_med, False, TINTA2), (fmt(it["media"], it["mfmt"]), True, TINTA2)]
     texto(d, x, y_med, linha, 7.4)
@@ -478,9 +485,16 @@ def v_ult(rot, nf):
 
 dpl = itens.get("Leite Total dia DairyPlan")
 vdd = itens.get("Leite comercializado no dia (coletas do laticínio)")
-kv = next((i for i in range(ND - 1, -1, -1) if vdd and vdd["vals"][i] not in (None, "")), None)
-dif_txt = (("", f'{fmt(dpl["vals"][kv], "#,##0")} kg × {fmt(vdd["vals"][kv], "#,##0")} kg')
-           if kv is not None else ("aguardando coletas", ""))
+# cartão DairyPlan × comercializado: média do período (dias com coleta), não o último dia
+kc = [i for i in range(ND) if vdd and dpl and vdd["vals"][i] not in (None, "") and dpl["vals"][i] not in (None, "")]
+if kc:
+    m_dp = sum(dpl["vals"][i] for i in kc) / len(kc)
+    m_vd = sum(vdd["vals"][i] for i in kc) / len(kc)
+    dif_txt = ("méd./dia:", f'{fmt(m_dp, "#,##0")} × {fmt(m_vd, "#,##0")} kg')
+    dif_per = (fmt(itens["Diferença DairyPlan × comercializado"]["media"], "+0.0%;-0.0%;0.0%", sinal=True),
+               f"média de {dias[kc[0]]:%d/%m} a {dias[kc[-1]]:%d/%m} ({len(kc)} dias)")
+else:
+    dif_txt, dif_per = ("aguardando coletas", ""), None
 CW = LARG / 6
 CH = 82  # altura dos cartões
 TITULOS = ["Vacas em lactação", "Produção 24 h (kg/vaca)", "DairyPlan × comercializado", "Gestantes (sem DNB)",
@@ -493,7 +507,8 @@ def monta_cartoes(tv=None):
                ("no tanque:", v_ult("Em lactação no tanque (lotes 1 a 7)", "0")), CW - 7, CH - 2, tv),
         cartao("Produção 24 h (kg/vaca)", "Produção média nas últimas 24 h (DP)",
                ("ECM:", v_ult("Média de leite ECM (gordura e proteína do tanque)", "0.0") + " kg"), CW - 7, CH - 2, tv),
-        cartao("DairyPlan × comercializado", "Diferença DairyPlan × comercializado", dif_txt, CW - 7, CH - 2, tv),
+        cartao("DairyPlan × comercializado", "Diferença DairyPlan × comercializado", dif_txt, CW - 7, CH - 2, tv,
+               periodo=dif_per),
         cartao("Gestantes (sem DNB)", "% gestantes ÷ (adultas − DNB)",
                ("vacas gestantes:", v_ult("Vacas gestantes (DDP ≥ 1, sem DNB)", "0")), CW - 7, CH - 2, tv),
         cartao("Em tratamento (lote 10)", "Animais em tratamento (lote 10)",

@@ -557,16 +557,27 @@ g_lote = caixa(f"Produção por lote em {ultimo:%d/%m}",
 G3W = LARG * 0.22 - 6      # gráficos menores da 2ª fileira
 GLW = LARG * 0.34 - 6      # leite DairyPlan × comercializado (kg), mais largo (dois conjuntos de valores)
 GH2 = 134
-dp_s, vd_s = serie("Leite Total dia DairyPlan"), serie("Leite comercializado no dia (coletas do laticínio)")
-dp_s, vd_s = [[v / 1000 if v is not None else None for v in x] for x in (dp_s, vd_s)]  # em mil
-dif = itens.get("Diferença DairyPlan × comercializado")
-dif_med = fmt(dif["media"], dif["mfmt"]) if dif and dif["media"] not in (None, "") else "–"
+# média acumulada desde o 1º dia do período (pedido da usuária em 11/11/2026): cada ponto é a média do 1º dia até
+# aquele dia; o comercializado e a "dif." só nos dias com coleta (a dif. é Σ DairyPlan ÷ Σ comercializado − 1 desses
+# dias, e o último ponto é igual ao cartão)
+dp_d, vd_d = serie("Leite Total dia DairyPlan"), serie("Leite comercializado no dia (coletas do laticínio)")
+dp_s, vd_s, dif_s = [], [], []
+sdp_t = ndp = sdp_c = svd = nvd = 0
+for a, b in zip(dp_d, vd_d):
+    if a is not None:
+        sdp_t, ndp = sdp_t + a, ndp + 1
+    if a is not None and b is not None:
+        sdp_c, svd, nvd = sdp_c + a, svd + b, nvd + 1
+    dp_s.append(sdp_t / ndp / 1000 if ndp and a is not None else None)  # em mil kg
+    vd_s.append(svd / nvd / 1000 if nvd and b is not None else None)
+    dif_s.append(sdp_c / svd - 1 if svd and b is not None and a is not None else None)
 g_leite = caixa("Leite DairyPlan × comercializado",
-                legenda_series([("DairyPlan (mil kg)", S1), ("Comercializado (mil kg)", S3)]) + f" · dif. méd. <b>{dif_med}</b>",
+                legenda_series([("DairyPlan", S1), ("Comercializado", S3)])
+                + " · média acumulada, mil kg",
                 grafico_linhas([("dp", dp_s, S1), ("vd", vd_s, S3)], GLW - 10, GH2, "0.0",
                                area="todas", valores=True,
-                               faixa=("dif.", [fmt(v, "+0.0%;-0.0%;0.0%", sinal=True) if isinstance(v, (int, float))
-                                               else "" for v in (dif["vals"] if dif else [])])),
+                               faixa=("dif.", [fmt(v, "+0.0%;-0.0%;0.0%", sinal=True) if v is not None else ""
+                                               for v in dif_s])),
                 GLW)
 m20 = serie("Vacas com leite < 20 kg (tanque)")
 g_20 = caixa("Vacas com leite abaixo de 20 kg",

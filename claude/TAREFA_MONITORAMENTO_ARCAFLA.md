@@ -228,6 +228,9 @@ os dias).
    - **Produção por lote** no último dia: barras arredondadas nas cores dos lotes, com ± DP.
 4. **Gráficos da linha de baixo**:
    - **Leite DairyPlan × comercializado**: azul/verde, em mil kg, com a linha **"dif."** de % por dia embaixo
+     **Desde 11/11/2026 (pedido da usuária): média acumulada** — cada ponto é a média do 1º dia do período até
+     aquele dia (DairyPlan em todos os dias; comercializado só nos dias com coleta) e a "dif." é Σ DP ÷ Σ
+     comercializado − 1 até aquele dia; o último ponto da dif. é igual ao cartão.
      das datas. A linha alterna em duas alturas quando não cabe.
    - **Vacas com leite abaixo de 20 kg**: barras, último dia em destaque.
    - **Vacas gestantes (% sem DNB)**.

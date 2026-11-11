@@ -888,3 +888,5 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   das diferenças diárias, que o 07/11 com uma coleta só puxava para +2,9%). Período 01–09/11: −0,6%.
 - O cartão do PDF mostra essa média como valor principal (sem "vs ontem"), com o período e a média diária em kg.
   O gráfico continua com a linha "dif." de cada dia e o "dif. méd." no subtítulo, agora com a mesma média.
+- Gráfico "Leite DairyPlan × comercializado" também passou para a média acumulada (escolha da usuária entre
+  acumulada, móvel de 3 dias e linha da média): pontos e linha "dif." acumulados desde o 1º dia; 10/11: −0,6%.

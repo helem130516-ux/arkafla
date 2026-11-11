@@ -869,3 +869,7 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - 7 saídas de adultas: 4 DNB (lotes 6 e 10), 1 seca (lote 14), 2 do lote 10 (fresca DEL 40 e vazia DEL 131).
 - Lote 10: 4 entradas, 12 saídas (9 voltaram ao lote 6, 2 saíram do rebanho, 1 DNB saiu) → 47 animais.
 - Vacas < 20 kg: 85 (−18). Comercializado de 08/11 = 72.501 kg (−9,6% vs DairyPlan; 07/11 teve só uma coleta).
+
+## 11/11/2026 – coletas (PDF de 11/11 10h17)
+- 09/11: 2 coletas (05h02 tanque 2 e 16h23 tanque 3) = 73.711 L = 76.070 kg; DairyPlan 67.802 kg → −10,9%.
+  A coleta das 05h02 leva leite do dia 08; somando 07 a 09/11 a diferença se equilibra (07/11 teve só 1 coleta).

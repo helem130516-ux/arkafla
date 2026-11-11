@@ -873,3 +873,11 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 ## 11/11/2026 – coletas (PDF de 11/11 10h17)
 - 09/11: 2 coletas (05h02 tanque 2 e 16h23 tanque 3) = 73.711 L = 76.070 kg; DairyPlan 67.802 kg → −10,9%.
   A coleta das 05h02 leva leite do dia 08; somando 07 a 09/11 a diferença se equilibra (07/11 teve só 1 coleta).
+
+## 11/11/2026 – rotina diária (relatório de 10/11)
+- Pesagens normais (1,04 · 1,02 · 1,02 · 1,03 · 1,06 · 1,08 · 1,05); sem correções.
+- Lactação 1629 (−24): 22 secagens para o lote 15 (lotes 2–6 e 1 do lote 10); 27 vacas do 15 → 14 (pré-parto).
+- Reorganização grande de lotes (1→4, 4→5/7, 5→6/7, 6→4/5, 7→5); produção 43,7 kg (+0,1), ECM 45,7.
+- 3 partos; 2 saídas de adultas (Bred, lotes 6 e 10); lote 10: 0 entradas, 2 saídas → 45.
+- Vazias com IA > 35 d: 73 (+5) — 6 vazias inseminadas em 05/10 completaram 36 dias.
+- Vacas < 20 kg: 58 (−27). Comercializado de 09/11 = 76.070 kg (DairyPlan −10,9%).

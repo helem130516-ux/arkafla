@@ -890,3 +890,7 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   O gráfico continua com a linha "dif." de cada dia e o "dif. méd." no subtítulo, agora com a mesma média.
 - Gráfico "Leite DairyPlan × comercializado" também passou para a média acumulada (escolha da usuária entre
   acumulada, móvel de 3 dias e linha da média): pontos e linha "dif." acumulados desde o 1º dia; 10/11: −0,6%.
+
+## 12/11/2026 – coletas (PDF de 12/11 09h35)
+- 10/11: 35.422 L (05h49) + 34.816 L (21h39) + 7 L (20h00, boleto 101126484, tanque 1 – provável amostra/resíduo)
+  = 70.245 L = 72.493 kg; DairyPlan 67.813 kg → −6,5% no dia. Média do período (01–10/11): −1,3%.

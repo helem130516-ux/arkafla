@@ -1,5 +1,5 @@
 # Um gráfico por página A4 (paisagem), Relatório Financeiro ago/2026:
-# receita, custo e margem por litro; Alimentação, Medicamentos, Mão de obra, Conservação e reparos — tudo em centavos por litro.
+# receita, custo e margem por litro; Alimentação, Medicamentos, Mão de obra, Conservação e reparos — tudo em R$ por litro.
 # Uso: python3 scripts/gera_graficos_custos_paginas_a4.py && node scripts/html_para_pdf.js <html> <pdf>
 import base64, pathlib
 
@@ -15,47 +15,45 @@ COLS = ["jul/26", "ago/26", "Média 2026", "Média 2025", "Média últ. 3m"]
 REC_L = [3.01, 2.88, 2.72, 2.64, 2.40, 2.44, 2.63, 2.77, 2.92, 2.87, 2.98, 3.35]
 CUS_L = [2.04, 1.87, 2.15, 2.19, 2.04, 2.14, 2.27, 2.28, 2.08, 2.24, 2.22, 2.03]
 MAR_L = [round(r - c, 2) for r, c in zip(REC_L, CUS_L)]  # margem = receita − custo por litro
-em_cent = lambda xs: [round(x * 100) for x in xs]
 
 
 # Produção mensal em milhões de litros (jul e ago exatos; demais meses arredondados no relatório).
 PROD = [1.89, 2.00, 1.92, 1.95, 1.95, 1.72, 1.88, 1.85, 1.99, 2.06, 2.162642, 2.116808]
-cent = lambda txt: br(float(txt.replace("R$ ", "").replace(",", ".")) * 100)  # "R$ 1,29" -> "129"
 
 
 def custo(nome, vals, tabela):
-    """vals em R$ mil por mês -> centavos por litro (custo do mês ÷ litros do mês)."""
-    c = [v / (p * 10) for v, p in zip(vals, PROD)]
-    media = sum(vals) / (sum(PROD) * 10)  # média ponderada pelos litros dos 12 meses
+    """vals em R$ mil por mês -> R$ por litro (custo do mês ÷ litros do mês)."""
+    c = [v / (p * 1000) for v, p in zip(vals, PROD)]
+    media = sum(vals) / (sum(PROD) * 1000)  # média ponderada pelos litros dos 12 meses
     var = (c[-1] / media - 1) * 100
     tab = []
     for rot, cols in tabela:
         if "R$/L" in rot or rot == "R$ por litro":
-            tab.append((rot.replace("(R$/L)", "(centavos/L)").replace("R$ por litro", "Centavos por litro"), [cent(x) for x in cols]))
+            tab.append((rot, cols))
         elif rot.startswith("%"):
             tab.append((rot, cols))
-    return dict(nome=nome, series=[("ago", [round(x, 1) for x in c], VERDE)], media=media, dec=1,
-                passo=20 if max(c) > 60 else 5,
-                sub="Custo por litro produzido nos últimos 12 meses (set/25–ago/26), em centavos por litro",
-                resumo=[("ago/26 · centavos por litro", f"{br(c[-1],1)} ¢/L", None),
-                        ("Média dos 12 meses", f"{br(media,1)} ¢/L", None),
+    return dict(nome=nome, series=[("ago", [round(x, 2) for x in c], VERDE)], media=media, dec=2,
+                passo=0.2 if max(c) > 0.6 else 0.05,
+                sub="Custo por litro produzido nos últimos 12 meses (set/25–ago/26), em R$ por litro",
+                resumo=[("ago/26 · R$ por litro", f"R$ {br(c[-1],2)}", None),
+                        ("Média dos 12 meses", f"R$ {br(media,2)}", None),
                         ("ago/26 vs média", f"{'+' if var >= 0 else '−'}{br(abs(var),0)}%", VERM if var >= 0 else VERDE),
-                        ("jul/26 · centavos por litro", f"{br(c[-2],1)} ¢/L", None)],
-                legenda=[(VERDE, "meses anteriores"), (OURO, "ago/26"), ("dash", f"média dos 12 meses: {br(media,1)} ¢/L")],
+                        ("jul/26 · R$ por litro", f"R$ {br(c[-2],2)}", None)],
+                legenda=[(VERDE, "meses anteriores"), (OURO, "ago/26"), ("dash", f"média dos 12 meses: R$ {br(media,2)}/L")],
                 tabela=tab)
 
 
 PAGINAS = [
-    dict(nome="Receita, custo e margem por litro", dec=0, passo=50, media=None,
-         series=[("Receita por litro", em_cent(REC_L), VERDE), ("Custo por litro", em_cent(CUS_L), LARANJA), ("Margem por litro", em_cent(MAR_L), AZUL)],
-         sub="Centavos por litro, últimos 12 meses (set/25–ago/26) · margem = receita − custo por litro",
-         resumo=[("Receita por litro · ago/26", "335 ¢/L", VERDE), ("Custo por litro · ago/26", "203 ¢/L", LARANJA),
-                 ("Margem por litro · ago/26", "132 ¢/L", AZUL), ("Preço do litro de leite · ago/26", "304 ¢/L", None)],
+    dict(nome="Receita, custo e margem por litro", dec=2, passo=0.5, media=None,
+         series=[("Receita por litro", REC_L, VERDE), ("Custo por litro", CUS_L, LARANJA), ("Margem por litro", MAR_L, AZUL)],
+         sub="R$ por litro, últimos 12 meses (set/25–ago/26) · margem = receita − custo por litro",
+         resumo=[("Receita por litro · ago/26", "R$ 3,35", VERDE), ("Custo por litro · ago/26", "R$ 2,03", LARANJA),
+                 ("Margem por litro · ago/26", "R$ 1,32", AZUL), ("Preço do litro de leite · ago/26", "R$ 3,04", None)],
          legenda=[(VERDE, "Receita por litro"), (LARANJA, "Custo por litro"), (AZUL, "Margem por litro")],
-         tabela=[("Preço do litro de leite (¢/L)", ["289", "304", "267", "279", "290"]),
-                 ("Receita bruta (¢/L)", ["298", "335", "281", "296", "307"]),
-                 ("Custo operacional (¢/L)", ["222", "203", "216", "200", "217"]),
-                 ("Margem bruta (¢/L)", ["76", "132", "65", "96", "90"])]),
+         tabela=[("Preço do litro de leite", ["R$ 2,89", "R$ 3,04", "R$ 2,67", "R$ 2,79", "R$ 2,90"]),
+                 ("Receita bruta por litro", ["R$ 2,98", "R$ 3,35", "R$ 2,81", "R$ 2,96", "R$ 3,07"]),
+                 ("Custo operacional por litro", ["R$ 2,22", "R$ 2,03", "R$ 2,16", "R$ 2,00", "R$ 2,17"]),
+                 ("Margem bruta por litro", ["R$ 0,76", "R$ 1,32", "R$ 0,65", "R$ 0,96", "R$ 0,90"])]),
     custo("Alimentação total", [2280, 2314, 2514, 2651, 2403, 2271, 2650, 2633, 2631, 2910, 3137, 2734],
           [("Valor do mês", ["R$ 3.136.888", "R$ 2.733.868", "R$ 2.671.108", "R$ 2.263.152", "—"]),
            ("   Concentrado", ["R$ 2.159.072", "R$ 1.998.144", "R$ 1.906.673", "R$ 1.702.095", "—"]),
@@ -96,7 +94,7 @@ def grafico(p, W=1000, H=None):
     while t <= vmax + 1e-9:
         y = base - ih * t / vmax
         g += f'<line x1="{ml}" x2="{W-mr}" y1="{y:.1f}" y2="{y:.1f}" stroke="{GRADE}"/>'
-        g += f'<text x="{ml-8}" y="{y+4:.1f}" text-anchor="end" font-size="12" fill="{INK2}">{br(t, 0 if float(passo).is_integer() else 1)}</text>'
+        g += f'<text x="{ml-8}" y="{y+4:.1f}" text-anchor="end" font-size="12" fill="{INK2}">{br(t, 0 if float(passo).is_integer() else (2 if passo < 0.1 else 1))}</text>'
         t += passo
     k, n = len(series), len(MESES)
     slot = iw / n

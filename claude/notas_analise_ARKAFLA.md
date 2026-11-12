@@ -894,3 +894,9 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 ## 12/11/2026 – coletas (PDF de 12/11 09h35)
 - 10/11: 35.422 L (05h49) + 34.816 L (21h39) + 7 L (20h00, boleto 101126484, tanque 1 – provável amostra/resíduo)
   = 70.245 L = 72.493 kg; DairyPlan 67.813 kg → −6,5% no dia. Média do período (01–10/11): −1,3%.
+
+## 12/11/2026 – análises do tanque de novembro (PDF Castrolanda emitido 12/11 10h44)
+- O PDF chegou junto com as coletas, mas é "Resultado Análise Leite" (LEI0940). Tirado de leite_vendido/ e salvo em
+  dados/analise_tanque/Castrolanda_Resultado_Analise_2026-11_emitido_2026-11-12.pdf (ácidos graxos ignorados).
+- Grupo novo: coletas de 05/11 (tanques 1 e 4) e 06/11 (tanques 2 e 3). Médias: gordura 3,45 · proteína 3,34 ·
+  lactose 4,74 · ST 12,46 · CCS 219 · CPP 6,75 · ureia 13,45. ECM de 10/11: 44,96 (antes 45,7 com a análise de 25/10).

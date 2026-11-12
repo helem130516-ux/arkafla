@@ -193,5 +193,57 @@
   "ureia": 11.0,
   "fonte": "analise_tanque/Castrolanda_Resultado_Analise_2026-10.pdf",
   "grupo": "Relatório mensal Castrolanda 10/2026 (coletas de 24 e 25/10)"
+ },
+ {
+  "data": "2026-11-05",
+  "tanque": 1,
+  "cpp": 10.0,
+  "ccs": 226.0,
+  "gordura": 3.41,
+  "proteina": 3.42,
+  "lactose": 4.73,
+  "st": 12.49,
+  "ureia": 12.3,
+  "fonte": "analise_tanque/Castrolanda_Resultado_Analise_2026-11_emitido_2026-11-12.pdf",
+  "grupo": "Relatório mensal Castrolanda 11/2026 (coletas de 05 e 06/11)"
+ },
+ {
+  "data": "2026-11-05",
+  "tanque": 4,
+  "cpp": 7.0,
+  "ccs": 173.0,
+  "gordura": 3.37,
+  "proteina": 3.22,
+  "lactose": 4.72,
+  "st": 12.24,
+  "ureia": 11.1,
+  "fonte": "analise_tanque/Castrolanda_Resultado_Analise_2026-11_emitido_2026-11-12.pdf",
+  "grupo": "Relatório mensal Castrolanda 11/2026 (coletas de 05 e 06/11)"
+ },
+ {
+  "data": "2026-11-06",
+  "tanque": 2,
+  "cpp": 5.0,
+  "ccs": 265.0,
+  "gordura": 3.57,
+  "proteina": 3.41,
+  "lactose": 4.73,
+  "st": 12.64,
+  "ureia": 15.7,
+  "fonte": "analise_tanque/Castrolanda_Resultado_Analise_2026-11_emitido_2026-11-12.pdf",
+  "grupo": "Relatório mensal Castrolanda 11/2026 (coletas de 05 e 06/11)"
+ },
+ {
+  "data": "2026-11-06",
+  "tanque": 3,
+  "cpp": 5.0,
+  "ccs": 212.0,
+  "gordura": 3.44,
+  "proteina": 3.32,
+  "lactose": 4.79,
+  "st": 12.47,
+  "ureia": 14.7,
+  "fonte": "analise_tanque/Castrolanda_Resultado_Analise_2026-11_emitido_2026-11-12.pdf",
+  "grupo": "Relatório mensal Castrolanda 11/2026 (coletas de 05 e 06/11)"
  }
 ]

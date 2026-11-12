@@ -348,3 +348,10 @@
 - Conflito de publicação: em 29/10 outra sessão publicou o painel com a 4ª coleta da análise oficial (24–25/10; relatório emitido em 29/10, cujo PDF não está aqui).
   - Os 4 registros foram trazidos para `dados/analise_oficial_extra.json`, que `le_analise_oficial.py` junta automaticamente. Os valores batem com o mapa de outubro (T2 232, T3 305, T4 251).
   - Publiquei por cima com as duas coisas juntas.
+
+## Análise oficial do tanque – nov/2026, 1ª coleta (12/11/2026, painel versão 20)
+- Arquivo: `dados/analise_oficial/analise_2026-11_emitido-2026-11-12.pdf` (mês 11/2026, emitido em 12/11/2026). São 68 linhas: 17 análises × 4 tanques, uma coleta (03–04/11).
+- CCS por tanque: T1 226, T2 265, T3 212, T4 173. CPP entre 5 e 10.
+  - Média simples: 219 (out/26 ponderada: 253). É prévia, sem volume; o mapa de nov/26 vai substituir.
+- O tanque 4 caiu para 173: é o menor valor dele desde jul/26 (antes ficava entre 251 e 512).
+- O painel mostra nov/26 marcado com "*" na aba Tanque.

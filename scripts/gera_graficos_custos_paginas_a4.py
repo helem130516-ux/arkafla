@@ -1,5 +1,5 @@
 # Um gráfico por página A4 (paisagem), Relatório Financeiro ago/2026:
-# receita, custo e margem por litro (R$/L); Alimentação, Medicamentos, Mão de obra, Conservação e reparos em centavos por litro.
+# receita, custo e margem por litro; Alimentação, Medicamentos, Mão de obra, Conservação e reparos — tudo em centavos por litro.
 # Uso: python3 scripts/gera_graficos_custos_paginas_a4.py && node scripts/html_para_pdf.js <html> <pdf>
 import base64, pathlib
 
@@ -15,6 +15,7 @@ COLS = ["jul/26", "ago/26", "Média 2026", "Média 2025", "Média últ. 3m"]
 REC_L = [3.01, 2.88, 2.72, 2.64, 2.40, 2.44, 2.63, 2.77, 2.92, 2.87, 2.98, 3.35]
 CUS_L = [2.04, 1.87, 2.15, 2.19, 2.04, 2.14, 2.27, 2.28, 2.08, 2.24, 2.22, 2.03]
 MAR_L = [round(r - c, 2) for r, c in zip(REC_L, CUS_L)]  # margem = receita − custo por litro
+em_cent = lambda xs: [round(x * 100) for x in xs]
 
 
 # Produção mensal em milhões de litros (jul e ago exatos; demais meses arredondados no relatório).
@@ -45,16 +46,16 @@ def custo(nome, vals, tabela):
 
 
 PAGINAS = [
-    dict(nome="Receita, custo e margem por litro", dec=2, passo=0.5, media=None,
-         series=[("Receita por litro", REC_L, VERDE), ("Custo por litro", CUS_L, LARANJA), ("Margem por litro", MAR_L, AZUL)],
-         sub="R$ por litro, últimos 12 meses (set/25–ago/26) · margem = receita − custo por litro",
-         resumo=[("Receita por litro · ago/26", "R$ 3,35", VERDE), ("Custo por litro · ago/26", "R$ 2,03", LARANJA),
-                 ("Margem por litro · ago/26", "R$ 1,32", AZUL), ("Preço do litro de leite · ago/26", "R$ 3,04", None)],
+    dict(nome="Receita, custo e margem por litro", dec=0, passo=50, media=None,
+         series=[("Receita por litro", em_cent(REC_L), VERDE), ("Custo por litro", em_cent(CUS_L), LARANJA), ("Margem por litro", em_cent(MAR_L), AZUL)],
+         sub="Centavos por litro, últimos 12 meses (set/25–ago/26) · margem = receita − custo por litro",
+         resumo=[("Receita por litro · ago/26", "335 ¢/L", VERDE), ("Custo por litro · ago/26", "203 ¢/L", LARANJA),
+                 ("Margem por litro · ago/26", "132 ¢/L", AZUL), ("Preço do litro de leite · ago/26", "304 ¢/L", None)],
          legenda=[(VERDE, "Receita por litro"), (LARANJA, "Custo por litro"), (AZUL, "Margem por litro")],
-         tabela=[("Preço do litro de leite", ["R$ 2,89", "R$ 3,04", "R$ 2,67", "R$ 2,79", "R$ 2,90"]),
-                 ("Receita bruta por litro", ["R$ 2,98", "R$ 3,35", "R$ 2,81", "R$ 2,96", "R$ 3,07"]),
-                 ("Custo operacional por litro", ["R$ 2,22", "R$ 2,03", "R$ 2,16", "R$ 2,00", "R$ 2,17"]),
-                 ("Margem bruta por litro", ["R$ 0,76", "R$ 1,32", "R$ 0,65", "R$ 0,96", "R$ 0,90"])]),
+         tabela=[("Preço do litro de leite (¢/L)", ["289", "304", "267", "279", "290"]),
+                 ("Receita bruta (¢/L)", ["298", "335", "281", "296", "307"]),
+                 ("Custo operacional (¢/L)", ["222", "203", "216", "200", "217"]),
+                 ("Margem bruta (¢/L)", ["76", "132", "65", "96", "90"])]),
     custo("Alimentação total", [2280, 2314, 2514, 2651, 2403, 2271, 2650, 2633, 2631, 2910, 3137, 2734],
           [("Valor do mês", ["R$ 3.136.888", "R$ 2.733.868", "R$ 2.671.108", "R$ 2.263.152", "—"]),
            ("   Concentrado", ["R$ 2.159.072", "R$ 1.998.144", "R$ 1.906.673", "R$ 1.702.095", "—"]),

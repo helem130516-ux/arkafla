@@ -909,3 +909,6 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Gestantes 1000 (−11): 6 partos, 3 prenhas → vazias, 1 saída; novilhas gestantes 540 (+10).
 - Quarta-feira: 44,05 kg/vaca no tanque, +0,04 vs terça e +0,8 kg (+1,9%) vs média dos 7 dias anteriores.
 - Vacas < 20 kg: 63 (+5).
+- Pedido 12/11: resumo das análises do tanque (gordura, proteína, CPP, ureia, CCS) em tabela, com a média embaixo, em
+  PDF → scripts/resumo_analises_pdf.py → monitoramento/analises/Resumo_Analises_Tanque_AAAA-MM-DD.pdf
+  (arredondamento meio para cima, como no Excel). Rodar de novo quando chegar análise nova, se a usuária pedir.

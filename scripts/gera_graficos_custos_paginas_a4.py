@@ -1,5 +1,5 @@
 # Um gráfico por página A4 (paisagem), Relatório Financeiro ago/2026:
-# receita, custo e margem por litro; Alimentação; Medicamentos; Mão de obra; Conservação e reparos.
+# receita, custo e margem por litro (R$/L); Alimentação, Medicamentos, Mão de obra, Conservação e reparos em centavos por litro.
 # Uso: python3 scripts/gera_graficos_custos_paginas_a4.py && node scripts/html_para_pdf.js <html> <pdf>
 import base64, pathlib
 
@@ -17,13 +17,31 @@ CUS_L = [2.04, 1.87, 2.15, 2.19, 2.04, 2.14, 2.27, 2.28, 2.08, 2.24, 2.22, 2.03]
 MAR_L = [round(r - c, 2) for r, c in zip(REC_L, CUS_L)]  # margem = receita − custo por litro
 
 
-def custo(nome, vals, media, atual, rl, var, tabela):
-    return dict(nome=nome, series=[("ago", vals, VERDE)], media=media, dec=0, passo=500 if max(vals) > 1000 else 100,
-                sub="Custo mensal dos últimos 12 meses (set/25–ago/26), em R$ mil",
-                resumo=[("Valor em ago/26", atual, None), ("Média dos 12 meses", f"R$ {br(media*1000)}", None),
-                        ("ago/26 vs média", var, VERM if var.startswith("+") else VERDE), ("Custo por litro em ago/26", rl, None)],
-                legenda=[(VERDE, "meses anteriores"), (OURO, "ago/26"), ("dash", f"média dos 12 meses: {br(media)} mil")],
-                tabela=tabela)
+# Produção mensal em milhões de litros (jul e ago exatos; demais meses arredondados no relatório).
+PROD = [1.89, 2.00, 1.92, 1.95, 1.95, 1.72, 1.88, 1.85, 1.99, 2.06, 2.162642, 2.116808]
+cent = lambda txt: br(float(txt.replace("R$ ", "").replace(",", ".")) * 100)  # "R$ 1,29" -> "129"
+
+
+def custo(nome, vals, tabela):
+    """vals em R$ mil por mês -> centavos por litro (custo do mês ÷ litros do mês)."""
+    c = [v / (p * 10) for v, p in zip(vals, PROD)]
+    media = sum(vals) / (sum(PROD) * 10)  # média ponderada pelos litros dos 12 meses
+    var = (c[-1] / media - 1) * 100
+    tab = []
+    for rot, cols in tabela:
+        if "R$/L" in rot or rot == "R$ por litro":
+            tab.append((rot.replace("(R$/L)", "(centavos/L)").replace("R$ por litro", "Centavos por litro"), [cent(x) for x in cols]))
+        elif rot.startswith("%"):
+            tab.append((rot, cols))
+    return dict(nome=nome, series=[("ago", [round(x, 1) for x in c], VERDE)], media=media, dec=1,
+                passo=20 if max(c) > 60 else 5,
+                sub="Custo por litro produzido nos últimos 12 meses (set/25–ago/26), em centavos por litro",
+                resumo=[("ago/26 · centavos por litro", f"{br(c[-1],1)} ¢/L", None),
+                        ("Média dos 12 meses", f"{br(media,1)} ¢/L", None),
+                        ("ago/26 vs média", f"{'+' if var >= 0 else '−'}{br(abs(var),0)}%", VERM if var >= 0 else VERDE),
+                        ("jul/26 · centavos por litro", f"{br(c[-2],1)} ¢/L", None)],
+                legenda=[(VERDE, "meses anteriores"), (OURO, "ago/26"), ("dash", f"média dos 12 meses: {br(media,1)} ¢/L")],
+                tabela=tab)
 
 
 PAGINAS = [
@@ -38,7 +56,6 @@ PAGINAS = [
                  ("Custo operacional por litro", ["R$ 2,22", "R$ 2,03", "R$ 2,16", "R$ 2,00", "R$ 2,17"]),
                  ("Margem bruta por litro", ["R$ 0,76", "R$ 1,32", "R$ 0,65", "R$ 0,96", "R$ 0,90"])]),
     custo("Alimentação total", [2280, 2314, 2514, 2651, 2403, 2271, 2650, 2633, 2631, 2910, 3137, 2734],
-          2594.002, "R$ 2.733.868", "R$ 1,29/L", "+5%",
           [("Valor do mês", ["R$ 3.136.888", "R$ 2.733.868", "R$ 2.671.108", "R$ 2.263.152", "—"]),
            ("   Concentrado", ["R$ 2.159.072", "R$ 1.998.144", "R$ 1.906.673", "R$ 1.702.095", "—"]),
            ("   Volumoso", ["R$ 977.817", "R$ 735.724", "R$ 764.436", "R$ 561.057", "—"]),
@@ -48,19 +65,16 @@ PAGINAS = [
            ("% do custo total", ["65,3%", "63,6%", "62,8%", "61,5%", "64,0%"]),
            ("% da receita bruta", ["48,6%", "38,5%", "48,3%", "41,5%", "45,2%"])]),
     custo("Medicamentos", [399, 263, 382, 331, 357, 347, 370, 261, 337, 497, 324, 350],
-          351.491, "R$ 349.668", "R$ 0,17/L", "−1%",
           [("Valor do mês", ["R$ 324.303", "R$ 349.668", "R$ 355.227", "R$ 328.644", "—"]),
            ("R$ por litro", ["R$ 0,15", "R$ 0,17", "R$ 0,18", "R$ 0,18", "R$ 0,18"]),
            ("% do custo total", ["6,7%", "8,1%", "8,4%", "8,9%", "8,5%"]),
            ("% da receita bruta", ["5,0%", "4,9%", "6,4%", "6,0%", "6,0%"])]),
     custo("Mão de obra", [287, 257, 248, 469, 318, 343, 324, 358, 279, 337, 317, 287],
-          318.610, "R$ 287.410", "R$ 0,14/L", "−10%",
           [("Valor do mês", ["R$ 317.479", "R$ 287.410", "R$ 320.332", "R$ 282.230", "—"]),
            ("R$ por litro", ["R$ 0,15", "R$ 0,14", "R$ 0,16", "R$ 0,15", "R$ 0,15"]),
            ("% do custo total", ["6,6%", "6,7%", "7,5%", "7,7%", "6,9%"]),
            ("% da receita bruta", ["4,9%", "4,0%", "5,8%", "5,2%", "4,8%"])]),
     custo("Conservação e reparos", [275, 235, 321, 161, 288, 181, 291, 352, 345, 334, 355, 280],
-          284.853, "R$ 280.255", "R$ 0,13/L", "−2%",
           [("Valor do mês", ["R$ 354.893", "R$ 280.255", "R$ 303.301", "R$ 227.145", "—"]),
            ("R$ por litro", ["R$ 0,16", "R$ 0,13", "R$ 0,15", "R$ 0,12", "R$ 0,15"]),
            ("% do custo total", ["7,4%", "6,5%", "7,1%", "6,2%", "7,1%"]),
@@ -81,7 +95,7 @@ def grafico(p, W=1000, H=None):
     while t <= vmax + 1e-9:
         y = base - ih * t / vmax
         g += f'<line x1="{ml}" x2="{W-mr}" y1="{y:.1f}" y2="{y:.1f}" stroke="{GRADE}"/>'
-        g += f'<text x="{ml-8}" y="{y+4:.1f}" text-anchor="end" font-size="12" fill="{INK2}">{br(t, 0 if dec == 0 else 1)}</text>'
+        g += f'<text x="{ml-8}" y="{y+4:.1f}" text-anchor="end" font-size="12" fill="{INK2}">{br(t, 0 if float(passo).is_integer() else 1)}</text>'
         t += passo
     k, n = len(series), len(MESES)
     slot = iw / n

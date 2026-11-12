@@ -900,3 +900,12 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   dados/analise_tanque/Castrolanda_Resultado_Analise_2026-11_emitido_2026-11-12.pdf (ácidos graxos ignorados).
 - Grupo novo: coletas de 05/11 (tanques 1 e 4) e 06/11 (tanques 2 e 3). Médias: gordura 3,45 · proteína 3,34 ·
   lactose 4,74 · ST 12,46 · CCS 219 · CPP 6,75 · ureia 13,45. ECM de 10/11: 44,96 (antes 45,7 com a análise de 25/10).
+
+## 12/11/2026 – rotina diária (relatório de 11/11, quarta)
+- Pesagens normais (1,03 · 1,02 · 1,01 · 1,04 · 1,09 · 1,14 · 1,02); sem correções.
+- Lactação 1630 (+1); tanque 1586; produção 43,8 kg (+0,1); ECM 45,0 (análise de 06/11); DairyPlan 68.931 kg.
+- 6 partos; 9 saídas de adultas (4 frescas DEL 13–58 dos lotes 7 e 10, 2 secas, 1 DNB, 1 prenha, 1 inseminada).
+- Lote 10: 14 entradas (lotes 2–7 e 20), 15 saídas (7 → lote 6, 2 → 7, 1 → 4, 1 → 15, 4 saíram do rebanho) → 44.
+- Gestantes 1000 (−11): 6 partos, 3 prenhas → vazias, 1 saída; novilhas gestantes 540 (+10).
+- Quarta-feira: 44,05 kg/vaca no tanque, +0,04 vs terça e +0,8 kg (+1,9%) vs média dos 7 dias anteriores.
+- Vacas < 20 kg: 63 (+5).

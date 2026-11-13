@@ -912,3 +912,11 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Pedido 12/11: resumo das análises do tanque (gordura, proteína, CPP, ureia, CCS) em tabela, com a média embaixo, em
   PDF → scripts/resumo_analises_pdf.py → monitoramento/analises/Resumo_Analises_Tanque_AAAA-MM-DD.pdf
   (arredondamento meio para cima, como no Excel). Rodar de novo quando chegar análise nova, se a usuária pedir.
+
+## 13/11/2026 – rotina diária (relatório de 12/11, quinta) – rotina disparou às 12h08 (atrasada)
+- Pesagens normais (1,04 · 1,04 · 1,05 · 1,04 · 1,11 · 1,13 · 1,05); sem correções.
+- Lactação 1635 (+5); tanque 1599 (+13); produção 45,0 kg (+0,9); ECM 46,0; DairyPlan 70.472 kg.
+- 4 partos; nenhuma saída de adultas. Lote 10: 1 entrada, 9 saídas (6 → lote 6, 1 → 1, 2, 3) → 36.
+- Vazias com IA > 35 d: 46 (−26) — 50 vacas vazias inseminadas (Vazia → Bred) em 12/11.
+- Quinta-feira: 45,0 kg/vaca no tanque, +0,96 vs quarta e +1,6 kg (+3,7%) vs média dos 7 dias anteriores.
+- Vacas < 20 kg: 59 (−4). Sem coletas novas (último comercializado: 10/11).

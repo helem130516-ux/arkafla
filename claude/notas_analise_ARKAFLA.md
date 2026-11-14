@@ -920,3 +920,11 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Vazias com IA > 35 d: 46 (−26) — 50 vacas vazias inseminadas (Vazia → Bred) em 12/11.
 - Quinta-feira: 45,0 kg/vaca no tanque, +0,96 vs quarta e +1,6 kg (+3,7%) vs média dos 7 dias anteriores.
 - Vacas < 20 kg: 59 (−4). Sem coletas novas (último comercializado: 10/11).
+
+## 14/11/2026 – rotina diária (relatório de 13/11, sexta)
+- Pesagens normais (1,03 · 1,02 · 1,01 · 1,00 · 1,05 · 1,10 · 1,05); sem correções.
+- Lactação 1635 (=); produção 43,6 kg (−1,1; queda em quase todos os lotes); ECM 44,8; DairyPlan 68.611 kg.
+- 2 partos; nenhuma saída; nenhuma mudança de lote e lote 10 sem entradas/saídas (36) — dia sem movimentação lançada.
+- Vazias com IA > 35 d: 71 (+25) — 25 vazias inseminadas em 08/10 completaram 36 dias; 2 inseminadas (Bred) de
+  08/10 também passaram de 35 dias sem diagnóstico.
+- Vacas < 20 kg: 50 (−9). Sem coletas novas (último comercializado: 10/11).

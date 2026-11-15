@@ -928,3 +928,11 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Vazias com IA > 35 d: 71 (+25) — 25 vazias inseminadas em 08/10 completaram 36 dias; 2 inseminadas (Bred) de
   08/10 também passaram de 35 dias sem diagnóstico.
 - Vacas < 20 kg: 50 (−9). Sem coletas novas (último comercializado: 10/11).
+
+## 15/11/2026 – rotina diária (relatório de 14/11, sábado)
+- Pesagens normais (1,05 · 1,01 · 1,02 · 1,01 · 1,03 · 1,08 · 1,05); sem correções.
+- Lactação 1635 (=); produção 43,5 kg (−0,1); ECM 44,8; DairyPlan 68.599 kg.
+- 0 partos, 0 saídas, nenhuma mudança de lote, lote 10 parado em 36 — segundo dia seguido sem movimentação
+  lançada no BoviSync (13 e 14/11). Partos lançados depois entram sozinhos pela DtÚltParto no relatório seguinte.
+- Vazias com IA > 35 d: 71 (=); 2 inseminadas de 08/10 seguem sem diagnóstico. Vacas < 20 kg: 51 (+1).
+- Sem coletas novas (último comercializado: 10/11).

@@ -950,3 +950,9 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   Média do período (01–14/11): −1,3%.
 - Também chegou o "Resultado Análise Leite" de nov/26 reemitido em 16/11 10h46: mesma coleta de 03–06/11 já registrada
   (CCS T1 226, T2 265, T3 212, T4 173); nada novo.
+- Rebaixado à tarde (`--substituir`, pedido da usuária: "rodar novamente com os partos atualizados"): 3.995 animais
+  (+10 bezerros), leite igual.
+  - Partos lançados: 13/11 = 2, 14/11 = 0 → 4, 15/11 = 0 → 6 (mais 1 com data de 16/11, que conta amanhã).
+  - 15/11: lactação 1643 (+8), tanque 1600 (+1), secas 214; lote 10: 16 entradas, 9 saídas → 43.
+  - Produção 41,9 kg e ECM 43,1 (sem mudança); DairyPlan 65.580 kg; vacas < 20 kg: 71.
+  - Gestantes 1017 (56,4%); vazias com IA > 35 d: 78.

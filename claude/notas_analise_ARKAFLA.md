@@ -936,3 +936,17 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   lançada no BoviSync (13 e 14/11). Partos lançados depois entram sozinhos pela DtÚltParto no relatório seguinte.
 - Vazias com IA > 35 d: 71 (=); 2 inseminadas de 08/10 seguem sem diagnóstico. Vacas < 20 kg: 51 (+1).
 - Sem coletas novas (último comercializado: 10/11).
+
+## 16/11/2026 – rotina diária (relatório de 15/11, domingo), rodada em outra sessão (branch claude/relaxed-newton-blmb18)
+- Pesagens normais (1,01 · 0,98 · 0,98 · 0,98 · 0,94 · 0,99 · 1,00); sem correções.
+- Lactação 1640 (+5); tanque 1587 (−12); produção 41,9 kg (−1,6; queda nas mesmas vacas do tanque, 44,0 → 42,5);
+  ECM 43,1; DairyPlan 65.341 kg. Vacas < 20 kg: 68 (+17).
+- 0 partos lançados, mas 7 animais passaram do lote 14 (pré-parto) para o 7: partos ainda sem DtÚltParto.
+- 2 saídas de adultas (3491 Bred lote 3; 3672 Prenha lote 5). Lote 10: 18 entradas, 1 saída → 53.
+- Diagnóstico de gestação lançado: 34 Bred → Prenha, 53 Bred → Vazia, 4 Prenha → Vazia. Gestantes 1026 (+29), 57,0%.
+  Vazias com IA > 35 d: 78 (+7).
+- Coletas (PDF emitido em 16/11 10h49, 34 coletas, Total Período 1.083.849 L): comercializado completo até 14/11.
+  11/11 74.001 kg (−6,9%), 12/11 72.413 kg (−2,7%), 13/11 70.697 kg (−3,0%), 14/11 68.806 kg (−0,3%).
+  Média do período (01–14/11): −1,3%.
+- Também chegou o "Resultado Análise Leite" de nov/26 reemitido em 16/11 10h46: mesma coleta de 03–06/11 já registrada
+  (CCS T1 226, T2 265, T3 212, T4 173); nada novo.

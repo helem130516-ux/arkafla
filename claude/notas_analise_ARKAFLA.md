@@ -936,3 +936,13 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   lançada no BoviSync (13 e 14/11). Partos lançados depois entram sozinhos pela DtÚltParto no relatório seguinte.
 - Vazias com IA > 35 d: 71 (=); 2 inseminadas de 08/10 seguem sem diagnóstico. Vacas < 20 kg: 51 (+1).
 - Sem coletas novas (último comercializado: 10/11).
+
+## 16/11/2026 – rotina diária (relatório de 15/11, domingo)
+- Pesagens dentro do normal, mas mais baixas (1,01 · 0,98 · 0,98 · 0,98 · 0,94 · 0,99 · 1,00); sem correções.
+- Produção 41,9 kg (−1,6), queda em todos os lotes (lote 5 −3,0; lote 7 −3,4); ECM 43,1; DairyPlan 65.341 kg (−3.258).
+- Lactação 1640 (+5): 7 vacas foram do lote 14 (pré-parto) para o 7 e já têm pesagem (0,5 a 19,8 kg), mas seguem
+  "Dry" com a DtÚltParto antiga → partos de 14–15/11 ainda não lançados (0 partos nos dois dias). Entram sozinhos
+  quando lançados. Elas também puxam para baixo a média do lote 7 e somam nas vacas < 20 kg (68, +17).
+- Lote 10: 18 entradas (lotes 1–7, 20, 30; DEL 4 a 347), 1 saída → 53; descarte 1.064 kg.
+- Diagnósticos de prenhez: 34 Bred → Prenha, 53 Bred → Vazia, 2 → DNB. Gestantes 1026 (+29); vazias IA > 35 d 78 (+7).
+- 2 saídas de adultas (lote 30 inseminada, lote 5 prenha). Sem coletas novas (último comercializado: 10/11).

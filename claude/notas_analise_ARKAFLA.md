@@ -955,3 +955,9 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - % fêmeas nascidas ÷ partos (7 d): 62% (−11 p.p.) — os bezerros dos partos de 14–15/11 provavelmente ainda não
   foram cadastrados (nascidas há ≤ 7 d: 18).
 - Vacas < 20 kg: 63 (−5); vazias IA > 35 d: 79 (+1). Sem coletas novas (último comercializado: 10/11).
+
+## 17/11/2026 – coletas (PDF de 17/11 11h05)
+- Comercializado 11 a 15/11 (kg): 74.001 · 72.413 · 70.748 · 68.824 · 66.607; DairyPlan −6,9% · −2,7% · −3,0% ·
+  −0,3% · −1,9%. Média do período (07–15/11, soma): −0,6%.
+- Todo dia aparece uma coleta pequena no tanque 1 (7 a 49 L, boletos tipo DDMM260484) – provável amostra/sobra.
+- Queda do comercializado de 13 a 15/11 acompanha a queda do DairyPlan (domingo 15/11).

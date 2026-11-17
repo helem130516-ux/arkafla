@@ -946,3 +946,12 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Lote 10: 18 entradas (lotes 1–7, 20, 30; DEL 4 a 347), 1 saída → 53; descarte 1.064 kg.
 - Diagnósticos de prenhez: 34 Bred → Prenha, 53 Bred → Vazia, 2 → DNB. Gestantes 1026 (+29); vazias IA > 35 d 78 (+7).
 - 2 saídas de adultas (lote 30 inseminada, lote 5 prenha). Sem coletas novas (último comercializado: 10/11).
+
+## 17/11/2026 – rotina diária (relatório de 16/11, segunda)
+- Pesagens normais (1,04 · 1,03 · 1,02 · 1,03 · 1,01 · 1,00 · 1,02); sem correções.
+- Produção recuperou: 43,6 kg (+1,7), alta em todos os lotes; ECM 44,9; DairyPlan 68.391 kg (+3.050).
+- Partos lançados com atraso entraram sozinhos: 14/11 = 4 e 15/11 = 6 (antes 0); 16/11 = 1. Lactação 1641 (+1).
+- Lote 10: 11 entradas, 11 saídas (8 → lote 6) → 53. 1 saída de adulta (lote 10, prenha).
+- % fêmeas nascidas ÷ partos (7 d): 62% (−11 p.p.) — os bezerros dos partos de 14–15/11 provavelmente ainda não
+  foram cadastrados (nascidas há ≤ 7 d: 18).
+- Vacas < 20 kg: 63 (−5); vazias IA > 35 d: 79 (+1). Sem coletas novas (último comercializado: 10/11).

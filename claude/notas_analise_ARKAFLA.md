@@ -369,3 +369,16 @@
 - **Qualidade do dado (grau):** até jun/26, 28–50% dos casos eram "Grave". Desde jul/26, quase todos estão como "Leve": em ago, 118 leves e 3 moderados; em set e nov, todos leves. Pode ser mudança no registro e não melhora real. Perguntar à fazenda.
 - Resumo mensal: out/26 com 101 agentes isolados em resultados positivos; nov/26 parcial com 58.
 - Ligação com o registro de mastite: 228 de 844 tratamentos (27%) têm cultura OnFarm até 3 dias do início. O registro de mastite vai só até 24/10.
+
+## Registro de mastite atualizado até 12/11/2026 (17/11/2026, painel versão 22)
+- Arquivo: `dados/MASTITE_2026.xlsx`, substituído pela versão nova da pasta completa. O histórico continua no git.
+  - `dados/mastite_tratamentos_2026.xlsx` foi removido, porque a aba 2026 da pasta nova já traz todos os tratamentos.
+- Aba 2026: 909 tratamentos. Os 844 anteriores não mudaram em nenhum campo. Há 65 novos, de 25/10 a 12/11: 29 em out e 36 em nov.
+  - Produtos dos novos: Ubrolexin 29, sem produto 16, Mastjet 12, Mastgen 8. Todos têm quarto.
+- As outras abas (hiperqueratose, SECAGEM, DOENÇAS GERAL) estão iguais: 1.836 secagens somando a exportação do rebanho, e 187 registros de doenças.
+- Depois do controle de 16/10: 87 tratamentos até 12/11.
+  - 19 retratamentos.
+  - 56 de 82 (68%) em vacas que já tinham CCS ≥ 200.
+  - Mais casos nos lotes 5 (22), 3 (19), 6 (13) e 2 (13).
+  - Esses tratamentos entram no indicador do próximo controle.
+- Vacas com 3 ou mais tratamentos em 2026: 96 (eram 83).

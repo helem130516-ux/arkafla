@@ -1,6 +1,379 @@
 {
-"arquivo": "onfarm_2026-10-19.xlsx",
+"arquivo": "onfarm_2026-11-16.xlsx",
 "registros": [
+{
+"vaca": 4385,
+"data": "2026-01-17",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Grave",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4578,
+"data": "2026-01-17",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Prototheca / Levedura"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4578,
+"data": "2026-01-17",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Moderado",
+"resultado": "Positivo",
+"agentes": [
+"Prototheca / Levedura"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4829,
+"data": "2026-01-17",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3858,
+"data": "2026-01-19",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Grave",
+"resultado": "Contaminado",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Prototheca / Levedura",
+"Pseudomonas spp"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4438,
+"data": "2026-01-19",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Grave",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4578,
+"data": "2026-01-19",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Grave",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4944,
+"data": "2026-01-19",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Grave",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 1187,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 2225,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Grave",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3039,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Grave",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3159,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3186,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Prototheca / Levedura"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3253,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Prototheca / Levedura"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3330,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Grave",
+"resultado": "Contaminado",
+"agentes": [
+"Outros Gram-pos",
+"Prototheca / Levedura",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3422,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Grave",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3576,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Moderado",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3576,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Moderado",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3632,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Moderado",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4063,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Grave",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4416,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4815,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4931,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5018,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Prototheca / Levedura"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5191,
+"data": "2026-01-22",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Grave",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
 {
 "vaca": 2570,
 "data": "2026-01-26",
@@ -13,7 +386,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "11",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -26,7 +399,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -43,7 +416,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -58,7 +431,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -73,7 +446,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -88,7 +461,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -104,7 +477,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -119,7 +492,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -135,7 +508,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -152,7 +525,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -165,7 +538,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -178,7 +551,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -193,7 +566,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -206,7 +579,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -222,7 +595,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -235,7 +608,7 @@
 "grau": "Leve",
 "resultado": "Positivo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -248,7 +621,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -265,7 +638,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -278,7 +651,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -294,7 +667,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -309,7 +682,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -324,7 +697,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -339,7 +712,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -354,7 +727,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -367,7 +740,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -383,7 +756,7 @@
 "Strep. uberis",
 "Prototheca / Levedura"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -398,7 +771,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -415,7 +788,7 @@
 "Prototheca / Levedura",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -428,7 +801,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -447,7 +820,7 @@
 "Enterococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -462,7 +835,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -475,7 +848,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "12",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -488,7 +861,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "13",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -501,7 +874,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -516,7 +889,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -529,7 +902,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -542,7 +915,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -555,7 +928,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -570,7 +943,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -583,7 +956,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "13",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -596,7 +969,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -609,7 +982,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -622,7 +995,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -635,7 +1008,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -650,7 +1023,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -663,7 +1036,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -678,7 +1051,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -693,7 +1066,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -706,7 +1079,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -719,7 +1092,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -734,7 +1107,7 @@
 "agentes": [
 "E. coli"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -747,7 +1120,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -762,7 +1135,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -777,7 +1150,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -793,7 +1166,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -812,7 +1185,7 @@
 "Pseudomonas spp",
 "Staph não aureus"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -827,7 +1200,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -840,7 +1213,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -856,7 +1229,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -875,7 +1248,7 @@
 "Pseudomonas spp",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -888,7 +1261,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -901,7 +1274,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -914,7 +1287,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -927,7 +1300,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -940,7 +1313,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "15",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -953,7 +1326,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "15",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -966,7 +1339,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -979,7 +1352,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -992,7 +1365,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1008,7 +1381,7 @@
 "Outros Gram-neg",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1021,7 +1394,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1036,7 +1409,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1051,7 +1424,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1067,7 +1440,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1080,7 +1453,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1093,7 +1466,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1106,7 +1479,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1119,7 +1492,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1134,7 +1507,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1147,7 +1520,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "13",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1162,7 +1535,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1175,7 +1548,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1190,7 +1563,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1205,7 +1578,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1218,7 +1591,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1234,7 +1607,7 @@
 "Strep. uberis",
 "E. coli"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1247,7 +1620,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "11",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1260,7 +1633,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "11",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1273,7 +1646,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1288,7 +1661,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1303,7 +1676,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1316,7 +1689,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1331,7 +1704,7 @@
 "agentes": [
 "E. coli"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1344,7 +1717,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1361,7 +1734,7 @@
 "Prototheca / Levedura",
 "Pseudomonas spp"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1374,7 +1747,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1389,7 +1762,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1406,7 +1779,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "14",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1422,7 +1795,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1435,7 +1808,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1448,7 +1821,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1463,7 +1836,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1476,7 +1849,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1492,7 +1865,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Serratia spp"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1508,7 +1881,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1523,7 +1896,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1538,7 +1911,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1551,7 +1924,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1564,7 +1937,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1577,7 +1950,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1590,7 +1963,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1603,7 +1976,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1616,7 +1989,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1631,7 +2004,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1644,7 +2017,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1660,7 +2033,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Strep. uberis"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1678,7 +2051,7 @@
 "Pseudomonas spp",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1693,7 +2066,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1709,7 +2082,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Strep. uberis"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1727,7 +2100,7 @@
 "Enterococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1740,7 +2113,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1753,7 +2126,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1766,7 +2139,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1781,7 +2154,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1794,7 +2167,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1807,7 +2180,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1820,7 +2193,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1833,7 +2206,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1848,7 +2221,7 @@
 "agentes": [
 "E. coli"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1863,7 +2236,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1876,7 +2249,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1891,7 +2264,7 @@
 "agentes": [
 "E. coli"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1904,7 +2277,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1921,7 +2294,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1934,7 +2307,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1947,7 +2320,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1960,7 +2333,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1975,7 +2348,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -1991,7 +2364,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Strep. uberis"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2004,7 +2377,7 @@
 "grau": "Moderado",
 "resultado": "Fazer Leitura",
 "agentes": [],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2017,7 +2390,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2032,7 +2405,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2045,7 +2418,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2058,7 +2431,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2071,7 +2444,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2084,7 +2457,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2097,7 +2470,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2110,7 +2483,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2125,7 +2498,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2142,7 +2515,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2155,7 +2528,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2168,7 +2541,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2184,7 +2557,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2202,7 +2575,7 @@
 "Prototheca / Levedura",
 "Pseudomonas spp"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2218,7 +2591,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2235,7 +2608,7 @@
 "Enterococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2248,7 +2621,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2263,7 +2636,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2278,7 +2651,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2293,7 +2666,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2308,7 +2681,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "11",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2321,7 +2694,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2334,7 +2707,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2347,7 +2720,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2363,7 +2736,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2378,7 +2751,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2394,7 +2767,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2409,7 +2782,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2426,7 +2799,7 @@
 "Outros Gram-neg",
 "Staph não aureus"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2442,7 +2815,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2458,7 +2831,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2475,7 +2848,7 @@
 "Prototheca / Levedura",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2488,7 +2861,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2503,7 +2876,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2521,7 +2894,7 @@
 "Serratia spp",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2536,7 +2909,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Sim",
 "status": "Em aberto"
 },
@@ -2551,7 +2924,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2564,7 +2937,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2577,7 +2950,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2590,7 +2963,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2603,7 +2976,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2619,7 +2992,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Strep. uberis"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Não",
 "status": "Em aberto"
 },
@@ -2634,7 +3007,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Sim",
 "status": "Em aberto"
 },
@@ -2649,7 +3022,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2664,7 +3037,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2677,7 +3050,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2692,7 +3065,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2705,7 +3078,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2720,7 +3093,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2738,7 +3111,7 @@
 "Pseudomonas spp",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2754,7 +3127,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2771,7 +3144,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2784,7 +3157,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2800,7 +3173,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2813,7 +3186,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2828,7 +3201,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2841,7 +3214,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2856,7 +3229,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2869,7 +3242,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2882,7 +3255,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2895,7 +3268,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2908,7 +3281,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2921,7 +3294,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2934,7 +3307,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2947,7 +3320,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2960,7 +3333,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2973,7 +3346,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2986,7 +3359,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -2999,7 +3372,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3015,7 +3388,7 @@
 "Strep. uberis",
 "E. coli"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3028,7 +3401,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3041,7 +3414,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3057,7 +3430,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3070,7 +3443,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3086,7 +3459,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Pseudomonas spp"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3101,7 +3474,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3118,7 +3491,7 @@
 "Enterococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3135,7 +3508,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3150,7 +3523,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3163,7 +3536,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3178,7 +3551,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3193,7 +3566,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3208,7 +3581,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "12",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3221,7 +3594,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3234,7 +3607,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3249,7 +3622,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3262,7 +3635,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3275,7 +3648,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3290,7 +3663,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3305,7 +3678,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3318,7 +3691,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3331,7 +3704,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3346,7 +3719,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3359,7 +3732,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3372,7 +3745,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3387,7 +3760,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3400,7 +3773,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3413,7 +3786,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3426,7 +3799,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3441,7 +3814,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3457,7 +3830,7 @@
 "Outros Gram-pos",
 "Prototheca / Levedura"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3472,7 +3845,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3485,7 +3858,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3501,7 +3874,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3514,7 +3887,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3527,7 +3900,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3542,7 +3915,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3560,7 +3933,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3573,7 +3946,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3588,7 +3961,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3603,7 +3976,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3616,7 +3989,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3631,7 +4004,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "11",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3646,7 +4019,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3662,7 +4035,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3675,7 +4048,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3690,7 +4063,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3703,7 +4076,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3718,7 +4091,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3733,7 +4106,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3748,7 +4121,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3761,7 +4134,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3774,7 +4147,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3787,7 +4160,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3800,7 +4173,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3815,7 +4188,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3828,7 +4201,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3841,7 +4214,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3854,7 +4227,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3867,7 +4240,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3880,7 +4253,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3895,7 +4268,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3912,7 +4285,7 @@
 "Outros Gram-pos",
 "Prototheca / Levedura"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3925,7 +4298,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3941,7 +4314,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3954,7 +4327,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3970,7 +4343,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3983,7 +4356,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -3998,7 +4371,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4011,7 +4384,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4024,7 +4397,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4039,7 +4412,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4052,7 +4425,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4065,7 +4438,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4078,7 +4451,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4091,7 +4464,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4104,7 +4477,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4117,7 +4490,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4132,7 +4505,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4145,7 +4518,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4158,7 +4531,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4171,7 +4544,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4184,7 +4557,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4197,7 +4570,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4213,7 +4586,7 @@
 "Klebsiella / Enterobacter",
 "Serratia spp"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4228,7 +4601,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4243,7 +4616,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4259,7 +4632,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4272,7 +4645,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4289,7 +4662,7 @@
 "Staph. aureus",
 "Prototheca / Levedura"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4305,7 +4678,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4321,7 +4694,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4334,7 +4707,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "12",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4347,7 +4720,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "12",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4360,7 +4733,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4373,7 +4746,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4386,7 +4759,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4399,7 +4772,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4412,7 +4785,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4425,7 +4798,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4438,7 +4811,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4451,7 +4824,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4466,7 +4839,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4479,7 +4852,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4492,7 +4865,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4505,7 +4878,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4520,7 +4893,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4533,7 +4906,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4549,7 +4922,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4565,7 +4938,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4580,7 +4953,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4593,7 +4966,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4608,7 +4981,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4623,7 +4996,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4636,7 +5009,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4649,7 +5022,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4662,7 +5035,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4678,7 +5051,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4693,7 +5066,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4706,7 +5079,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4721,7 +5094,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4736,7 +5109,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4751,7 +5124,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4764,7 +5137,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4779,7 +5152,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4795,7 +5168,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4808,7 +5181,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4823,7 +5196,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4836,7 +5209,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4849,7 +5222,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4864,7 +5237,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4879,7 +5252,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4892,7 +5265,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4905,7 +5278,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4920,7 +5293,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4935,7 +5308,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4950,7 +5323,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4965,7 +5338,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4980,7 +5353,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -4993,7 +5366,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5006,7 +5379,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "15",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5021,7 +5394,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5034,7 +5407,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5047,7 +5420,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5060,7 +5433,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5073,7 +5446,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5089,7 +5462,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5102,7 +5475,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5115,7 +5488,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "14",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5128,7 +5501,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5143,7 +5516,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5159,7 +5532,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5172,7 +5545,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5187,7 +5560,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5200,7 +5573,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "11",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5215,7 +5588,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5231,7 +5604,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5246,7 +5619,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5259,7 +5632,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5275,7 +5648,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5290,7 +5663,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5305,7 +5678,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5320,7 +5693,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5338,7 +5711,7 @@
 "Outros Gram-neg",
 "Pseudomonas spp"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5353,7 +5726,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5369,7 +5742,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5384,7 +5757,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5399,7 +5772,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5414,7 +5787,7 @@
 "agentes": [
 "Serratia spp"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5427,7 +5800,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5442,7 +5815,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5457,7 +5830,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5470,7 +5843,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5483,7 +5856,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5499,7 +5872,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5512,7 +5885,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5525,7 +5898,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5540,7 +5913,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5556,7 +5929,7 @@
 "E. coli",
 "Pseudomonas spp"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5574,7 +5947,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5587,7 +5960,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5602,7 +5975,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5619,7 +5992,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5632,7 +6005,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5649,7 +6022,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5664,7 +6037,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5677,7 +6050,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5693,7 +6066,7 @@
 "E. coli",
 "Klebsiella / Enterobacter"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5709,7 +6082,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5725,7 +6098,7 @@
 "Klebsiella / Enterobacter",
 "Outros Gram-neg"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5741,7 +6114,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5756,7 +6129,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5769,7 +6142,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5782,7 +6155,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5797,7 +6170,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5813,7 +6186,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5828,7 +6201,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5841,7 +6214,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5857,7 +6230,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5872,7 +6245,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5887,7 +6260,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5902,7 +6275,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5915,7 +6288,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5930,7 +6303,7 @@
 "agentes": [
 "Pseudomonas spp"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5946,7 +6319,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Prototheca / Levedura"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5961,7 +6334,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5977,7 +6350,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -5990,7 +6363,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6006,7 +6379,7 @@
 "Staph. aureus",
 "E. coli"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6021,7 +6394,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6034,7 +6407,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6047,7 +6420,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6063,7 +6436,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6076,7 +6449,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6089,7 +6462,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "11",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6102,7 +6475,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6115,7 +6488,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6128,7 +6501,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6144,7 +6517,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph. aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6159,7 +6532,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6174,7 +6547,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6187,7 +6560,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6204,7 +6577,7 @@
 "Lactococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6219,7 +6592,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6237,7 +6610,7 @@
 "Lactococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6250,7 +6623,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6265,7 +6638,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6280,7 +6653,7 @@
 "agentes": [
 "E. coli"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6295,7 +6668,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6313,7 +6686,7 @@
 "Prototheca / Levedura",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6328,7 +6701,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6343,7 +6716,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6358,7 +6731,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6375,7 +6748,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6391,7 +6764,7 @@
 "Outros Gram-pos",
 "Prototheca / Levedura"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6406,7 +6779,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6421,7 +6794,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6434,7 +6807,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6449,7 +6822,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6462,7 +6835,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6478,7 +6851,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6491,7 +6864,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6506,7 +6879,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6522,7 +6895,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6537,7 +6910,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6553,7 +6926,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6571,7 +6944,7 @@
 "Enterococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6588,7 +6961,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6605,7 +6978,7 @@
 "Prototheca / Levedura",
 "Pseudomonas spp"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6621,7 +6994,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6636,7 +7009,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6651,7 +7024,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6666,7 +7039,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6679,7 +7052,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6695,7 +7068,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6710,7 +7083,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6725,7 +7098,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6738,7 +7111,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6754,7 +7127,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6769,7 +7142,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6784,7 +7157,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6799,7 +7172,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6814,7 +7187,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6829,7 +7202,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6842,7 +7215,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6858,7 +7231,7 @@
 "Pseudomonas spp",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6873,7 +7246,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6888,7 +7261,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6904,7 +7277,7 @@
 "Strep. uberis",
 "Pseudomonas spp"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6917,7 +7290,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6930,7 +7303,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6943,7 +7316,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6959,7 +7332,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Strep. uberis"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6974,7 +7347,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -6989,7 +7362,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7002,7 +7375,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7017,7 +7390,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7032,7 +7405,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7047,7 +7420,7 @@
 "agentes": [
 "E. coli"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7062,7 +7435,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7077,7 +7450,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7092,7 +7465,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7105,7 +7478,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7122,7 +7495,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7137,7 +7510,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7152,7 +7525,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7168,7 +7541,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7185,7 +7558,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7200,7 +7573,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7213,7 +7586,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7228,7 +7601,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7241,7 +7614,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7256,7 +7629,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7271,7 +7644,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7284,7 +7657,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7299,7 +7672,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7312,7 +7685,7 @@
 "grau": "Grave",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7327,7 +7700,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7342,7 +7715,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7357,7 +7730,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7372,7 +7745,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7391,7 +7764,7 @@
 "Lactococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7406,7 +7779,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7421,7 +7794,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7436,7 +7809,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7454,7 +7827,7 @@
 "Enterococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7469,7 +7842,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7484,7 +7857,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7497,7 +7870,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7512,7 +7885,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Sim",
 "status": "Em aberto"
 },
@@ -7529,7 +7902,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7545,7 +7918,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7561,7 +7934,7 @@
 "Strep. agalactiae / dysgalactiae",
 "E. coli"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7577,7 +7950,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7590,7 +7963,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7605,7 +7978,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7620,7 +7993,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7633,7 +8006,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7650,7 +8023,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7663,7 +8036,7 @@
 "grau": "Leve",
 "resultado": "Fazer Leitura",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7676,7 +8049,7 @@
 "grau": "Leve",
 "resultado": "Fazer Leitura",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7689,7 +8062,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7707,7 +8080,7 @@
 "Klebsiella / Enterobacter",
 "Staph não aureus"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7720,7 +8093,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7735,7 +8108,7 @@
 "agentes": [
 "E. coli"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7750,7 +8123,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7765,7 +8138,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7783,7 +8156,7 @@
 "Pseudomonas spp",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7801,7 +8174,7 @@
 "E. coli",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7816,7 +8189,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7833,7 +8206,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7849,7 +8222,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7868,7 +8241,7 @@
 "Pseudomonas spp",
 "Staph não aureus"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7889,7 +8262,7 @@
 "Pseudomonas spp",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7902,7 +8275,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7917,7 +8290,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7933,7 +8306,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7946,7 +8319,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7959,7 +8332,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7975,7 +8348,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -7990,7 +8363,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8006,7 +8379,7 @@
 "Strep. uberis",
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8024,7 +8397,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8039,7 +8412,7 @@
 "agentes": [
 "E. coli"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8057,7 +8430,7 @@
 "Enterococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8072,7 +8445,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8089,7 +8462,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8105,7 +8478,7 @@
 "Prototheca / Levedura",
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8118,7 +8491,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8136,7 +8509,7 @@
 "Strep. uberis",
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8151,7 +8524,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8164,7 +8537,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8180,7 +8553,7 @@
 "Prototheca / Levedura",
 "Serratia spp"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8197,7 +8570,7 @@
 "Enterococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8213,7 +8586,7 @@
 "Prototheca / Levedura",
 "Serratia spp"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8226,7 +8599,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8241,7 +8614,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8256,7 +8629,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8269,7 +8642,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8284,7 +8657,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8297,7 +8670,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8312,7 +8685,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8325,7 +8698,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8338,7 +8711,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8353,7 +8726,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8366,7 +8739,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8379,7 +8752,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8395,7 +8768,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8410,7 +8783,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8425,7 +8798,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "11",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8440,7 +8813,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8453,7 +8826,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8468,7 +8841,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8483,7 +8856,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8496,7 +8869,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8509,7 +8882,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8525,7 +8898,7 @@
 "Outros Gram-pos",
 "Prototheca / Levedura"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8541,7 +8914,7 @@
 "Prototheca / Levedura",
 "Staph não aureus"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8556,7 +8929,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8572,7 +8945,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph. aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8585,7 +8958,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8601,7 +8974,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8618,7 +8991,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8631,7 +9004,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8646,7 +9019,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8661,7 +9034,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8674,7 +9047,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8689,7 +9062,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8702,7 +9075,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8715,7 +9088,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8728,7 +9101,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8741,7 +9114,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8756,7 +9129,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8771,7 +9144,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8787,7 +9160,7 @@
 "Outros Gram-pos",
 "Prototheca / Levedura"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8806,7 +9179,7 @@
 "E. coli",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8819,7 +9192,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8832,7 +9205,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8848,7 +9221,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8863,7 +9236,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8876,7 +9249,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8891,7 +9264,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8906,7 +9279,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8922,7 +9295,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8939,7 +9312,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8954,7 +9327,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8967,7 +9340,7 @@
 "grau": "Leve",
 "resultado": "Fazer Leitura",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8980,7 +9353,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -8996,7 +9369,7 @@
 "Strep. agalactiae / dysgalactiae",
 "E. coli"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9009,7 +9382,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9024,7 +9397,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9043,7 +9416,7 @@
 "Lactococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "17",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9058,7 +9431,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9075,7 +9448,7 @@
 "Lactococcus spp",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9091,7 +9464,7 @@
 "E. coli",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9106,7 +9479,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "11",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9123,7 +9496,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "17",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9138,7 +9511,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9155,7 +9528,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9171,7 +9544,7 @@
 "Prototheca / Levedura",
 "Enterococcus spp"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9186,7 +9559,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9201,7 +9574,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9218,7 +9591,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9234,7 +9607,7 @@
 "Strep. uberis",
 "Enterococcus spp"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9252,7 +9625,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9267,7 +9640,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9280,7 +9653,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9293,7 +9666,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9309,7 +9682,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9324,7 +9697,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9340,7 +9713,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9353,7 +9726,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9368,7 +9741,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9383,7 +9756,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "13",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9399,7 +9772,7 @@
 "Serratia spp",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9415,7 +9788,7 @@
 "Prototheca / Levedura",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9431,7 +9804,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9447,7 +9820,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9460,7 +9833,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9477,7 +9850,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9495,7 +9868,7 @@
 "Serratia spp",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9512,7 +9885,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9527,7 +9900,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9542,7 +9915,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9555,7 +9928,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "11",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9571,7 +9944,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9588,7 +9961,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9601,7 +9974,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9614,7 +9987,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9629,7 +10002,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9644,7 +10017,7 @@
 "agentes": [
 "Klebsiella / Enterobacter"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9659,7 +10032,7 @@
 "agentes": [
 "E. coli"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9675,7 +10048,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Prototheca / Levedura"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9690,7 +10063,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9703,7 +10076,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9718,7 +10091,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9733,7 +10106,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9746,7 +10119,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9759,7 +10132,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9774,7 +10147,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9789,7 +10162,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9805,7 +10178,7 @@
 "Outros Gram-pos",
 "E. coli"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9822,7 +10195,7 @@
 "Prototheca / Levedura",
 "Enterococcus spp"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9841,7 +10214,7 @@
 "Serratia spp",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9854,7 +10227,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9870,7 +10243,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9885,7 +10258,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9900,7 +10273,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9916,7 +10289,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9931,7 +10304,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "7",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9947,7 +10320,7 @@
 "Enterococcus spp",
 "Lactococcus spp"
 ],
-"n_diag": "9",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9962,7 +10335,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9975,7 +10348,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -9988,7 +10361,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10004,7 +10377,7 @@
 "Outros Gram-pos",
 "Prototheca / Levedura"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10019,7 +10392,7 @@
 "agentes": [
 "Lactococcus spp"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10034,7 +10407,7 @@
 "agentes": [
 "E. coli"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10047,7 +10420,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10062,7 +10435,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10075,7 +10448,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10088,7 +10461,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10103,7 +10476,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10116,7 +10489,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10129,7 +10502,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10144,7 +10517,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10160,7 +10533,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10175,7 +10548,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10188,7 +10561,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10203,7 +10576,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10219,7 +10592,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10235,7 +10608,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10251,7 +10624,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Outros Gram-pos"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10264,7 +10637,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10280,7 +10653,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10297,7 +10670,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10310,7 +10683,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10326,7 +10699,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10342,7 +10715,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10357,7 +10730,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10372,7 +10745,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10385,7 +10758,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10400,7 +10773,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10415,7 +10788,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10428,7 +10801,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10441,7 +10814,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10454,7 +10827,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10467,7 +10840,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10480,7 +10853,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10493,7 +10866,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10506,7 +10879,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10521,7 +10894,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "14",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10537,7 +10910,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10553,7 +10926,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Prototheca / Levedura"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10568,7 +10941,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10581,7 +10954,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10596,7 +10969,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10611,7 +10984,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10624,7 +10997,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10639,7 +11012,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10652,7 +11025,7 @@
 "grau": "Leve",
 "resultado": "Fazer Leitura",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10665,7 +11038,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10678,7 +11051,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10691,7 +11064,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10707,7 +11080,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10720,7 +11093,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10735,7 +11108,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10748,7 +11121,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10763,7 +11136,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "6",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10776,7 +11149,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10789,7 +11162,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10802,7 +11175,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10815,7 +11188,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10828,7 +11201,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10845,7 +11218,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10862,7 +11235,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10878,7 +11251,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10894,7 +11267,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10907,7 +11280,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10922,7 +11295,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10937,7 +11310,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10953,7 +11326,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10966,7 +11339,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10981,7 +11354,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -10994,7 +11367,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11010,7 +11383,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11023,7 +11396,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11036,7 +11409,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11049,7 +11422,7 @@
 "grau": "Não aplicável",
 "resultado": "Fazer Leitura",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11064,7 +11437,7 @@
 "agentes": [
 "Strep. uberis"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11079,7 +11452,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11092,7 +11465,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "14",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11105,7 +11478,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11118,7 +11491,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11131,7 +11504,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11146,7 +11519,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11162,7 +11535,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11175,7 +11548,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11188,7 +11561,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11201,7 +11574,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11214,7 +11587,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11229,7 +11602,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11244,7 +11617,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11259,7 +11632,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11272,7 +11645,7 @@
 "grau": "Não aplicável",
 "resultado": "Fazer Leitura",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11287,7 +11660,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11302,7 +11675,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11317,7 +11690,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11330,7 +11703,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11343,7 +11716,7 @@
 "grau": "Não aplicável",
 "resultado": "Fazer Leitura",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11356,7 +11729,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11369,7 +11742,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11382,7 +11755,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "14",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11397,7 +11770,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11414,7 +11787,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11429,7 +11802,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "10",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11442,7 +11815,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11457,7 +11830,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "15",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11473,7 +11846,7 @@
 "Staph. aureus",
 "Strep. uberis"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11486,7 +11859,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11501,7 +11874,7 @@
 "agentes": [
 "Outros Gram-pos"
 ],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11514,7 +11887,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11529,7 +11902,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11544,7 +11917,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11557,7 +11930,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11572,7 +11945,7 @@
 "agentes": [
 "Prototheca / Levedura"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11585,7 +11958,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11598,7 +11971,7 @@
 "grau": "Moderado",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11615,7 +11988,7 @@
 "Prototheca / Levedura",
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11630,7 +12003,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11647,7 +12020,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11662,7 +12035,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11677,7 +12050,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11694,7 +12067,7 @@
 "Staph. aureus",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11709,7 +12082,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "8",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11724,7 +12097,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11740,7 +12113,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Pseudomonas spp"
 ],
-"n_diag": "4",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11755,7 +12128,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11768,7 +12141,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11781,7 +12154,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11797,7 +12170,7 @@
 "Outros Gram-pos",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11810,7 +12183,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11823,7 +12196,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11836,7 +12209,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "5",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11849,7 +12222,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11862,7 +12235,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11877,7 +12250,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11890,7 +12263,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11903,7 +12276,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11919,7 +12292,7 @@
 "Strep. agalactiae / dysgalactiae",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11932,7 +12305,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11945,7 +12318,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11960,7 +12333,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11973,7 +12346,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -11988,7 +12361,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12003,7 +12376,7 @@
 "agentes": [
 "Staph. aureus"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12016,7 +12389,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "2",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12031,7 +12404,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "3",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12044,7 +12417,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12059,7 +12432,7 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12074,7 +12447,7 @@
 "agentes": [
 "Staph não aureus"
 ],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12094,7 +12467,7 @@
 "Serratia spp",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12107,7 +12480,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12120,7 +12493,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12133,7 +12506,7 @@
 "grau": "Não aplicável",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12146,7 +12519,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12164,7 +12537,7 @@
 "Strep. uberis",
 "Staph não aureus"
 ],
-"n_diag": "0",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12177,7 +12550,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12190,7 +12563,7 @@
 "grau": "Leve",
 "resultado": "Negativo",
 "agentes": [],
-"n_diag": "1",
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 },
@@ -12205,7 +12578,1836 @@
 "agentes": [
 "Strep. agalactiae / dysgalactiae"
 ],
-"n_diag": "1",
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 6128,
+"data": "2026-10-19",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 2494,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Staph. aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 2943,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3208,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3421,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3805,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Contaminado",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Outros Gram-pos",
+"Serratia spp",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3834,
+"data": "2026-10-26",
+"tipo": "Secagem",
+"leitura": "Manual",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3853,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Contaminado",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Strep. uberis",
+"Serratia spp"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3901,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Strep. uberis"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4018,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE PE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4193,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4200,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE AD PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Lactococcus spp",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4229,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4326,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Manual",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Strep. uberis"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4353,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4419,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4773,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Prototheca / Levedura",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4862,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4906,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4953,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5021,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5126,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5209,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Manual",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5285,
+"data": "2026-10-26",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5916,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 6082,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 6128,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 892,
+"data": "2026-10-26",
+"tipo": "Mastite Clínica",
+"leitura": "Manual",
+"quarto": "AD PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Staph. aureus",
+"Strep. uberis",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3637,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3665,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3852,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4017,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4386,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4397,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4416,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4446,
+"data": "2026-11-02",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5103,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Manual",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5167,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5191,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5245,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5309,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Manual",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5398,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5413,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5445,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Manual",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5450,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5674,
+"data": "2026-11-02",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 2894,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"E. coli"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3380,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3413,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3576,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3879,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Enterococcus spp",
+"Lactococcus spp"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3894,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3906,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4104,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4212,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4219,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4226,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4244,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4265,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4358,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Manual",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4446,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4458,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Manual",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4533,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Manual",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4606,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4620,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Prototheca / Levedura"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4638,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Enterococcus spp",
+"Lactococcus spp"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4656,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Manual",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4740,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Manual",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4774,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5233,
+"data": "2026-11-03",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Contaminado",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Strep. uberis",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 2761,
+"data": "2026-11-09",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Contaminado",
+"agentes": [
+"Outros Gram-pos",
+"Enterococcus spp",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3509,
+"data": "2026-11-09",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3597,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4164,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4192,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4200,
+"data": "2026-11-09",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Strep. uberis"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4339,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Prototheca / Levedura",
+"Serratia spp"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4376,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Pseudomonas spp"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4389,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4394,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Strep. uberis",
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4532,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4608,
+"data": "2026-11-09",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4626,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4939,
+"data": "2026-11-09",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4984,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5021,
+"data": "2026-11-09",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5099,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5262,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5270,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5315,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Manual",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5359,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Contaminado",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Strep. uberis",
+"Outros Gram-pos",
+"Prototheca / Levedura",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5435,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Outros Gram-pos",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5449,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5451,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Staph. aureus",
+"Outros Gram-pos",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5467,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5511,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5516,
+"data": "2026-11-09",
+"tipo": "Secagem",
+"leitura": "Manual",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Positivo",
+"agentes": [
+"Pseudomonas spp"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5554,
+"data": "2026-11-09",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Outros Gram-pos"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5583,
+"data": "2026-11-09",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5813,
+"data": "2026-11-09",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Contaminado",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Outros Gram-pos",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3504,
+"data": "2026-11-14",
+"tipo": "Mastite Clínica",
+"leitura": "Manual",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Contaminado",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Strep. uberis",
+"Enterococcus spp"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4446,
+"data": "2026-11-14",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Negativo",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4464,
+"data": "2026-11-14",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Contaminado",
+"agentes": [
+"Strep. uberis",
+"Outros Gram-pos",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4610,
+"data": "2026-11-14",
+"tipo": "Mastite Clínica",
+"leitura": "Manual",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Contaminado",
+"agentes": [
+"Strep. agalactiae / dysgalactiae",
+"Prototheca / Levedura",
+"Staph não aureus"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4847,
+"data": "2026-11-14",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Positivo",
+"agentes": [
+"Strep. uberis"
+],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 2303,
+"data": "2026-11-16",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 2862,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3370,
+"data": "2026-11-16",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3399,
+"data": "2026-11-16",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3549,
+"data": "2026-11-16",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PE",
+"grau": "Leve",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3631,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3685,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 3967,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4044,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4190,
+"data": "2026-11-16",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Leve",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4294,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4319,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4325,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4464,
+"data": "2026-11-16",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "PD",
+"grau": "Leve",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4544,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4567,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4651,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 4658,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5359,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5483,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 5665,
+"data": "2026-11-16",
+"tipo": "Secagem",
+"leitura": "Automático",
+"quarto": "AE AD PE PD",
+"grau": "Não aplicável",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
+"cura": "Aguardando período de {x} dias",
+"status": "Em aberto"
+},
+{
+"vaca": 6052,
+"data": "2026-11-16",
+"tipo": "Mastite Clínica",
+"leitura": "Automático",
+"quarto": "AD",
+"grau": "Leve",
+"resultado": "Fazer Leitura",
+"agentes": [],
+"n_diag": null,
 "cura": "Aguardando período de {x} dias",
 "status": "Em aberto"
 }

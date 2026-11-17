@@ -29,7 +29,7 @@ for row in ws.iter_rows(min_row=2, values_only=True):
     v = str(r["BRINCO"]).strip()
     regs.append(dict(vaca=int(v) if v.isdigit() else v, data=f"{y}-{m}-{d}", tipo=r["TIPO"], leitura=r["TIPO_LEITURA"],
                      quarto=(r["QUARTO"] or "").replace(",", " "), grau=r["GRAU"], resultado=r["RESULTADO"],
-                     agentes=[MAP[k] for k in MAP if r.get(k) == "Sim"], n_diag=r["DIAGNOSTICO POR ANIMAL"],
+                     agentes=[MAP[k] for k in MAP if r.get(k) == "Sim"], n_diag=r.get("DIAGNOSTICO POR ANIMAL"),
                      cura=r["CURA_CLINICA"], status=r["STATUS_VALIDACAO"]))
 regs.sort(key=lambda x: (x["data"], str(x["vaca"])))
 json.dump(dict(arquivo=arq.split("/")[-1], registros=regs), open("dados/cultura_onfarm_vacas.json", "w"), ensure_ascii=False, indent=0)

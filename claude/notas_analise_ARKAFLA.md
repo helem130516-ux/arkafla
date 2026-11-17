@@ -355,3 +355,17 @@
   - Média simples: 219 (out/26 ponderada: 253). É prévia, sem volume; o mapa de nov/26 vai substituir.
 - O tanque 4 caiu para 173: é o menor valor dele desde jul/26 (antes ficava entre 251 e 512).
 - O painel mostra nov/26 marcado com "*" na aba Tanque.
+
+## OnFarm atualizado até 16/11/2026 (17/11/2026, painel versão 21)
+- Arquivo: `dados/cultura_onfarm/onfarm_2026-11-16.xlsx`. São 991 culturas de 17/01 a 16/11/2026.
+  - As 839 da exportação anterior continuam iguais. Há 152 novas: 99 de nov, 28 de out e 25 de jan.
+  - Esta exportação não tem mais a coluna "DIAGNOSTICO POR ANIMAL"; o leitor foi ajustado.
+- Total: 848 culturas de mastite clínica e 143 na secagem.
+  - As culturas na secagem começaram em set/26: 21 em set, 69 em out e 53 em nov.
+  - Out–nov: 52 positivas e 48 negativas de 122. Agentes mais comuns nas positivas: Staph não aureus 31, Outros Gram-pos 17, Strep. ag/dysg 15, Strep. uberis 9.
+- Mastite clínica:
+  - out/26: 78 casos, 40 positivos (Strep. ag/dysg 24) e 32 negativos;
+  - nov/26 (até 16/11): 46 casos, 17 positivos, 16 negativos e 7 aguardando leitura.
+- **Qualidade do dado (grau):** até jun/26, 28–50% dos casos eram "Grave". Desde jul/26, quase todos estão como "Leve": em ago, 118 leves e 3 moderados; em set e nov, todos leves. Pode ser mudança no registro e não melhora real. Perguntar à fazenda.
+- Resumo mensal: out/26 com 101 agentes isolados em resultados positivos; nov/26 parcial com 58.
+- Ligação com o registro de mastite: 228 de 844 tratamentos (27%) têm cultura OnFarm até 3 dias do início. O registro de mastite vai só até 24/10.

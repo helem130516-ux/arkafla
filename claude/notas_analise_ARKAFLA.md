@@ -970,3 +970,8 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Partos: 16/11 corrigido sozinho para 5 (4 lançados à tarde); 17/11 = 0 por enquanto (4 vacas foram do 14 para o 7).
 - 4 saídas de adultas, todas do lote 10 (uma fresca DEL 6). Lote 10: 0 entradas, 5 saídas → 48.
 - Vazias IA > 35 d: 82 (+3); % fêmeas ÷ partos 7 d: 58% (bezerros de 14–17/11 ainda sem cadastro?).
+- Pedido 18/11 ("comercializado do dia 17 não entrou"): o PDF de 18/11 10h49 já tinha 17/11 completo (05h55
+  tanque 2 35.617 L + 18h01 tanque 3 33.107 L = 68.724 L = 70.923 kg; DairyPlan −6,2%), mas a regra cortava sempre a
+  última data de coleta. Regra nova em le_leite_vendido.py: a última data entra quando já tem 2 coletas > 1.000 L.
+- Com 07/11 fora da janela de 10 dias (08–17/11), a média do período ficou em −5,0%: 08/11 (−9,6%) ainda carrega o
+  leite que a coleta única de 07/11 não levou.

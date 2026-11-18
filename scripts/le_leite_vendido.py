@@ -8,7 +8,7 @@ análises do tanque pelo volume. O PDF é guardado em dados/leite_vendido/.
 A cada execução os totais são refeitos com todos os PDFs guardados: as coletas de todos eles são
 juntadas pelo número do boleto (sem repetir), e o total do dia é a soma das coletas com aquela data.
 Do PDF mais recente, são ignoradas as coletas com data igual ou posterior à de emissão e as da última
-data de coleta: esses dias podem estar incompletos (ex.: PDF emitido em 21/10 às 14:31 só tinha uma
+data de coleta quando ela ainda não tem 2 coletas grandes (> 1.000 L): esses dias podem estar incompletos (ex.: PDF emitido em 21/10 às 14:31 só tinha uma
 coleta com data de 20/10). O próximo PDF completa esses dias. Isso também resolve a virada do mês
 (relatório mensal por data de recepção: parte das coletas de 30/10 só aparece no PDF de novembro).
 
@@ -54,7 +54,13 @@ def le(pdf):
     em = EMITIDO.search(txt)
     # dia da emissão (e depois) e a última data de coleta do relatório podem estar incompletos
     corte = datetime.strptime(em[1], "%d/%m/%Y").date().isoformat() if em else "9999"
-    corte = min(corte, max(dias)) if dias else corte
+    # a última data de coleta só entra se já tiver as 2 coletas grandes (> 1.000 L) do dia (pedido da usuária em
+    # 18/11/2026: o PDF de 18/11 10h49 tinha 17/11 completo, com as coletas das 05h55 e das 18h01)
+    if dias:
+        ult = max(dias)
+        grandes = sum(1 for c in col if c["data"] == ult and c["volume"] > 1000)
+        if grandes < 2:
+            corte = min(corte, ult)
     return n, em, col, corte
 
 

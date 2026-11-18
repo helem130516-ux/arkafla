@@ -961,3 +961,12 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   −0,3% · −1,9%. Média do período (07–15/11, soma): −0,6%.
 - Todo dia aparece uma coleta pequena no tanque 1 (7 a 49 L, boletos tipo DDMM260484) – provável amostra/sobra.
 - Queda do comercializado de 13 a 15/11 acompanha a queda do DairyPlan (domingo 15/11).
+
+## 18/11/2026 – coletas (PDF 18/11 10h49) + rotina diária (relatório de 17/11, terça), rodada junto às 10h49
+- Coletas: 16/11 = 67.010 L = 69.154 kg (2 coletas); DairyPlan −1,1%.
+- Pesagens normais (1,04 · 1,00 · 1,00 · 1,03 · 0,94 · 0,93 · 1,03); sem correções.
+- Lactação 1626 (−15): 15 secagens para o lote 15 (lotes 2–6, 10, 30). Reorganização: 1→4 (11), 5→6 (9), 6→5 (12), 7→5 (10).
+- Produção 42,9 kg (−0,7); lotes 5 e 6 −2,3 e −2,0; ECM 44,2; DairyPlan 66.532 kg. Vacas < 20 kg: 78 (+15).
+- Partos: 16/11 corrigido sozinho para 5 (4 lançados à tarde); 17/11 = 0 por enquanto (4 vacas foram do 14 para o 7).
+- 4 saídas de adultas, todas do lote 10 (uma fresca DEL 6). Lote 10: 0 entradas, 5 saídas → 48.
+- Vazias IA > 35 d: 82 (+3); % fêmeas ÷ partos 7 d: 58% (bezerros de 14–17/11 ainda sem cadastro?).

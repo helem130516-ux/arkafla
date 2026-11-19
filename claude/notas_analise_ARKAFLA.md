@@ -975,3 +975,12 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   última data de coleta. Regra nova em le_leite_vendido.py: a última data entra quando já tem 2 coletas > 1.000 L.
 - Com 07/11 fora da janela de 10 dias (08–17/11), a média do período ficou em −5,0%: 08/11 (−9,6%) ainda carrega o
   leite que a coleta única de 07/11 não levou.
+
+## 19/11/2026 – rotina diária (relatório de 18/11, quarta)
+- PESAGENS SUSPEITAS nos lotes 5 e 6: Leite/Leite7 = 0,85 e 0,83 (demais: 1,05 · 0,98 · 0,99 · 1,03 · 1,03).
+  As mesmas vacas caíram de 35,5 → 30,9 kg (lote 5) e 22,2 → 18,8 kg (lote 6); 210 de 330 e 138 de 205 vacas com
+  razão < 0,9. Perguntado à usuária se corrige com 17/11 (último dia normal). Relatório enviado sem correção.
+- Produção 40,7 kg (−2,2); ECM 41,9; DairyPlan 63.935 kg (−2.597); vacas < 20 kg 139 (+61) – efeito das pesagens.
+- Quarta-feira: 41,1 kg/vaca no tanque, −2,1 vs terça e −2,7 vs média 7 dias (afetado pelas pesagens dos lotes 5/6).
+- Lactação 1634 (+8); 5 partos em 18/11 e 17/11 corrigido para 3. 56 inseminações (Vazia → Bred), vazias IA > 35 d
+  51 (−31); 4 novas DNB (59). Lote 10: 7 entradas, 5 saídas → 50. Nenhuma saída de adultas.

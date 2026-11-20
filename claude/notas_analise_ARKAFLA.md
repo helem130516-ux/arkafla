@@ -984,3 +984,14 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Quarta-feira: 41,1 kg/vaca no tanque, −2,1 vs terça e −2,7 vs média 7 dias (afetado pelas pesagens dos lotes 5/6).
 - Lactação 1634 (+8); 5 partos em 18/11 e 17/11 corrigido para 3. 56 inseminações (Vazia → Bred), vazias IA > 35 d
   51 (−31); 4 novas DNB (59). Lote 10: 7 entradas, 5 saídas → 50. Nenhuma saída de adultas.
+
+## 20/11/2026 – rotina diária (relatório de 19/11, quinta) – ALERTA de queda nos lotes 4, 5 e 6
+- Leite/Leite7: 1,04 · 0,99 · 0,98 · 0,96 · 0,80 · 0,79 · 1,03. Mediana das mesmas vacas (16 → 17 → 18 → 19/11):
+  lote 4 47,4 · 47,0 · 46,9 · 43,0; lote 5 38,2 · 35,5 · 30,9 · 26,8; lote 6 24,4 · 22,6 · 19,2 · 17,2.
+  Queda progressiva (não é um dia isolado). DairyPlan 70.472 (12/11) → 60.592 kg (19/11).
+- Indício de medidor: DairyPlan × comercializado estava −0,3% a −1,9% em 14–16/11 e foi a −6,2% em 17/11.
+  Precisa das coletas de 18–19/11 para confirmar. Pedido à usuária: conferir medidores/ordenha dos lotes 4–6 e
+  mandar o PDF das coletas. Sem correção aplicada (pendente também a decisão sobre 18/11).
+- Produção 38,8 kg (−1,9); ECM 40,0; vacas < 20 kg 199 (+60). Quinta: 39,0 kg/vaca, −4,3 vs média de 7 dias.
+- 0 partos, 0 saídas, nenhuma mudança de lote, lote 10 parado (50) – movimentação de 19/11 ainda não lançada.
+  11 inseminações; vazias IA > 35 d 42 (−9).

@@ -1003,3 +1003,9 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - 3 partos (19/11 ficou com 1); 2 saídas (fresca do lote 10, inseminada do lote 2); lote 10: 18 entradas, 12 saídas → 56.
 - 25 vacas do 15 → 14 (pré-parto). Vazias IA > 35 d 64 (+22; lote de IATF cruzando os 35 dias).
 - Sem correção aplicada; aguardando a usuária (18/11 e a queda dos lotes 4–6).
+
+## 21/11/2026 – coletas (PDF 21/11 16h11) + causa da queda dos lotes 4–6
+- Comercializado (kg): 17/11 70.923 · 18/11 66.198 · 19/11 62.566 · 20/11 59.472. DairyPlan −6,2% · −3,4% · −3,2% · +1,3%.
+- A queda é REAL (o laticínio recebeu menos leite, acompanhando o DairyPlan) — não é falha de medidor.
+  A usuária informou: "queda da produção foi devido ao calor". Pesagens de 18–20/11 NÃO serão corrigidas
+  (pendência de 18/11 encerrada).

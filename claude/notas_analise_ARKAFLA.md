@@ -995,3 +995,11 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Produção 38,8 kg (−1,9); ECM 40,0; vacas < 20 kg 199 (+60). Quinta: 39,0 kg/vaca, −4,3 vs média de 7 dias.
 - 0 partos, 0 saídas, nenhuma mudança de lote, lote 10 parado (50) – movimentação de 19/11 ainda não lançada.
   11 inseminações; vazias IA > 35 d 42 (−9).
+
+## 21/11/2026 – rotina diária (relatório de 20/11, sexta)
+- Leite/Leite7: 1,01 · 1,01 · 0,98 · 0,95 · 0,84 · 0,87 · 1,01. Mesmas vacas (16→20/11): lote 4 47,4→42,2;
+  lote 5 38,2→27,2; lote 6 24,2→17,4 — pararam de cair em 20/11 (estáveis vs 19/11). Ainda sem coletas de 18–20/11.
+- Produção 38,5 kg (−0,4); ECM 39,6; DairyPlan 60.224 kg. Vacas < 20 kg 183 (−16).
+- 3 partos (19/11 ficou com 1); 2 saídas (fresca do lote 10, inseminada do lote 2); lote 10: 18 entradas, 12 saídas → 56.
+- 25 vacas do 15 → 14 (pré-parto). Vazias IA > 35 d 64 (+22; lote de IATF cruzando os 35 dias).
+- Sem correção aplicada; aguardando a usuária (18/11 e a queda dos lotes 4–6).

@@ -1009,3 +1009,10 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - A queda é REAL (o laticínio recebeu menos leite, acompanhando o DairyPlan) — não é falha de medidor.
   A usuária informou: "queda da produção foi devido ao calor". Pesagens de 18–20/11 NÃO serão corrigidas
   (pendência de 18/11 encerrada).
+
+## 22/11/2026 – rotina diária (relatório de 21/11, sábado)
+- Pesagens normais (1,05 · 1,01 · 1,01 · 0,98 · 0,99 · 1,02 · 1,03); sem correções.
+- Recuperação após o calor: produção 40,5 kg (+2,0), alta em todos os lotes (lote 5 +4,2); ECM 41,6;
+  DairyPlan 63.240 kg (+3.015). Vacas < 20 kg 130 (−53).
+- Lactação 1637 (=); 2 partos; 0 saídas; lote 10: 4 entradas, 0 saídas → 60. 3 novas DNB (63).
+- Novilhas inseminadas com IA > 35 d: 1 (nova). Vazias IA > 35 d 62 (−2).

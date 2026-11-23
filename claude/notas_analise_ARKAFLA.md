@@ -1024,3 +1024,12 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Lote 10: 2 entradas, 14 saídas (11 → lote 6) → 48. Vacas < 20 kg 111 (−19).
 - Diagnósticos: 43 Bred → Prenha, 57 Bred → Vazia. Gestantes 1041 (+42, 58,2%); DEL > 150 não gestantes 223 (−18);
   vazias IA > 35 d 69 (+7). Novilhas inseminadas com IA > 35 d sem diagnóstico: 5 (+4).
+
+## 23/11/2026 – coletas (PDF 23/11 11h47) + partos atualizados do BoviSync
+- Comercializado: 21/11 61.151 L = 63.108 kg (DP +0,2%); 22/11 62.622 L = 64.626 kg (DP +0,9%). Recuperação após o calor.
+- Pedido "rodar relatório do BoviSync tbm novamente": baixado numa cópia às 11h50; levados ao relatório de 22/11
+  só DtÚltParto e LACT de 8 partos (21/11: 3626, 3742, 4176, 5223, 5395; 22/11: 5127, 5298, 6276 – novilha → LACT 1).
+  Partos: 21/11 2 → 7; 22/11 0 → 3. Original em dados/zootecnico_original/Zootecnico_2026-11-22_antes_partos.xlsx.
+  Atenção: a DtÚltParto no arquivo é texto "AAAA-MM-DD" (gravar como texto, não como data do Excel).
+- Não trazido (lançamentos de 23/11): 4 partos de 23/11, 14 mudanças de lote, 13 animais a menos / 6 a mais.
+- % fêmeas ÷ partos 7 d caiu para 46%: bezerros desses partos ainda não cadastrados.

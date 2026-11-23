@@ -45,5 +45,21 @@
   "campos": "DtÚltParto e LACT (só partos com data até 05/11; lotes e demais colunas mantidos)",
   "original": "dados/zootecnico_original/Zootecnico_2026-11-05_antes_partos.xlsx",
   "pedido": "usuária em 06/11: pegar dados atualizados do BoviSync"
+ },
+ "2026-11-22": {
+  "partos_atualizados_de": "BoviSync baixado em 23/11 às 11h50",
+  "brincos": [
+   6276,
+   3626,
+   3742,
+   4176,
+   5127,
+   5223,
+   5298,
+   5395
+  ],
+  "campos": "DtÚltParto e LACT (só partos com data até 22/11; lotes e demais colunas mantidos)",
+  "original": "dados/zootecnico_original/Zootecnico_2026-11-22_antes_partos.xlsx",
+  "pedido": "usuária em 23/11: rodar relatório do BoviSync novamente"
  }
 }

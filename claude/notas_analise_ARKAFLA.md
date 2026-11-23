@@ -1016,3 +1016,11 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   DairyPlan 63.240 kg (+3.015). Vacas < 20 kg 130 (−53).
 - Lactação 1637 (=); 2 partos; 0 saídas; lote 10: 4 entradas, 0 saídas → 60. 3 novas DNB (63).
 - Novilhas inseminadas com IA > 35 d: 1 (nova). Vazias IA > 35 d 62 (−2).
+
+## 23/11/2026 – rotina diária (relatório de 22/11, domingo)
+- Pesagens normais (1,05 · 1,04 · 1,02 · 0,99 · 1,10 · 1,06 · 1,04); sem correções.
+- Produção 41,7 kg (+1,2) – segue recuperando do calor (lote 5 +2,9; lote 6 +1,7); ECM 42,9; DairyPlan 65.229 kg.
+- Lactação 1645 (+8); 0 partos lançados em 22/11, mas 8 vacas foram do 14 para o 7 → partos devem entrar depois.
+- Lote 10: 2 entradas, 14 saídas (11 → lote 6) → 48. Vacas < 20 kg 111 (−19).
+- Diagnósticos: 43 Bred → Prenha, 57 Bred → Vazia. Gestantes 1041 (+42, 58,2%); DEL > 150 não gestantes 223 (−18);
+  vazias IA > 35 d 69 (+7). Novilhas inseminadas com IA > 35 d sem diagnóstico: 5 (+4).

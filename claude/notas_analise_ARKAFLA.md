@@ -1033,3 +1033,7 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   Atenção: a DtÚltParto no arquivo é texto "AAAA-MM-DD" (gravar como texto, não como data do Excel).
 - Não trazido (lançamentos de 23/11): 4 partos de 23/11, 14 mudanças de lote, 13 animais a menos / 6 a mais.
 - % fêmeas ÷ partos 7 d caiu para 46%: bezerros desses partos ainda não cadastrados.
+- Análises do tanque (PDF Castrolanda emitido 23/11 12h00): novos grupos de 13/11 e 17/11 (4 tanques cada; sem
+  ácidos graxos). Médias 13/11: gord 3,48 · prot 3,38 · CPP 17,0 · ureia 14,3 · CCS 236; 17/11: 3,52 · 3,36 · 13,8 ·
+  14,4 · 247. Tanque 3 de 17/11 com CCS 296 (o maior). ECM recalculado nos dias de 13/11 em diante.
+  Resumo em PDF refeito: monitoramento/analises/Resumo_Analises_Tanque_2026-11-17.pdf.

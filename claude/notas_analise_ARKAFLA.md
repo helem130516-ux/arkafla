@@ -1045,3 +1045,6 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Lotes 20 → 2 (95) e 30 → 3 (97): os lotes 20/30 foram unidos aos 2/3 (sem efeito nos números; já contavam como 2/3).
 - Produção 41,1 kg (−0,6); ECM 42,7; DairyPlan 63.757 kg. 6 partos (22/11 ficou com 3). Vacas < 20 kg 91 (−20).
 - Lote 10: 14 entradas, 2 saídas → 60. Novilhas inseminadas com IA > 35 d sem diagnóstico: 9 (+4).
+
+## 24/11/2026 – coletas (PDF 24/11 15h34)
+- 23/11: 62.937 L (10h17 tanque 1 + 18h44 tanque 4) = 64.951 kg; DairyPlan −1,8%. Média do período (14–23/11): −1,6%.

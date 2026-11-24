@@ -1041,7 +1041,7 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 ## 24/11/2026 – rotina diária (relatório de 23/11, segunda)
 - Pesagens normais (1,02 · 1,01 · 1,01 · 0,99 · 1,11 · 1,07 · 1,01); sem correções.
 - Lactação 1613 (−33): 27 secagens para o lote 15 (11 do lote 5, 11 do 6) e 13 saídas de adultas
-  (4 DNB e 4 outras do lote 6, 2 frescas DEL 6 e 8 dos lotes 7 e 10, 1 seca, 2 inseminadas). DNB 57 (−4).
+  (7 do lote 6, sendo 4 DNB; 2 frescas DEL 6 e 8 dos lotes 7 e 10; 1 seca; 3 inseminadas dos lotes 2, 10 e 30). DNB 57 (−4).
 - Lotes 20 → 2 (95) e 30 → 3 (97): os lotes 20/30 foram unidos aos 2/3 (sem efeito nos números; já contavam como 2/3).
 - Produção 41,1 kg (−0,6); ECM 42,7; DairyPlan 63.757 kg. 6 partos (22/11 ficou com 3). Vacas < 20 kg 91 (−20).
 - Lote 10: 14 entradas, 2 saídas → 60. Novilhas inseminadas com IA > 35 d sem diagnóstico: 9 (+4).

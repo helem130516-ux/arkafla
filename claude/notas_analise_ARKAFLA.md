@@ -1048,3 +1048,10 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 
 ## 24/11/2026 – coletas (PDF 24/11 15h34)
 - 23/11: 62.937 L (10h17 tanque 1 + 18h44 tanque 4) = 64.951 kg; DairyPlan −1,8%. Média do período (14–23/11): −1,6%.
+
+## 25/11/2026 – rotina diária (relatório de 24/11, terça)
+- Leite/Leite7: 1,06 · 1,07 · 1,05 · 1,03 · 1,17 · 1,26 · 1,08. Lote 6 acima de 1,2, mas é recuperação real
+  (a média de 7 dias ainda tem os dias de calor); lote 6 26,0 kg, igual ao nível de antes do calor. Sem correções.
+- Produção 43,1 kg (+2,0), alta em todos os lotes; ECM 44,8; DairyPlan 67.045 kg (+3.289). Vacas < 20 kg 53 (−38).
+- Lactação 1614 (+1); 3 partos; 0 saídas; lote 10 sem entradas/saídas (60) e quase nenhuma mudança de lote.
+- Novilhas inseminadas com IA > 35 d sem diagnóstico: 18 (+9). Vazias IA > 35 d: 76 (+4).

@@ -1055,3 +1055,12 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Produção 43,1 kg (+2,0), alta em todos os lotes; ECM 44,8; DairyPlan 67.045 kg (+3.289). Vacas < 20 kg 53 (−38).
 - Lactação 1614 (+1); 3 partos; 0 saídas; lote 10 sem entradas/saídas (60) e quase nenhuma mudança de lote.
 - Novilhas inseminadas com IA > 35 d sem diagnóstico: 18 (+9). Vazias IA > 35 d: 76 (+4).
+
+## 26/11/2026 – rotina diária (relatório de 25/11, quarta)
+- Pesagens normais (1,02 · 1,00 · 1,01 · 1,02 · 1,09 · 1,13 · 1,02); sem correções.
+- Produção 41,4 kg (−1,7; queda em todos os lotes depois da alta de 24/11); ECM 43,0; DairyPlan 64.128 kg.
+- Quarta: 41,45 kg/vaca no tanque, −2,3 vs terça e +0,5 kg (+1,2%) vs média dos 7 dias anteriores.
+- 24/11 corrigido sozinho para 6 partos; 25/11 = 3. Lactação 1620 (+6). Lote 10: 0 entradas, 13 saídas
+  (11 → lote 5) → 47. Vacas < 20 kg 78 (+25).
+- Diagnósticos: 39 Bred → Prenha, 32 → Vazia (inclui novilhas: gestantes 568, +36; Bred > 35 d: 18 → 0;
+  novilhas vazias IA > 35 d 10, +5). 28 inseminações de vacas.

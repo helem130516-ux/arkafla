@@ -1064,3 +1064,8 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   (11 → lote 5) → 47. Vacas < 20 kg 78 (+25).
 - Diagnósticos: 39 Bred → Prenha, 32 → Vazia (inclui novilhas: gestantes 568, +36; Bred > 35 d: 18 → 0;
   novilhas vazias IA > 35 d 10, +5). 28 inseminações de vacas.
+
+## 26/11/2026 – coletas (PDF 26/11 11h39)
+- 24/11: 64.718 L = 66.789 kg (DP +0,4%); 25/11: 64.808 L = 66.882 kg (DP −4,1%). Média do período (16–25/11): −1,8%.
+- 25/11: o comercializado ficou estável enquanto o DairyPlan caiu 2.918 kg – a queda de 25/11 nas pesagens pode
+  ter sido em parte de leitura (razões normais, 1,00–1,13); acompanhar.

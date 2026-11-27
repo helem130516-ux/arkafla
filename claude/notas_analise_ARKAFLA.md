@@ -1069,3 +1069,13 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - 24/11: 64.718 L = 66.789 kg (DP +0,4%); 25/11: 64.808 L = 66.882 kg (DP −4,1%). Média do período (16–25/11): −1,8%.
 - 25/11: o comercializado ficou estável enquanto o DairyPlan caiu 2.918 kg – a queda de 25/11 nas pesagens pode
   ter sido em parte de leitura (razões normais, 1,00–1,13); acompanhar.
+
+## 27/11/2026 – rotina diária (relatório de 26/11, quinta) – REORGANIZAÇÃO DOS LOTES
+- ~830 mudanças de lote entre adultas (lotes 1–7): reagrupamento por produção/DEL. Médias por lote de 26/11 não são
+  comparáveis com os dias anteriores (lote 2 62,3 kg DP 6,8 – alto; lote 7 43,8; lote 6 29,4). DEL mediano:
+  1 = 60 · 2 = 123 · 3 = 174 · 4 = 240 · 5 = 222 · 6 = 296 · 7 = 69. Tamanhos: 185 · 187 · 190 · 339 · 341 · 184 · 130.
+- Pesagens normais (1,03 · 1,03 · 1,04 · 1,06 · 1,08 · 1,10 · 1,07); sem correções.
+- Produção 43,0 kg (+1,6); ECM 44,7; DairyPlan 65.681 kg. % leitura 96,9% (−1,5 p.p.).
+- Quinta: 43,58 kg/vaca no tanque, +2,1 vs quarta e +2,6 kg (+6,2%) vs média 7 dias.
+- 0 partos lançados em 26/11; 28 secagens (Prenha → Dry); lote 10: 16 entradas, 3 saídas → 60.
+- 54 inseminações: vazias IA > 35 d 76 → 37. Vacas < 20 kg 49 (−29).

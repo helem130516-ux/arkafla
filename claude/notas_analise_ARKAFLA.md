@@ -1079,3 +1079,10 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Quinta: 43,58 kg/vaca no tanque, +2,1 vs quarta e +2,6 kg (+6,2%) vs média 7 dias.
 - 0 partos lançados em 26/11; 28 secagens (Prenha → Dry); lote 10: 16 entradas, 3 saídas → 60.
 - 54 inseminações: vazias IA > 35 d 76 → 37. Vacas < 20 kg 49 (−29).
+
+## 27/11/2026 – "atualizar todos os dados" (coletas PDF 27/11 16h32 + BoviSync 16h40)
+- Coletas: 26/11 = 64.307 L = 66.365 kg (2 coletas); DairyPlan −1,0%. Média do período (17–26/11): −1,8%.
+- BoviSync numa cópia; levados ao relatório de 26/11 só DtÚltParto e LACT de 6 partos (25/11: 4383, 6083, 6158 –
+  duas novilhas → LACT 1; 26/11: 4263, 4373, 5313). Partos 25/11 3 → 6; 26/11 0 → 3.
+  Original em dados/zootecnico_original/Zootecnico_2026-11-26_antes_partos.xlsx.
+- Não trazido (lançamentos de 27/11): 2 partos de 27/11, 8 mudanças de lote, 4 animais novos.

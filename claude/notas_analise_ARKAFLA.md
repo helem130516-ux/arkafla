@@ -1093,3 +1093,7 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
 - Lote 10 parado (0/0, 60). 47 novilhas do lote 16 → 13. Nenhuma saída.
 - Vazias IA > 35 d: 37 → 76 (+39): 39 vacas vazias inseminadas em 22/10 completaram 36 dias.
   Novilhas vazias IA > 35 d 16 (+6). Vacas < 20 kg 62 (+13).
+- Pedido 28/11: tabela de produção de 01/11 até hoje (vacas em ordenha e média/vaca/dia) →
+  scripts/tabela_producao.py [início] [fim] → monitoramento/analises/Producao_Diaria_<início>_a_<fim>.pdf/.xlsx
+  (também leite total DairyPlan e comercializado; média do período embaixo). 01–27/11: 1.634 vacas em ordenha,
+  42,6 kg/vaca/dia, DairyPlan 66.656 kg/dia, comercializado 67.886 kg/dia.

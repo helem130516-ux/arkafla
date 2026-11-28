@@ -1086,3 +1086,10 @@ Este é o modelo oficial do PDF diário. Não mudar o layout sem pedido do usuá
   duas novilhas → LACT 1; 26/11: 4263, 4373, 5313). Partos 25/11 3 → 6; 26/11 0 → 3.
   Original em dados/zootecnico_original/Zootecnico_2026-11-26_antes_partos.xlsx.
 - Não trazido (lançamentos de 27/11): 2 partos de 27/11, 8 mudanças de lote, 4 animais novos.
+
+## 28/11/2026 – rotina diária (relatório de 27/11, sexta)
+- Pesagens normais (1,05 · 1,00 · 1,06 · 1,03 · 1,06 · 1,11 · 1,05); sem correções.
+- Produção 42,9 kg (−0,2); ECM 44,5; DairyPlan 66.296 kg. Lactação 1624 (+8). 2 partos (26/11 ficou com 3).
+- Lote 10 parado (0/0, 60). 47 novilhas do lote 16 → 13. Nenhuma saída.
+- Vazias IA > 35 d: 37 → 76 (+39): 39 vacas vazias inseminadas em 22/10 completaram 36 dias.
+  Novilhas vazias IA > 35 d 16 (+6). Vacas < 20 kg 62 (+13).
